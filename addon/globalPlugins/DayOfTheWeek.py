@@ -1,7 +1,8 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 # Allows you to find the day of the week corresponding to a choosen date
 # Authors:
 # Abdel <abdelkrim.bensaid@gmail.com>
+# Noelia <nrm1977@gmail.com>
 
 import addonHandler
 addonHandler.initTranslation()
@@ -15,30 +16,38 @@ from globalCommands import SCRCAT_TOOLS
 # The weekDays tuple
 weekDays = (
 	# Translators: A day of the week.
-	_(u"Monday"),
-	_(u"Tuesday"),
-	_(u"Wednesday"),
-	_(u"Thursday"),
-	_(u"Friday"),
-	_(u"Saturday"),
-	_(u"Sunday")
-	)
+	_("Monday"),
+	# Translators: A day of the week.
+	_("Tuesday"),
+	# Translators: A day of the week.
+	_("Wednesday"),
+	# Translators: A day of the week.
+	_("Thursday"),
+	# Translators: A day of the week.
+	_("Friday"),
+	# Translators: A day of the week.
+	_("Saturday"),
+	# Translators: A day of the week.
+	_("Sunday")
+)
 
 def getDayName(numberedDay=1):
 	day = weekDays[numberedDay - 1]
 	return day
 
-def getDayOfWeek(iYear, iMonth, iDay):
+def getDayOfWeek(year, month, day):
 	""" Returns the day of the week corresponding to the chosen date.
-	@param1 : The year of the date.
-	@param2 : The month of the date.
-	@param3: The day of the date.
+	@param year: The year of the date.
+	@type year: str
+	@param month: The month of the date.
+	@type month: str
+	@param day: The day of the date.
+	@type day: str
 	"""
-	d=datetime.datetime(int(iYear), int(iMonth), int(iDay))
+	d = datetime.date(int(year), int(month), int(day))
 	theDay = getDayName(d.isoweekday())
 	return theDay
 
-# Creating a dialog derived from wx.Dialog
 class DateDialog(wx.Dialog):
 	_instance = None
 	def __new__(cls, *args, **kwargs):
@@ -46,39 +55,46 @@ class DateDialog(wx.Dialog):
 			return super(DateDialog, cls).__new__(cls, *args, **kwargs)
 		return DateDialog._instance
 
-	def __init__(self, parent, title):
+	def __init__(self, parent):
 		if DateDialog._instance is not None:
 			return
 		DateDialog._instance = self
-		wx.Dialog.__init__(self, parent=parent, title=title)
-		# Creating a BoxSizer
+		# Translators: The title of the Date Dialog.
+		super(DateDialog,self).__init__(parent,title=_("Get the day of the week"))
 		dialogSizer=wx.BoxSizer(wx.VERTICAL)
-		# Creating a DatePickerCtrl
-		self.datePicker = wx.DatePickerCtrl(parent=self)
-		searchButton = wx.Button(parent=self, label=_(u"&Get the day"), size=(175, 28))
-		closeButton = wx.Button(parent=self, label=_(u"&Close"), id=wx.ID_CLOSE, size=(175, 28))
-		# Adding the widgets in the sizer
+		# Translators: A label for a list in a dialog.
+		datesLabel=wx.StaticText(self,-1,label=_("Type or select a date"))
+		dialogSizer.Add(datesLabel)
+		self.datePicker = wx.DatePickerCtrl(self)
 		dialogSizer.Add(item=self.datePicker, proportion = 0,flag=wx.ALL, border=5)
-		dialogSizer.Add(item=searchButton, proportion = 0, flag=wx.ALL, border=5)
-		dialogSizer.Add(item=closeButton, proportion = 0, flag=wx.ALL, border=5)
-		self.SetSizerAndFit(dialogSizer)
-		self.Center
+		dialogSizer.Add(self.CreateButtonSizer(wx.OK | wx.CANCEL))
+		self.datePicker.Bind(wx.EVT_CHAR, self.onListChar)
+		self.Bind(wx.EVT_BUTTON, self.onOk, id=wx.ID_OK)
+		self.Bind(wx.EVT_BUTTON, self.onCancel, id=wx.ID_CANCEL)
+		dialogSizer.Fit(self)
+		self.SetSizer(dialogSizer)
+		self.datePicker.SetFocus()
+		self.Center(wx.BOTH | wx.CENTER_ON_SCREEN)
 
-		# Events of actions
-		searchButton.Bind(wx.EVT_BUTTON, self.onSearch)
-		closeButton.Bind(wx.EVT_BUTTON, lambda evt: self.onClose())
-		closeButton.Bind(wx.EVT_BUTTON, self.onClose)
-		self.EscapeId = wx.ID_CLOSE
-		searchButton.SetDefault()
+	def __del__(self):
+		DateDialog._instance = None
 
-	def onSearch(self, evt):
-		evt.Skip()
-		msgBox=gui.messageBox(message=getDayOfWeek(str(self.datePicker.GetValue()).split("/")[2].split()[0], str(self.datePicker.GetValue()).split("/")[1], str(self.datePicker.GetValue()).split("/")[0]), caption=_(u"Your day"), style=wx.OK|wx.ICON_INFORMATION)
-		# Translators: To not close the dialog after closing the msgBox.
-		return
+	def onListChar(self, evt):
+		if evt.KeyCode == wx.WXK_SPACE:
+			# Activate the OK button.
+			self.ProcessEvent(wx.CommandEvent(wx.wxEVT_COMMAND_BUTTON_CLICKED, wx.ID_OK))
+		else:
+			evt.Skip()
 
-	def onClose(self, evt):
-		evt.Skip()
+	def onOk(self, evt):
+		dateParams = str(self.datePicker.GetValue()).split("/") # List: day, month, year
+		msgBox=gui.messageBox(
+		message=getDayOfWeek(dateParams[2].split()[0], dateParams[1], dateParams[0]),
+		# Translators: The title of a dialog.
+		caption=_("Your day"),
+		style=wx.OK|wx.ICON_INFORMATION)
+
+	def onCancel(self, evt):
 		self.Destroy()
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
@@ -87,21 +103,28 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.createSubMenu()
 
 	def createSubMenu(self):
-		""" Adds a subMenu in the tools menu for the day of the week
-		"""
-		self.sub_menu = gui.mainFrame.sysTrayIcon.toolsMenu
-		# Translators: Items in the tools menu for the Addon dayOfTheWeek.
-		self.dayOfTheWeek = self.sub_menu.Append(wx.ID_ANY, _(u"&Day of the week..."), _(u"Displays the dialog box to search a day corresponding to a chosen date"))
-		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.showDialog, self.dayOfTheWeek)
+		self.toolsMenu = gui.mainFrame.sysTrayIcon.toolsMenu
+		# Translators: Item in the tools menu for the Addon dayOfTheWeek.
+		self.dayOfTheWeek = self.toolsMenu.Append(wx.ID_ANY, _("&Day of the week..."),
+		"")
+		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onDateDialog, self.dayOfTheWeek)
 
-	def showDialog(self, evt):
-		""" Create the dialog box to search the day of the week
-		"""
-		dlg = DateDialog(parent = gui.mainFrame, title=_(u"Choose a date"))
-		dlg.Show(True)
+	def terminate(self):
+		try:
+			self.toolsMenu.RemoveItem(self.dayOfTheWeek)
+		except wx.PyDeadObjectError:
+			pass
+
+	def onDateDialog(self, evt):
+		if gui.isInMessageBox:
+			return
+		gui.mainFrame.prePopup()
+		d=DateDialog(gui.mainFrame)
+		d.Show()
+		gui.mainFrame.postPopup()
 
 	def script_activateDayOfTheWeekDialog(self, gesture):
-		wx.CallAfter(self.showDialog, None)
-	# documentation:
-	script_activateDayOfTheWeekDialog.__doc__ = _(u"Allows you to find the day of the week corresponding to a choosen date")
+		wx.CallAfter(self.showDialog, gui.mainFrame)
+	# Translators: Message presented in input help mode.
+	script_activateDayOfTheWeekDialog.__doc__ = _("Allows you to find the day of the week corresponding to a choosen date.")
 	script_activateDayOfTheWeekDialog.category = SCRCAT_TOOLS
