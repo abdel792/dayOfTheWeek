@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Allows you to find the day of the week corresponding to a choosen date
+# Allows you to find the day of the week corresponding to a chosen date
 # Authors:
 # Abdel <abdelkrim.bensaid@gmail.com>
 # Noelia <nrm1977@gmail.com>
@@ -126,5 +126,5 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_activateDayOfTheWeekDialog(self, gesture):
 		wx.CallAfter(self.showDialog, gui.mainFrame)
 	# Translators: Message presented in input help mode.
-	script_activateDayOfTheWeekDialog.__doc__ = _("Allows you to find the day of the week corresponding to a choosen date.")
+	script_activateDayOfTheWeekDialog.__doc__ = _("Allows you to find the day of the week corresponding to a chosen date.")
 	script_activateDayOfTheWeekDialog.category = SCRCAT_TOOLS
