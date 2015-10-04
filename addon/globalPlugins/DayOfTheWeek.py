@@ -124,7 +124,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gui.mainFrame.postPopup()
 
 	def script_activateDayOfTheWeekDialog(self, gesture):
-		wx.CallAfter(self.showDialog, gui.mainFrame)
+		wx.CallAfter(self.onDateDialog, gui.mainFrame)
 	# Translators: Message presented in input help mode.
 	script_activateDayOfTheWeekDialog.__doc__ = _("Allows you to find the day of the week corresponding to a chosen date.")
 	script_activateDayOfTheWeekDialog.category = SCRCAT_TOOLS
