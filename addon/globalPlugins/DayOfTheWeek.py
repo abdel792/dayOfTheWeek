@@ -13,41 +13,6 @@ import datetime
 # Importing the SCRCAT_TOOLS category from the globalCommands module.
 from globalCommands import SCRCAT_TOOLS
 
-# The weekDays tuple
-weekDays = (
-	# Translators: A day of the week.
-	_("Monday"),
-	# Translators: A day of the week.
-	_("Tuesday"),
-	# Translators: A day of the week.
-	_("Wednesday"),
-	# Translators: A day of the week.
-	_("Thursday"),
-	# Translators: A day of the week.
-	_("Friday"),
-	# Translators: A day of the week.
-	_("Saturday"),
-	# Translators: A day of the week.
-	_("Sunday")
-)
-
-def getDayName(numberedDay=1):
-	day = weekDays[numberedDay - 1]
-	return day
-
-def getDayOfWeek(year, month, day):
-	""" Returns the day of the week corresponding to the chosen date.
-	@param year: The year of the date.
-	@type year: str
-	@param month: The month of the date.
-	@type month: str
-	@param day: The day of the date.
-	@type day: str
-	"""
-	d = datetime.date(int(year), int(month), int(day))
-	theDay = getDayName(d.isoweekday())
-	return theDay
-
 class DateDialog(wx.Dialog):
 	_instance = None
 	def __new__(cls, *args, **kwargs):
@@ -87,9 +52,10 @@ class DateDialog(wx.Dialog):
 			evt.Skip()
 
 	def onOk(self, evt):
-		dateParams = str(self.datePicker.GetValue()).split("/") # List: day, month, year
+		date = self.datePicker.GetValue()
+		weekDay = date.Format("%A")
 		msgBox=gui.messageBox(
-		message=getDayOfWeek(dateParams[2].split()[0], dateParams[1], dateParams[0]),
+		message=weekDay,
 		# Translators: The title of a dialog.
 		caption=_("Your day"),
 		style=wx.OK|wx.ICON_INFORMATION)
