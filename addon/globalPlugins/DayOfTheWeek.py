@@ -9,7 +9,6 @@ addonHandler.initTranslation()
 import globalPluginHandler
 import wx
 import gui
-import datetime
 # Importing the SCRCAT_TOOLS category from the globalCommands module.
 from globalCommands import SCRCAT_TOOLS
 
