@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dayOfTheWeek 1.0\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2015-10-30 04:04+1000\n"
+"PO-Revision-Date: 2015-11-09 11:40+0545\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: drishtibachak@gmail.com\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.2\n"
+
+#. Translators: The title of the Date Dialog.
+msgid "Get the day of the week"
+msgstr "बार पत्ता लगाउनु होस्"
+
+#. Translators: A label for a list in a dialog.
+msgid "Type or select a date"
+msgstr "मिति चयन अथवा टङ्कण गर्नु होस् ।"
+
+#. Translators: The title of a dialog.
+msgid "Your day"
+msgstr "तपाइको बार"
+
+#. Translators: Item in the tools menu for the Addon dayOfTheWeek.
+msgid "&Day of the week..."
+msgstr "&हप्ताको बार"
+
+#. Translators: Message presented in input help mode.
+msgid "Allows you to find the day of the week corresponding to a chosen date."
+msgstr "आफुले चाहेको मितिको बार पत्ता लगाउन सकिने छ ।"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Day of the week"
+msgstr "हप्ताको बार"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"With this add-on, you'll be able to find the day of the week corresponding to a "
+"chosen date."
+msgstr "यो उप-कर्मीको सहयोगले तपाइ आफूले चाहेको मिति कुन बारमा पर्छ भनेर जान्न सक्नु हुनेछ ।"
