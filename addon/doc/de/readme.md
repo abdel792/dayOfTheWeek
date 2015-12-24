@@ -1,4 +1,4 @@
-# Day of the week #
+# Tag der Woche #
 
 *	 Autoren: Abdel, Noelia.
 *	 [stabile Version herunterladen][1]
@@ -11,8 +11,9 @@ Im Menü Extras von NVDA wird hierfür ein neuer Eintrag "Wochentag"
 hinzugefügt. Dieser Eintrag öffnet ein Dialogfeld, das aus drei
 Steuerelementen besteht
 
-*	 A listbox to choose or type your date.
-*	 An "OK" button to display a messageBox containing your day.
+*	 Ein Datumsfeld um das Datum einzugeben oder auszuwählen.
+*	 ein OK-Schalter, der ein Meldungsfenster mit dem Wochentag zum
+   betreffenden Datum anzeigt.
 *	 einen Schalter "abbrechen", der den dialog schließt
 
 ## Anmerkungen ##
