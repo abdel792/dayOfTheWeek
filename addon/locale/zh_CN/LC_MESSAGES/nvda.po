@@ -5,50 +5,46 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: dayOfTheWeek 1.0\n"
+"Project-Id-Version: dayOfTheWeek 1.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2015-10-30 04:04+1000\n"
-"PO-Revision-Date: 2016-03-31 15:32+0200\n"
-"Language: fr\n"
+"POT-Creation-Date: 2015-12-04 04:04+1000\n"
+"PO-Revision-Date: 2016-03-27 22:10+0800\n"
+"Last-Translator: Noelia Ruiz Martínez <nrm1977@gmail.com>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Patrick ZAJDA <patrick@zajda.fr>\n"
+"X-Generator: Poedit 1.7.4\n"
 "Language-Team: \n"
-"X-Generator: Poedit 1.8.7\n"
 
 #. Translators: The title of the Date Dialog.
 msgid "Get the day of the week"
-msgstr "Obtenir le jour de la semaine"
+msgstr "查看某一天是星期几"
 
 #. Translators: A label for a list in a dialog.
 msgid "Type or select a date"
-msgstr "Taper ou sélectionner une date"
+msgstr "输入或选择一个日期"
 
 #. Translators: The title of a dialog.
 msgid "Your day"
-msgstr "Votre jour"
+msgstr "您的日期"
 
 #. Translators: Item in the tools menu for the Addon dayOfTheWeek.
 msgid "&Day of the week..."
-msgstr "Jour de la &semaine..."
+msgstr "星期几(&D)..."
 
 #. Translators: Message presented in input help mode.
 msgid "Allows you to find the day of the week corresponding to a chosen date."
-msgstr ""
-"Vous permet de connaître le jour de la semaine correspondant à une date "
-"donnée."
+msgstr "允许您查看所选日期是星期几"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Day of the week"
-msgstr "Jour de la semaine"
+msgstr "某天星期几"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
 "With this add-on, you'll be able to find the day of the week corresponding "
 "to a chosen date."
-msgstr ""
-"Avec ce module complémentaire, vous pourrez connaître le jour de la semaine "
-"correspondant à une date donnée."
+msgstr "使用此插件，允许您查看所选日期是星期几"
