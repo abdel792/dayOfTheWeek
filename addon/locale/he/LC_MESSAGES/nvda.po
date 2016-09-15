@@ -1,0 +1,52 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dayOfTheWeek 1.4\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2016-06-24 04:00+1000\n"
+"Last-Translator: shmuel <shmuel_naaman@yahoo.com>\n"
+"Language-Team: Shmuel Retbi , Shmuel Naaman"
+"PO-Revision-Date: 2016-09-11 19:03+0300\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.6\n"
+
+#. Translators: The title of the Date Dialog.
+msgid "Get the day of the week"
+msgstr "הצג את היום בשבוע"
+
+#. Translators: A label for a list in a dialog.
+msgid "Type or select a date"
+msgstr "נא הקש תאריך או בחר מהרשימה"
+
+#. Translators: The title of a dialog.
+msgid "Your day"
+msgstr "היום הוא "
+
+#. Translators: Item in the tools menu for the Addon dayOfTheWeek.
+msgid "&Day of the week..."
+msgstr "&יום בשבוע"
+
+#. Translators: Message presented in input help mode.
+msgid "Allows you to find the day of the week corresponding to a chosen date."
+msgstr "מחזיר את היום בשבוע של תאריך מסויים"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Day of the week"
+msgstr "יום בשבוע"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"With this add-on, you'll be able to find the day of the week corresponding "
+"to a chosen date."
+msgstr "תוסף זה מאפשר לדעת מהו היום בשבוע של תאריך מסויים"
