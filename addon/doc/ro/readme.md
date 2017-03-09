@@ -4,7 +4,7 @@
 *	 Descărcați [versiunea stabilă][1]
 *	 Descărcați [versiunea în dezvoltare][2]
 
-Acest add-on vă permite să găsiți o zi din săptămână care corespunde cu o
+Acest supliment vă permite să găsiți o zi din săptămână care corespunde cu o
 dată aleasă.
 
 El adaugă un element în NVDA, meniul instrumente, numit „Day of the week”,
