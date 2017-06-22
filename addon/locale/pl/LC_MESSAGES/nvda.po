@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the dayOfTheWeek package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dayOfTheWeek 1.4\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2017-02-03 04:00+1000\n"
+"PO-Revision-Date: 2017-06-22 01:41+0100\n"
+"Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+
+#. Translators: The title of the Date Dialog.
+msgid "Get the day of the week"
+msgstr "Dowiedź się od dacie w tygodniu"
+
+#. Translators: A label for a list in a dialog.
+msgid "Type or select a date"
+msgstr "Napisz, lub zaznacz datę"
+
+#. Translators: The title of a dialog.
+msgid "Your day"
+msgstr "Twój dzień"
+
+#. Translators: Item in the tools menu for the Addon dayOfTheWeek.
+msgid "&Day of the week..."
+msgstr "&Dzień tygodnia..."
+
+#. Translators: Message presented in input help mode.
+msgid "Allows you to find the day of the week corresponding to a chosen date."
+msgstr ""
+"Umożliwia poszukiwanie dnia tygodnia, odpowiadającego za konkretną datę."
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Day of the week"
+msgstr "dzień tygodnia"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"With this add-on, you'll be able to find the day of the week corresponding "
+"to a chosen date."
+msgstr ""
+"Za pomocą tego dodatku, można znaleźć dzień tygodnia, który odpowiada "
+"konkretniej dacie."
