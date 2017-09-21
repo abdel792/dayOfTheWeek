@@ -19,8 +19,8 @@ avautuu valintaikkuna, jossa on kolme säädintä:
 ## Huomautuksia ##
 *	 Voit sulkea valintaikkunan myös painamalla Esc-näppäintä.
 *	 Voit liittää valintaikkunan avaamista varten näppäinkomennon NVDA:n
-   Asetukset-valikon Syöte-eleet-kohdasta ja valitsemalla avautuvasta
-   valintaikkunasta Työkalut-luokan.
+   Asetukset-valikon Syötekomennot-kohdasta ja valitsemalla avautuvasta
+   valintaikkunasta Työkalut-kategorian.
 
 ## Muutokset versiossa 1.0 ##
 *	 Ensimmäinen versio.
