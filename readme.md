@@ -18,6 +18,6 @@ It adds an item in the NVDA Tools menu named "Day of the week", to open a dialog
 ## Changes for 1.0 ##
 *	 Initial version.
 
-[1]: http://addons.nvda-project.org/files/get.php?file=dw
+[1]: https://github.com/abdel792/dayOfTheWeek/releases/download/v1.5/dayOfTheWeek-1.5.nvda-addon
 
-[2]: http://addons.nvda-project.org/files/get.php?file=dw-dev
+[2]: https://github.com/abdel792/dayOfTheWeek/releases/download/v1.5/dayOfTheWeek-1.5.nvda-addon
