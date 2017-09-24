@@ -1,5 +1,13 @@
-# -*- coding: utf-8 -*-
+# -*- coding: UTF-8 -*-
+
+# globalPlugins/dayOfTheWeek.py.
 # Allows you to find the day of the week corresponding to a chosen date
+
+#Copyright (C) 2015-2017 Abdel <abdelkrim.bensaid@gmail.com>, Noelia <nrm1977@gmail.com>
+# Released under GPL 2
+#This file is covered by the GNU General Public License.
+#See the file COPYING for more details.
+
 # Authors:
 # Abdel <abdelkrim.bensaid@gmail.com>
 # Noelia <nrm1977@gmail.com>
@@ -9,10 +17,29 @@ addonHandler.initTranslation()
 import globalPluginHandler
 import wx
 import gui
+
 # Importing the SCRCAT_TOOLS category from the globalCommands module.
 from globalCommands import SCRCAT_TOOLS
 
+weekDays = {
+	# Translators: a day of the week.
+	"0": _("Sunday"),
+	# Translators: a day of the week.
+	"1": _("Monday"),
+	# Translators: a day of the week.
+	"2": _("Tuesday"),
+	# Translators: a day of the week.
+	"3": _("Wednesday"),
+	# Translators: a day of the week.
+	"4": _("Thursday"),
+	# Translators: a day of the week.
+	"5": _("Friday"),
+	# Translators: a day of the week.
+	"6": _("Saturday"),
+	}
+
 class DateDialog(wx.Dialog):
+
 	_instance = None
 	def __new__(cls, *args, **kwargs):
 		if DateDialog._instance is None:
@@ -25,18 +52,18 @@ class DateDialog(wx.Dialog):
 		DateDialog._instance = self
 		# Translators: The title of the Date Dialog.
 		super(DateDialog,self).__init__(parent,title=_("Get the day of the week"))
-		dialogSizer=wx.BoxSizer(wx.VERTICAL)
+		mainSizer=wx.BoxSizer(wx.VERTICAL)
+		sHelper = gui.guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
 		# Translators: A label for a list in a dialog.
-		datesLabel=wx.StaticText(self,-1,label=_("Type or select a date"))
-		dialogSizer.Add(datesLabel)
-		self.datePicker = wx.DatePickerCtrl(self)
-		dialogSizer.Add(item=self.datePicker, proportion = 0,flag=wx.ALL, border=5)
-		dialogSizer.Add(self.CreateButtonSizer(wx.OK | wx.CANCEL))
+		dateLabel = _("Type or select a date")
+		sHelper.addItem(wx.StaticText(self, label=dateLabel))
+		self.datePicker = sHelper.addItem(wx.DatePickerCtrl(self))
+		sHelper.addDialogDismissButtons(self.CreateButtonSizer(wx.OK|wx.CANCEL))
 		self.datePicker.Bind(wx.EVT_CHAR, self.onListChar)
 		self.Bind(wx.EVT_BUTTON, self.onOk, id=wx.ID_OK)
-		self.Bind(wx.EVT_BUTTON, self.onCancel, id=wx.ID_CANCEL)
-		dialogSizer.Fit(self)
-		self.SetSizer(dialogSizer)
+		mainSizer.Add(sHelper.sizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
+		self.Sizer = mainSizer
+		mainSizer.Fit(self)
 		self.datePicker.SetFocus()
 		self.Center(wx.BOTH | wx.CENTER_ON_SCREEN)
 
@@ -52,17 +79,15 @@ class DateDialog(wx.Dialog):
 
 	def onOk(self, evt):
 		date = self.datePicker.GetValue()
-		weekDay = date.Format("%A")
+		weekDay = weekDays[date.Format("%w")]
 		msgBox=gui.messageBox(
 		message=weekDay,
 		# Translators: The title of a dialog.
 		caption=_("Your day"),
 		style=wx.OK|wx.ICON_INFORMATION)
 
-	def onCancel(self, evt):
-		self.Destroy()
-
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
+
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
 		self.createSubMenu()
@@ -81,8 +106,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			pass
 
 	def onDateDialog(self, evt):
-		if gui.isInMessageBox:
-			return
 		gui.mainFrame.prePopup()
 		d=DateDialog(gui.mainFrame)
 		d.Show()
