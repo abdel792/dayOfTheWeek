@@ -20,7 +20,17 @@ controlli:
 *	 è possibile assegnare un tasto rapido per aprire la finestra di dialogo
    dal menu tasti e gesti di immissione, situato nelle preferenze di NVDA.
 
+## Changes for 2.0 ##
+
+*	 Used the gui.guiHelper module to ensure the correct appearance of the
+   dialog asking for a date;
+*	 Added the GPL license to the addon;
+*	 Days of the week have been translated, so that the add-on works properly
+   in the different languages;
+*	 Used the %w format for the dates rather than %a to avoid encoding errors.
+
 ## Modifiche per 1.0 ##
+
 *	 Versione iniziale.
 
 [[!tag dev stable]]

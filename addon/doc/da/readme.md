@@ -19,7 +19,17 @@ week". Menupunktet åbner en dialog, som består af tre felter.
 *	 Du kan tilknytte en genvejstast til at åbne dialogen under
    Inputbevægelser, nærmere bestemt under kategorien værktøjer.
 
+## Changes for 2.0 ##
+
+*	 Used the gui.guiHelper module to ensure the correct appearance of the
+   dialog asking for a date;
+*	 Added the GPL license to the addon;
+*	 Days of the week have been translated, so that the add-on works properly
+   in the different languages;
+*	 Used the %w format for the dates rather than %a to avoid encoding errors.
+
 ## Ændringer i 1.0 ##
+
 *	 Første version.
 
 [[!tag dev stable]]

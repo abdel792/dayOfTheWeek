@@ -18,7 +18,17 @@ dialog composed of 3 controls:
 *	 You can assign a shortcut to open the dialog in "Input gestures" menu
    and, more precisely, in the "Tools" category.
 
+## Changes for 2.0 ##
+
+*	 Used the gui.guiHelper module to ensure the correct appearance of the
+   dialog asking for a date;
+*	 Added the GPL license to the addon;
+*	 Days of the week have been translated, so that the add-on works properly
+   in the different languages;
+*	 Used the %w format for the dates rather than %a to avoid encoding errors.
+
 ## १.० मा गरिएका परिवर्तनहरू ##
+
 *	 शुरूको संस्करण
 
 [[!tag dev stable]]

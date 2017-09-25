@@ -20,7 +20,18 @@ pour ouvrir une boîte de dialogue composé de 3 contrôles :
    le menu "Gestes de Commandes" et, plus précisément, dans la catégorie
    "Outils".
 
+## Changements pour la version 2.0 ##
+
+*	 Utilisé le module gui.guiHelper pour assurer la bonne apparence de la
+   boîte de dialogue demandant une date ;
+*	 Ajout de la licence GPL pour le module complémentaire ;
+*	 Days of the week à été traduits, de sorte que le module complémentaire
+   fonctionne correctement dans les différentes langues ;
+*	 Utilisé le format %w pour les dates plutôt que %a pour éviter les erreurs
+   de codage.
+
 ## Changements pour la version 1.0 ##
+
 *	 Première version
 
 [[!tag dev stable]]

@@ -22,7 +22,17 @@ avautuu valintaikkuna, jossa on kolme säädintä:
    Asetukset-valikon Syötekomennot-kohdasta ja valitsemalla avautuvasta
    valintaikkunasta Työkalut-kategorian.
 
+## Changes for 2.0 ##
+
+*	 Used the gui.guiHelper module to ensure the correct appearance of the
+   dialog asking for a date;
+*	 Added the GPL license to the addon;
+*	 Days of the week have been translated, so that the add-on works properly
+   in the different languages;
+*	 Used the %w format for the dates rather than %a to avoid encoding errors.
+
 ## Muutokset versiossa 1.0 ##
+
 *	 Ensimmäinen versio.
 
 [[!tag dev stable]]

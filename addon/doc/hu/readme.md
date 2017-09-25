@@ -21,7 +21,17 @@ Hozzáadja az NVDA Eszközök menüjéhez A hét napja almenüt, ami 3 vezérlő
    párbeszédpanel megnyitásához, az opció az Eszközök kategóriában
    található.
 
+## Changes for 2.0 ##
+
+*	 Used the gui.guiHelper module to ensure the correct appearance of the
+   dialog asking for a date;
+*	 Added the GPL license to the addon;
+*	 Days of the week have been translated, so that the add-on works properly
+   in the different languages;
+*	 Used the %w format for the dates rather than %a to avoid encoding errors.
+
 ## Az 1.0 verzió változásai: ##
+
 *	 Első kiadás
 
 [[!tag dev stable]]
