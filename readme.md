@@ -15,6 +15,11 @@ It adds an item in the NVDA Tools menu named "Day of the week", to open a dialog
 *	 You can close this dialog just by pressing Escape.
 *	 You can assign a shortcut to open the dialog in "Input gestures" menu and, more precisely, in the "Tools" category.
 
+## Changes for 3.0 ##
+
+*	 Back to the %A format for the day of the week because it allows to recognize a greater number of languages;
+*	 Improved the accessibility of the date selection with recognition of the 3 fields 'Day', 'Month' and 'Year'.
+
 ## Changes for 2.0 ##
 
 *	 Used the gui.guiHelper module to ensure the correct appearance of the dialog asking for a date;
@@ -26,6 +31,6 @@ It adds an item in the NVDA Tools menu named "Day of the week", to open a dialog
 
 *	 Initial version.
 
-[1]: https://github.com/abdel792/dayOfTheWeek/releases/download/v2.0/dayOfTheWeek-2.0.nvda-addon
+[1]: https://github.com/abdel792/dayOfTheWeek/releases/download/v3.0-dev/dayOfTheWeek-3.0-dev.nvda-addon
 
-[2]: https://github.com/abdel792/dayOfTheWeek/releases/download/v2.0/dayOfTheWeek-2.0.nvda-addon
+[2]: https://github.com/abdel792/dayOfTheWeek/releases/download/v3.0-dev/dayOfTheWeek-3.0-dev.nvda-addon

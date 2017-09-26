@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 # globalPlugins/dayOfTheWeek.py.
+
 # Allows you to find the day of the week corresponding to a chosen date
 
 #Copyright (C) 2015-2017 Abdel <abdelkrim.bensaid@gmail.com>, Noelia <nrm1977@gmail.com>
@@ -8,39 +9,33 @@
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
 
-# Authors:
-# Abdel <abdelkrim.bensaid@gmail.com>
-# Noelia <nrm1977@gmail.com>
-
 import addonHandler
 addonHandler.initTranslation()
 import globalPluginHandler
+import speech
+import controlTypes
 import wx
 import gui
+from NVDAObjects.IAccessible import IAccessible
 
 # Importing the SCRCAT_TOOLS category from the globalCommands module.
 from globalCommands import SCRCAT_TOOLS
 
-weekDays = {
-	# Translators: a day of the week.
-	"0": _("Sunday"),
-	# Translators: a day of the week.
-	"1": _("Monday"),
-	# Translators: a day of the week.
-	"2": _("Tuesday"),
-	# Translators: a day of the week.
-	"3": _("Wednesday"),
-	# Translators: a day of the week.
-	"4": _("Thursday"),
-	# Translators: a day of the week.
-	"5": _("Friday"),
-	# Translators: a day of the week.
-	"6": _("Saturday"),
-	}
+fieldLabels = (
+	# Translators: The label of the days field.
+	_("You can select a day with the vertical arrows"),
+	# Translators: The label of the months field.
+	_("You can select a month with the vertical arrows"),
+	# Translators: The label of the years field.
+	_("You can select a year with the vertical arrows")
+)
+
+curDateField = 0
 
 class DateDialog(wx.Dialog):
 
 	_instance = None
+
 	def __new__(cls, *args, **kwargs):
 		if DateDialog._instance is None:
 			return super(DateDialog, cls).__new__(cls, *args, **kwargs)
@@ -78,19 +73,68 @@ class DateDialog(wx.Dialog):
 			evt.Skip()
 
 	def onOk(self, evt):
+		import ctypes
 		date = self.datePicker.GetValue()
-		weekDay = weekDays[date.Format("%w")]
+		weekDay = date.Format("%A").decode("mbcs")
 		msgBox=gui.messageBox(
 		message=weekDay,
 		# Translators: The title of a dialog.
 		caption=_("Your day"),
 		style=wx.OK|wx.ICON_INFORMATION)
 
+class MyDayOfWeek (IAccessible):
+
+	curField=0
+
+	def event_gainFocus (self):
+		global curDateField
+		speech.speakObject (self, reason=controlTypes.REASON_FOCUS)
+		if curDateField== 0: curDateField += 1
+		if curDateField== 1:
+			speech.speakMessage (fieldLabels[0])
+		if curDateField == 2:
+			speech.speakMessage (fieldLabels[1])
+		if curDateField== 3:
+			speech.speakMessage (fieldLabels[2])
+
+	def script_nextField (self, gesture):
+		global curDateField
+		gesture.send()
+		curDateField += 1
+		if curDateField > 3: curDateField = 1
+		if curDateField ==1:
+			speech.speakMessage (fieldLabels[0])
+		if curDateField==2:
+			speech.speakMessage (fieldLabels[1])
+		if curDateField==3:
+			speech.speakMessage (fieldLabels[2])
+
+	def script_previousField (self, gesture):
+		global curDateField
+		gesture.send()
+		curDateField-=1
+		if curDateField<1: curDateField=3
+		if curDateField==1:
+			speech.speakMessage (fieldLabels[0])
+		if curDateField==2:
+			speech.speakMessage (fieldLabels[1])
+		if curDateField==3:
+			speech.speakMessage (fieldLabels[2])
+
+	__gestures={
+		"kb:leftArrow":"previousField",
+		"kb:rightArrow":"nextField"
+	}
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
 		self.createSubMenu()
+
+	def chooseNVDAObjectOverlayClasses (self, obj, clsList):
+		if obj.value and obj.role == controlTypes.ROLE_DROPLIST and len(obj.value) == 10 and "/" in obj.value:
+			clsList.insert (0, MyDayOfWeek)
 
 	def createSubMenu(self):
 		self.toolsMenu = gui.mainFrame.sysTrayIcon.toolsMenu
