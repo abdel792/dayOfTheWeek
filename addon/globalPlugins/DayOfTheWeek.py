@@ -13,6 +13,9 @@ import addonHandler
 addonHandler.initTranslation()
 import globalPluginHandler
 import speech
+import time
+import keyboardHandler
+import api
 import controlTypes
 import wx
 import gui
@@ -31,6 +34,7 @@ fieldLabels = (
 )
 
 curDateField = 0
+oldSpeechMode = speech.speechMode
 
 class DateDialog(wx.Dialog):
 
@@ -75,7 +79,7 @@ class DateDialog(wx.Dialog):
 	def onOk(self, evt):
 		import ctypes
 		date = self.datePicker.GetValue()
-		weekDay = date.Format("%A").decode("mbcs")
+		weekDay = date.Format("%A")
 		msgBox=gui.messageBox(
 		message=weekDay,
 		# Translators: The title of a dialog.
@@ -84,42 +88,79 @@ class DateDialog(wx.Dialog):
 
 class MyDayOfWeek (IAccessible):
 
-	curField=0
-
 	def event_gainFocus (self):
 		global curDateField
 		speech.speakObject (self, reason=controlTypes.REASON_FOCUS)
 		if curDateField== 0: curDateField += 1
-		if curDateField== 1:
-			speech.speakMessage (fieldLabels[0])
-		if curDateField == 2:
-			speech.speakMessage (fieldLabels[1])
-		if curDateField== 3:
-			speech.speakMessage (fieldLabels[2])
+		self.sayField (curDateField)
+
+	def sayField (self, columnID):
+		fieldID = columnID - 1
+		speech.speakMessage (fieldLabels[fieldID])
+
+	def whatChanged (self, val1, val2):
+		global curDateField
+		val1 = val1.split("/")
+		val2 = val2.split("/")
+		if val1[0] != val2[0]:
+			curDateField = 1
+		if val1[1] != val2[1]:
+			curDateField = 2
+		if val1[2] != val2[2]:
+			curDateField = 3
+		self.sayField (curDateField)
 
 	def script_nextField (self, gesture):
-		global curDateField
+		val1 = self.value
+		increment = 0
 		gesture.send()
-		curDateField += 1
-		if curDateField > 3: curDateField = 1
-		if curDateField ==1:
-			speech.speakMessage (fieldLabels[0])
-		if curDateField==2:
-			speech.speakMessage (fieldLabels[1])
-		if curDateField==3:
-			speech.speakMessage (fieldLabels[2])
+		# I know it is not correct to do this, but we can't do otherwise.
+		speech.speechMode = speech.speechMode_off
+		keyboardHandler.KeyboardInputGesture.fromName ("downArrow").send()
+		increment = 1
+		api.processPendingEvents()
+		val2 = self.value
+		# We verify that we are not on the last value
+		if val1 == val2:
+			# In this case, we move to the previous value.
+			keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send()
+			increment = -1
+			api.processPendingEvents()
+		# We restore the value of the current date.
+		if increment == -1:
+			keyboardHandler.KeyboardInputGesture.fromName ("downArrow").send()
+			api.processPendingEvents()
+		if increment == 1:
+			keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send()
+			api.processPendingEvents()
+		speech.speechMode = oldSpeechMode
+		self.whatChanged (val1, val2)
 
 	def script_previousField (self, gesture):
-		global curDateField
+		val1 = self.value
+		increment = 0
 		gesture.send()
-		curDateField-=1
-		if curDateField<1: curDateField=3
-		if curDateField==1:
-			speech.speakMessage (fieldLabels[0])
-		if curDateField==2:
-			speech.speakMessage (fieldLabels[1])
-		if curDateField==3:
-			speech.speakMessage (fieldLabels[2])
+		# I know it is not correct to do this, but we can't do otherwise.
+		speech.speechMode = speech.speechMode_off
+		keyboardHandler.KeyboardInputGesture.fromName ("downArrow").send()
+		increment = 1
+		api.processPendingEvents()
+		val2 = self.value
+		# We verify that we are not on the last value
+		if val1 == val2:
+			# In this case, we move to the previous value.
+			keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send()
+			increment = -1
+			api.processPendingEvents()
+		# We restore the value of the current date.
+		if increment == -1:
+			keyboardHandler.KeyboardInputGesture.fromName ("downArrow").send()
+			api.processPendingEvents()
+		if increment == 1:
+			keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send()
+			api.processPendingEvents()
+		speech.speechMode = oldSpeechMode
+		self.whatChanged (val1, val2)
 
 	__gestures={
 		"kb:leftArrow":"previousField",
