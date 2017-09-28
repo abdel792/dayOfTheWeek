@@ -19,14 +19,15 @@ ca să deschidă un dialog compus din 3 controale:
 *	 Puteți aloca o comandă rapidă pentru a deschide dialogul în meniul
    „Gesturi de intrare” și, mai precis, în categoria „Instrumente”.
 
-## Changes for 2.0 ##
+## Modificări în versiunea 2.0 ##
 
-*	 Used the gui.guiHelper module to ensure the correct appearance of the
-   dialog asking for a date;
-*	 Added the GPL license to the addon;
-*	 Days of the week have been translated, so that the add-on works properly
-   in the different languages;
-*	 Used the %w format for the dates rather than %a to avoid encoding errors.
+*	 A fost folosit modulul gui.guiHelper pentru a asigura aspectul corect al
+   dialogului care cere o dată;
+*	 A fost adăugată licența GPL pentru supliment;
+*	 Zilele săptămânii au fost traduse, astfel încât suplimentul să
+   funcționeze corect în diferite limbi;
+*	 A fost folosit formatul %w pentru date, mai degrabă decât %a pentru
+   evitarea erorilor de codificare.
 
 ## Modificări în versiunea 1.0 ##
 
