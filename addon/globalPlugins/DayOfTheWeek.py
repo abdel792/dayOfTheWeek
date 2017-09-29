@@ -17,6 +17,7 @@ import keyboardHandler
 import globalVars
 import api
 import ui
+import os
 import controlTypes
 import wx
 import gui
@@ -24,8 +25,8 @@ from gui.settingsDialogs import SettingsDialog
 from NVDAObjects.IAccessible import IAccessible
 import config
 
-# Importing the SCRCAT_TOOLS category from the globalCommands module.
-from globalCommands import SCRCAT_TOOLS
+### Constants
+ADDON_SUMMARY = addonHandler.Addon (os.path.join (os.path.dirname (__file__), '..').decode ('mbcs')).manifest['summary']
 
 fieldLabels = (
 	# Translators: The label of the days field.
@@ -50,7 +51,7 @@ georgianDays = {
 }
 
 curDateField = 0
-oldSpeechMode = speech.speechMode
+savedSpeechMode = speech.speechMode if not speech.speechMode == speech.speechMode_off else None
 
 confSpec = {
 	'reportLabels': 'boolean(default = True)'
@@ -117,10 +118,9 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 	def makeSettings (self, settingsSizer):
 		settingsSizerHelper = gui.guiHelper.BoxSizerHelper (self, sizer = settingsSizer)
 		# Translators: The label of the checkbox to enable or disable the date field labels announcements.
-		self.reportDateFieldLabelsCheckBox = wx.CheckBox (parent = self, label = _("Enable announcements of the date field labels"))
+		labelAnnounce = _("Enable announcements of the date field labels")
+		self.reportDateFieldLabelsCheckBox = wx.CheckBox (parent = self, label = labelAnnounce)
 		self.reportDateFieldLabelsCheckBox.SetValue (config.conf['dayOfWeek']['reportLabels'])
-		if globalVars.appArgs.secure:
-			self.reportDateFieldLabelsCheckBox.Disable ()
 		settingsSizerHelper.addItem (self.reportDateFieldLabelsCheckBox)
 
 	def postInit (self):
@@ -156,64 +156,43 @@ class MyDayOfWeek (IAccessible):
 			curDateField = 3
 		self.sayField (curDateField)
 
-	def script_nextField (self, gesture):
+	def script_switchBetweenDateFields (self, gesture):
 		val1 = self.value
 		increment = 0
 		gesture.send ()
 		# I know it is not correct to do this, but we can't do otherwise.
-		speech.speechMode = speech.speechMode_off
-		keyboardHandler.KeyboardInputGesture.fromName ("downArrow").send ()
-		increment = 1
-		api.processPendingEvents ()
-		val2 = self.value
-		# We verify that we are not on the last value
-		if val1 == val2:
-			# In this case, we move to the previous value.
-			keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-			increment = -1
-			api.processPendingEvents ()
-		# We restore the value of the current date.
-		if increment == -1:
+		# We check if the speechMode is off or note.
+		if savedSpeechMode:
+			speech.speechMode = speech.speechMode_off
 			keyboardHandler.KeyboardInputGesture.fromName ("downArrow").send ()
+			increment = 1
 			api.processPendingEvents ()
-		if increment == 1:
-			keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-			api.processPendingEvents ()
-		speech.speechMode = oldSpeechMode
-		self.whatChanged (val1, val2)
-
-	def script_previousField (self, gesture):
-		val1 = self.value
-		increment = 0
-		gesture.send ()
-		# I know it is not correct to do this, but we can't do otherwise.
-		speech.speechMode = speech.speechMode_off
-		keyboardHandler.KeyboardInputGesture.fromName ("downArrow").send ()
-		increment = 1
-		api.processPendingEvents ()
-		val2 = self.value
-		# We verify that we are not on the last value
-		if val1 == val2:
-			# In this case, we move to the previous value.
-			keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-			increment = -1
-			api.processPendingEvents ()
-		# We restore the value of the current date.
-		if increment == -1:
-			keyboardHandler.KeyboardInputGesture.fromName ("downArrow").send ()
-			api.processPendingEvents ()
-		if increment == 1:
-			keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-			api.processPendingEvents ()
-		speech.speechMode = oldSpeechMode
+			val2 = self.value
+			# We verify that we are not on the last value
+			if val1 == val2:
+				# In this case, we move to the previous value.
+				keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+				increment = -1
+				api.processPendingEvents ()
+			# We restore the value of the current date.
+			if increment == -1:
+				keyboardHandler.KeyboardInputGesture.fromName ("downArrow").send ()
+				api.processPendingEvents ()
+			if increment == 1:
+				keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+				api.processPendingEvents ()
+			# We give back to the speechMode its saved value.
+			speech.speechMode = savedSpeechMode
 		self.whatChanged (val1, val2)
 
 	__gestures = {
-		"kb:leftArrow":"previousField",
-		"kb:rightArrow":"nextField"
+		"kb:leftArrow":"switchBetweenDateFields",
+		"kb:rightArrow":"switchBetweenDateFields"
 	}
 
 class GlobalPlugin (globalPluginHandler.GlobalPlugin):
+
+	scriptCategory = ADDON_SUMMARY
 
 	def __init__(self, *args, **kwargs):
 		super (GlobalPlugin, self).__init__(*args, **kwargs)
@@ -231,15 +210,17 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		_("&Day of the week..."),
 		# Translators: The tooltyp text for the dayOfTheWeek submenu.
 		_("Day of the week add-on and its settings"))
+
 		dateChoice = dowMenu.Append (wx.ID_ANY,
 		# Translators: The name of the first item in the dayOfTheWeek add-on submenu.
 		_("Search a &day"),
 		# Translators: The tooltyp text for the first item in the dayOfTheWeek add-on submenu.
 		_("Search a day in the calendar"))
 		gui.mainFrame.sysTrayIcon.Bind (wx.EVT_MENU, self.onDateDialog, dateChoice)
+
 		addonSettings = dowMenu.Append (wx.ID_ANY,
 		# Translators: The name of the second item in the dayOfTheWeek add-on submenu.
-		_("dayOfTheWeek add-on se&ttings"),
+		_("{0} add-on se&ttings").format ("dayOfTheWeek"),
 		# Translators: The tooltyp text for the second item in the dayOfTheWeek add-on submenu.
 		_("Configure the dayOfTheWeek add-on"))
 		gui.mainFrame.sysTrayIcon.Bind (wx.EVT_MENU, self.onAddonSettingsDialog, addonSettings)
@@ -267,11 +248,10 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 
 	# Translators: Message presented in input help mode.
 	script_activateDayOfTheWeekDialog.__doc__ = _("Allows you to find the day of the week corresponding to a chosen date.")
-	script_activateDayOfTheWeekDialog.category = SCRCAT_TOOLS
 
 	def script_activateDayOfTheWeekSettingsDialog (self, gesture):
 		wx.CallAfter (self.onAddonSettingsDialog, gui.mainFrame)
 
 	# Translators: Message presented in input help mode.
 	script_activateDayOfTheWeekSettingsDialog.__doc__ = _("Allows you to open the dayOfTheWeek add-on settings dialog.")
-	script_activateDayOfTheWeekSettingsDialog.category = SCRCAT_TOOLS
+
