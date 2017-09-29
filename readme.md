@@ -5,15 +5,23 @@
 
 This add-on allows you to find a day of the week corresponding to a chosen date.
 
-It adds an item in the NVDA Tools menu named "Day of the week", to open a dialog composed of 3 controls:
+It adds a submenu in the NVDA Preferences menu named "Day of the week", containing 2 items:
 
-*	 A listbox to choose or type your date.
-*	 An "OK" button to display a messageBox containing your day.
-*	 A "Cancel" button to close the dialog.
+*	 The first one named "Search a day", opens a dialog composed of 3 controls:
+	*	 A listbox to choose or type your date.
+	*	 An "OK" button to display a messageBox containing your day.
+	*	 A "Cancel" button to close the dialog.
+*	 The second one named "dayOfTheWeek add-on settings" opens the parameters of the add-on to specify whether you want labels for date fields or not.
 
 ## Notes ##
 *	 You can close this dialog just by pressing Escape.
-*	 You can assign a shortcut to open the dialog in "Input gestures" menu and, more precisely, in the "Tools" category.
+*	 You can assign a shortcut to open these dialogs in "Input gestures" menu and, more precisely, in the "Tools" category.
+
+## Changes for 4.0 ##
+
+*	 Added a technique for the integration of the Georgian language for the recognition of the days of the week;
+*	 Added the braille recognition in the labels of the date fields;
+*	 Added a configuration dialog box to enable or disable the announces of the labels.
 
 ## Changes for 3.0 ##
 
@@ -31,6 +39,6 @@ It adds an item in the NVDA Tools menu named "Day of the week", to open a dialog
 
 *	 Initial version.
 
-[1]: https://github.com/abdel792/dayOfTheWeek/releases/download/v3.0-dev/dayOfTheWeek-3.0-dev.nvda-addon
+[1]: https://github.com/abdel792/dayOfTheWeek/releases/download/v4.0-dev/dayOfTheWeek-4.0-dev.nvda-addon
 
-[2]: https://github.com/abdel792/dayOfTheWeek/releases/download/v3.0-dev/dayOfTheWeek-3.0-dev.nvda-addon
+[2]: https://github.com/abdel792/dayOfTheWeek/releases/download/v4.0-dev/dayOfTheWeek-4.0-dev.nvda-addon

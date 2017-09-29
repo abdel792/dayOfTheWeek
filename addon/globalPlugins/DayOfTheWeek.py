@@ -13,13 +13,16 @@ import addonHandler
 addonHandler.initTranslation()
 import globalPluginHandler
 import speech
-import time
 import keyboardHandler
+import globalVars
 import api
+import ui
 import controlTypes
 import wx
 import gui
+from gui.settingsDialogs import SettingsDialog
 from NVDAObjects.IAccessible import IAccessible
+import config
 
 # Importing the SCRCAT_TOOLS category from the globalCommands module.
 from globalCommands import SCRCAT_TOOLS
@@ -33,8 +36,26 @@ fieldLabels = (
 	_("You can select a year with the vertical arrows")
 )
 
+# The following tuple was created to list the Georgian days that are not recognized by the %A format, this technique will be improved if other languages ??encounter the same problem.
+# Other localization messages for the Georgian language can be translated by the NVDA translation team.
+
+georgianDays = (
+	u'?????',
+	u'????????',
+	u'?????????',
+	u'?????????',
+	u'?????????',
+	u'?????????',
+	u'??????'
+)
+
 curDateField = 0
 oldSpeechMode = speech.speechMode
+
+confSpec = {
+	'reportLabels': 'boolean(default = True)'
+	}
+config.conf.spec['dayOfWeek'] = confSpec
 
 class DateDialog(wx.Dialog):
 
@@ -50,17 +71,18 @@ class DateDialog(wx.Dialog):
 			return
 		DateDialog._instance = self
 		# Translators: The title of the Date Dialog.
-		super(DateDialog,self).__init__(parent,title=_("Get the day of the week"))
-		mainSizer=wx.BoxSizer(wx.VERTICAL)
-		sHelper = gui.guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
+		dlgTitle = _("Get the day of the week")
+		super(DateDialog,self).__init__(parent,title = dlgTitle)
+		mainSizer = wx.BoxSizer(wx.VERTICAL)
+		sHelper = gui.guiHelper.BoxSizerHelper(self, orientation = wx.VERTICAL)
 		# Translators: A label for a list in a dialog.
 		dateLabel = _("Type or select a date")
-		sHelper.addItem(wx.StaticText(self, label=dateLabel))
+		sHelper.addItem(wx.StaticText(self, label = dateLabel))
 		self.datePicker = sHelper.addItem(wx.DatePickerCtrl(self))
 		sHelper.addDialogDismissButtons(self.CreateButtonSizer(wx.OK|wx.CANCEL))
 		self.datePicker.Bind(wx.EVT_CHAR, self.onListChar)
-		self.Bind(wx.EVT_BUTTON, self.onOk, id=wx.ID_OK)
-		mainSizer.Add(sHelper.sizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
+		self.Bind(wx.EVT_BUTTON, self.onOk, id = wx.ID_OK)
+		mainSizer.Add(sHelper.sizer, border = gui.guiHelper.BORDER_FOR_DIALOGS, flag = wx.ALL)
 		self.Sizer = mainSizer
 		mainSizer.Fit(self)
 		self.datePicker.SetFocus()
@@ -77,26 +99,50 @@ class DateDialog(wx.Dialog):
 			evt.Skip()
 
 	def onOk(self, evt):
-		import ctypes
+		import languageHandler
+		curNVDALang = languageHandler.getLanguage ()
 		date = self.datePicker.GetValue()
-		weekDay = date.Format("%A")
-		msgBox=gui.messageBox(
-		message=weekDay,
+		weekDay = date.Format("%A") if not curNVDALang == u"ka" else georgianDays[date.Format ("%w")]
+		msgBox = gui.messageBox(
+		message = weekDay,
 		# Translators: The title of a dialog.
-		caption=_("Your day"),
-		style=wx.OK|wx.ICON_INFORMATION)
+		caption = _("Your day"),
+		style = wx.OK|wx.ICON_INFORMATION)
+
+class DayOfWeekSettingsDialog (SettingsDialog):
+
+	# Translators: The title of the add-on configuration dialog box.
+	title = _("Configuration of the addon {0}").format ("dayOfTheWeek")
+
+	def makeSettings (self, settingsSizer):
+		settingsSizerHelper = gui.guiHelper.BoxSizerHelper (self, sizer = settingsSizer)
+		# Translators: The label of the checkbox to enable or disable the date field labels announcements.
+		self.reportDateFieldLabelsCheckBox = wx.CheckBox (parent = self, label = _("Enable announcements of the date field labels"))
+		self.reportDateFieldLabelsCheckBox.SetValue (config.conf['dayOfWeek']['reportLabels'])
+		if globalVars.appArgs.secure:
+			self.reportDateFieldLabelsCheckBox.Disable ()
+		settingsSizerHelper.addItem (self.reportDateFieldLabelsCheckBox)
+
+	def postInit (self):
+		self.reportDateFieldLabelsCheckBox.SetFocus ()
+
+	def onOk (self, evt):
+		config.conf['dayOfWeek']['reportLabels'] = self.reportDateFieldLabelsCheckBox.GetValue ()
+		super (DayOfWeekSettingsDialog, self).onOk (evt)
 
 class MyDayOfWeek (IAccessible):
 
 	def event_gainFocus (self):
 		global curDateField
-		speech.speakObject (self, reason=controlTypes.REASON_FOCUS)
-		if curDateField== 0: curDateField += 1
+		speech.speakObject (self, reason = controlTypes.REASON_FOCUS)
+		if curDateField == 0: curDateField += 1
 		self.sayField (curDateField)
 
 	def sayField (self, columnID):
 		fieldID = columnID - 1
-		speech.speakMessage (fieldLabels[fieldID])
+		label = fieldLabels[fieldID]
+		if config.conf["dayOfWeek"]["reportLabels"]:
+			ui.message (label)
 
 	def whatChanged (self, val1, val2):
 		global curDateField
@@ -162,7 +208,7 @@ class MyDayOfWeek (IAccessible):
 		speech.speechMode = oldSpeechMode
 		self.whatChanged (val1, val2)
 
-	__gestures={
+	__gestures = {
 		"kb:leftArrow":"previousField",
 		"kb:rightArrow":"nextField"
 	}
@@ -178,26 +224,54 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			clsList.insert (0, MyDayOfWeek)
 
 	def createSubMenu(self):
-		self.toolsMenu = gui.mainFrame.sysTrayIcon.toolsMenu
-		# Translators: Item in the tools menu for the Addon dayOfTheWeek.
-		self.dayOfTheWeek = self.toolsMenu.Append(wx.ID_ANY, _("&Day of the week..."),
-		"")
-		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onDateDialog, self.dayOfTheWeek)
+		self.menu = gui.mainFrame.sysTrayIcon.preferencesMenu
+		dowMenu = wx.Menu()
+		self.mainItem = self.menu.AppendSubMenu (dowMenu,
+		# Translators: Item in the preferences menu for the Addon dayOfTheWeek.
+		_("&Day of the week..."),
+		# Translators: The tooltyp text for the dayOfTheWeek submenu.
+		_("Day of the week add-on and its settings"))
+		dateChoice = dowMenu.Append (wx.ID_ANY,
+		# Translators: The name of the first item in the dayOfTheWeek add-on submenu.
+		_("Search a &day"),
+		# Translators: The tooltyp text for the first item in the dayOfTheWeek add-on submenu.
+		_("Search a day in the calendar"))
+		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onDateDialog, dateChoice)
+		addonSettings = dowMenu.Append (wx.ID_ANY,
+		# Translators: The name of the second item in the dayOfTheWeek add-on submenu.
+		_("dayOfTheWeek add-on se&ttings"),
+		# Translators: The tooltyp text for the second item in the dayOfTheWeek add-on submenu.
+		_("Configure the dayOfTheWeek add-on"))
+		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onAddonSettingsDialog, addonSettings)
 
 	def terminate(self):
 		try:
-			self.toolsMenu.RemoveItem(self.dayOfTheWeek)
+			self.menu.RemoveItem(self.mainItem)
 		except wx.PyDeadObjectError:
 			pass
 
-	def onDateDialog(self, evt):
+	def onDateDialog (self, evt):
 		gui.mainFrame.prePopup()
-		d=DateDialog(gui.mainFrame)
+		d = DateDialog (gui.mainFrame)
+		d.Show()
+		gui.mainFrame.postPopup()
+
+	def onAddonSettingsDialog (self, evt):
+		gui.mainFrame.prePopup()
+		d = DayOfWeekSettingsDialog (gui.mainFrame)
 		d.Show()
 		gui.mainFrame.postPopup()
 
 	def script_activateDayOfTheWeekDialog(self, gesture):
 		wx.CallAfter(self.onDateDialog, gui.mainFrame)
+
 	# Translators: Message presented in input help mode.
 	script_activateDayOfTheWeekDialog.__doc__ = _("Allows you to find the day of the week corresponding to a chosen date.")
 	script_activateDayOfTheWeekDialog.category = SCRCAT_TOOLS
+
+	def script_activateDayOfTheWeekSettingsDialog(self, gesture):
+		wx.CallAfter(self.onAddonSettingsDialog, gui.mainFrame)
+
+	# Translators: Message presented in input help mode.
+	script_activateDayOfTheWeekSettingsDialog.__doc__ = _("Allows you to open the dayOfTheWeek add-on settings dialog.")
+	script_activateDayOfTheWeekSettingsDialog.category = SCRCAT_TOOLS
