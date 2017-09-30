@@ -139,7 +139,6 @@ class MyDayOfWeek (IAccessible):
 		self.sayField (curDateField)
 
 	def sayField (self, columnID):
-		import braille
 		import ui
 		fieldID = columnID - 1
 		label = fieldLabels[fieldID]
