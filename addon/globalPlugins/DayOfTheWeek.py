@@ -136,9 +136,9 @@ class MyDayOfWeek (IAccessible):
 		global curDateField
 		speech.speakObject (self, reason = controlTypes.REASON_FOCUS)
 		if curDateField == 0: curDateField += 1
-		self.sayField (curDateField)
+		self.sayFieldLabel (curDateField)
 
-	def sayField (self, columnID):
+	def sayFieldLabel (self, columnID):
 		import ui
 		fieldID = columnID - 1
 		label = fieldLabels[fieldID]
@@ -154,7 +154,7 @@ class MyDayOfWeek (IAccessible):
 			curDateField = 2
 		if val1[2] != val2[2]:
 			curDateField = 3
-		self.sayField (curDateField)
+		self.sayFieldLabel (curDateField)
 
 	def script_switchBetweenDateFields (self, gesture):
 		val1 = self.value
