@@ -16,7 +16,6 @@ import speech
 import keyboardHandler
 import globalVars
 import api
-import ui
 import os
 import controlTypes
 import wx
@@ -51,7 +50,6 @@ georgianDays = {
 }
 
 curDateField = 0
-savedSpeechMode = speech.speechMode if not speech.speechMode == speech.speechMode_off else None
 
 confSpec = {
 	'reportLabels': 'boolean(default = True)'
@@ -132,6 +130,8 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 
 class MyDayOfWeek (IAccessible):
 
+	savedSpeechMode = speech.speechMode
+
 	def event_gainFocus (self):
 		global curDateField
 		speech.speakObject (self, reason = controlTypes.REASON_FOCUS)
@@ -139,9 +139,15 @@ class MyDayOfWeek (IAccessible):
 		self.sayField (curDateField)
 
 	def sayField (self, columnID):
+		import braille
+		import ui
 		fieldID = columnID - 1
 		label = fieldLabels[fieldID]
-		if config.conf["dayOfWeek"]["reportLabels"]:
+		# We check the state of the current speechMode.
+		if self.savedSpeechMode == speech.speechMode_off:
+			# We announce the field label for those who only use braille.
+			braille.handler.message (label)
+		else:
 			ui.message (label)
 
 	def whatChanged (self, val1, val2):
@@ -159,30 +165,33 @@ class MyDayOfWeek (IAccessible):
 	def script_switchBetweenDateFields (self, gesture):
 		val1 = self.value
 		increment = 0
+		self.savedSpeechMode = speech.speechMode
 		gesture.send ()
 		# I know it is not correct to do this, but we can't do otherwise.
 		# We check if the speechMode is off or note.
-		if savedSpeechMode:
+		if self.savedSpeechMode != speech.speechMode_off:
 			speech.speechMode = speech.speechMode_off
-			keyboardHandler.KeyboardInputGesture.fromName ("downArrow").send ()
-			increment = 1
+		# The following calculation must be made in all cases, to allow those who use only Braille, to have the announcement of the labels of the date fields.
+		keyboardHandler.KeyboardInputGesture.fromName ("downArrow").send ()
+		increment = 1
+		api.processPendingEvents ()
+		val2 = self.value
+		# We verify that we are not on the last value
+		if val1 == val2:
+			# In this case, we move to the previous value.
+			keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+			increment = -1
 			api.processPendingEvents ()
-			val2 = self.value
-			# We verify that we are not on the last value
-			if val1 == val2:
-				# In this case, we move to the previous value.
-				keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-				increment = -1
-				api.processPendingEvents ()
-			# We restore the value of the current date.
-			if increment == -1:
-				keyboardHandler.KeyboardInputGesture.fromName ("downArrow").send ()
-				api.processPendingEvents ()
-			if increment == 1:
-				keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-				api.processPendingEvents ()
-			# We give back to the speechMode its saved value.
-			speech.speechMode = savedSpeechMode
+		# We restore the value of the current date.
+		if increment == -1:
+			keyboardHandler.KeyboardInputGesture.fromName ("downArrow").send ()
+			api.processPendingEvents ()
+		if increment == 1:
+			keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+			api.processPendingEvents ()
+		# We give back to the speechMode its saved value.
+		if self.savedSpeechMode != speech.speechMode_off:
+			speech.speechMode = self.savedSpeechMode
 		self.whatChanged (val1, val2)
 
 	__gestures = {
@@ -199,7 +208,7 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		self.createSubMenu ()
 
 	def chooseNVDAObjectOverlayClasses (self, obj, clsList):
-		if obj.value and obj.role == controlTypes.ROLE_DROPLIST and len (obj.value) == 10 and "/" in obj.value:
+		if obj.value and obj.role == controlTypes.ROLE_DROPLIST and len (obj.value) == 10 and "/" in obj.value and config.conf["dayOfWeek"]["reportLabels"]:
 			clsList.insert (0, MyDayOfWeek)
 
 	def createSubMenu (self):
