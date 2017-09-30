@@ -143,12 +143,7 @@ class MyDayOfWeek (IAccessible):
 		import ui
 		fieldID = columnID - 1
 		label = fieldLabels[fieldID]
-		# We check the state of the current speechMode.
-		if self.savedSpeechMode == speech.speechMode_off:
-			# We announce the field label for those who only use braille.
-			braille.handler.message (label)
-		else:
-			ui.message (label)
+		ui.message (label)
 
 	def whatChanged (self, val1, val2):
 		global curDateField
