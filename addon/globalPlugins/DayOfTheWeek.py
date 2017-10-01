@@ -14,7 +14,6 @@ addonHandler.initTranslation ()
 import globalPluginHandler
 import speech
 import keyboardHandler
-import globalVars
 import api
 import os
 import controlTypes
@@ -25,7 +24,7 @@ from NVDAObjects.IAccessible import IAccessible
 import config
 
 ### Constants
-ADDON_SUMMARY = addonHandler.Addon (os.path.join (os.path.dirname (__file__), '..').decode ('mbcs')).manifest['summary']
+ADDON_SUMMARY = addonHandler.Addon (os.path.join (os.path.dirname (__file__), "..").decode ("mbcs")).manifest["summary"]
 
 fieldLabels = (
 	# Translators: The label of the days field.
@@ -52,9 +51,9 @@ georgianDays = {
 curDateField = 0
 
 confSpec = {
-	'reportLabels': 'boolean(default = True)'
+	"reportLabels" : "boolean(default = True)"
 	}
-config.conf.spec['dayOfWeek'] = confSpec
+config.conf.spec["dayOfWeek"] = confSpec
 
 class DateDialog (wx.Dialog):
 
@@ -118,17 +117,17 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 		# Translators: The label of the checkbox to enable or disable the date field labels announcements.
 		labelAnnounce = _("Enable announcements of the date field labels")
 		self.reportDateFieldLabelsCheckBox = wx.CheckBox (parent = self, label = labelAnnounce)
-		self.reportDateFieldLabelsCheckBox.SetValue (config.conf['dayOfWeek']['reportLabels'])
+		self.reportDateFieldLabelsCheckBox.SetValue (config.conf["dayOfWeek"]["reportLabels"])
 		settingsSizerHelper.addItem (self.reportDateFieldLabelsCheckBox)
 
 	def postInit (self):
 		self.reportDateFieldLabelsCheckBox.SetFocus ()
 
 	def onOk (self, evt):
-		config.conf['dayOfWeek']['reportLabels'] = self.reportDateFieldLabelsCheckBox.GetValue ()
+		config.conf["dayOfWeek"]["reportLabels"] = self.reportDateFieldLabelsCheckBox.GetValue ()
 		super (DayOfWeekSettingsDialog, self).onOk (evt)
 
-class MyDayOfWeek (IAccessible):
+class AnnounceFieldsLabels (IAccessible):
 
 	increment = 0
 
@@ -160,7 +159,7 @@ class MyDayOfWeek (IAccessible):
 		if self.increment:
 			return
 		else:
-			super(MyDayOfWeek, self).event_valueChange()
+			super(AnnounceFieldsLabels, self).event_valueChange()
 
 	def script_switchBetweenDateFields (self, gesture):
 		val1 = self.value
@@ -201,7 +200,7 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 
 	def chooseNVDAObjectOverlayClasses (self, obj, clsList):
 		if obj.value and obj.role == controlTypes.ROLE_DROPLIST and len (obj.value) == 10 and "/" in obj.value and config.conf["dayOfWeek"]["reportLabels"]:
-			clsList.insert (0, MyDayOfWeek)
+			clsList.insert (0, AnnounceFieldsLabels)
 
 	def createSubMenu (self):
 		self.menu = gui.mainFrame.sysTrayIcon.preferencesMenu
