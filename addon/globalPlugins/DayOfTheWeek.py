@@ -130,7 +130,7 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 
 class MyDayOfWeek (IAccessible):
 
-	savedSpeechMode = speech.speechMode
+	increment = 0
 
 	def event_gainFocus (self):
 		global curDateField
@@ -156,37 +156,35 @@ class MyDayOfWeek (IAccessible):
 			curDateField = 3
 		self.sayFieldLabel (curDateField)
 
+	def event_valueChange(self):
+		if self.increment:
+			return
+		else:
+			super(MyDayOfWeek, self).event_valueChange()
+
 	def script_switchBetweenDateFields (self, gesture):
 		val1 = self.value
-		increment = 0
-		self.savedSpeechMode = speech.speechMode
 		gesture.send ()
-		# I know it is not correct to do this, but we can't do otherwise.
-		# We check if the speechMode is off or note.
-		if self.savedSpeechMode != speech.speechMode_off:
-			speech.speechMode = speech.speechMode_off
 		# The following calculation must be made in all cases, to allow those who use only Braille, to have the announcement of the labels of the date fields.
 		keyboardHandler.KeyboardInputGesture.fromName ("downArrow").send ()
-		increment = 1
+		self.increment = 1
 		api.processPendingEvents ()
 		val2 = self.value
 		# We verify that we are not on the last value
 		if val1 == val2:
 			# In this case, we move to the previous value.
 			keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-			increment = -1
+			self.increment = -1
 			api.processPendingEvents ()
 		# We restore the value of the current date.
-		if increment == -1:
+		if self.increment == -1:
 			keyboardHandler.KeyboardInputGesture.fromName ("downArrow").send ()
 			api.processPendingEvents ()
-		if increment == 1:
+		elif self.increment == 1:
 			keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
 			api.processPendingEvents ()
-		# We give back to the speechMode its saved value.
-		if self.savedSpeechMode != speech.speechMode_off:
-			speech.speechMode = self.savedSpeechMode
 		self.whatChanged (val1, val2)
+		self.increment = 0
 
 	__gestures = {
 		"kb:leftArrow":"switchBetweenDateFields",
