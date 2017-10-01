@@ -133,7 +133,7 @@ class AnnounceFieldsLabels (IAccessible):
 
 	def event_gainFocus (self):
 		global curDateField
-		speech.speakObject (self, reason = controlTypes.REASON_FOCUS)
+		super (AnnounceFieldsLabels, self).event_gainFocus ()
 		if curDateField == 0: curDateField += 1
 		self.sayFieldLabel (curDateField)
 
@@ -155,11 +155,10 @@ class AnnounceFieldsLabels (IAccessible):
 			curDateField = 3
 		self.sayFieldLabel (curDateField)
 
-	def event_valueChange(self):
+	def event_valueChange (self):
 		if self.increment:
 			return
-		else:
-			super(AnnounceFieldsLabels, self).event_valueChange()
+		super (AnnounceFieldsLabels, self).event_valueChange ()
 
 	def script_switchBetweenDateFields (self, gesture):
 		val1 = self.value
