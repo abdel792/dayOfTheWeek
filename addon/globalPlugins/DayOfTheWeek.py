@@ -186,6 +186,8 @@ class AnnounceFieldsLabels (IAccessible):
 		if val1[2] != val2[2]:
 			curDateField = 3
 			curValue = val1[2]
+		if curValue == "1601":
+			curDateField = 3
 		if not self.vertical:
 			self.sayFieldLabel (curValue, curDateField)
 		else:
