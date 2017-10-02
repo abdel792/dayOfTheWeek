@@ -176,7 +176,7 @@ class AnnounceFieldsLabels (IAccessible):
 		global curDateField
 		val1 = val1.split ("/")
 		val2 = val2.split ("/")
-		curValue = ""
+		curValue = "1601"
 		if val1[0] != val2[0]:
 			curDateField = 1
 			curValue = val1[0]
@@ -221,10 +221,11 @@ class AnnounceFieldsLabels (IAccessible):
 		gesture.send ()
 		self.vertical = 1
 		self.calculateCurField ()
-		self.vertical = 0
+		self.vertical = 1
 
 	def script_horizontalMovements (self, gesture):
 		gesture.send ()
+		self.vertical = 0
 		self.calculateCurField ()
 
 class GlobalPlugin (globalPluginHandler.GlobalPlugin):
