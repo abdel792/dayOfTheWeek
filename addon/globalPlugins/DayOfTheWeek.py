@@ -51,7 +51,8 @@ georgianDays = {
 curDateField = 0
 
 confSpec = {
-	"reportLabels" : "boolean(default = True)"
+	"reportLabels" : "boolean(default = True)",
+	"reportValuesWhenMovingVerticaly" : "boolean(default = False)"
 	}
 config.conf.spec["dayOfWeek"] = confSpec
 
@@ -120,50 +121,72 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 		self.reportDateFieldLabelsCheckBox.SetValue (config.conf["dayOfWeek"]["reportLabels"])
 		settingsSizerHelper.addItem (self.reportDateFieldLabelsCheckBox)
 
+		# Translators: The label of the checkbox to enable or disable the current date field value only announcement when moving vertically.
+		valueAnnounce = _("Enable announcements of the current date field value only when moving vertically")
+		self.reportDateFieldValuesCheckBox = wx.CheckBox (parent = self, label = valueAnnounce)
+		self.reportDateFieldValuesCheckBox.SetValue (config.conf["dayOfWeek"]["reportValuesWhenMovingVerticaly"])
+		settingsSizerHelper.addItem (self.reportDateFieldValuesCheckBox)
+
 	def postInit (self):
 		self.reportDateFieldLabelsCheckBox.SetFocus ()
 
 	def onOk (self, evt):
 		config.conf["dayOfWeek"]["reportLabels"] = self.reportDateFieldLabelsCheckBox.GetValue ()
+		config.conf["dayOfWeek"]["reportValuesWhenMovingVerticaly"] = self.reportDateFieldValuesCheckBox.GetValue ()
 		super (DayOfWeekSettingsDialog, self).onOk (evt)
 
 class AnnounceFieldsLabels (IAccessible):
 
 	increment = 0
+	vertical = 0
 
 	def event_gainFocus (self):
 		global curDateField
 		super (AnnounceFieldsLabels, self).event_gainFocus ()
 		if curDateField == 0: curDateField += 1
-		self.sayFieldLabel (curDateField)
+		self.calculateCurField ()
 
-	def sayFieldLabel (self, columnID):
+	def sayFieldLabel (self, curValue, columnID = None):
 		import ui
-		fieldID = columnID - 1
-		label = fieldLabels[fieldID]
-		ui.message (label)
+		field = "{0}, {1}".format (curValue, fieldLabels[columnID - 1]) if columnID else curValue
+		ui.message (field)
 
 	def whatChanged (self, val1, val2):
 		global curDateField
 		val1 = val1.split ("/")
 		val2 = val2.split ("/")
+		curValue = ""
 		if val1[0] != val2[0]:
 			curDateField = 1
+			curValue = val1[0]
 		if val1[1] != val2[1]:
 			curDateField = 2
+			curValue = val1[1]
 		if val1[2] != val2[2]:
 			curDateField = 3
-		self.sayFieldLabel (curDateField)
+			curValue = val1[2]
+		if not self.vertical:
+			self.sayFieldLabel (curValue, curDateField)
+		else:
+			if config.conf["dayOfWeek"]["reportValuesWhenMovingVerticaly"]:
+				self.sayFieldLabel (curValue)
+			else:
+				super (AnnounceFieldsLabels, self).event_valueChange ()
+
+	def script_verticalArrows (self, gesture):
+		gesture.send ()
+		self.vertical = 1
+		self.calculateCurField ()
+		self.vertical = 0
 
 	def event_valueChange (self):
 		if self.increment:
 			return
 		super (AnnounceFieldsLabels, self).event_valueChange ()
 
-	def script_switchBetweenDateFields (self, gesture):
+	def calculateCurField (self):
 		val1 = self.value
-		gesture.send ()
-		# The following calculation must be made in all cases, to allow those who use only Braille, to have the announcement of the labels of the date fields.
+			# The following calculation must be made in all cases, to allow those who use only Braille, to have the announcement of the labels of the date fields.
 		keyboardHandler.KeyboardInputGesture.fromName ("downArrow").send ()
 		self.increment = 1
 		api.processPendingEvents ()
@@ -184,9 +207,15 @@ class AnnounceFieldsLabels (IAccessible):
 		self.whatChanged (val1, val2)
 		self.increment = 0
 
+	def script_switchBetweenDateFields (self, gesture):
+		gesture.send ()
+		self.calculateCurField ()
+
 	__gestures = {
 		"kb:leftArrow":"switchBetweenDateFields",
-		"kb:rightArrow":"switchBetweenDateFields"
+		"kb:rightArrow":"switchBetweenDateFields",
+		"kb:upArrow":"verticalArrows",
+		"kb:downArrow":"verticalArrows"
 	}
 
 class GlobalPlugin (globalPluginHandler.GlobalPlugin):
