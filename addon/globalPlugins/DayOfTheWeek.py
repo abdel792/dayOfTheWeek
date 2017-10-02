@@ -52,7 +52,7 @@ curDateField = 0
 
 confSpec = {
 	"reportLabels" : "boolean(default = True)",
-	"reportValuesWhenMovingVerticaly" : "boolean(default = False)"
+	"reportFieldsValuesWhenMovingVertically" : "boolean(default = False)"
 	}
 config.conf.spec["dayOfWeek"] = confSpec
 
@@ -124,7 +124,7 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 		# Translators: The label of the checkbox to enable or disable the current date field value only announcement when moving vertically.
 		valueAnnounce = _("Enable announcements of the current date field value only when moving vertically")
 		self.reportDateFieldValuesCheckBox = wx.CheckBox (parent = self, label = valueAnnounce)
-		self.reportDateFieldValuesCheckBox.SetValue (config.conf["dayOfWeek"]["reportValuesWhenMovingVerticaly"])
+		self.reportDateFieldValuesCheckBox.SetValue (config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"])
 		settingsSizerHelper.addItem (self.reportDateFieldValuesCheckBox)
 
 	def postInit (self):
@@ -132,19 +132,40 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 
 	def onOk (self, evt):
 		config.conf["dayOfWeek"]["reportLabels"] = self.reportDateFieldLabelsCheckBox.GetValue ()
-		config.conf["dayOfWeek"]["reportValuesWhenMovingVerticaly"] = self.reportDateFieldValuesCheckBox.GetValue ()
+		config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"] = self.reportDateFieldValuesCheckBox.GetValue ()
 		super (DayOfWeekSettingsDialog, self).onOk (evt)
 
 class AnnounceFieldsLabels (IAccessible):
 
 	increment = 0
 	vertical = 0
+	vMovementKeys = (
+		"kb:upArrow",
+		"kb:downArrow",
+		"kb:home",
+		"kb:end"
+	)
+	hMovementKeys = (
+		"kb:leftArrow",
+		"kb:rightArrow"
+	)
+
+	def initOverlayClass (self):
+		for vKey in self.vMovementKeys:
+			self.bindGesture (vKey, "verticalMovements")
+		for hKey in self.hMovementKeys:
+			self.bindGesture (hKey, "horizontalMovements")
 
 	def event_gainFocus (self):
 		global curDateField
 		super (AnnounceFieldsLabels, self).event_gainFocus ()
 		if curDateField == 0: curDateField += 1
 		self.calculateCurField ()
+
+	def event_valueChange (self):
+		if self.increment:
+			return
+		super (AnnounceFieldsLabels, self).event_valueChange ()
 
 	def sayFieldLabel (self, curValue, columnID = None):
 		import ui
@@ -168,21 +189,10 @@ class AnnounceFieldsLabels (IAccessible):
 		if not self.vertical:
 			self.sayFieldLabel (curValue, curDateField)
 		else:
-			if config.conf["dayOfWeek"]["reportValuesWhenMovingVerticaly"]:
+			if config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"]:
 				self.sayFieldLabel (curValue)
 			else:
 				super (AnnounceFieldsLabels, self).event_valueChange ()
-
-	def script_verticalArrows (self, gesture):
-		gesture.send ()
-		self.vertical = 1
-		self.calculateCurField ()
-		self.vertical = 0
-
-	def event_valueChange (self):
-		if self.increment:
-			return
-		super (AnnounceFieldsLabels, self).event_valueChange ()
 
 	def calculateCurField (self):
 		val1 = self.value
@@ -207,16 +217,15 @@ class AnnounceFieldsLabels (IAccessible):
 		self.whatChanged (val1, val2)
 		self.increment = 0
 
-	def script_switchBetweenDateFields (self, gesture):
+	def script_verticalMovements (self, gesture):
+		gesture.send ()
+		self.vertical = 1
+		self.calculateCurField ()
+		self.vertical = 0
+
+	def script_horizontalMovements (self, gesture):
 		gesture.send ()
 		self.calculateCurField ()
-
-	__gestures = {
-		"kb:leftArrow":"switchBetweenDateFields",
-		"kb:rightArrow":"switchBetweenDateFields",
-		"kb:upArrow":"verticalArrows",
-		"kb:downArrow":"verticalArrows"
-	}
 
 class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 
