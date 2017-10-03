@@ -178,12 +178,42 @@ class AnnounceFieldsLabels (IAccessible):
 		val2 = val2.split ("/")
 		curValue = "1601"
 		if val1[0] != val2[0]:
+			# We're in the day field.
 			curDateField = 1
 			curValue = val1[0]
 		if val1[1] != val2[1]:
+			# We're in the month field.
 			curDateField = 2
 			curValue = val1[1]
+			# Here is a technique to fix the problem when switching to shorter months.
+			# Since the calculation function executes a down arrow and an up arrow to find the value of the current month, it often switches to shorter months, which changes the value of the day.
+			if val2[0] == "28":
+				if val1[0] == "31":
+					keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
+					keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+					keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+					keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+					keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
+					api.processPendingEvents ()
+				elif val1[0] == "30":
+					keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
+					keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+					keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+					keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
+					api.processPendingEvents ()
+				elif val1[0] == "29":
+					keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
+					keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+					keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
+					api.processPendingEvents ()
+			elif val2[0] == "30":
+				if val1[0] == "31":
+					keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
+					keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+					keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
+					api.processPendingEvents ()
 		if val1[2] != val2[2]:
+			# We're in the year field.
 			curDateField = 3
 			curValue = val1[2]
 		if curValue == "1601":
@@ -220,10 +250,9 @@ class AnnounceFieldsLabels (IAccessible):
 		self.increment = 0
 
 	def script_verticalMovements (self, gesture):
+		self.vertical = 1
 		gesture.send ()
-		self.vertical = 1
 		self.calculateCurField ()
-		self.vertical = 1
 
 	def script_horizontalMovements (self, gesture):
 		gesture.send ()
