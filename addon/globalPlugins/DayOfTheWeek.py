@@ -176,6 +176,7 @@ class AnnounceFieldsLabels (IAccessible):
 		global curDateField
 		val1 = val1.split ("/")
 		val2 = val2.split ("/")
+		# To fix a bug with the year 1601, we are forced to initialize the value of curValue to 1601
 		curValue = "1601"
 		if val1[0] != val2[0]:
 			# We're in the day field.
@@ -187,6 +188,7 @@ class AnnounceFieldsLabels (IAccessible):
 			curValue = val1[1]
 			# Here is a technique to fix the problem when switching to shorter months.
 			# Since the calculation function executes a down arrow and an up arrow to find the value of the current month, it often switches to shorter months, which changes the value of the day.
+			# The following if block is for the common years, where the February month is 28 days.
 			if val2[0] == "28":
 				if val1[0] == "31":
 					keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
@@ -206,6 +208,20 @@ class AnnounceFieldsLabels (IAccessible):
 					keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
 					keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
 					api.processPendingEvents ()
+			# The following elif block is for the leap years, where the February month is 29 days.
+			elif val2[0] == "29":
+				if val1[0] == "31":
+					keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
+					keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+					keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+					keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
+					api.processPendingEvents ()
+				elif val1[0] == "30":
+					keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
+					keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+					keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
+					api.processPendingEvents ()
+			# The following elif block is for the 30-day months.
 			elif val2[0] == "30":
 				if val1[0] == "31":
 					keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
@@ -216,6 +232,15 @@ class AnnounceFieldsLabels (IAccessible):
 			# We're in the year field.
 			curDateField = 3
 			curValue = val1[2]
+			# Here is a technique to fix the problem when switching to shorter years, for instance, when switching from a common year to a leap year.
+			# Since the calculation function executes a down arrow and an up arrow to find the value of the current year, it sometimes switches to shorter years, which changes the value of the day field in February month.
+			if val2[0] == "28":
+				if val1[0] == "29" and val1[1] == "02":
+					keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
+					keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+					keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
+					api.processPendingEvents ()
+		# The following if statement has been added to correct the current field's non-recognition bug when year is 1601.
 		if curValue == "1601":
 			curDateField = 3
 		if not self.vertical:
@@ -240,11 +265,11 @@ class AnnounceFieldsLabels (IAccessible):
 			self.increment = -1
 			api.processPendingEvents ()
 		# We restore the value of the current date.
-		if self.increment == -1:
-			keyboardHandler.KeyboardInputGesture.fromName ("downArrow").send ()
-			api.processPendingEvents ()
-		elif self.increment == 1:
+		if self.increment == 1:
 			keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+			api.processPendingEvents ()
+		elif self.increment == -1:
+			keyboardHandler.KeyboardInputGesture.fromName ("downArrow").send ()
 			api.processPendingEvents ()
 		self.whatChanged (val1, val2)
 		self.increment = 0
@@ -276,7 +301,7 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		dowMenu = wx.Menu ()
 		self.mainItem = self.menu.AppendSubMenu (dowMenu,
 		# Translators: Item in the preferences menu for the Addon dayOfTheWeek.
-		_("&Day of the week..."),
+		_("Day of the &week..."),
 		# Translators: The tooltyp text for the dayOfTheWeek submenu.
 		_("Day of the week add-on and its settings"))
 
