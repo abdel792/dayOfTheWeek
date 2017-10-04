@@ -232,7 +232,7 @@ class AnnounceFieldsLabels (IAccessible):
 			# We're in the year field.
 			curDateField = 3
 			curValue = val1[2]
-			# Here is a technique to fix the problem when switching to shorter years, for instance, when switching from a common year to a leap year.
+			# Here is a technique to fix the problem when switching to shorter years, for instance, when switching from a leap year to a common year.
 			# Since the calculation function executes a down arrow and an up arrow to find the value of the current year, it sometimes switches to shorter years, which changes the value of the day field in February month.
 			if val2[0] == "28":
 				if val1[0] == "29" and val1[1] == "02":
