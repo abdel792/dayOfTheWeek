@@ -19,14 +19,15 @@ semana", para abrir un diálogo compuesto de 3 controles:
 *	 Puedes asignar un atajo de teclado para abrir el diálogo en el menú
    "Gestos de Entrada" y, más concretamente, en la categoría "Herramientas".
 
-## Changes for 2.0 ##
+## Cambios para 2.0 ##
 
-*	 Used the gui.guiHelper module to ensure the correct appearance of the
-   dialog asking for a date;
-*	 Added the GPL license to the addon;
-*	 Days of the week have been translated, so that the add-on works properly
-   in the different languages;
-*	 Used the %w format for the dates rather than %a to avoid encoding errors.
+*	 Utiliza el módulo gui.guiHelper para asegurar la correcta apariencia del
+   diálogo pidiendo una fecha;
+*	 Añadida la licencia GPL para el complemento;
+*	 Los días de la semana se han traducido, para que el complemento funcione
+   correctamente en los distintos idiomas;
+*	 Utiliza el formato de %w para las fechas en lugar de %a para evitar
+   errores de codificación.
 
 ## Cambios para 1.0 ##
 

@@ -21,12 +21,12 @@ otvaranje dijaloškog okvira koji sadrži 3 kontrole:
 
 ## Izmjene u inačici 2.0 ##
 
-*	 Used the gui.guiHelper module to ensure the correct appearance of the
-   dialog asking for a date;
-*	 Added the GPL license to the addon;
-*	 Days of the week have been translated, so that the add-on works properly
-   in the different languages;
-*	 Used the %w format for the dates rather than %a to avoid encoding errors.
+*	 Korišten je gui.guiHelper kako bi se pojavio ispravan dijaloški okvir za
+   odabir datuma
+*	 Dodana GPL licenca u dodatak
+*	 Dani u tjednu su prevedeni, tako da dodatak sada radi ispravno na
+   različitim jezicima;
+*	 Korišten je %w format za datume umjesto %a zbog grešaka u kodiranju.
 
 ## Promjene u 1.0 ##
 

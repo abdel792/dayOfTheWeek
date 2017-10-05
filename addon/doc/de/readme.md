@@ -21,14 +21,15 @@ Steuerelementen besteht
 *	 Über den NVDA-Einstellungsdialog "Eingaben" können Sie dem Dialog eine
    Tastenkombination zuweisen.
 
-## Changes for 2.0 ##
+## Änderungen bis 2.0 ##
 
-*	 Used the gui.guiHelper module to ensure the correct appearance of the
-   dialog asking for a date;
-*	 Added the GPL license to the addon;
-*	 Days of the week have been translated, so that the add-on works properly
-   in the different languages;
-*	 Used the %w format for the dates rather than %a to avoid encoding errors.
+*	 Nun wird das gui.guiHelper-Modul verwendet,um die korrekte Darstellung
+   des Dialogfelds zu gewährleisten, welches nach dem Datum fragt.
+*	 Die Erweiterung wurde unter der GPL lizensiert.
+*	 Die Wochentage sind übersetzt worden, damit das Add-on ordnungsgemäß in
+   den verschiedenen Sprachen funktioniert;
+*	 Nun wird das Format %w für Daten verwendet, um Kodierungsfehler zu
+   vermeiden. Zuvor wurde %a verwendet.
 
 ## Änderungen in Version 1.0 ##
 

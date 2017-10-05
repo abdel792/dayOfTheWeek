@@ -7,7 +7,7 @@
 Ce module complémentaire vous permet de trouver un jour de la semaine
 correspondant à une date choisie.
 
-Il ajoute un élément dans le menu Outils de NVDA nommé "Day of the week",
+Il ajoute un élément dans le menu Outils de NVDA nommé "Jour de la semaine",
 pour ouvrir une boîte de dialogue composé de 3 contrôles :
 
 *	 Une zone de liste pour choisir ou tapez votre date.
@@ -25,8 +25,8 @@ pour ouvrir une boîte de dialogue composé de 3 contrôles :
 *	 Utilisé le module gui.guiHelper pour assurer la bonne apparence de la
    boîte de dialogue demandant une date ;
 *	 Ajout de la licence GPL pour le module complémentaire ;
-*	 Days of the week à été traduits, de sorte que le module complémentaire
-   fonctionne correctement dans les différentes langues ;
+*	 Les jours de la semaine ont été traduits, de sorte que le module
+   complémentaire fonctionne correctement dans les différentes langues ;
 *	 Utilisé le format %w pour les dates plutôt que %a pour éviter les erreurs
    de codage.
 
