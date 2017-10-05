@@ -26,6 +26,7 @@ import config
 
 ### Constants
 ADDON_SUMMARY = addonHandler.Addon (os.path.join (os.path.dirname (__file__), "..").decode ("mbcs")).manifest["summary"]
+ADDON_NAME = addonHandler.Addon (os.path.join (os.path.dirname (__file__), "..").decode ("mbcs")).manifest["name"]
 
 fieldLabels = (
 	# Translators: The long label of the days field.
@@ -119,7 +120,7 @@ class DateDialog (wx.Dialog):
 class DayOfWeekSettingsDialog (SettingsDialog):
 
 	# Translators: The title of the add-on configuration dialog box.
-	title = _("Configuration of the addon {0}").format ("dayOfTheWeek")
+	title = _("Configuration of the addon {0}").format (ADDON_NAME)
 	LABEL_ANNOUNCE_LEVELS = (
 		("short",
 		# Translators: Level for short announces of labels.
@@ -354,7 +355,7 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		# Translators: Item in the preferences menu for the Addon dayOfTheWeek.
 		_("Day of the &week..."),
 		# Translators: The tooltyp text for the dayOfTheWeek submenu.
-		_("Day of the week add-on and its settings"))
+		_("{0} add-on and its settings").format (ADDON_NAME))
 
 		dateChoice = dowMenu.Append (wx.ID_ANY,
 		# Translators: The name of the first item in the dayOfTheWeek add-on submenu.
@@ -365,9 +366,9 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 
 		addonSettings = dowMenu.Append (wx.ID_ANY,
 		# Translators: The name of the second item in the dayOfTheWeek add-on submenu.
-		_("{0} add-on se&ttings").format ("dayOfTheWeek"),
+		_("{0} add-on se&ttings").format (ADDON_NAME),
 		# Translators: The tooltyp text for the second item in the dayOfTheWeek add-on submenu.
-		_("Configure the dayOfTheWeek add-on"))
+		_("Configure the {0} add-on").format (ADDON_NAME))
 		gui.mainFrame.sysTrayIcon.Bind (wx.EVT_MENU, self.onAddonSettingsDialog, addonSettings)
 
 	def terminate (self):
