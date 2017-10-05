@@ -141,7 +141,7 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 		settingsSizerHelper.addItem (self.enableAnnouncesCheckBox)
 
 		# Translators: The label for an item to select the level of the announces of labels (short, long or disabled).
-		labelAnnounceLevelText = _("Level of the announces of labels:")
+		labelAnnounceLevelText = _("Level of the announces of &labels:")
 		labelAnnounceLevelChoices = [name for level, name in self.LABEL_ANNOUNCE_LEVELS]
 		self.labelAnnounceLevelsList = settingsSizerHelper.addLabeledControl(labelAnnounceLevelText, wx.Choice, choices = labelAnnounceLevelChoices)
 		curLevel = config.conf["dayOfWeek"]["labelAnnounceLevel"]
@@ -154,7 +154,7 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 		self.labelAnnounceLevelsList.Enabled = self.enableAnnouncesCheckBox.IsChecked ()
 
 		# Translators: The label of the checkbox to enable or disable the current date field value only announcement when moving vertically.
-		valueAnnounce = _("Enable announcements of the current date field value only, when moving &vertically")
+		valueAnnounce = _("Enable announcements of the current date field value only, when moving &vertically:")
 		self.reportDateFieldValuesCheckBox = wx.CheckBox (parent = self, label = valueAnnounce)
 		self.reportDateFieldValuesCheckBox.SetValue (config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"])
 		settingsSizerHelper.addItem (self.reportDateFieldValuesCheckBox)
