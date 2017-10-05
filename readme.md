@@ -13,8 +13,14 @@ It adds a submenu in the NVDA Preferences menu named "Day of the week", containi
 	*	An "OK" button to display a messageBox containing your day;
 	*	A "Cancel" button to close the dialog.
 *	The second one named "dayOfTheWeek add-on settings" opens the parameters of the add-on to specify whether you want to report labels for date fields or not, it is composed of the following elements:
-	*	Enable announcements of the date field labels;
-	*	Enable announcement of the current date field value only when moving vertically.
+	*	Enable accessibility of the date selector;
+	*	Level of the announces of labels, you will then have 3 choices:
+		*	Long (it's the default choice);
+		*	Short (for short announcements);
+		*	Off (to disable labels announcements).
+	*	Enable announcement of the current date field value only, when moving vertically;
+	*	An "OK" button to save your configuration;
+	*	A "Cancel" button to cancel and close the dialog.
 
 
 ## Notes ##
