@@ -13,6 +13,7 @@ import addonHandler
 addonHandler.initTranslation ()
 import globalPluginHandler
 import speech
+from logHandler import log
 import keyboardHandler
 import api
 import os
@@ -27,12 +28,18 @@ import config
 ADDON_SUMMARY = addonHandler.Addon (os.path.join (os.path.dirname (__file__), "..").decode ("mbcs")).manifest["summary"]
 
 fieldLabels = (
-	# Translators: The label of the days field.
-	_("You can select a day with the vertical arrows"),
-	# Translators: The label of the months field.
-	_("You can select a month with the vertical arrows"),
-	# Translators: The label of the years field.
-	_("You can select a year with the vertical arrows")
+	# Translators: The long label of the days field.
+	(_("You can select a day with the vertical arrows"),
+	# Translators: The short label of the days field.
+	_("Select a day")),
+	# Translators: The long label of the months field.
+	(_("You can select a month with the vertical arrows"),
+	# Translators: The short label of the months field.
+	_("Select a month")),
+	# Translators: The long label of the years field.
+	(_("You can select a year with the vertical arrows"),
+	# Translators: The short label of the years field.
+	_("Select a year"))
 )
 
 # The following dictionary was created to list the Georgian days that are not recognized by the %A format, this technique will be improved if other languages ??encounter the same problem.
@@ -51,7 +58,8 @@ georgianDays = {
 curDateField = 0
 
 confSpec = {
-	"reportLabels" : "boolean(default = True)",
+	"enableAnnounces" : "boolean(default = True)",
+	"labelAnnounceLevel" : "string(default = long)",
 	"reportFieldsValuesWhenMovingVertically" : "boolean(default = False)"
 	}
 config.conf.spec["dayOfWeek"] = confSpec
@@ -112,26 +120,62 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 
 	# Translators: The title of the add-on configuration dialog box.
 	title = _("Configuration of the addon {0}").format ("dayOfTheWeek")
+	LABEL_ANNOUNCE_LEVELS = (
+		("short",
+		# Translators: Level for short announces of labels.
+		_("Short")),
+		("long",
+		# Translators: Level for long announces of labels.
+		_("Long")),
+		("off",
+		# Translators: Level to disable announces of labels.
+		_("Off"))
+	)
 
 	def makeSettings (self, settingsSizer):
 		settingsSizerHelper = gui.guiHelper.BoxSizerHelper (self, sizer = settingsSizer)
-		# Translators: The label of the checkbox to enable or disable the date field labels announcements.
-		labelAnnounce = _("Enable announcements of the date field labels")
-		self.reportDateFieldLabelsCheckBox = wx.CheckBox (parent = self, label = labelAnnounce)
-		self.reportDateFieldLabelsCheckBox.SetValue (config.conf["dayOfWeek"]["reportLabels"])
-		settingsSizerHelper.addItem (self.reportDateFieldLabelsCheckBox)
+		# Translators: The label of the checkbox to enable or disable the date selector accessibility.
+		enableAnnounces = _("En&able the accessibility of the date selector:")
+		self.enableAnnouncesCheckBox = wx.CheckBox (parent = self, label = enableAnnounces)
+		self.enableAnnouncesCheckBox.SetValue (config.conf["dayOfWeek"]["enableAnnounces"])
+		settingsSizerHelper.addItem (self.enableAnnouncesCheckBox)
+
+		# Translators: The label for an item to select the level of the announces of labels (short, long or disabled).
+		labelAnnounceLevelText = _("Level of the announces of labels:")
+		labelAnnounceLevelChoices = [name for level, name in self.LABEL_ANNOUNCE_LEVELS]
+		self.labelAnnounceLevelsList = settingsSizerHelper.addLabeledControl(labelAnnounceLevelText, wx.Choice, choices = labelAnnounceLevelChoices)
+		curLevel = config.conf["dayOfWeek"]["labelAnnounceLevel"]
+		for index, (level, name) in enumerate(self.LABEL_ANNOUNCE_LEVELS):
+			if level == curLevel:
+				self.labelAnnounceLevelsList.SetSelection(index)
+				break
+			else:
+				log.debugWarning("Could not set level list to current level of the announces of labels")
+		self.labelAnnounceLevelsList.Enabled = self.enableAnnouncesCheckBox.IsChecked ()
 
 		# Translators: The label of the checkbox to enable or disable the current date field value only announcement when moving vertically.
-		valueAnnounce = _("Enable announcements of the current date field value only when moving vertically")
+		valueAnnounce = _("Enable announcements of the current date field value only, when moving &vertically")
 		self.reportDateFieldValuesCheckBox = wx.CheckBox (parent = self, label = valueAnnounce)
 		self.reportDateFieldValuesCheckBox.SetValue (config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"])
 		settingsSizerHelper.addItem (self.reportDateFieldValuesCheckBox)
+		self.reportDateFieldValuesCheckBox.Enabled = self.enableAnnouncesCheckBox.IsChecked ()
+		self.enableAnnouncesCheckBox.Bind (wx.EVT_CHECKBOX, self.onCheckAnnounces)
 
 	def postInit (self):
-		self.reportDateFieldLabelsCheckBox.SetFocus ()
+		self.enableAnnouncesCheckBox.SetFocus ()
+
+	def onCheckAnnounces (self, event):
+		if self.enableAnnouncesCheckBox.IsChecked ():
+			self.labelAnnounceLevelsList.Enable ()
+			self.reportDateFieldValuesCheckBox.Enable ()
+		else:
+			self.labelAnnounceLevelsList.Disable ()
+			self.reportDateFieldValuesCheckBox.Disable ()
 
 	def onOk (self, evt):
-		config.conf["dayOfWeek"]["reportLabels"] = self.reportDateFieldLabelsCheckBox.GetValue ()
+		config.conf["dayOfWeek"]["enableAnnounces"] = self.enableAnnouncesCheckBox.GetValue ()
+		labelAnnounceLevel = self.LABEL_ANNOUNCE_LEVELS[self.labelAnnounceLevelsList.GetSelection()][0]
+		config.conf["dayOfWeek"]["labelAnnounceLevel"] = labelAnnounceLevel
 		config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"] = self.reportDateFieldValuesCheckBox.GetValue ()
 		super (DayOfWeekSettingsDialog, self).onOk (evt)
 
@@ -169,7 +213,14 @@ class AnnounceFieldsLabels (IAccessible):
 
 	def sayFieldLabel (self, curValue, columnID = None):
 		import ui
-		field = "{0}, {1}".format (curValue, fieldLabels[columnID - 1]) if columnID else curValue
+		labelAnnounce = ""
+		if columnID:
+			if config.conf["dayOfWeek"]["labelAnnounceLevel"] != "off":
+				if config.conf["dayOfWeek"]["labelAnnounceLevel"] == "long":
+					labelAnnounce = fieldLabels[columnID - 1][0]
+				else:
+					labelAnnounce = fieldLabels[columnID - 1][1]
+		field = "{0}, {1}".format (curValue, labelAnnounce) if columnID else curValue
 		ui.message (field)
 
 	def whatChanged (self, val1, val2):
@@ -293,7 +344,7 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		self.createSubMenu ()
 
 	def chooseNVDAObjectOverlayClasses (self, obj, clsList):
-		if obj.value and obj.role == controlTypes.ROLE_DROPLIST and len (obj.value) == 10 and "/" in obj.value and config.conf["dayOfWeek"]["reportLabels"]:
+		if obj.value and obj.role == controlTypes.ROLE_DROPLIST and len (obj.value) == 10 and "/" in obj.value and config.conf["dayOfWeek"]["enableAnnounces"]:
 			clsList.insert (0, AnnounceFieldsLabels)
 
 	def createSubMenu (self):
