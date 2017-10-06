@@ -34,7 +34,7 @@ It adds a submenu in the NVDA Preferences menu named "Day of the week", containi
 *	 Improved the accessibility of the date selection with recognition of the 3 fields 'Day', 'Month' and 'Year', and their respective values;
 *	 Added a technique for the integration of the Georgian language for the recognition of the days of the week;
 *	 Added a configuration dialog box to enable or disable the announces of the labels;
-"	 Moved the add-on submenu from "Tools" to "Preferences";
+*	 Moved the add-on submenu from "Tools" to "Preferences";
 *	 Changed the add-on category to "Day of the week".
 
 ## Changes for 2.0 ##
