@@ -25,15 +25,15 @@ It adds a submenu in the NVDA Preferences menu named "Day of the week", containi
 
 ## Notes ##
 
-*	 You can close this dialog just by pressing Escape.
+*	 You can close these dialogs just by pressing Escape.
 *	 You can assign a shortcut to open these dialogs in "Input gestures" menu and, more precisely, in the "Day of the week" category.
 
-## Changes for 3.0 ##
+## Changes for 3.1 ##
 
 *	 Back to the %A format for the day of the week because it allows to recognize a greater number of languages;
-*	 Improved the accessibility of the date selection with recognition of the 3 fields 'Day', 'Month' and 'Year', and their respective values;
+*	 Improved the accessibility of the date selector with recognition of the 3 fields 'Day', 'Month' and 'Year', and their respective values;
 *	 Added a technique for the integration of the Georgian language for the recognition of the days of the week;
-*	 Added a configuration dialog box to enable or disable the announces of the labels;
+*	 Added a configuration dialog box to enable or disable the accessibility of the date selector;
 *	 Moved the add-on submenu from "Tools" to "Preferences";
 *	 Changed the add-on category to "Day of the week".
 
@@ -48,6 +48,6 @@ It adds a submenu in the NVDA Preferences menu named "Day of the week", containi
 
 *	 Initial version.
 
-[1]: https://github.com/abdel792/dayOfTheWeek/releases/download/v3.0/dayOfTheWeek-3.0.nvda-addon
+[1]: https://github.com/abdel792/dayOfTheWeek/releases/download/v3.1/dayOfTheWeek-3.1.nvda-addon
 
-[2]: https://github.com/abdel792/dayOfTheWeek/releases/download/v3.0/dayOfTheWeek-3.0.nvda-addon
+[2]: https://github.com/abdel792/dayOfTheWeek/releases/download/v3.1/dayOfTheWeek-3.1.nvda-addon
