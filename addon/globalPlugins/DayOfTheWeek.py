@@ -120,7 +120,7 @@ class DateDialog (wx.Dialog):
 class DayOfWeekSettingsDialog (SettingsDialog):
 
 	# Translators: The title of the add-on configuration dialog box.
-	title = _("Configuration of the addon {0}").format (ADDON_NAME)
+	title = _(u"Configuration of the addon {0}").format (ADDON_NAME)
 	LABEL_ANNOUNCE_LEVELS = (
 		("short",
 		# Translators: Level for short announces of labels.
@@ -221,7 +221,7 @@ class AnnounceFieldsLabels (IAccessible):
 					labelAnnounce = fieldLabels[columnID - 1][0]
 				else:
 					labelAnnounce = fieldLabels[columnID - 1][1]
-		field = "{0}, {1}".format (curValue, labelAnnounce) if columnID else curValue
+		field = u"{0}, {1}".format (curValue, labelAnnounce) if columnID else curValue
 		ui.message (field)
 
 	def whatChanged (self, val1, val2):
@@ -355,7 +355,7 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		# Translators: Item in the preferences menu for the Addon dayOfTheWeek.
 		_("Day of the &week..."),
 		# Translators: The tooltyp text for the dayOfTheWeek submenu.
-		_("{0} add-on and its settings").format (ADDON_NAME))
+		_(u"{0} add-on and its settings").format (ADDON_NAME))
 
 		dateChoice = dowMenu.Append (wx.ID_ANY,
 		# Translators: The name of the first item in the dayOfTheWeek add-on submenu.
@@ -366,9 +366,9 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 
 		addonSettings = dowMenu.Append (wx.ID_ANY,
 		# Translators: The name of the second item in the dayOfTheWeek add-on submenu.
-		_("{0} add-on se&ttings").format (ADDON_NAME),
+		_(u"{0} add-on se&ttings").format (ADDON_NAME),
 		# Translators: The tooltyp text for the second item in the dayOfTheWeek add-on submenu.
-		_("Configure the {0} add-on").format (ADDON_NAME))
+		_(u"Configure the {0} add-on").format (ADDON_NAME))
 		gui.mainFrame.sysTrayIcon.Bind (wx.EVT_MENU, self.onAddonSettingsDialog, addonSettings)
 
 	def terminate (self):
@@ -399,5 +399,5 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		wx.CallAfter (self.onAddonSettingsDialog, gui.mainFrame)
 
 	# Translators: Message presented in input help mode.
-	script_activateDayOfTheWeekSettingsDialog.__doc__ = _("Allows you to open the dayOfTheWeek add-on settings dialog.")
+	script_activateDayOfTheWeekSettingsDialog.__doc__ = _(u"Allows you to open the {0} add-on settings dialog.").format (ADDON_NAME)
 
