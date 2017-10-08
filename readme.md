@@ -28,6 +28,10 @@ It adds a submenu in the NVDA Preferences menu named "Day of the week", containi
 *	 You can close these dialogs just by pressing Escape.
 *	 You can assign a shortcut to open these dialogs in "Input gestures" menu and, more precisely, in the "Day of the week" category.
 
+## Changes for 4.0 ##
+
+*	 The add-on is now able to recognize all the regional date formats that the user can choose.
+
 ## Changes for 3.1 ##
 
 *	 Back to the %A format for the day of the week because it allows to recognize a greater number of languages;
@@ -48,6 +52,6 @@ It adds a submenu in the NVDA Preferences menu named "Day of the week", containi
 
 *	 Initial version.
 
-[1]: https://github.com/abdel792/dayOfTheWeek/releases/download/v3.1/dayOfTheWeek-3.1.nvda-addon
+[1]: https://github.com/abdel792/dayOfTheWeek/releases/download/v4.0-dev/dayOfTheWeek-4.0-dev.nvda-addon
 
-[2]: https://github.com/abdel792/dayOfTheWeek/releases/download/v3.1/dayOfTheWeek-3.1.nvda-addon
+[2]: https://github.com/abdel792/dayOfTheWeek/releases/download/v4.0-dev/dayOfTheWeek-4.0-dev.nvda-addon
