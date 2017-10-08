@@ -80,7 +80,6 @@ def isDatepickerDate (value):
 	"""
 	This function makes it possible to check whether the date format matches to be able to affect our overlay class.
 	"""
-
 	ptrn = "^[\d]{2,4}[/\.-][\d]{2}[/\.-][\d]{2,4}$"
 	rg = re.compile (ptrn)
 	return bool (rg.match (value))
@@ -398,7 +397,7 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		self.createSubMenu ()
 
 	def chooseNVDAObjectOverlayClasses (self, obj, clsList):
-		if obj.value and obj.role == controlTypes.ROLE_DROPLIST and isDatepickerDate (obj.value):
+		if obj.value and obj.role == controlTypes.ROLE_DROPLIST and isDatepickerDate (obj.value) and config.conf["dayOfWeek"]["enableAnnounces"]:
 			clsList.insert (0, AnnounceFieldsLabels)
 
 	def createSubMenu (self):
