@@ -221,13 +221,13 @@ class AnnounceFieldsLabels (IAccessible):
 			return
 		super (AnnounceFieldsLabels, self).event_valueChange ()
 
-	def isEnUS (self):
+	def isUS (self):
 		import locale
-		if locale.getdefaultlocale ()[0] == "en_US":
+		if "US" in locale.getdefaultlocale ()[0]:
 			return True
 		return False
 
-	def sayFieldLabel (self, curValue, columnID = None):
+	def sayField (self, curValue, columnID = None):
 		import ui
 		labelAnnounce = ""
 		if columnID:
@@ -246,7 +246,9 @@ class AnnounceFieldsLabels (IAccessible):
 
 	def whatChanged (self, val1, val2):
 		global curDateField
-		flag = None
+		isYear = False
+		isMonth = False
+		isMonthUS = False
 		val1 = val1.split (self.getDelimiter (val1))
 		val2 = val2.split (self.getDelimiter (val2))
 		# To fix a bug with the year 1601, we are forced to initialize the value of curValue to 1601
@@ -254,143 +256,143 @@ class AnnounceFieldsLabels (IAccessible):
 		if val1[0] != val2[0]:
 			# We're in the day, month or year field.
 			curValue = val1[0]
-			if self.isEnUS () and len (val1[2]) == 4 and len (val1[1]) < 3:
-				# We're in the month field for en_US layout.
+			if self.isUS () and len (val1[2]) == 4 and len (val1[1]) < 3:
+				# We're in the month field for US layout.
+				isMonthUS = True
 				curDateField = 2
 				# Here is a technique to fix the problem when switching to shorter months.
 				# Since the calculation function executes a down arrow and an up arrow to find the value of the current month, it often switches to shorter months, which changes the value of the day.
 				# The following if block is for the common years, where the February month is 28 days.
 				if val2[1] == "28":
 					if val1[1] == "31":
-						self.leftOrRight (value = val1[0], flag = True)
+						keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
 						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
 						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
 						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-						self.leftOrRight (value = val1[0])
+						keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
 						api.processPendingEvents ()
 					elif val1[1] == "30":
-						self.leftOrRight (value = val1[0], flag = True)
+						keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
 						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
 						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-						self.leftOrRight (value = val1[0])
+						keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
 						api.processPendingEvents ()
 					elif val1[1] == "29":
-						self.leftOrRight (value = val1[0], flag = True)
+						keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
 						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-						self.leftOrRight (value = val1[0])
+						keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
 						api.processPendingEvents ()
 				# The following elif block is for the leap years, where the February month is 29 days.
 				elif val2[1] == "29":
 					if val1[1] == "31":
-						self.leftOrRight (value = val1[0], flag = True)
+						keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
 						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
 						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-						self.leftOrRight (value = val1[0])
+						keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
 						api.processPendingEvents ()
 					elif val1[1] == "30":
-						self.leftOrRight (value = val1[0], flag = True)
+						keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
 						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-						self.leftOrRight (value = val1[0])
+						keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
 						api.processPendingEvents ()
 				# The following elif block is for the 30-day months.
 				elif val2[1] == "30":
 					if val1[1] == "31":
-						self.leftOrRight (value = val1[0], flag = True)
+						keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
 						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-						self.leftOrRight (value = val1[0])
+						keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
 						api.processPendingEvents ()
 			else:
-				curDateField = 3 if len (val1[0]) == 4 else 1
-				if curDateField == 3:
-					flag = True
-				# For the year field only.
-				if len (val1[0]) == 4:
+				curDateField = 3 if len (curValue) == 4 else 1
+				if len (curValue) == 4:
+					isYear = True
+					# For the year field only.
 					# Here is a technique to fix the problem when switching to shorter years, for instance, when switching from a leap year to a common year.
 					# Since the calculation function executes a down arrow and an up arrow to find the value of the current year, it sometimes switches to shorter years, which changes the value of the day field in February month.
 					if val2[2] == "28":
-						if val1[2] == "29" and val1[1] == "02":
+						if val1[2] == "29" and val1[1] in ["2", "02"]:
 							keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
 							keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
 							keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
-							#api.processPendingEvents ()
+							api.processPendingEvents ()
 		if val1[1] != val2[1]:
 			# We're in the month or day field.
-			curValue = val1[1]
-			if self.isEnUS () and len (curValue) < 3 and len (val1[2]) == 4:
-				curDateField = 1
-			else:
-				curDateField = 2
-				# Here is a technique to fix the problem when switching to shorter months.
-				# Since the calculation function executes a down arrow and an up arrow to find the value of the current month, it often switches to shorter months, which changes the value of the day.
-				# The following if block is for the common years, where the February month is 28 days.
-				if any (x == "28" for x in [val2[0], val2[2]]):
-					if any (x == "31" for x in [val1[0], val1[2]]):
-						self.leftOrRight (value = val1[0], flag = True)
-						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-						self.leftOrRight (value = val1[0])
-						api.processPendingEvents ()
-					elif any (x == "30" for x in [val1[0], val1[2]]):
-						self.leftOrRight (value = val1[0], flag = True)
-						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-						self.leftOrRight (value = val1[0])
-						api.processPendingEvents ()
-					elif any (x == "29" for x in [val1[0], val1[2]]):
-						self.leftOrRight (value = val1[0], flag = True)
-						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-						self.leftOrRight (value = val1[0])
-						api.processPendingEvents ()
-				# The following elif block is for the leap years, where the February month is 29 days.
-				elif any (x == "29" for x in [val2[0], val2[2]]):
-					if any (x == "31" for x in [val1[0], val1[2]]):
-						self.leftOrRight (value = val1[0], flag = True)
-						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-						self.leftOrRight (value = val1[0])
-						api.processPendingEvents ()
-					elif any (x == "30" for x in [val1[0], val1[2]]):
-						self.leftOrRight (value = val1[0], flag = True)
-						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-						self.leftOrRight (value = val1[0])
-						api.processPendingEvents ()
-				# The following elif block is for the 30-day months.
-				elif any (x == "30" for x in [val2[0], val2[2]]):
-					if any (x == "31" for x in [val1[0], val1[2]]):
-						self.leftOrRight (value = val1[0], flag = True)
-						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-						self.leftOrRight (value = val1[0])
-						api.processPendingEvents ()
+			if not isMonthUS and not isYear:
+				curValue = val1[1]
+				curDateField = 1 if self.isUS () and len (curValue) < 3 and len (val1[2]) == 4 else 2
+				if curDateField == 2:
+					isMonth = True
+					# Here is a technique to fix the problem when switching to shorter months.
+					# Since the calculation function executes a down arrow and an up arrow to find the value of the current month, it often switches to shorter months, which changes the value of the day.
+					# The following if block is for the common years, where the February month is 28 days.
+					if any (x == "28" for x in [val2[0], val2[2]]):
+						if any (x == "31" for x in [val1[0], val1[2]]):
+							self.leftOrRight (value = val1[0], flag = True)
+							keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+							keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+							keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+							self.leftOrRight (value = val1[0])
+							api.processPendingEvents ()
+						elif any (x == "30" for x in [val1[0], val1[2]]):
+							self.leftOrRight (value = val1[0], flag = True)
+							keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+							keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+							self.leftOrRight (value = val1[0])
+							api.processPendingEvents ()
+						elif any (x == "29" for x in [val1[0], val1[2]]):
+							self.leftOrRight (value = val1[0], flag = True)
+							keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+							self.leftOrRight (value = val1[0])
+							api.processPendingEvents ()
+					# The following elif block is for the leap years, where the February month is 29 days.
+					elif any (x == "29" for x in [val2[0], val2[2]]):
+						if any (x == "31" for x in [val1[0], val1[2]]):
+							self.leftOrRight (value = val1[0], flag = True)
+							keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+							keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+							self.leftOrRight (value = val1[0])
+							api.processPendingEvents ()
+						elif any (x == "30" for x in [val1[0], val1[2]]):
+							self.leftOrRight (value = val1[0], flag = True)
+							keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+							self.leftOrRight (value = val1[0])
+							api.processPendingEvents ()
+					# The following elif block is for the 30-day months.
+					elif any (x == "30" for x in [val2[0], val2[2]]):
+						if any (x == "31" for x in [val1[0], val1[2]]):
+							self.leftOrRight (value = val1[0], flag = True)
+							keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+							self.leftOrRight (value = val1[0])
+							api.processPendingEvents ()
 		if val1[2] != val2[2]:
 			# We're in the year or the day field.
-			curValue = val1[2]
-			if not flag:
-				curDateField = 3 if len (val1[2]) == 4 or len (self.value) == 8 else 1
-			# For the year field only.
-			if not len (val1[0]) == 4:
-				# Here is a technique to fix the problem when switching to shorter years, for instance, when switching from a leap year to a common year.
-				# Since the calculation function executes a down arrow and an up arrow to find the value of the current year, it sometimes switches to shorter years, which changes the value of the day field in February month.
-				if any (x == "28" for x in [val2[0], val2[1]]):
-					if (val1[0] == "29" and val1[1] == "02") or (val1[1] == "29" and val1[0] == "02"):
-						if self.isEnUS ():
-							keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
-						else:
-							keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
-						keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
-						if self.isEnUS ():
-							keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
-						else:
-							keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
-						api.processPendingEvents ()
+			if not isYear and not isMonth:
+				curDateField = 3 if len (val1[2]) == 4 else 1
+				curValue = val1[2]
+				# For the year field only.
+				if len (curValue) == 4:
+					# Here is a technique to fix the problem when switching to shorter years, for instance, when switching from a leap year to a common year.
+					# Since the calculation function executes a down arrow and an up arrow to find the value of the current year, it sometimes switches to shorter years, which changes the value of the day field in February month.
+					if any (x == "28" for x in [val2[0], val2[1]]):
+						if (val1[0] == "29" and val1[1] in ["2", "02"]) or (val1[1] == "29" and val1[0] in ["2", "02"]):
+							if self.isUS ():
+								keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
+							else:
+								keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
+							keyboardHandler.KeyboardInputGesture.fromName ("upArrow").send ()
+							if self.isUS ():
+								keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
+							else:
+								keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
+							api.processPendingEvents ()
 		# The following if statement has been added to correct the current field's non-recognition bug when year is 1601.
 		if curValue == "1601":
 			curDateField = 3
 		if not self.vertical:
-			self.sayFieldLabel (curValue, curDateField)
+			self.sayField (curValue, curDateField)
 		else:
 			if config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"]:
-				self.sayFieldLabel (curValue)
+				self.sayField (curValue)
 			else:
 				super (AnnounceFieldsLabels, self).event_valueChange ()
 
@@ -402,15 +404,9 @@ class AnnounceFieldsLabels (IAccessible):
 				keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
 		else:
 			if len (value) == 4:
-				if self.IsEnUS ():
-					keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
-				else:
-					keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
+				keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
 			else:
-				if self.IsEnUS ():
-					keyboardHandler.KeyboardInputGesture.fromName ("leftArrow").send ()
-				else:
-					keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
+				keyboardHandler.KeyboardInputGesture.fromName ("rightArrow").send ()
 
 	def calculateCurField (self):
 		val1 = self.value
