@@ -7,27 +7,51 @@
 Diese Erweiterung erlaubt Ihnen die Ermittlung des Wochentags für ein
 angegebenes Datum.
 
-Im Menü Extras von NVDA wird hierfür ein neuer Eintrag "Wochentag"
-hinzugefügt. Dieser Eintrag öffnet ein Dialogfeld, das aus drei
-Steuerelementen besteht
+It adds a submenu in the NVDA Preferences menu named "Day of the week",
+containing 2 items:
 
-*	 Ein Datumsfeld um das Datum einzugeben oder auszuwählen.
-*	 ein OK-Schalter, der ein Meldungsfenster mit dem Wochentag zum
-   betreffenden Datum anzeigt.
-*	 einen Schalter "abbrechen", der den dialog schließt
+
+*	The first one named "Search a day", opens a dialog composed of 3 controls:
+	*	A listbox to choose or type your date;
+	*	An "OK" button to display a messageBox containing your day;
+	*	A "Cancel" button to close the dialog.
+*	The second one named "dayOfTheWeek add-on settings" opens the parameters of the add-on to specify whether you want to report labels for date fields or not, it is composed of the following elements:
+	*	Enable accessibility of the date selector;
+	*	Level of the announces of labels, you will then have 3 choices:
+		*	Long (it's the default choice);
+		*	Short (for short announcements);
+		*	Off (to disable labels announcements).
+	*	Enable announcement of the current date field value only, when moving vertically;
+	*	An "OK" button to save your configuration;
+	*	A "Cancel" button to cancel and close the dialog.
+
 
 ## Anmerkungen ##
-*	 Sie können den Dialog auch durch Drücken der Taste ESC schließen.
-*	 Über den NVDA-Einstellungsdialog "Eingaben" können Sie dem Dialog eine
-   Tastenkombination zuweisen.
+
+*	 You can close these dialogs just by pressing Escape.
+*	 You can assign a shortcut to open these dialogs in "Input gestures" menu
+   and, more precisely, in the "Day of the week" category.
+
+## Changes for 3.1 ##
+
+*	 Back to the old format for the day of the week because it allows to
+   recognize a greater number of languages;
+*	 Improved the accessibility of the date selector with recognition of the 3
+   fields 'Day', 'Month' and 'Year', and their respective values;
+*	 Added a technique for the integration of the Georgian language for the
+   recognition of the days of the week;
+*	 Added a configuration dialog box to enable or disable the accessibility
+   of the date selector;
+*	 Moved the add-on submenu from "Tools" to "Preferences";
+*	 Changed the add-on category to "Day of the week".
 
 ## Änderungen bis 2.0 ##
 
 *	 Nun wird das gui.guiHelper-Modul verwendet,um die korrekte Darstellung
    des Dialogfelds zu gewährleisten, welches nach dem Datum fragt.
 *	 Die Erweiterung wurde unter der GPL lizensiert.
-*	 Die Wochentage sind übersetzt worden, damit das Add-on ordnungsgemäß in
-   den verschiedenen Sprachen funktioniert;
+*	 Days of the week have been translated, so that the add-on works properly
+   in the different languages.;
 *	 Nun wird das Format %w für Daten verwendet, um Kodierungsfehler zu
    vermeiden. Zuvor wurde %a verwendet.
 

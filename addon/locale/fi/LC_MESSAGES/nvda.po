@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2015-10-30 04:04+1000\n"
-"PO-Revision-Date: 2015-11-06 10:49+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-10-09 08:09+0200\n"
+"Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.11\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Translators: The long label of the days field.
+msgid "You can select a day with the vertical arrows"
+msgstr "Voit valita päivän nuolinäppäimillä ylös ja alas"
+
+#. Translators: The short label of the days field.
+msgid "Select a day"
+msgstr "Valitse päivä"
+
+#. Translators: The long label of the months field.
+msgid "You can select a month with the vertical arrows"
+msgstr "Voit valita kuukauden nuolinäppäimillä ylös ja alas"
+
+#. Translators: The short label of the months field.
+msgid "Select a month"
+msgstr "Valitse kuukausi"
+
+#. Translators: The long label of the years field.
+msgid "You can select a year with the vertical arrows"
+msgstr "Voit valita vuoden nuolinäppäimillä ylös ja alas"
+
+#. Translators: The short label of the years field.
+msgid "Select a year"
+msgstr "Valitse vuosi"
 
 #. Translators: The title of the Date Dialog.
 msgid "Get the day of the week"
@@ -30,14 +54,75 @@ msgstr "Kirjoita tai valitse päivämäärä"
 msgid "Your day"
 msgstr "Päivä"
 
-#. Translators: Item in the tools menu for the Addon dayOfTheWeek.
-msgid "&Day of the week..."
-msgstr "&Viikonpäivä..."
+#. Translators: The title of the add-on configuration dialog box.
+#, python-brace-format
+msgid "Configuration of the addon {0}"
+msgstr "{0}-lisäosan asetukset"
+
+#. Translators: Level for short announces of labels.
+msgid "Short"
+msgstr "Lyhyt"
+
+#. Translators: Level for long announces of labels.
+msgid "Long"
+msgstr "Pitkä"
+
+#. Translators: Level to disable announces of labels.
+msgid "Off"
+msgstr "Ei käytössä"
+
+#. Translators: The label of the checkbox to enable or disable the date selector accessibility.
+msgid "En&able the accessibility of the date selector:"
+msgstr "Ot&a käyttöön päivämäärävalitsimen saavutettavuus"
+
+#. Translators: The label for an item to select the level of the announces of labels (short, long or disabled).
+msgid "Level of the announces of &labels:"
+msgstr "Se&litteiden ilmoitustaso:"
+
+#. Translators: The label of the checkbox to enable or disable the current date field value only announcement when moving vertically.
+msgid ""
+"Enable announcements of the current date field value only, when moving "
+"&vertically:"
+msgstr ""
+"Ilmoita nykyisen päivämääräkentän arvo vain siirryttäessä &nuolilla ylös ja "
+"alas"
+
+#. Translators: Item in the preferences menu for the Addon dayOfTheWeek.
+msgid "Day of the &week..."
+msgstr "Vii&konpäivä..."
+
+#. Translators: The tooltyp text for the dayOfTheWeek submenu.
+#, python-brace-format
+msgid "{0} add-on and its settings"
+msgstr "{0} -lisäosa ja sen asetukset"
+
+#. Translators: The name of the first item in the dayOfTheWeek add-on submenu.
+msgid "Search a &day"
+msgstr "Etsi &päivä"
+
+#. Translators: The tooltyp text for the first item in the dayOfTheWeek add-on submenu.
+msgid "Search a day in the calendar"
+msgstr "Etsi päivä kalenterista"
+
+#. Translators: The name of the second item in the dayOfTheWeek add-on submenu.
+#, python-brace-format
+msgid "{0} add-on se&ttings"
+msgstr "{0}-lisäosan a&setukset"
+
+#. Translators: The tooltyp text for the second item in the dayOfTheWeek add-on submenu.
+#, python-brace-format
+msgid "Configure the {0} add-on"
+msgstr "Määritä {0}-lisäosan asetukset"
 
 #. Translators: Message presented in input help mode.
 msgid "Allows you to find the day of the week corresponding to a chosen date."
 msgstr ""
 "Mahdollistaa valittua päivämäärää vastaavan viikonpäivän selvittämisen."
+
+#. Translators: Message presented in input help mode.
+#, python-brace-format
+msgid "Allows you to open the {0} add-on settings dialog."
+msgstr "Avaa {0}-lisäosan asetusvalintaikkunan."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -52,3 +137,24 @@ msgid ""
 msgstr ""
 "Tällä lisäosalla on mahdollista selvittää valittua päivämäärää vastaava "
 "viikonpäivä."
+
+#~ msgid "Sunday"
+#~ msgstr "sunnuntai"
+
+#~ msgid "Monday"
+#~ msgstr "maanantai"
+
+#~ msgid "Tuesday"
+#~ msgstr "tiistai"
+
+#~ msgid "Wednesday"
+#~ msgstr "keskiviikko"
+
+#~ msgid "Thursday"
+#~ msgstr "torstai"
+
+#~ msgid "Friday"
+#~ msgstr "perjantai"
+
+#~ msgid "Saturday"
+#~ msgstr "lauantai"

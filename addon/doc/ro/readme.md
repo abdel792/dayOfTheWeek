@@ -7,17 +7,44 @@
 Acest supliment vă permite să găsiți o zi din săptămână care corespunde cu o
 dată aleasă.
 
-El adaugă un element în NVDA, meniul instrumente, numit „Day of the week”,
-ca să deschidă un dialog compus din 3 controale:
+El adaugă un element în NVDA, meniul preferințe, numit „Day of the week”,
+care conține două elemente:
 
-*	 O casetă de liste pentru a alege sau tasta data.
-*	 Un buton „OK” pentru a afișa un mesaj care conține ziua.
-*	 Un buton „Anulare” pentru a închide dialogul.
+
+*	Primul se numește "caută o zi", deschide un dialog compus din 3 controale:
+	*	O listă pentru alegerea sau tastarea datei;
+	*	Un buton "OK" pentru afișarea unui mesaj care conține ziua;
+	*	Un buton de anulare pentru închiderea dialogului.
+*	Al doilea se numește "Setări dayOfTheWeek", deschide parametrii suplimentului pentru a specifica dacă vreți să raportați sau nu etichetele pentru câmpurile de dată, este compus din următoarele elemente:
+	*	Activează accesibilitatea selectorului de dată;
+	*	Nivelul de anunțări ale etichetelor, veți avea 3 alegeri:
+		*	Lung (e alegerea implicită);
+		*	Scurt (pentru anunțurile scurte);
+		*	Dezactivat (pentru dezactivarea anunțurilor etichetelor).
+	*	Activează doar anunțarea valorii câmpului de dată curent la deplasarea pe vertical;
+	*	Un buton "OK" pentru salvarea configurației;
+	*	Un buton de anulare pentru anularea modificărilor efectuate și închiderea dialogului.
+
 
 ## Note ##
-*	 Puteți închide acest dialog apăsând tasta Escape.
+
+*	 Puteți închide aceste dialoguri apăsând tasta Escape.
 *	 Puteți aloca o comandă rapidă pentru a deschide dialogul în meniul
-   „Gesturi de intrare” și, mai precis, în categoria „Instrumente”.
+   „Gesturi de intrare” și, mai precis, în categoria /„Day of the Week/”.
+
+## Modificări în versiunea 3.1 ##
+
+*	 S-a revenit la vechiul format al zilei săptămânii, deoarece permite
+   recunoașterea unui număr mare de limbi;
+*	 A fost îmbunătățită accesibilitatea selectorului de dată cu recunoașterea
+   a trei câmpuri 'zi, 'lună' și 'an', dar și respectivele valori ale
+   acestora;
+*	 A fost adăugată o tehnică pentru integrarea limbii georgiene pentru
+   recunoașterea zilelor săptămânii;
+*	 A fost adăugat un dialog de configurare pentru activarea sau dezactivarea
+   accesibilității selectorului de dată;
+*	 Sub-meniul suplimentului a fost mutat din instrumente în preferințe.
+*	 A fost schimbată categoria suplimentului în "Day of the week".
 
 ## Modificări în versiunea 2.0 ##
 

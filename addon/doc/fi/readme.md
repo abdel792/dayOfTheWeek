@@ -7,27 +7,51 @@
 Tällä lisäosalla on mahdollista selvittää valittua päivämäärää vastaava
 viikonpäivä.
 
-NVDA-valikon Työkalut-alavalikon alle lisätään Viikonpäivä-vaihtoehto, josta
-avautuu valintaikkuna, jossa on kolme säädintä:
+NVDA:n Asetukset-valikkoon lisätään Viikonpäivä-alavalikko, jossa on kaksi
+kohdetta:
 
-*	 Listaruutu, josta voit valita tai johon voit kirjoittaa haluamasi
-   päivämäärän.
-*	 OK-painike, jota painettaessa tulee näkyviin valitsemasi päivän näyttävä
-   ilmoitusruutu.
-*	 Peruuta-painike, joka sulkee valintaikkunan.
+
+*	Ensimmäinen, "Etsi päivä", avaa valintaikkunan, jossa on kolme säädintä:
+	*	Listaruutu päivämäärän valitsemiseen tai kirjoittamiseen;
+	*	"OK"-painike, jota painettaessa valitsemasi päivämäärä näytetään ilmoitusruudussa;
+	*	"Peruuta"-painike, jolla valintaikkuna suljetaan.
+*	Toinen, "Viikonpäivä-lisäosan asetukset", avaa lisäosan asetusvalintaikkunan, josta voit määrittää, ilmoitetaanko päivämääräkenttien selitteet, ja siinä on seuraavat osat:
+	*	Ota käyttöön päivämäärävalitsimen saavutettavuus;
+	*	Selitteiden ilmoitustaso, josta on valittavissa kolme vaihtoehtoa:
+		*	Pitkä (tämä on valittu oletuksena);
+		*	Lyhyt (lyhyet ilmoitukset);
+		*	Ei käytössä (poistaa selitteiden ilmoittamisen käytöstä).
+	*	Ilmoita nykyisen päivämääräkentän arvo vain siirryttäessä nuolilla ylös ja alas;
+	*	"OK"-painike asetusten tallentamiseen;
+	*	"Peruuta"-painike muutosten perumiseen ja valintaikkunan sulkemiseen.
+
 
 ## Huomautuksia ##
-*	 Voit sulkea valintaikkunan myös painamalla Esc-näppäintä.
-*	 Voit liittää valintaikkunan avaamista varten näppäinkomennon NVDA:n
-   Asetukset-valikon Syötekomennot-kohdasta ja valitsemalla avautuvasta
-   valintaikkunasta Työkalut-kategorian.
+
+*	 Voit sulkea nämä valintaikkunat painamalla Esc-näppäintä.
+*	 Voit liittää näppäinkomennon näiden valintaikkunoiden avaamista varten
+   NVDA:n Asetukset-valikon Syötekomennot-kohdasta ja valitsemalla
+   avautuvasta valintaikkunasta Viikonpäivä-kategorian.
+
+## Muutokset versiossa 3.1 ##
+
+*	 Palattu viikonpäivän vanhaan muotoon, koska se mahdollistaa useamman
+   kielen tunnistamisen;
+*	 Paranneltu päivämäärävalitsimen saavutettavuutta "Päivä"-, "Kuukausi"- ja
+   "Vuosi"-kenttien sekä niiden arvojen tunnistamisessa;
+*	 Lisätty tekniikka georgian kielen integroimiseen viikonpäivien
+   tunnistamista varten;
+*	 Lisätty asetusvalintaikkuna päivämäärävalitsimen saavutettavuuden
+   käyttöön ottamiseen tai käytöstä poistamiseen;
+*	 Lisäosan alavalikko siirretty "Työkalut"-valikosta "Asetukset"-valikkoon;
+*	 Lisäosan kategoriaksi muutettu "Viikonpäivä".
 
 ## Muutokset versiossa 2.0 ##
 
 *	 Päivämääränkyselyvalintaikkunan asianmukaisen ulkoasun varmistamiseen
    käytetään gui.guiHelper-moduulia;
 *	 Lisätty GPL-lisenssi;
-*	 Viikonpäivät on käännetty, jotta lisäosa toimii oikein eri kielillä;
+*	 Viikonpäivät on käännetty, jotta lisäosa toimii oikein eri kielillä.
 *	 Koodausvirheiden välttämiseksi päivämääriä varten käytetään %w-muotoa
    %a:n asemesta.
 
