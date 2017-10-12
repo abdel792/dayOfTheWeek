@@ -90,18 +90,39 @@ class DateDialog (wx.Dialog):
 		# Translators: The title of the Date Dialog.
 		dlgTitle = _("Get the day of the week")
 		super (DateDialog,self).__init__(parent,title = dlgTitle)
-		mainSizer = wx.BoxSizer (wx.VERTICAL)
-		sHelper = gui.guiHelper.BoxSizerHelper (self, orientation = wx.VERTICAL)
+		self.mainSizer = wx.BoxSizer (wx.VERTICAL)
 		# Translators: A label for a list in a dialog.
-		dateLabel = _("Type or select a date")
-		sHelper.addItem (wx.StaticText (self, label = dateLabel))
+		self.dateLabel = _("Type or select a date")
+		# This try/except/else block has been added to ensure the compatibility of the add-on with the NVDA versions that preceded version 2016.4, which included the gui.guiHelper module.
+		try:
+			import gui.guiHelper
+		except ImportError:
+			self.showDateDialog ()
+		else:
+			self.showDateDialogForGuiHelper ()
+
+	def showDateDialogForGuiHelper (self):
+		sHelper = gui.guiHelper.BoxSizerHelper (self, orientation = wx.VERTICAL)
+		sHelper.addItem (wx.StaticText (self, label = self.dateLabel))
 		self.datePicker = sHelper.addItem (wx.DatePickerCtrl (self))
 		sHelper.addDialogDismissButtons (self.CreateButtonSizer (wx.OK|wx.CANCEL))
 		self.datePicker.Bind (wx.EVT_CHAR, self.onListChar)
 		self.Bind (wx.EVT_BUTTON, self.onOk, id = wx.ID_OK)
-		mainSizer.Add (sHelper.sizer, border = gui.guiHelper.BORDER_FOR_DIALOGS, flag = wx.ALL)
-		self.Sizer = mainSizer
-		mainSizer.Fit (self)
+		self.mainSizer.Add (sHelper.sizer, border = gui.guiHelper.BORDER_FOR_DIALOGS, flag = wx.ALL)
+		self.Sizer = self.mainSizer
+		self.mainSizer.Fit (self)
+		self.datePicker.SetFocus ()
+		self.Center (wx.BOTH | wx.CENTER_ON_SCREEN)
+	def showDateDialog (self):
+		datesLabel = wx.StaticText(self,-1,label=self.dateLabel)
+		self.mainSizer.Add (datesLabel)
+		self.datePicker = wx.DatePickerCtrl (self)
+		self.mainSizer.Add (item = self.datePicker, proportion = 0,flag=wx.ALL, border = 5)
+		self.mainSizer.Add (self.CreateButtonSizer (wx.OK | wx.CANCEL))
+		self.datePicker.Bind (wx.EVT_CHAR, self.onListChar)
+		self.Bind (wx.EVT_BUTTON, self.onOk, id=wx.ID_OK)
+		self.mainSizer.Fit (self)
+		self.SetSizer (self.mainSizer)
 		self.datePicker.SetFocus ()
 		self.Center (wx.BOTH | wx.CENTER_ON_SCREEN)
 
@@ -143,17 +164,28 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 	)
 
 	def makeSettings (self, settingsSizer):
-		settingsSizerHelper = gui.guiHelper.BoxSizerHelper (self, sizer = settingsSizer)
 		# Translators: The label of the checkbox to enable or disable the date selector accessibility.
-		enableAnnounces = _("En&able the accessibility of the date selector:")
-		self.enableAnnouncesCheckBox = wx.CheckBox (parent = self, label = enableAnnounces)
+		self.enableAnnounces = _("En&able the accessibility of the date selector:")
+		# Translators: The label for an item to select the level of the announces of labels (short, long or disabled).
+		self.labelAnnounceLevelText = _("Level of the announces of &labels:")
+		# Translators: The label of the checkbox to enable or disable the current date field value only announcement when moving vertically.
+		self.valueAnnounce = _("Enable announcements of the current date field value only, when moving &vertically:")
+		# This try/except/else block has been added to ensure the compatibility of the add-on with the NVDA versions that preceded version 2016.4, which included the gui.guiHelper module.
+		try:
+			import gui.guiHelper
+		except ImportError:
+			self.showSettingsDialog (settingsSizer = settingsSizer)
+		else:
+			self.showSettingsDialogForGuiHelper (settingsSizer = settingsSizer)
+
+	def showSettingsDialogForGuiHelper (self, settingsSizer):
+		settingsSizerHelper = gui.guiHelper.BoxSizerHelper (self, sizer = settingsSizer)
+		self.enableAnnouncesCheckBox = wx.CheckBox (self, label = self.enableAnnounces)
 		self.enableAnnouncesCheckBox.SetValue (config.conf["dayOfWeek"]["enableAnnounces"])
 		settingsSizerHelper.addItem (self.enableAnnouncesCheckBox)
 
-		# Translators: The label for an item to select the level of the announces of labels (short, long or disabled).
-		labelAnnounceLevelText = _("Level of the announces of &labels:")
 		labelAnnounceLevelChoices = [name for level, name in self.LABEL_ANNOUNCE_LEVELS]
-		self.labelAnnounceLevelsList = settingsSizerHelper.addLabeledControl(labelAnnounceLevelText, wx.Choice, choices = labelAnnounceLevelChoices)
+		self.labelAnnounceLevelsList = settingsSizerHelper.addLabeledControl(self.labelAnnounceLevelText, wx.Choice, choices = labelAnnounceLevelChoices)
 		curLevel = config.conf["dayOfWeek"]["labelAnnounceLevel"]
 		for index, (level, name) in enumerate(self.LABEL_ANNOUNCE_LEVELS):
 			if level == curLevel:
@@ -163,11 +195,36 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 				log.debugWarning("Could not set level list to current level of the announces of labels")
 		self.labelAnnounceLevelsList.Enabled = self.enableAnnouncesCheckBox.IsChecked ()
 
-		# Translators: The label of the checkbox to enable or disable the current date field value only announcement when moving vertically.
-		valueAnnounce = _("Enable announcements of the current date field value only, when moving &vertically:")
-		self.reportDateFieldValuesCheckBox = wx.CheckBox (parent = self, label = valueAnnounce)
+		self.reportDateFieldValuesCheckBox = wx.CheckBox (self, label = self.valueAnnounce)
 		self.reportDateFieldValuesCheckBox.SetValue (config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"])
 		settingsSizerHelper.addItem (self.reportDateFieldValuesCheckBox)
+		self.reportDateFieldValuesCheckBox.Enabled = self.enableAnnouncesCheckBox.IsChecked ()
+		self.enableAnnouncesCheckBox.Bind (wx.EVT_CHECKBOX, self.onCheckAnnounces)
+
+	def showSettingsDialog (self, settingsSizer):
+		dialogSizer = wx.BoxSizer (wx.VERTICAL)
+		self.enableAnnouncesCheckBox = wx.CheckBox (self, label = self.enableAnnounces)
+		self.enableAnnouncesCheckBox.SetValue (config.conf["dayOfWeek"]["enableAnnounces"])
+		dialogSizer.Add (self.enableAnnouncesCheckBox)
+
+		labelAnnounceLevelChoices = [name for level, name in self.LABEL_ANNOUNCE_LEVELS]
+		labelAnnounce = wx.StaticText (self,label=self.labelAnnounceLevelText)
+		dialogSizer.Add (labelAnnounce)
+		self.labelAnnounceLevelsList = wx.Choice (self, choices = labelAnnounceLevelChoices)
+		curLevel = config.conf["dayOfWeek"]["labelAnnounceLevel"]
+		for index, (level, name) in enumerate(self.LABEL_ANNOUNCE_LEVELS):
+			if level == curLevel:
+				self.labelAnnounceLevelsList.SetSelection(index)
+				break
+			else:
+				log.debugWarning("Could not set level list to current level of the announces of labels")
+		dialogSizer.Add (self.labelAnnounceLevelsList)
+		self.labelAnnounceLevelsList.Enabled = self.enableAnnouncesCheckBox.IsChecked ()
+
+		self.reportDateFieldValuesCheckBox = wx.CheckBox (self, label = self.valueAnnounce)
+		self.reportDateFieldValuesCheckBox.SetValue (config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"])
+		dialogSizer.Add (self.reportDateFieldValuesCheckBox)
+		settingsSizer.Add (dialogSizer, border=10, flag=wx.BOTTOM)
 		self.reportDateFieldValuesCheckBox.Enabled = self.enableAnnouncesCheckBox.IsChecked ()
 		self.enableAnnouncesCheckBox.Bind (wx.EVT_CHECKBOX, self.onCheckAnnounces)
 
