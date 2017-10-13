@@ -35,7 +35,7 @@ It adds a submenu in the NVDA Preferences menu named "Day of the week", containi
 
 ## Changes for 3.1 ##
 
-*	 Back to the old format for the day of the week because it allows to recognize a greater number of languages;
+*	 Back to the previous format for the day of the week because it allows to recognize a greater number of languages;
 *	 Improved the accessibility of the date selector with recognition of the 3 fields 'Day', 'Month' and 'Year', and their respective values;
 *	 Added a technique for the integration of the Georgian language for the recognition of the days of the week;
 *	 Added a configuration dialog box to enable or disable the accessibility of the date selector;
@@ -47,7 +47,7 @@ It adds a submenu in the NVDA Preferences menu named "Day of the week", containi
 *	 Used the gui.guiHelper module to ensure the correct appearance of the dialog asking for a date;
 *	 Added the GPL license to the addon;
 *	 Days of the week have been translated, so that the add-on works properly in the different languages;
-*	 Used the %w format for the dates rather than %a to avoid encoding errors.
+*	 Changed the day format to avoid encoding errors.
 
 ## Changes for 1.0 ##
 
