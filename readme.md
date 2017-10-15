@@ -30,8 +30,8 @@ It adds a submenu in the NVDA Preferences menu named "Day of the week", containi
 
 ## Changes for 4.0 ##
 
-*	 The add-on is now able to recognize all the regional date formats that the user can choose.;
-*	 Added the backward compatibility of the add-on with the NVDA versions that preceded version 2016.4, which included the gui.guiHelper module.
+*	 The add-on is now able to recognize all the regional date formats that the user can choose;
+*	 Added the backward compatibility of the add-on with the NVDA versions that preceded 2016.4, which included the gui.guiHelper module.
 
 ## Changes for 3.1 ##
 
