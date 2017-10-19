@@ -5,178 +5,134 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.0\n"
+"Project-Id-Version: dayOfTheWeek 3.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2015-12-04 04:04+1000\n"
-"PO-Revision-Date: 2017-10-16 20:37+0300\n"
-"Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
-"Language-Team: Turkish <cagrid@hotmail.comLL@li.org>\n"
-"Language: tr\n"
+"POT-Creation-Date: 2015-10-30 04:04+1000\n"
+"PO-Revision-Date: 2017-10-07 16:24+0200\n"
+"Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
+"Language-Team: spanish <oprisniki@gmail.com>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.4\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-Basepath: C:/Users/cagri.dogan/AppData/Roaming/nvda/addons/"
-"dayOfTheWeek/globalPlugins\n"
-"X-Poedit-SearchPath-0: C:/Users/cagri.dogan/AppData/Roaming/nvda/addons/"
-"dayOfTheWeek/globalPlugins\n"
+"X-Generator: Poedit 1.8.12\n"
 
 #. Translators: The long label of the days field.
 msgid "You can select a day with the vertical arrows"
-msgstr "Yukarı-aşağı yön tuşlarıyla bir gün seçebilirsiniz"
+msgstr "Puedes seleccionar un día con las flechas verticales"
 
 #. Translators: The short label of the days field.
 msgid "Select a day"
-msgstr "Gün seçin"
+msgstr "Selecciona un día"
 
 #. Translators: The long label of the months field.
 msgid "You can select a month with the vertical arrows"
-msgstr "Yukarı-aşağı yön tuşlarıyla bir ay seçebilirsiniz"
+msgstr "Puedes seleccionar un mes con las flechas verticales"
 
 #. Translators: The short label of the months field.
 msgid "Select a month"
-msgstr "Ay seçin"
+msgstr "Selecciona un mes"
 
 #. Translators: The long label of the years field.
 msgid "You can select a year with the vertical arrows"
-msgstr "Yukarı-aşağı yön tuşlarıyla bir yıl seçebilirsiniz"
+msgstr "Puedes seleccionar un año con las flechas verticales"
 
 #. Translators: The short label of the years field.
 msgid "Select a year"
-msgstr "Yıl seçin"
+msgstr "Selecciona un año"
 
 #. Translators: The title of the Date Dialog.
 msgid "Get the day of the week"
-msgstr "Bu tarih hangi gün"
+msgstr "Obtener el día de la semana"
 
 #. Translators: A label for a list in a dialog.
 msgid "Type or select a date"
-msgstr "Yazın veya bir tarih seçin"
+msgstr "Teclea o selecciona una fecha"
 
 #. Translators: The title of a dialog.
 msgid "Your day"
-msgstr "Seçtiğiniz gün"
+msgstr "Tu día"
 
 #. Translators: The title of the add-on configuration dialog box.
 #, python-brace-format
 msgid "Configuration of the addon {0}"
-msgstr "{0} eklenti konfigürasyonu"
+msgstr "Configuración del complemento {0}"
 
 #. Translators: Level for short announces of labels.
 msgid "Short"
-msgstr "Kısa"
+msgstr "Corto"
 
 #. Translators: Level for long announces of labels.
 msgid "Long"
-msgstr "Uzun"
+msgstr "Largo"
 
 #. Translators: Level to disable announces of labels.
 msgid "Off"
-msgstr "Kapalı"
+msgstr "Desactivado"
 
 #. Translators: The label of the checkbox to enable or disable the date selector accessibility.
 msgid "En&able the accessibility of the date selector:"
-msgstr "Tarih s&eçicinin erişilebilirliğini etkinleştir:"
+msgstr "H&abilitar la accesibilidad del selector de fecha:"
 
 #. Translators: The label for an item to select the level of the announces of labels (short, long or disabled).
 msgid "Level of the announces of &labels:"
-msgstr "Etiketlerin bildirim seviyesi:"
+msgstr "Nivel de los anuncios de las &etiquetas:"
 
 #. Translators: The label of the checkbox to enable or disable the current date field value only announcement when moving vertically.
 msgid ""
 "Enable announcements of the current date field value only, when moving "
 "&vertically:"
-msgstr "Yalnızca &dikey hareket ederken mevcut alandaki  değeri seslendir:"
+msgstr ""
+"Habilitar anuncios del valor del campo de fecha actual solamente, al moverse "
+"&verticalmente:"
 
 #. Translators: Item in the preferences menu for the Addon dayOfTheWeek.
 msgid "Day of the &week..."
-msgstr "&Bu tarih hangi gün..."
+msgstr "Día de la &semana..."
 
 #. Translators: The tooltyp text for the dayOfTheWeek submenu.
 #, python-brace-format
 msgid "{0} add-on and its settings"
-msgstr "{0} eklentisi ve ayarları"
+msgstr "Complemento {0} y sus opciones"
 
 #. Translators: The name of the first item in the dayOfTheWeek add-on submenu.
 msgid "Search a &day"
-msgstr "&Gün arama"
+msgstr "Encontrar un &día"
 
 #. Translators: The tooltyp text for the first item in the dayOfTheWeek add-on submenu.
 msgid "Search a day in the calendar"
-msgstr "Takvimde gün arama"
+msgstr "Encontrar un día en el calendario"
 
 #. Translators: The name of the second item in the dayOfTheWeek add-on submenu.
 #, python-brace-format
 msgid "{0} add-on se&ttings"
-msgstr "{0} eklenti a&yarları"
+msgstr "Opciones del complemen&to {0}"
 
 #. Translators: The tooltyp text for the second item in the dayOfTheWeek add-on submenu.
 #, python-brace-format
 msgid "Configure the {0} add-on"
-msgstr "{0} eklentisini konfigüre et"
+msgstr "Configurar el complemento {0}"
 
 #. Translators: Message presented in input help mode.
 msgid "Allows you to find the day of the week corresponding to a chosen date."
-msgstr "Seçilen tarihe tekabül eden günü öğrenmenizi sağlar."
+msgstr ""
+"Te permite encontrar el día de la semana correspondiente a una fecha elegida."
 
 #. Translators: Message presented in input help mode.
 #, python-brace-format
 msgid "Allows you to open the {0} add-on settings dialog."
-msgstr "{0} eklenti  Ayarları iletişim kutusunu açar."
+msgstr "Te permite abrir el diálogo de opciones del complemento {0}."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Day of the week"
-msgstr "Bu tarih hangi gün..."
+msgstr "Día de la semana"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
 "With this add-on, you'll be able to find the day of the week corresponding "
 "to a chosen date."
-msgstr "Seçilen tarihe tekabül eden günü öğrenmenizi sağlar."
-
-#~ msgid "Sunday"
-#~ msgstr "Pazar"
-
-#~ msgid "Monday"
-#~ msgstr "Pazartesi"
-
-#~ msgid "Tuesday"
-#~ msgstr "Salı"
-
-#~ msgid "Wednesday"
-#~ msgstr "Çarşamba"
-
-#~ msgid "Thursday"
-#~ msgstr "Perşembe"
-
-#~ msgid "Friday"
-#~ msgstr "Cuma"
-
-#~ msgid "Saturday"
-#~ msgstr "Cumartesi"
-
-#~ msgid "The tracked object has been set at the nvda navigator object."
-#~ msgstr "nesne sunucusu takip edilen nesneye taşındı"
-
-#~ msgid "Object to be tracked set as the position of NVDA navigator object."
-#~ msgstr "Nesne sunucusunu takip edilen nesneye taşır"
-
-#~ msgid ""
-#~ "the object named %s is being tracked. NVDA will say any text as it is "
-#~ "updated."
-#~ msgstr ""
-#~ "%s adlı nesne izleniyor. NVDA, nesne güncellendiğinde seslendirecek."
-
-#~ msgid "object %s is not being followed anymore."
-#~ msgstr "%s adlı nesne artık izlenmiyor."
-
-#~ msgid "The object set to be tracked or not to be tracked."
-#~ msgstr ""
-#~ "üzerinde bulunulan nesne takip edilmeye başlanır. Takip sırasında bu "
-#~ "tuşlara basmak takibi sonlandırır."
-
-#~ msgid "Reads the value of the tracked object."
-#~ msgstr "Takip edilen nesnenin güncel değeri seslendirilir"
+msgstr ""
+"Con este complemento, podrás encontrar el día de la semana correspondiente a "
+"una fecha elegida."

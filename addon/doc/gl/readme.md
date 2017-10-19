@@ -32,10 +32,17 @@ contén 2 elementos:
 *	 Podes asignar un atallo de teclado para abrir o diálogo no menú "Xestos
    de Entrada" e, máis concretamente, na categoría "Día da semana".
 
+## Changes for 4.0 ##
+
+*	 The add-on is now able to recognize all the regional date formats that
+   the user can choose;
+*	 Added the backward compatibility of the add-on with the NVDA versions
+   that preceded 2016.4, which included the gui.guiHelper module.
+
 ## Cambios para 3.1 ##
 
-*	 Volta ao formato anterior para o día da semana porque permite recoñecer
-   un meirande número de linguas;
+*	 Back to the previous format for the day of the week because it allows to
+   recognize a greater number of languages;
 *	 Mellora da acesibilidade do selector de datas co recoñecemento dos 3
    campos "Día", "Mes" e "Ano", e os seus respectivos valores;
 *	 Engadida unha técnica para a integración da lingua Georgiana para o
@@ -50,10 +57,9 @@ contén 2 elementos:
 *	 Usa o módulo gui.guiHelper para asegurar a correcta apariencia do diálogo
    pedindo unha data;
 *	 Engadida a licencia GPL para o complemento;
-*	 Traducíronse os días da semana, para que o complemento funcione
-   correctamente nas distintas linguas;
-*	 Usa o formato de %w para as datas en lugar de %a para evitar erros de
-   codificación.
+*	 Days of the week have been translated, so that the add-on works properly
+   in the different languages;
+*	 Changed the day format to avoid encoding errors.
 
 ## Cambios para 1.0 ##
 

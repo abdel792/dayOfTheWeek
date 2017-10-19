@@ -33,6 +33,14 @@ que contiene 2 elementos:
    "Gestos de Entrada" y, más concretamente, en la categoría "Día de la
    semana".
 
+## Cambios para 4.0 ##
+
+*	 El complemento es ahora capaz de reconocer todos los formatos de fecha
+   regional que el usuario puede elegir;
+*	 Añadido la compatibilidad hacia atrás del complemento con las versiones
+   de NVDA que precedieron a la versión 2016.4, que incluía el módulo
+   gui.guiHelper.
+
 ## Cambios para 3.1 ##
 
 *	 Retorno al formato anterior para el día de la semana porque permite
@@ -52,9 +60,8 @@ que contiene 2 elementos:
    diálogo pidiendo una fecha;
 *	 Añadida la licencia GPL para el complemento;
 *	 Los días de la semana se han traducido, para que el complemento funcione
-   correctamente en los distintos idiomas.;
-*	 Utiliza el formato de %w para las fechas en lugar de %a para evitar
-   errores de codificación.
+   correctamente en los distintos idiomas;
+*	 Cambiado el formato del día para evitar errores de codificación.
 
 ## Cambios para 1.0 ##
 

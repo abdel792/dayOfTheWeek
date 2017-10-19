@@ -32,6 +32,13 @@ care conține două elemente:
 *	 Puteți aloca o comandă rapidă pentru a deschide dialogul în meniul
    „Gesturi de intrare” și, mai precis, în categoria /„Day of the Week/”.
 
+## Modificări în versiunea 4.0 ##
+
+*	 Suplimentul poate recunoaște toate formatele datelor regionale p care le
+   poate alege un utilizator;
+*	 A fost adăugată înapoi compatibilitatea suplimentului cu versiunile NVDA
+   care au precedat versiunea 2016.4, care a inclus modulul gui.guiHelper.
+
 ## Modificări în versiunea 3.1 ##
 
 *	 S-a revenit la vechiul format al zilei săptămânii, deoarece permite
@@ -53,8 +60,7 @@ care conține două elemente:
 *	 A fost adăugată licența GPL pentru supliment;
 *	 Zilele săptămânii au fost traduse, astfel încât suplimentul să
    funcționeze corect în diferite limbi;
-*	 A fost folosit formatul %w pentru date, mai degrabă decât %a pentru
-   evitarea erorilor de codificare.
+*	 Formatul zilei a fost modificat pentru a evita erorile de codificare.
 
 ## Modificări în versiunea 1.0 ##
 

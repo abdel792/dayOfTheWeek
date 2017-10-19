@@ -33,6 +33,13 @@ kohdetta:
    NVDA:n Asetukset-valikon Syötekomennot-kohdasta ja valitsemalla
    avautuvasta valintaikkunasta Viikonpäivä-kategorian.
 
+## Muutokset versiossa 4.0 ##
+
+*	 Lisäosa tunnistaa nyt kaikki käyttäjän valittavissa olevat alueelliset
+   päivämäärämuodot;
+*	 Lisätty taaksepäin yhteensopivuus gui.guiHelper-moduulin sisältävää NVDA
+   2016.4:ää vanhemmille versioille.
+
 ## Muutokset versiossa 3.1 ##
 
 *	 Palattu viikonpäivän vanhaan muotoon, koska se mahdollistaa useamman
@@ -51,9 +58,8 @@ kohdetta:
 *	 Päivämääränkyselyvalintaikkunan asianmukaisen ulkoasun varmistamiseen
    käytetään gui.guiHelper-moduulia;
 *	 Lisätty GPL-lisenssi;
-*	 Viikonpäivät on käännetty, jotta lisäosa toimii oikein eri kielillä.
-*	 Koodausvirheiden välttämiseksi päivämääriä varten käytetään %w-muotoa
-   %a:n asemesta.
+*	 Viikonpäivät on käännetty, jotta lisäosa toimii oikein eri kielillä;
+*	 Päivän muotoa muutettu koodausvirheiden välttämiseksi.
 
 ## Muutokset versiossa 1.0 ##
 

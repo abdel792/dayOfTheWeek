@@ -33,10 +33,17 @@ semaine", contenant 2 éléments :
    le menu "Gestes de Commandes" et, plus précisément, dans la catégorie
    "Jour de la semaine".
 
+## Changements pour la version 4.0 ##
+
+*	 Le module complémentaire est maintenant en mesure de reconnaître tous les
+   formats de date régional que l'utilisateur peut choisir ;
+*	 Ajout de la rétrocompatibilité du module avec les versions NVDA
+   antérieures à la version 2016.4, qui incluait le module gui.guiHelper.
+
 ## Changements pour la version 3.1 ##
 
-*	 Retour au précédent format pour le jour de la semaine car il permet de
-   reconnaître un plus grand nombre de langues;
+*	 Retour au format précédent pour le jour de la semaine car il permet de
+   reconnaître un plus grand nombre de langues ;
 *	 Amélioré l'accessibilité du sélecteur de date avec la reconnaissance des
    3 champs "Jour", "Mois" et "Année", et leurs valeurs respectives;
 *	 Ajout d'une technique pour l'intégration de la langue Géorgienne pour la
@@ -53,9 +60,8 @@ semaine", contenant 2 éléments :
    boîte de dialogue demandant une date ;
 *	 Ajout de la licence GPL pour le module complémentaire ;
 *	 Les jours de la semaine ont été traduits, de sorte que le module
-   complémentaire fonctionne correctement dans les différentes langues.;
-*	 Utilisé le format %w pour les dates plutôt que %a pour éviter les erreurs
-   de codage.
+   complémentaire fonctionne correctement dans les différentes langues ;
+*	 Changé le format de jour pour éviter les erreurs d'encodage.
 
 ## Changements pour la version 1.0 ##
 

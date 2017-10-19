@@ -32,9 +32,16 @@ containing 2 items:
 *	 You can assign a shortcut to open these dialogs in "Input gestures" menu
    and, more precisely, in the "Day of the week" category.
 
+## Changes for 4.0 ##
+
+*	 The add-on is now able to recognize all the regional date formats that
+   the user can choose;
+*	 Added the backward compatibility of the add-on with the NVDA versions
+   that preceded 2016.4, which included the gui.guiHelper module.
+
 ## Changes for 3.1 ##
 
-*	 Back to the old format for the day of the week because it allows to
+*	 Back to the previous format for the day of the week because it allows to
    recognize a greater number of languages;
 *	 Improved the accessibility of the date selector with recognition of the 3
    fields 'Day', 'Month' and 'Year', and their respective values;
@@ -51,9 +58,8 @@ containing 2 items:
    des Dialogfelds zu gewährleisten, welches nach dem Datum fragt.
 *	 Die Erweiterung wurde unter der GPL lizensiert.
 *	 Days of the week have been translated, so that the add-on works properly
-   in the different languages.;
-*	 Nun wird das Format %w für Daten verwendet, um Kodierungsfehler zu
-   vermeiden. Zuvor wurde %a verwendet.
+   in the different languages;
+*	 Changed the day format to avoid encoding errors.
 
 ## Änderungen in Version 1.0 ##
 
