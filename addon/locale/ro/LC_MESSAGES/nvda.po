@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 1.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-02-12 04:04+1000\n"
-"PO-Revision-Date: 2017-10-14 10:55+0200\n"
+"PO-Revision-Date: 2017-10-20 09:31+0200\n"
 "Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
 "Language-Team: \n"
 "Language: ro\n"
@@ -88,7 +88,7 @@ msgstr ""
 
 #. Translators: Item in the preferences menu for the Addon dayOfTheWeek.
 msgid "Day of the &week..."
-msgstr "&Ziua săptămânii."
+msgstr "Day of the &week..."
 
 #. Translators: The tooltyp text for the dayOfTheWeek submenu.
 #, python-brace-format
@@ -125,7 +125,7 @@ msgstr "Vă permite să deschideți dialogul de setări al suplimentului {0}."
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Day of the week"
-msgstr "Ziua săptămânii"
+msgstr "Day of the week"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager

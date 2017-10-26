@@ -12,17 +12,17 @@ semaine", contenant 2 éléments :
 
 
 *	Le premier nommé "Trouver un jour", ouvre une boîte de dialogue composée de 3 contrôles :
-	*	Une zone de liste pour choisir ou tapez votre date;
-	*	Un bouton "OK" pour afficher une boîte de messages contenant votre jour;
+	*	Une zone de liste pour choisir ou tapez votre date ;
+	*	Un bouton "OK" pour afficher une boîte de messages contenant votre jour ;
 	*	Un bouton "Annuler" pour fermer la boîte de dialogue.
 *	Le deuxième nommé "Paramètres du module complémentaire dayOfTheWeek" ouvre les paramètres du module complémentaire pour spécifier si vous souhaitez annoncer les étiquettes pour les champs de date ou non, il se compose des éléments suivants :
-	*	Activer l'accessibilité du sélecteur de date;
+	*	Activer l'accessibilité du sélecteur de date ;
 	*	Niveau des annonces d'étiquettes, vous aurez alors 3 choix :
-		*	Long (c'est le choix par défaut);
-		*	Court (pour les annonces courts);
+		*	Long (c'est le choix par défaut) ;
+		*	Court (pour les annonces courts) ;
 		*	Désactiver (désactiver les annonces d'étiquettes).
-	*	Activer les annonces de la valeur actuelle du champ de la date uniquement lorsque vous vous déplacez verticalement;
-	*	Un bouton "OK" pour sauvegarder votre configuration;
+	*	Activer les annonces de la valeur actuelle du champ de la date uniquement lorsque vous vous déplacez verticalement ;
+	*	Un bouton "OK" pour sauvegarder votre configuration ;
 	*	Un bouton "Annuler" pour annuler et fermer la boîte de dialogue.
 
 
@@ -45,13 +45,13 @@ semaine", contenant 2 éléments :
 *	 Retour au format précédent pour le jour de la semaine car il permet de
    reconnaître un plus grand nombre de langues ;
 *	 Amélioré l'accessibilité du sélecteur de date avec la reconnaissance des
-   3 champs "Jour", "Mois" et "Année", et leurs valeurs respectives;
+   3 champs "Jour", "Mois" et "Année", et leurs valeurs respectives ;
 *	 Ajout d'une technique pour l'intégration de la langue Géorgienne pour la
-   reconnaissance des jours de la semaine;
+   reconnaissance des jours de la semaine ;
 *	 Ajout d'une boîte de dialogue de configuration pour activer ou désactiver
-   l'accessibilité du sélecteur de date;
-*	 Déplacé le sous-menu du module complémentaire de "Outils" à
-   "Préférences";
+   l'accessibilité du sélecteur de date ;
+*	 Déplacé le sous-menu du module complémentaire de "Outils" à "Préférences"
+   ;
 *	 Changé la catégorie du module complémentaire à "Jour de la semaine".
 
 ## Changements pour la version 2.0 ##
@@ -65,7 +65,7 @@ semaine", contenant 2 éléments :
 
 ## Changements pour la version 1.0 ##
 
-*	 Première version
+*	 Première version.
 
 [[!tag dev stable]]
 

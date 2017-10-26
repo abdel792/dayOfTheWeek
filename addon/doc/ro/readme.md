@@ -1,4 +1,4 @@
-# Ziua săptămânii #
+# Day of the week #
 
 *	 Autori: Abdel, Noelia.
 *	 Descărcați [versiunea stabilă][1]
