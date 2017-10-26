@@ -113,6 +113,7 @@ class DateDialog (wx.Dialog):
 		self.mainSizer.Fit (self)
 		self.datePicker.SetFocus ()
 		self.Center (wx.BOTH | wx.CENTER_ON_SCREEN)
+
 	def showDateDialog (self):
 		datesLabel = wx.StaticText(self,-1,label=self.dateLabel)
 		self.mainSizer.Add (datesLabel)
