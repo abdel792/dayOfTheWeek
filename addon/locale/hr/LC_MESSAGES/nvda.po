@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2015-10-30 04:04+1000\n"
-"PO-Revision-Date: 2016-01-28 20:48+0100\n"
-"Last-Translator: zvonimir stanečić <zvonimirek222@yandex.com>\n"
+"PO-Revision-Date: 2017-10-28 12:17+0100\n"
+"Last-Translator: zvonimir Stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: hr <zvonimirek222@yandex.com>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,30 @@ msgstr ""
 "X-Generator: Poedit 1.6.10\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. Translators: The long label of the days field.
+msgid "You can select a day with the vertical arrows"
+msgstr "Možeš označavati dan sa vertikalnim strelicama"
+
+#. Translators: The short label of the days field.
+msgid "Select a day"
+msgstr "označi dan"
+
+#. Translators: The long label of the months field.
+msgid "You can select a month with the vertical arrows"
+msgstr "Možeš označavati mjesec sa vertikalnim strelicama"
+
+#. Translators: The short label of the months field.
+msgid "Select a month"
+msgstr "Označi mjesec"
+
+#. Translators: The long label of the years field.
+msgid "You can select a year with the vertical arrows"
+msgstr "Možeš označavati godinu sa vertikalnim strelicama"
+
+#. Translators: The short label of the years field.
+msgid "Select a year"
+msgstr "označi godinu"
 
 #. Translators: The title of the Date Dialog.
 msgid "Get the day of the week"
@@ -31,13 +55,72 @@ msgstr "Upiši ili označi datum"
 msgid "Your day"
 msgstr "Tvoj dan"
 
-#. Translators: Item in the tools menu for the Addon dayOfTheWeek.
-msgid "&Day of the week..."
+#. Translators: The title of the add-on configuration dialog box.
+#, python-brace-format
+msgid "Configuration of the addon {0}"
+msgstr "konfiguracija dodatka {0}"
+
+#. Translators: Level for short announces of labels.
+msgid "Short"
+msgstr "Kratko"
+
+#. Translators: Level for long announces of labels.
+msgid "Long"
+msgstr "dugo"
+
+#. Translators: Level to disable announces of labels.
+msgid "Off"
+msgstr "isključeno"
+
+#. Translators: The label of the checkbox to enable or disable the date selector accessibility.
+msgid "En&able the accessibility of the date selector:"
+msgstr "&omogući pristupačnost za kontrolu izbora datuma:"
+
+#. Translators: The label for an item to select the level of the announces of labels (short, long or disabled).
+msgid "Level of the announces of &labels:"
+msgstr "Razina izgovora &opisa:"
+
+#. Translators: The label of the checkbox to enable or disable the current date field value only announcement when moving vertically.
+msgid ""
+"Enable announcements of the current date field value only, when moving "
+"&vertically:"
+msgstr "OMOGUĆI IZGOVOR DATUMA PRI vertikalnom kretanju:"
+
+#. Translators: Item in the preferences menu for the Addon dayOfTheWeek.
+msgid "Day of the &week..."
 msgstr "&Dan u tjednu..."
+
+#. Translators: The tooltyp text for the dayOfTheWeek submenu.
+#, python-brace-format
+msgid "{0} add-on and its settings"
+msgstr "{0} dodatak i njegove postavke"
+
+#. Translators: The name of the first item in the dayOfTheWeek add-on submenu.
+msgid "Search a &day"
+msgstr "Pretraži &dab"
+
+#. Translators: The tooltyp text for the first item in the dayOfTheWeek add-on submenu.
+msgid "Search a day in the calendar"
+msgstr "Pretražuje dan u kalendaru"
+
+#. Translators: The name of the second item in the dayOfTheWeek add-on submenu.
+#, python-brace-format
+msgid "{0} add-on se&ttings"
+msgstr "Postavke dodatka {0}"
+
+#. Translators: The tooltyp text for the second item in the dayOfTheWeek add-on submenu.
+#, python-brace-format
+msgid "Configure the {0} add-on"
+msgstr "Podesi dodatak {0}"
 
 #. Translators: Message presented in input help mode.
 msgid "Allows you to find the day of the week corresponding to a chosen date."
 msgstr "Omogućava traženje dana u tjednu kojemu je pridružen datum."
+
+#. Translators: Message presented in input help mode.
+#, fuzzy, python-brace-format
+msgid "Allows you to open the {0} add-on settings dialog."
+msgstr "omogućava otvaranje postavki dodatka dan u tjednu."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -52,3 +135,24 @@ msgid ""
 msgstr ""
 "Sa ovim dodatkom, moći ćete pronaći dan u tjednu kojem odgovara određeni "
 "datum."
+
+#~ msgid "Sunday"
+#~ msgstr "Nedjelja"
+
+#~ msgid "Monday"
+#~ msgstr "ponedjeljak"
+
+#~ msgid "Tuesday"
+#~ msgstr "utorak"
+
+#~ msgid "Wednesday"
+#~ msgstr "srijeda"
+
+#~ msgid "Thursday"
+#~ msgstr "četvrtak"
+
+#~ msgid "Friday"
+#~ msgstr "petak"
+
+#~ msgid "Saturday"
+#~ msgstr "subota"
