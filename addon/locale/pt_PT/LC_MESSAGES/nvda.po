@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2015-10-30 04:04+1000\n"
-"PO-Revision-Date: 2017-11-05 00:18-0000\n"
+"PO-Revision-Date: 2017-11-09 20:49-0000\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
-"Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com>\n"
+"Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com; rui.fontes>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -75,23 +75,19 @@ msgstr "Desligado"
 
 #. Translators: The label of the checkbox to enable or disable the date selector accessibility.
 msgid "En&able the accessibility of the date selector:"
-msgstr "%Activa a acessibilidade do selector de data:"
+msgstr "&Activa a acessibilidade do selector de data:"
 
 #. Translators: The label for an item to select the level of the announces of labels (short, long or disabled).
 msgid "Level of the announces of &labels:"
-msgstr "Nível de anúncios de %níveis:"
+msgstr "Nível de anúncios de &rótulos:"
 
 #. Translators: The label of the checkbox to enable or disable the current date field value only announcement when moving vertically.
-msgid ""
-"Enable announcements of the current date field value only, when moving "
-"&vertically:"
-msgstr ""
-"Activar apenas anúncios do valor atual dos campos da data, ao mover-se v"
-"%erticalmente:"
+msgid "Enable announcements of the current date field value only, when moving &vertically:"
+msgstr "Activar apenas anúncios do valor atual dos campos da data, ao mover-se v&erticalmente:"
 
 #. Translators: Item in the preferences menu for the Addon dayOfTheWeek.
 msgid "Day of the &week..."
-msgstr "Dia da S%emana..."
+msgstr "Dia da S&emana..."
 
 #. Translators: The tooltyp text for the dayOfTheWeek submenu.
 #, python-brace-format
@@ -100,7 +96,7 @@ msgstr "{0} add-on e suas configurações"
 
 #. Translators: The name of the first item in the dayOfTheWeek add-on submenu.
 msgid "Search a &day"
-msgstr "Procure um %dia;"
+msgstr "Procure um &dia;"
 
 #. Translators: The tooltyp text for the first item in the dayOfTheWeek add-on submenu.
 msgid "Search a day in the calendar"
@@ -109,21 +105,21 @@ msgstr "Procure um dia no calendário"
 #. Translators: The name of the second item in the dayOfTheWeek add-on submenu.
 #, python-brace-format
 msgid "{0} add-on se&ttings"
-msgstr "{0} add-on %configurações"
+msgstr "{0} add-on &configurações"
 
 #. Translators: The tooltyp text for the second item in the dayOfTheWeek add-on submenu.
 #, python-brace-format
 msgid "Configure the {0} add-on"
-msgstr "Configure o {0} add-on"
+msgstr "Configure o {0} extra"
 
 #. Translators: Message presented in input help mode.
 msgid "Allows you to find the day of the week corresponding to a chosen date."
 msgstr "permite-lhe encontrar o dia correspondente a uma data escolhida"
 
 #. Translators: Message presented in input help mode.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Allows you to open the {0} add-on settings dialog."
-msgstr "Permite-lhe abrir o diálogo de configurações do Add-on !dayOfTheWeek\""
+msgstr "Permite-lhe abrir o diálogo de configurações {0} do extra"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -132,9 +128,6 @@ msgstr "Dia da semana"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid ""
-"With this add-on, you'll be able to find the day of the week corresponding "
-"to a chosen date."
-msgstr ""
-"Com este Add-on, será capaz de encontrar o dia da semana de uma data "
-"escolhida."
+msgid "With this add-on, you'll be able to find the day of the week corresponding to a chosen date."
+msgstr "Com este Add-on, será capaz de encontrar o dia da semana de uma data escolhida."
+
