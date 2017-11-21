@@ -53,6 +53,6 @@ It adds a submenu in the NVDA Preferences menu named "Day of the week", containi
 
 *	 Initial version.
 
-[1]: https://github.com/abdel792/dayOfTheWeek/releases/download/v4.3/dayOfTheWeek-4.3.nvda-addon
+[1]: https://github.com/abdel792/dayOfTheWeek/releases/download/v4.4/dayOfTheWeek-4.4.nvda-addon
 
-[2]: https://github.com/abdel792/dayOfTheWeek/releases/download/v4.3/dayOfTheWeek-4.3.nvda-addon
+[2]: https://github.com/abdel792/dayOfTheWeek/releases/download/v4.4/dayOfTheWeek-4.4.nvda-addon
