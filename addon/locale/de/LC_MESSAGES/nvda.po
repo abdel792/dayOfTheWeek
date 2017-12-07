@@ -8,14 +8,39 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2015-10-30 04:04+1000\n"
-"PO-Revision-Date: 2015-11-23 07:03+0100\n"
+"PO-Revision-Date: 2017-12-01 18:57+0100\n"
+"Last-Translator: Adriani Botez <adriani.botez@gmail.com>\n"
+"Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: René Linke <rene.linke@hamburg.de>\n"
-"Language-Team: \n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-Bookmarks: -1,-1,2,-1,-1,-1,-1,-1,-1,-1\n"
+
+#. Translators: The long label of the days field.
+msgid "You can select a day with the vertical arrows"
+msgstr "Sie können ein Jahr mit den Pfeiltasten hoch und runter auswählen."
+
+#. Translators: The short label of the days field.
+msgid "Select a day"
+msgstr "Tag auswählen"
+
+#. Translators: The long label of the months field.
+msgid "You can select a month with the vertical arrows"
+msgstr "Sie können ein Jahr mit den Pfeiltasten hoch und runter auswählen."
+
+#. Translators: The short label of the months field.
+msgid "Select a month"
+msgstr "Monat auswählen"
+
+#. Translators: The long label of the years field.
+msgid "You can select a year with the vertical arrows"
+msgstr "Sie können ein Jahr mit den Pfeiltasten hoch und runter auswählen."
+
+#. Translators: The short label of the years field.
+msgid "Select a year"
+msgstr "Jahr auswählen"
 
 #. Translators: The title of the Date Dialog.
 msgid "Get the day of the week"
@@ -29,13 +54,74 @@ msgstr "Geben Sie ein Datum ein oder wählen Sie es aus."
 msgid "Your day"
 msgstr "Tag"
 
-#. Translators: Item in the tools menu for the Addon dayOfTheWeek.
-msgid "&Day of the week..."
+#. Translators: The title of the add-on configuration dialog box.
+#, python-brace-format
+msgid "Configuration of the addon {0}"
+msgstr "Erweiterungseinstellungen für {0}"
+
+#. Translators: Level for short announces of labels.
+msgid "Short"
+msgstr "Kurz"
+
+#. Translators: Level for long announces of labels.
+msgid "Long"
+msgstr "Lang"
+
+#. Translators: Level to disable announces of labels.
+msgid "Off"
+msgstr "Aus"
+
+#. Translators: The label of the checkbox to enable or disable the date selector accessibility.
+msgid "En&able the accessibility of the date selector:"
+msgstr "Ak&tiviere die Zugänglichkeit des Wählers für das Datum"
+
+#. Translators: The label for an item to select the level of the announces of labels (short, long or disabled).
+msgid "Level of the announces of &labels:"
+msgstr "Ausführlichkeit der &Beschriftungsansagen"
+
+#. Translators: The label of the checkbox to enable or disable the current date field value only announcement when moving vertically.
+msgid ""
+"Enable announcements of the current date field value only, when moving "
+"&vertically:"
+msgstr ""
+"Aktiviere die Ansagen der Werte des Feldes für das aktuelle Datum nur bei "
+"senkrechter &Navigation:"
+
+#. Translators: Item in the preferences menu for the Addon dayOfTheWeek.
+msgid "Day of the &week..."
 msgstr "&Wochentag..."
+
+#. Translators: The tooltyp text for the dayOfTheWeek submenu.
+#, python-brace-format
+msgid "{0} add-on and its settings"
+msgstr "{0} Erweiterung und Einstellungen"
+
+#. Translators: The name of the first item in the dayOfTheWeek add-on submenu.
+msgid "Search a &day"
+msgstr "Tag &suchen"
+
+#. Translators: The tooltyp text for the first item in the dayOfTheWeek add-on submenu.
+msgid "Search a day in the calendar"
+msgstr "Einen Tag im Kalender suchen"
+
+#. Translators: The name of the second item in the dayOfTheWeek add-on submenu.
+#, python-brace-format
+msgid "{0} add-on se&ttings"
+msgstr "{0} Erweiterungsein&stellungen"
+
+#. Translators: The tooltyp text for the second item in the dayOfTheWeek add-on submenu.
+#, python-brace-format
+msgid "Configure the {0} add-on"
+msgstr "Einstellungen für die Erweiterung {0} anpassen"
 
 #. Translators: Message presented in input help mode.
 msgid "Allows you to find the day of the week corresponding to a chosen date."
-msgstr "Damit ermitteln Sie den Wochentag eines Datums."
+msgstr "Hiermit ermitteln Sie den Wochentag eines Datums."
+
+#. Translators: Message presented in input help mode.
+#, fuzzy, python-brace-format
+msgid "Allows you to open the {0} add-on settings dialog."
+msgstr "Öffnet das Einstellungsdialog der Erweiterung"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -50,3 +136,24 @@ msgid ""
 msgstr ""
 "Mit dieser Erweiterung ermitteln Sie den jeweiligen Wochentag aus dem "
 "angegebenen Datum."
+
+#~ msgid "Sunday"
+#~ msgstr "Sonntag"
+
+#~ msgid "Monday"
+#~ msgstr "Montag"
+
+#~ msgid "Tuesday"
+#~ msgstr "Dienstag"
+
+#~ msgid "Wednesday"
+#~ msgstr "Mittwoch"
+
+#~ msgid "Thursday"
+#~ msgstr "Donnerstag"
+
+#~ msgid "Friday"
+#~ msgstr "Freitag"
+
+#~ msgid "Saturday"
+#~ msgstr "Samstag"
