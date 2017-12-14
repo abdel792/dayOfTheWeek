@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2015-10-30 04:04+1000\n"
-"PO-Revision-Date: 2017-11-05 13:40+0100\n"
+"PO-Revision-Date: 2017-12-14 09:00-0800\n"
 "Last-Translator: zvonimir Stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: hr <zvonimirek222@yandex.com>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.8.9\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
@@ -135,24 +135,3 @@ msgid ""
 msgstr ""
 "Sa ovim dodatkom, moći ćete pronaći dan u tjednu kojem odgovara određeni "
 "datum."
-
-#~ msgid "Sunday"
-#~ msgstr "Nedjelja"
-
-#~ msgid "Monday"
-#~ msgstr "ponedjeljak"
-
-#~ msgid "Tuesday"
-#~ msgstr "utorak"
-
-#~ msgid "Wednesday"
-#~ msgstr "srijeda"
-
-#~ msgid "Thursday"
-#~ msgstr "četvrtak"
-
-#~ msgid "Friday"
-#~ msgstr "petak"
-
-#~ msgid "Saturday"
-#~ msgstr "subota"

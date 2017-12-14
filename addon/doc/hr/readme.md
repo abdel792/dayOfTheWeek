@@ -11,19 +11,19 @@ It adds a submenu in the NVDA Preferences menu named "Day of the week",
 containing 2 items:
 
 
-*	The first one named "Search a day", opens a dialog composed of 3 controls:
-	*	A listbox to choose or type your date;
-	*	An "OK" button to display a messageBox containing your day;
-	*	A "Cancel" button to close the dialog.
-*	The second one named "dayOfTheWeek add-on settings" opens the parameters of the add-on to specify whether you want to report labels for date fields or not, it is composed of the following elements:
-	*	Enable accessibility of the date selector;
-	*	Level of the announces of labels, you will then have 3 choices:
-		*	Long (it's the default choice);
-		*	Short (for short announcements);
-		*	Off (to disable labels announcements).
-	*	Enable announcement of the current date field value only, when moving vertically;
-	*	An "OK" button to save your configuration;
-	*	A "Cancel" button to cancel and close the dialog.
+*	Prva stavka "Search a day", otvara dijaloški okvir koji se sastoji od 3 kontrole:
+*	*	Popis za odabir ili unos datuma;
+*	*	Gumb "u redu" koji prikazuje poruku s odabranim danom;
+*	*	Gumb "Otkaži" koji zatvara dijaloški okvir;
+*	Druga stavka "Postavke dodatka DayOfTheWeek" otvara parametre dodatka gdje možete odrediti želite li ili ne želite polja za unos vrijednosti datuma, sastoji se od sljedećih elemenata:
+*	*	Omogući pristupačnost polja za odabir datuma;
+*	*	Način izvještavanja o vrijednostima, ovdje ćete imati 3 mogućnosti izbora:
+*	*	*	 Dugi (podrazumijevani izbor);
+*	*	*	 Kratki (za kratko izvještavanje);
+*	*	*	Isključeno (onemogućuje izgovaranje vrijednosti).
+*	*	Omogući izgovaranje samo polja s trenutnim datumom tijekom kretanja vertikalno;
+*	*	Gumb "U redu" koji sprema konfiguraciju;
+*	*	 Gumb "Otkaži" koji otkazuje i zatvara dijaloški okvir.
 
 
 ## Napomene ##
@@ -34,23 +34,23 @@ containing 2 items:
 
 ## Changes for 4.0 ##
 
-*	 The add-on is now able to recognize all the regional date formats that
-   the user can choose;
-*	 Added the backward compatibility of the add-on with the NVDA versions
-   that preceded 2016.4, which included the gui.guiHelper module.
+*	 Dodatak sada može prepoznati sve regionalne formate datuma koje korisnik
+   može odabrati;
+*	 Dodatak je sada kompatibilan sa starijim inačicama NVDA, koje su
+   uključivale gui.guiHelper
 
 ## Changes for 3.1 ##
 
-*	 Back to the previous format for the day of the week because it allows to
-   recognize a greater number of languages;
-*	 Improved the accessibility of the date selector with recognition of the 3
-   fields 'Day', 'Month' and 'Year', and their respective values;
-*	 Added a technique for the integration of the Georgian language for the
-   recognition of the days of the week;
-*	 Added a configuration dialog box to enable or disable the accessibility
-   of the date selector;
-*	 Moved the add-on submenu from "Tools" to "Preferences";
-*	 Changed the add-on category to "Day of the week".
+*	 Povratak na prethodni format dana u tjednu, jer to omogućava
+   prepoznavanje većeg broja jezika;
+*	 Poboljšana pristupačnost polja za odabir datuma sa prepoznavanjem 3
+   polja: 'Dan', 'Mjesec i 'Godina', te pripadajućih vrijednosti;
+*	 Dodana tehnika za integriranje gruzijskog jezika za prepoznavanje dana u
+   tjednu;
+*	 Dodan podizbornik za omogućavanje ili onemogućavanje pristupačnosti polja
+   za odabir datuma;
+*	 Premješten podizbornik dodatka iz "Alati" u "Postavke";
+*	 Premještena kategorija dodatka u "Dan u tjednu".
 
 ## Izmjene u inačici 2.0 ##
 

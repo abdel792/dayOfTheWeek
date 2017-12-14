@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2015-10-30 04:04+1000\n"
-"PO-Revision-Date: 2017-10-09 08:09+0200\n"
+"PO-Revision-Date: 2017-12-14 08:51-0800\n"
 "Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.11\n"
+"X-Generator: Poedit 1.8.9\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Translators: The long label of the days field.
@@ -137,24 +137,3 @@ msgid ""
 msgstr ""
 "Tällä lisäosalla on mahdollista selvittää valittua päivämäärää vastaava "
 "viikonpäivä."
-
-#~ msgid "Sunday"
-#~ msgstr "sunnuntai"
-
-#~ msgid "Monday"
-#~ msgstr "maanantai"
-
-#~ msgid "Tuesday"
-#~ msgstr "tiistai"
-
-#~ msgid "Wednesday"
-#~ msgstr "keskiviikko"
-
-#~ msgid "Thursday"
-#~ msgstr "torstai"
-
-#~ msgid "Friday"
-#~ msgstr "perjantai"
-
-#~ msgid "Saturday"
-#~ msgstr "lauantai"
