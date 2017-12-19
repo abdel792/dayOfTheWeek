@@ -19,7 +19,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description" : _("""With this add-on, you'll be able to find the day of the week corresponding to a chosen date."""),
 	# version
-	"addon_version" : "4.4",
+	"addon_version" : "5.0",
 	# Author(s)
 	"addon_author" : u"Abdel <abdelkrim.bensaid@gmail.com>, Noelia <nrm1977@gmail.com>",
 	# URL for the add-on documentation support

@@ -28,6 +28,9 @@ It adds a submenu in the NVDA Preferences menu named "Day of the week", containi
 *	 You can close these dialogs just by pressing Escape.
 *	 You can assign a shortcut to open these dialogs in "Input gestures" menu and, more precisely, in the "Day of the week" category.
 
+## Changes for 5.0 ##
+*	 Added the compatibility of the add-on with wxPython 4.0 and Python3.
+
 ## Changes for 4.0 ##
 
 *	 The add-on is now able to recognize all the regional date formats that the user can choose;

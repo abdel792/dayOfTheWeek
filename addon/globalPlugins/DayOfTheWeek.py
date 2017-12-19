@@ -1,4 +1,5 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals # To ensure coding compatibility with python 2 and 3.
 
 # globalPlugins/dayOfTheWeek.py.
 
@@ -48,13 +49,13 @@ fieldLabels = (
 # Other localization messages for the Georgian language can be translated by the NVDA translation team.
 
 georgianDays = {
-	"0" : u"კვირა",
-	"1" : u"ორშაბათი",
-	"2" : u"სამშაბათი",
-	"3" : u"ოთხშაბათი",
-	"4" : u"ხუთშაბათი",
-	"5" : u"პარასკევი",
-	"6" : u"შაბათი"
+	"0" : "კვირა",
+	"1" : "ორშაბათი",
+	"2" : "სამშაბათი",
+	"3" : "ოთხშაბათი",
+	"4" : "ხუთშაბათი",
+	"5" : "პარასკევი",
+	"6" : "შაბათი"
 }
 
 curDateField = 0
@@ -104,7 +105,12 @@ class DateDialog (wx.Dialog):
 	def showDateDialogForGuiHelper (self):
 		sHelper = gui.guiHelper.BoxSizerHelper (self, orientation = wx.VERTICAL)
 		sHelper.addItem (wx.StaticText (self, label = self.dateLabel))
-		self.datePicker = sHelper.addItem (wx.DatePickerCtrl (self))
+		try:
+			# for wx version 4.0.
+			self.datePicker = sHelper.addItem (wx.adv.DatePickerCtrl (self))
+		except AttributeError:
+			# for wx version 3.0.
+			self.datePicker = sHelper.addItem (wx.DatePickerCtrl (self))
 		sHelper.addDialogDismissButtons (self.CreateButtonSizer (wx.OK|wx.CANCEL))
 		self.datePicker.Bind (wx.EVT_CHAR, self.onListChar)
 		self.Bind (wx.EVT_BUTTON, self.onOk, id = wx.ID_OK)
@@ -112,7 +118,7 @@ class DateDialog (wx.Dialog):
 		self.Sizer = self.mainSizer
 		self.mainSizer.Fit (self)
 		self.datePicker.SetFocus ()
-		self.Center (wx.BOTH | wx.CENTER_ON_SCREEN)
+		self.Center (wx.BOTH | wx.CENTER)
 
 	def showDateDialog (self):
 		datesLabel = wx.StaticText(self,-1,label=self.dateLabel)
@@ -141,7 +147,7 @@ class DateDialog (wx.Dialog):
 		import languageHandler
 		curNVDALang = languageHandler.getLanguage ()
 		date = self.datePicker.GetValue ()
-		weekDay = date.Format ("%A") if not curNVDALang == u"ka" else georgianDays[date.Format ("%w")]
+		weekDay = date.Format ("%A") if not curNVDALang == "ka" else georgianDays[date.Format ("%w")]
 		msgBox = gui.messageBox (
 		message = weekDay,
 		# Translators: The title of a dialog.
@@ -151,7 +157,7 @@ class DateDialog (wx.Dialog):
 class DayOfWeekSettingsDialog (SettingsDialog):
 
 	# Translators: The title of the add-on configuration dialog box.
-	title = _(u"Configuration of the addon {0}").format (ADDON_NAME)
+	title = _("Configuration of the addon {0}").format (ADDON_NAME)
 	LABEL_ANNOUNCE_LEVELS = (
 		("short",
 		# Translators: Level for short announces of labels.
@@ -294,7 +300,7 @@ class AnnounceFieldsLabels (IAccessible):
 					labelAnnounce = fieldLabels[columnID - 1][0]
 				else:
 					labelAnnounce = fieldLabels[columnID - 1][1]
-		field = u"{0}, {1}".format (curValue, labelAnnounce) if columnID else curValue
+		field = "{0}, {1}".format (curValue, labelAnnounce) if columnID else curValue
 		ui.message (field)
 
 	def getDelimiter (self, value):
@@ -518,7 +524,7 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		# Translators: Item in the preferences menu for the Addon dayOfTheWeek.
 		_("Day of the &week..."),
 		# Translators: The tooltyp text for the dayOfTheWeek submenu.
-		_(u"{0} add-on and its settings").format (ADDON_NAME))
+		_("{0} add-on and its settings").format (ADDON_NAME))
 
 		dateChoice = dowMenu.Append (wx.ID_ANY,
 		# Translators: The name of the first item in the dayOfTheWeek add-on submenu.
@@ -529,9 +535,9 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 
 		addonSettings = dowMenu.Append (wx.ID_ANY,
 		# Translators: The name of the second item in the dayOfTheWeek add-on submenu.
-		_(u"{0} add-on se&ttings").format (ADDON_NAME),
+		_("{0} add-on se&ttings").format (ADDON_NAME),
 		# Translators: The tooltyp text for the second item in the dayOfTheWeek add-on submenu.
-		_(u"Configure the {0} add-on").format (ADDON_NAME))
+		_("Configure the {0} add-on").format (ADDON_NAME))
 		gui.mainFrame.sysTrayIcon.Bind (wx.EVT_MENU, self.onAddonSettingsDialog, addonSettings)
 
 	def terminate (self):
@@ -562,5 +568,5 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		wx.CallAfter (self.onAddonSettingsDialog, gui.mainFrame)
 
 	# Translators: Message presented in input help mode.
-	script_activateDayOfTheWeekSettingsDialog.__doc__ = _(u"Allows you to open the {0} add-on settings dialog.").format (ADDON_NAME)
+	script_activateDayOfTheWeekSettingsDialog.__doc__ = _("Allows you to open the {0} add-on settings dialog.").format (ADDON_NAME)
 
