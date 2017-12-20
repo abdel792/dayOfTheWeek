@@ -71,7 +71,7 @@ def isDatepickerDate (value):
 	"""
 	This function makes it possible to check whether the date format matches to be able to affect our overlay class.
 	"""
-	ptrn = "^[\d]{1,4}[/\.-][\da-zA-Z]{1,3}[/\.-][\d]{1,4}$"
+	ptrn = "^[\d]{1,4}[/\.-][\da-zA-Z]{1,3}[/\.-][\d]{1,4}[/\.-]?$"
 	rg = re.compile (ptrn)
 	return bool (rg.match (value))
 
