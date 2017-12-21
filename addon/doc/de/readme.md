@@ -13,7 +13,7 @@ hinzu, das 2 Einträge enthält:
 
 *	Das erste mit dem Namen "Suche nach einem Tag" öffnet einen Dialog, der aus 3 Steuerelementen besteht:
 	-	Eine Listbox, um das Datum auszuwählen oder einzugeben; 
-	-	Ein "Ok-Schalter", um eine Meldung anzuzeigen, die deinen Tag enthält; 
+	-	Ein "Ok-Schalter", um eine Meldung anzuzeigen, die den ausgewählten Tag enthält; 
 	-	Ein "Abbrechen-Schalter", um den Dialog zu schließen.
 *	Das zweite mit dem Namen "Tag der Woche Einstellungen" öffnet die Parameter der Erweiterung. Hier kann angegeben werden, ob Sie Beschriftungen für Datumsfelder angesagt bekommen möchten oder nicht. Der Dialog besteht aus den folgenden Elementen:
 	-	Zugänglichkeit des Auswahlschalters für das Datum aktivieren;
@@ -35,14 +35,14 @@ hinzu, das 2 Einträge enthält:
 ## Änderungen in V4.0 ##
 
 *	 Die Erweiterung ist nun in der Lage, alle regionalen Datumsformate zu
-   erkennen, die ausgewählt werden können;
+   erkennen;
 *	 Abwärtskompatibilität der Erweiterung mit den NVDA-Versionen vor 2016.4,
    die das Modul gui.guiHelper enthielten wurde hinzugefügt.
 
 ## Änderungen in V3.1 ##
 
-*	 Zurück zum vorherigen Format für den Wochentag, weil es erlaubt, eine
-   größere Anzahl von Sprachen zu erkennen;
+*	 Zurück zum vorherigen Format für den Wochentag, weil es eine größere
+   Anzahl von Sprachen erkennt;
 *	 Die Zugänglichkeit der Datumsauswahl wurde verbessert, indem die 3 Felder
    "Tag", "Monat" und "Jahr" mit ihren jeweiligen Werten erkannt werden;
 *	 Eine Modalität für die Integration der georgischen Sprache zur Erkennung
@@ -53,7 +53,7 @@ hinzu, das 2 Einträge enthält:
    verschoben;
 *	 Die Erweiterungskategorie wurde in "Tag der Woche" geändert.
 
-## Änderungen bis 2.0 ##
+## Änderungen in V2.0 ##
 
 *	 Nun wird das gui.guiHelper-Modul verwendet,um die korrekte Darstellung
    des Dialogfelds zu gewährleisten, welches nach dem Datum fragt.

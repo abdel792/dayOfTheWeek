@@ -1,4 +1,4 @@
-# Day of the week #
+# День недели #
 
 *	 Авторы: Abdel, Noelia.
 *	 Загрузить [стабильную версию][1]
@@ -7,8 +7,8 @@
 Это дополнение позволяет определить день недели, соответствующий указанной
 дате.
 
-It adds a submenu in the NVDA Preferences menu named "Day of the week",
-containing 2 items:
+Он добавляет подменю в меню параметров NVDA "день недели", содержащий 2
+пункта:
 
 
 *	The first one named "Search a day", opens a dialog composed of 3 controls:
@@ -28,13 +28,20 @@ containing 2 items:
 
 ## Примечания ##
 
-*	 You can close these dialogs just by pressing Escape.
-*	 You can assign a shortcut to open these dialogs in "Input gestures" menu
-   and, more precisely, in the "Day of the week" category.
+*	 Вы также можете закрыть эти диалоги, нажав клавишу Escape.
+*	 Вы можете назначить горячие клавиши для открытия этих диалогов в разделе
+   "Жесты ввода", перейдя в раздел "День недели".
 
-## Changes for 3.1 ##
+## Изменения в версии 4.0 ##
 
-*	 Back to the old format for the day of the week because it allows to
+*	 The add-on is now able to recognize all the regional date formats that
+   the user can choose;
+*	 Added the backward compatibility of the add-on with the NVDA versions
+   that preceded 2016.4, which included the gui.guiHelper module.
+
+## Изменения в версии 3.1 ##
+
+*	 Back to the previous format for the day of the week because it allows to
    recognize a greater number of languages;
 *	 Improved the accessibility of the date selector with recognition of the 3
    fields 'Day', 'Month' and 'Year', and their respective values;
@@ -45,14 +52,14 @@ containing 2 items:
 *	 Moved the add-on submenu from "Tools" to "Preferences";
 *	 Changed the add-on category to "Day of the week".
 
-## Changes for 2.0 ##
+## Изменения в версии 2.0 ##
 
 *	 Used the gui.guiHelper module to ensure the correct appearance of the
    dialog asking for a date;
-*	 Added the GPL license to the addon;
-*	 Days of the week have been translated, so that the add-on works properly
-   in the different languages.;
-*	 Used the %w format for the dates rather than %a to avoid encoding errors.
+*	 Для дополнения Добавлено лицензия GPL;
+*	 Дни недели были переведены, так что дополнение работает правильно в
+   разных языках;
+*	 Изменился формат дня, чтобы избежать ошибок кодировки.
 
 ## Изменения в версии 1.0 ##
 
