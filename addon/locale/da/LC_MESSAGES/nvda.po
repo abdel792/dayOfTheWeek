@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 1.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2015-12-04 04:04+1000\n"
-"PO-Revision-Date: 2017-12-26 11:10+0100\n"
+"PO-Revision-Date: 2017-12-28 22:42+0100\n"
 "Last-Translator: Bue Vester-Andersen <bue@vester-andersen.dk>\n"
 "Language-Team: Danish <LL@li.org>\n"
 "Language: da\n"
@@ -117,9 +117,9 @@ msgstr ""
 "Sætter dig i stand til at finde den ugedag, som svarer til en valgt dato."
 
 #. Translators: Message presented in input help mode.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Allows you to open the {0} add-on settings dialog."
-msgstr "Åbn dialogen Indstillinger for tilføjelsesprogrammet DayOfTheWeek"
+msgstr "Åbn dialogen Indstillinger for tilføjelsesprogrammet {0}"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
