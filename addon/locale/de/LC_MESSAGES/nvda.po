@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2015-10-30 04:04+1000\n"
-"PO-Revision-Date: 2017-12-14 07:27-0800\n"
-"Last-Translator: Adriani Botez <adriani.botez@gmail.com>\n"
+"PO-Revision-Date: 2018-01-14 10:38+0100\n"
+"Last-Translator: Bernd Dorer <bdorer@mailbox.org>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 2.0.5\n"
 "X-Poedit-Bookmarks: -1,-1,2,-1,-1,-1,-1,-1,-1,-1\n"
 
 #. Translators: The long label of the days field.
 msgid "You can select a day with the vertical arrows"
-msgstr "Sie können ein Jahr mit den Pfeiltasten hoch und runter auswählen."
+msgstr "Sie können einen Tag mit den Pfeiltasten hoch und runter auswählen."
 
 #. Translators: The short label of the days field.
 msgid "Select a day"
@@ -28,7 +28,7 @@ msgstr "Tag auswählen"
 
 #. Translators: The long label of the months field.
 msgid "You can select a month with the vertical arrows"
-msgstr "Sie können ein Jahr mit den Pfeiltasten hoch und runter auswählen."
+msgstr "Sie können einen Monat mit den Pfeiltasten hoch und runter auswählen."
 
 #. Translators: The short label of the months field.
 msgid "Select a month"
