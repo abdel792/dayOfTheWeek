@@ -27,8 +27,8 @@ from NVDAObjects.IAccessible import IAccessible
 import config
 
 ### Constants
-ADDON_SUMMARY = addonHandler.Addon (os.path.join (os.path.dirname (__file__), "..").decode ("mbcs")).manifest["summary"]
-ADDON_NAME = addonHandler.Addon (os.path.join (os.path.dirname (__file__), "..").decode ("mbcs")).manifest["name"]
+ADDON_SUMMARY = addonHandler.getCodeAddon ().manifest["summary"]
+ADDON_NAME = addonHandler.getCodeAddon ().manifest["name"]
 
 fieldLabels = (
 	# Translators: The long label of the days field.
