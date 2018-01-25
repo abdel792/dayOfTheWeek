@@ -32,6 +32,11 @@
 *	 Вы можете назначить горячие клавиши для открытия этих диалогов в разделе
    "Жесты ввода", перейдя в раздел "День недели".
 
+## Changes for 5.0 ##
+
+*	 Added the compatibility of the add-on with wxPython 4.0 and Python3;
+*	 Fixed a bug with add-on paths that contain non-ASCII characters.
+
 ## Изменения в версии 4.0 ##
 
 *	 The add-on is now able to recognize all the regional date formats that

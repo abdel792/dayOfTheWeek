@@ -32,6 +32,12 @@ care conține două elemente:
 *	 Puteți aloca o comandă rapidă pentru a deschide dialogul în meniul
    „Gesturi de intrare” și, mai precis, în categoria /„Day of the Week/”.
 
+## Modificări în versiunea 5.0 ##
+
+*	 S-a adăugat compatibilitatea suplimentului cu wxPython 4.0 și Python3.
+*	 S-a rezolvat o problemă privind adresele suplimentului care conținea
+   caractere non-ASCII
+
 ## Modificări în versiunea 4.0 ##
 
 *	 Suplimentul poate recunoaște toate formatele datelor regionale p care le

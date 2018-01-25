@@ -5,62 +5,62 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: dayOfTheWeek 1.1\n"
+"Project-Id-Version: dayOfTheWeek 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2015-12-04 04:04+1000\n"
-"PO-Revision-Date: 2018-01-21 09:45+0100\n"
-"Last-Translator: Nicolai Svendsen <chojiro1990@gmail.com>\n"
-"Language-Team: Danish <LL@li.org>\n"
-"Language: da\n"
+"POT-Creation-Date: 2015-10-30 04:04+1000\n"
+"PO-Revision-Date: 2018-01-14 10:38+0100\n"
+"Last-Translator: Bernd Dorer <bdorer@mailbox.org>\n"
+"Language-Team: \n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.0.5\n"
+"X-Poedit-Bookmarks: -1,-1,2,-1,-1,-1,-1,-1,-1,-1\n"
 
 #. Translators: The long label of the days field.
 msgid "You can select a day with the vertical arrows"
-msgstr "Du kan vælge en dag med pil op og pil ned."
+msgstr "Sie können einen Tag mit den Pfeiltasten hoch und runter auswählen."
 
 #. Translators: The short label of the days field.
 msgid "Select a day"
-msgstr "Vælg en dag"
+msgstr "Tag auswählen"
 
 #. Translators: The long label of the months field.
 msgid "You can select a month with the vertical arrows"
-msgstr "Du kan vælge en måned med pil op og pil ned."
+msgstr "Sie können einen Monat mit den Pfeiltasten hoch und runter auswählen."
 
 #. Translators: The short label of the months field.
 msgid "Select a month"
-msgstr "Vælg en måned"
+msgstr "Monat auswählen"
 
 #. Translators: The long label of the years field.
 msgid "You can select a year with the vertical arrows"
-msgstr "Du kan vælge et år med pil op og pil ned."
+msgstr "Sie können ein Jahr mit den Pfeiltasten hoch und runter auswählen."
 
 #. Translators: The short label of the years field.
 msgid "Select a year"
-msgstr "Vælg et år"
+msgstr "Jahr auswählen"
 
 #. Translators: The title of the Date Dialog.
 msgid "Get the day of the week"
-msgstr "Find ugedagen"
+msgstr "Wochentag ermitteln"
 
 #. Translators: A label for a list in a dialog.
 msgid "Type or select a date"
-msgstr "Indtast eller vælg en dato"
+msgstr "Geben Sie ein Datum ein oder wählen Sie es aus."
 
 #. Translators: The title of a dialog.
 msgid "Your day"
-msgstr "Din ugedag"
+msgstr "Tag"
 
 #. Translators: The title of the add-on configuration dialog box.
-#, python-brace-format
 msgid "Configuration of the addon {0}"
-msgstr "Indstilling af tilføjelsesprogrammet {0}"
+msgstr "Erweiterungseinstellungen für {0}"
 
 #. Translators: Level for short announces of labels.
 msgid "Short"
-msgstr "Kort"
+msgstr "Kurz"
 
 #. Translators: Level for long announces of labels.
 msgid "Long"
@@ -68,62 +68,60 @@ msgstr "Lang"
 
 #. Translators: Level to disable announces of labels.
 msgid "Off"
-msgstr "Fra"
+msgstr "Aus"
 
 #. Translators: The label of the checkbox to enable or disable the date selector accessibility.
 msgid "En&able the accessibility of the date selector:"
-msgstr "&Gør datovælgeren tilgængelig:"
+msgstr "Ak&tiviere die Zugänglichkeit des Wählers für das Datum"
 
 #. Translators: The label for an item to select the level of the announces of labels (short, long or disabled).
 msgid "Level of the announces of &labels:"
-msgstr "Annonceringsniveau for &etiketter:"
+msgstr "Ausführlichkeit der &Beschriftungsansagen"
 
 #. Translators: The label of the checkbox to enable or disable the current date field value only announcement when moving vertically.
 msgid ""
 "Enable announcements of the current date field value only, when moving "
 "&vertically:"
-msgstr "Kun annoncering af datofeltet, når der flyttes &lodret:"
+msgstr ""
+"Aktiviere die Ansagen der Werte des Feldes für das aktuelle Datum nur bei "
+"senkrechter &Navigation:"
 
 #. Translators: Item in the preferences menu for the Addon dayOfTheWeek.
 msgid "Day of the &week..."
-msgstr "Uge&dag..."
+msgstr "&Wochentag..."
 
 #. Translators: The tooltyp text for the dayOfTheWeek submenu.
-#, python-brace-format
 msgid "{0} add-on and its settings"
-msgstr "Tilføjelsesprogrammet {0} og dets indstillinger"
+msgstr "{0} Erweiterung und Einstellungen"
 
 #. Translators: The name of the first item in the dayOfTheWeek add-on submenu.
 msgid "Search a &day"
-msgstr "Find en &dag"
+msgstr "Tag &suchen"
 
 #. Translators: The tooltyp text for the first item in the dayOfTheWeek add-on submenu.
 msgid "Search a day in the calendar"
-msgstr "Find en dag i kalenderen"
+msgstr "Einen Tag im Kalender suchen"
 
 #. Translators: The name of the second item in the dayOfTheWeek add-on submenu.
-#, python-brace-format
 msgid "{0} add-on se&ttings"
-msgstr "&Indstillinger for tilføjelsesprogrammet {0}"
+msgstr "{0} Erweiterungsein&stellungen"
 
 #. Translators: The tooltyp text for the second item in the dayOfTheWeek add-on submenu.
-#, python-brace-format
 msgid "Configure the {0} add-on"
-msgstr "Indstil tilføjelsesprogrammet {0}"
+msgstr "Einstellungen für die Erweiterung {0} anpassen"
 
 #. Translators: Message presented in input help mode.
 msgid "Allows you to find the day of the week corresponding to a chosen date."
-msgstr "Lader dig finde den ugedag, som svarer til en valgt dato."
+msgstr "Hiermit ermitteln Sie den Wochentag eines Datums."
 
 #. Translators: Message presented in input help mode.
-#, python-brace-format
 msgid "Allows you to open the {0} add-on settings dialog."
-msgstr "Åbn dialogen Indstillinger for tilføjelsesprogrammet {0}."
+msgstr "Öffnet das Einstellungsdialog der Erweiterung {0}"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Day of the week"
-msgstr "Ugedag"
+msgstr "Wochentag"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -131,5 +129,5 @@ msgid ""
 "With this add-on, you'll be able to find the day of the week corresponding "
 "to a chosen date."
 msgstr ""
-"Med dette tilføjelsesprogram kan du finde den ugedag, som svarer til en "
-"valgt dato."
+"Mit dieser Erweiterung ermitteln Sie den jeweiligen Wochentag aus dem "
+"angegebenen Datum."

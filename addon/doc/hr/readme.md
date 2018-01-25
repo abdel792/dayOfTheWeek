@@ -32,6 +32,11 @@ containing 2 items:
 *	 You can assign a shortcut to open these dialogs in "Input gestures" menu
    and, more precisely, in the "Day of the week" category.
 
+## Changes for 5.0 ##
+
+*	 Added the compatibility of the add-on with wxPython 4.0 and Python3;
+*	 Fixed a bug with add-on paths that contain non-ASCII characters.
+
 ## Changes for 4.0 ##
 
 *	 Dodatak sada može prepoznati sve regionalne formate datuma koje korisnik

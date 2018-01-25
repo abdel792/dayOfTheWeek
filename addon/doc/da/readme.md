@@ -1,32 +1,71 @@
 # Day of the week (Ugedag) #
 
-*	 Forfatter: Abdel, Noelia.
+*	 Forfattere: Abdel, Noelia.
 *	 download [stabil version][1]
-*	 download [udviklingsversionversion][2]
+*	 download [udviklingsversion][2]
 
 Med dette tilføjelsesprogram kan du finde den ugedag, som svarer til en
 valgt dato.
 
-Det tilføjer et punkt til NVDAs Værktøjer-menu, som hedder "Day of the
-week". Menupunktet åbner en dialog, som består af tre felter.
+Det tilføjer en undermenu i NVDA-menuen under indstillinger ved navn
+"Ugedag", der indeholder 2 elementer:
 
-*	 En listeboks, hvor du kan vælge eller indtaste din dato.
-*	 En OK-knap, som vil vise en meddelelsesboks med din ugedag.
-*	 En Annuller-knap, som lukker dialogen.
+
+*	Den første ved navn "Find en dag" åbner en dialog med tre kontrolelementer:
+	*	En listboks der lader dig vælge eller indtaste en dato;
+	*	En "ok" knap der viser din dato;
+	*	Knappen "afbryd" der lader dig lukke dialogen.
+*	Den anden ved navn "Indstillinger for tilføjelsesprogrammet Ugedag" åbner en dialog, hvor du kan beslutte om du ønsker at få etiketter for datofelter oplyst eller ej. Dialogen består af følgende:
+	*	Gør datovælgeren tilgængelig;
+	*	Annonceringsniveau for etiketter, hvor du har tre muligheder:
+		*	Lang: Dette er standardindstillingen;
+		*	Kort: For korte meddelelser;
+		*	Fra: Slår annoncering af etiketter fra.
+	*	Kun annoncering af datofeltet, når der flyttes lodret;
+	*	Og knappen "ok" for at gemme din konfiguration;
+	*	Knappen "afbryd" for at lukke dialogen og annullere dine ændringer.
+
 
 ## Noter ##
-*	 Du kan lukke dialogen blot ved at trykke på Escape.
+
+*	 Du kan lukke disse dialoger bare ved at trykke på Escape.
 *	 Du kan tilknytte en genvejstast til at åbne dialogen under
-   Inputbevægelser, nærmere bestemt under kategorien værktøjer.
+   Inputbevægelser, nærmere bestemt under kategorien "Ugedag"
 
-## Changes for 2.0 ##
+## Ændringer i 5.0 ##
 
-*	 Used the gui.guiHelper module to ensure the correct appearance of the
-   dialog asking for a date;
-*	 Added the GPL license to the addon;
-*	 Days of the week have been translated, so that the add-on works properly
-   in the different languages;
-*	 Used the %w format for the dates rather than %a to avoid encoding errors.
+*	 Added the compatibility of the add-on with wxPython 4.0 and Python3;
+*	 Fixed a bug with add-on paths that contain non-ASCII characters.
+
+## Ændringer i4.0  ##
+
+*	 Tilføjelsesprogrammet er nu i stand til at genkende alle de regionale
+   datoformater, som brugeren kan vælge;
+*	 Tilføjet bagudkompatibilitet for tilføjelsesprogrammet med NVDA
+   versioner, der gik forud for 2016.4, som omfattede gui.guiHelper modul.
+
+## Ændringer i 3.1 ##
+
+*	 Tilbage til det tidligere format for Ugedag, fordi det giver mulighed for
+   at genkende et større antal sprog;
+*	 Forbedret tilgængelighed af dato selector med anerkendelsen af de 3
+   felter 'Dag', 'Måned' og 'År', og deres respektive værdier;
+*	 Tilføjet en teknik til integrering af det georgiske sprog for
+   anerkendelse af dagene i ugen;
+*	 Tilføjet en konfigurationsdialog for at aktivere eller deaktivere
+   tilgængeligheden af datovælgeren;
+*	 Flyttede tilføjelsespakkens undermenu fra "Værktøjer" til
+   "Indstillinger";
+*	 Ændret tilføjelsespakkens kategori til "Ugedag".
+
+## Ændringer i 2.0 ##
+
+*	 Brugt modulet gui.guiHelper for at sikre den korrekte udseende i
+   dialogboksen der beder om en dato;
+*	 Tilføjet GPL-licensen til tilføjelsen;
+*	 Ugedag er blevet oversat, således at tilføjelsen virker korrekt på de
+   forskellige sprog;
+*	 Ændret dagsformat for at undgå kodningsfejl.
 
 ## Ændringer i 1.0 ##
 

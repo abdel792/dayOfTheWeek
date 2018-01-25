@@ -33,6 +33,12 @@ que contiene 2 elementos:
    "Gestos de Entrada" y, más concretamente, en la categoría "Día de la
    semana".
 
+## Cambios para 5.0 ##
+
+*	 Añadido la compatibilidad del complemento con wxPython 4.0 y Python3.
+*	 Arreglado un error con rutas de complementos que no contienen caracteres
+   ASCII.
+
 ## Cambios para 4.0 ##
 
 *	 El complemento es ahora capaz de reconocer todos los formatos de fecha

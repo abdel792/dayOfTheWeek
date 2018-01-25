@@ -33,6 +33,12 @@ kohdetta:
    NVDA:n Asetukset-valikon Syötekomennot-kohdasta ja valitsemalla
    avautuvasta valintaikkunasta Viikonpäivä-kategorian.
 
+## Muutokset versiossa 5.0 ##
+
+*	 Lisätty wxPython 4.0:n ja Python 3:n yhteensopivuus;
+*	 Korjattu bugi, jota esiintyi, kun lisäosan hakemistopoluissa oli muita
+   kuin ASCII-merkkejä.
+
 ## Muutokset versiossa 4.0 ##
 
 *	 Lisäosa tunnistaa nyt kaikki käyttäjän valittavissa olevat alueelliset

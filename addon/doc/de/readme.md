@@ -32,6 +32,13 @@ hinzu, das 2 Einträge enthält:
 *	 Über den NVDA-Einstellungsdialog "Eingaben" können Sie
    Tastenkombinationen zuweisen, um diese Dialoge zu öffnen.
 
+## Änderungen in V5.0 ##
+
+*	 Die Kompatibilität der Erweiterung mit wxPython 4.0 und Python3 wurde
+   hinzugefügt;
+*	 Ein Fehler wurde behoben, bei dem manche Pfade der Erweiterung
+   Nicht-ASCII-Zeichen enthielten.
+
 ## Änderungen in V4.0 ##
 
 *	 Die Erweiterung ist nun in der Lage, alle regionalen Datumsformate zu

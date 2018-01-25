@@ -31,6 +31,11 @@
 *	 يمكنكم تعيينُ مفتاح اختصار لفتح حِوارات الإضافة بالذهاب إلى مُحاورةِ
    "تخصيص اختصارات NVDA" و اختيار الفئة "يوم الأسبوع".
 
+## Changes for 5.0 ##
+
+*	 Added the compatibility of the add-on with wxPython 4.0 and Python3;
+*	 Fixed a bug with add-on paths that contain non-ASCII characters.
+
 ## مستجدات الإصدار 4.0 ##
 
 *	 يُمكِن للإضافة الآن أن تتعرفَ على جميع التنسيقات المتعلقة بالتاريخ التي

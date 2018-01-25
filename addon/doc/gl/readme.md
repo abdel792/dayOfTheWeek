@@ -32,6 +32,12 @@ contén 2 elementos:
 *	 Podes asignar un atallo de teclado para abrir o diálogo no menú "Xestos
    de Entrada" e, máis concretamente, na categoría "Día da semana".
 
+## Changes for 5.0 ##
+
+*	 Engadida compatibilidade do complemento con Wx Python 4.0 e Python 3;
+*	 Aranxado un erro con rutas de complementos que conteñen caracteres non
+   ASCII.
+
 ## Changes for 4.0 ##
 
 *	 The add-on is now able to recognize all the regional date formats that

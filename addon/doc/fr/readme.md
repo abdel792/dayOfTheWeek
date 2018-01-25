@@ -33,6 +33,11 @@ semaine", contenant 2 éléments :
    le menu "Gestes de Commandes" et, plus précisément, dans la catégorie
    "Jour de la semaine".
 
+## Changements pour la version 5.0 ##
+
+*	 Added the compatibility of the add-on with wxPython 4.0 and Python3;
+*	 Fixed a bug with add-on paths that contain non-ASCII characters.
+
 ## Changements pour la version 4.0 ##
 
 *	 Le module complémentaire est maintenant en mesure de reconnaître tous les
