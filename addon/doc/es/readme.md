@@ -35,7 +35,7 @@ que contiene 2 elementos:
 
 ## Cambios para 5.0 ##
 
-*	 Añadido la compatibilidad del complemento con wxPython 4.0 y Python3.
+*	 Añadido la compatibilidad del complemento con wxPython 4.0 y Python3;
 *	 Arreglado un error con rutas de complementos que no contienen caracteres
    ASCII.
 

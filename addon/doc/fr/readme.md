@@ -35,8 +35,10 @@ semaine", contenant 2 éléments :
 
 ## Changements pour la version 5.0 ##
 
-*	 Added the compatibility of the add-on with wxPython 4.0 and Python3;
-*	 Fixed a bug with add-on paths that contain non-ASCII characters.
+*	 Ajout de la compatibilité du module complémentaire avec wxPython 4.0 et
+   Python3 ;
+*	 Correction d'un bug avec les chemins du module complémentaire contenant
+   des caractères non-ASCII.
 
 ## Changements pour la version 4.0 ##
 

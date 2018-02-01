@@ -32,23 +32,23 @@ contén 2 elementos:
 *	 Podes asignar un atallo de teclado para abrir o diálogo no menú "Xestos
    de Entrada" e, máis concretamente, na categoría "Día da semana".
 
-## Changes for 5.0 ##
+## Cambios para 5.0 ##
 
 *	 Engadida compatibilidade do complemento con Wx Python 4.0 e Python 3;
 *	 Aranxado un erro con rutas de complementos que conteñen caracteres non
    ASCII.
 
-## Changes for 4.0 ##
+## Cambios para 4.0 ##
 
-*	 The add-on is now able to recognize all the regional date formats that
-   the user can choose;
-*	 Added the backward compatibility of the add-on with the NVDA versions
-   that preceded 2016.4, which included the gui.guiHelper module.
+*	 O complemento ahora é quen de recoñecer todos os formatos de rexión que o
+   usuario poda escoller;
+*	 Engadida a compatibilidade cara atrás do complemento coas versións do
+   NVDA que precederan á 2016.4, que inclúe o módulo gui.guiHelper.
 
 ## Cambios para 3.1 ##
 
-*	 Back to the previous format for the day of the week because it allows to
-   recognize a greater number of languages;
+*	 Volta ao formato anterior para o día da semana porque permite recoñecer
+   un meirande número de linguas;
 *	 Mellora da acesibilidade do selector de datas co recoñecemento dos 3
    campos "Día", "Mes" e "Ano", e os seus respectivos valores;
 *	 Engadida unha técnica para a integración da lingua Georgiana para o
@@ -63,9 +63,9 @@ contén 2 elementos:
 *	 Usa o módulo gui.guiHelper para asegurar a correcta apariencia do diálogo
    pedindo unha data;
 *	 Engadida a licencia GPL para o complemento;
-*	 Days of the week have been translated, so that the add-on works properly
-   in the different languages;
-*	 Changed the day format to avoid encoding errors.
+*	 Traducíronse os días da semana, para que o complemento funcione
+   correctamente nas distintas linguas;
+*	 Cambiouse o formato de día para evitar erros de codificación.
 
 ## Cambios para 1.0 ##
 
