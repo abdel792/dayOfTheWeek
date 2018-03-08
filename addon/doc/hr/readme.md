@@ -34,8 +34,9 @@ containing 2 items:
 
 ## Changes for 5.0 ##
 
-*	 Added the compatibility of the add-on with wxPython 4.0 and Python3;
-*	 Fixed a bug with add-on paths that contain non-ASCII characters.
+*	 Dodana kompatibilnost dodatka sa wxPython 4.0 i Python 3;
+*	 Ispravljena greška u dijelovima dodatka koji sadrže znakove koji nisu
+   ASCi.
 
 ## Changes for 4.0 ##
 
