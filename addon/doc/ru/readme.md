@@ -32,10 +32,10 @@
 *	 Вы можете назначить горячие клавиши для открытия этих диалогов в разделе
    "Жесты ввода", перейдя в раздел "День недели".
 
-## Changes for 5.0 ##
+## Изменения в версии 5.0 ##
 
-*	 Added the compatibility of the add-on with wxPython 4.0 and Python3;
-*	 Fixed a bug with add-on paths that contain non-ASCII characters.
+*	 Добавлена совместимость дополнения с wxPython 4.0 и Python3;
+*	 Исправлена ошибка с путями дополнения, которые содержат не-ASCII символы.
 
 ## Изменения в версии 4.0 ##
 
