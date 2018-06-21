@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 5.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2015-12-04 04:04+1000\n"
-"PO-Revision-Date: 2018-06-06 16:04+0800\n"
+"PO-Revision-Date: 2018-06-17 07:03+0800\n"
 "Last-Translator: dingpengyu <dingpengyu06@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #. Translators: The long label of the days field.
 msgid "You can select a day with the vertical arrows"
-msgstr "您可以使用垂直箭头选择一天"
+msgstr "使用上下光标选择一天"
 
 #. Translators: The short label of the days field.
 msgid "Select a day"
@@ -27,15 +27,15 @@ msgstr "选择一天"
 
 #. Translators: The long label of the months field.
 msgid "You can select a month with the vertical arrows"
-msgstr "您可以使用垂直箭头选择一个月份"
+msgstr "使用上下光标选择一月"
 
 #. Translators: The short label of the months field.
 msgid "Select a month"
-msgstr "选择一个月"
+msgstr "选择一月"
 
 #. Translators: The long label of the years field.
 msgid "You can select a year with the vertical arrows"
-msgstr "您可以使用垂直箭头选择一年"
+msgstr "使用上下光标选择一年"
 
 #. Translators: The short label of the years field.
 msgid "Select a year"
@@ -51,7 +51,7 @@ msgstr "输入或选择一个日期"
 
 #. Translators: The title of a dialog.
 msgid "Your day"
-msgstr "您的日期"
+msgstr "你的一天"
 
 #. Translators: The title of the add-on configuration dialog box.
 #, python-brace-format
@@ -72,7 +72,7 @@ msgstr "开"
 
 #. Translators: The label of the checkbox to enable or disable the date selector accessibility.
 msgid "En&able the accessibility of the date selector:"
-msgstr "可以使用日期选择器的可访问性："
+msgstr "使用日期选择器的可访问性："
 
 #. Translators: The label for an item to select the level of the announces of labels (short, long or disabled).
 msgid "Level of the announces of &labels:"
@@ -85,14 +85,13 @@ msgid ""
 msgstr "当移动垂直时，仅启用当前日期字段值的通知："
 
 #. Translators: Item in the preferences menu for the Addon dayOfTheWeek.
-#, fuzzy
 msgid "Day of the &week..."
-msgstr "星期几(&D)..."
+msgstr "&Day of the week..."
 
 #. Translators: The tooltyp text for the dayOfTheWeek submenu.
 #, python-brace-format
 msgid "{0} add-on and its settings"
-msgstr "{0}加载项及其设置"
+msgstr "{0}插件和设置"
 
 #. Translators: The name of the first item in the dayOfTheWeek add-on submenu.
 msgid "Search a &day"
@@ -105,21 +104,21 @@ msgstr "在日历中搜索一天"
 #. Translators: The name of the second item in the dayOfTheWeek add-on submenu.
 #, python-brace-format
 msgid "{0} add-on se&ttings"
-msgstr "{0}附加设置"
+msgstr "&{0}插件设置"
 
 #. Translators: The tooltyp text for the second item in the dayOfTheWeek add-on submenu.
 #, python-brace-format
 msgid "Configure the {0} add-on"
-msgstr "配置{0}加载项"
+msgstr "配置{0}插件"
 
 #. Translators: Message presented in input help mode.
 msgid "Allows you to find the day of the week corresponding to a chosen date."
 msgstr "允许您查看所选日期是星期几"
 
 #. Translators: Message presented in input help mode.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Allows you to open the {0} add-on settings dialog."
-msgstr "允许您打开dayOfTheWeek附加设置对话框。"
+msgstr "允许您打开{0}加载项设置对话框。"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -131,4 +130,4 @@ msgstr "某天星期几"
 msgid ""
 "With this add-on, you'll be able to find the day of the week corresponding "
 "to a chosen date."
-msgstr "借助此附加功能，您可以找到与所选日期对应的星期几。"
+msgstr "借助此插件，您可以找到与所选日期对应的星期"

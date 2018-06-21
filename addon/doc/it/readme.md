@@ -7,8 +7,8 @@
 Questo componente aggiuntivo permette di conoscere il giorno della settimana
 a apartire da una data conosciuta.
 
-It adds a submenu in the NVDA Preferences menu named "Day of the week",
-containing 2 items:
+Aggiunge un elemento nel menu strumenti di NVDA chiamato "Giorno della
+settimana", contenente due elementi:
 
 
 *	The first one named "Search a day", opens a dialog composed of 3 controls:
@@ -28,11 +28,12 @@ containing 2 items:
 
 ## Note ##
 
-*	 You can close these dialogs just by pressing Escape.
-*	 You can assign a shortcut to open these dialogs in "Input gestures" menu
-   and, more precisely, in the "Day of the week" category.
+*	 è possibile chiudere queste finestre semplicemente premendo esc.
+*	 È possibile assegnare una combinazione di tasti per aprire queste
+   finestre di dialogo nel menu "gesti e tasti di immissione" e, più
+   precisamente, nella categoria  "Giorno della settimana".
 
-## Changes for 5.0 ##
+## Modifiche per 5.0 ##
 
 *	 Added the compatibility of the add-on with wxPython 4.0 and Python3;
 *	 Fixed a bug with add-on paths that contain non-ASCII characters.
@@ -52,19 +53,20 @@ containing 2 items:
    fields 'Day', 'Month' and 'Year', and their respective values;
 *	 Added a technique for the integration of the Georgian language for the
    recognition of the days of the week;
-*	 Added a configuration dialog box to enable or disable the accessibility
-   of the date selector;
-*	 Moved the add-on submenu from "Tools" to "Preferences";
-*	 Changed the add-on category to "Day of the week".
+*	 Aggiunta una finestra di configurazione per attivare o disattivare
+   l'accessibilità del selettore date.
+*	 Spostato il sottomenu del componente aggiuntivo da strumenti a
+   preferenze.
+*	 Modificata la categoria dell'addon in "giorno della settimana".
 
 ## Modifiche per 2.0 ##
 
 *	 Used the gui.guiHelper module to ensure the correct appearance of the
    dialog asking for a date;
-*	 Added the GPL license to the addon;
-*	 Days of the week have been translated, so that the add-on works properly
-   in the different languages;
-*	 Changed the day format to avoid encoding errors.
+*	 Aggiunta la licenza GPL al componente.
+*	 Sono stati tradotti i giorni della settimana, così il componente
+   aggiuntivo funzionerà in più lingue.
+*	 Modificato il formato del giorno per evitare errori di codifica.
 
 ## Modifiche per 1.0 ##
 
