@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 1.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2015-12-04 04:04+1000\n"
-"PO-Revision-Date: 2018-01-15 19:07+0100\n"
+"PO-Revision-Date: 2018-06-26 05:50+0100\n"
 "Last-Translator: Noelia Ruiz Martínez <nrm1977@gmail.com>\n"
 "Language-Team: HUN\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.6.4\n"
 
 #. Translators: The long label of the days field.
 msgid "You can select a day with the vertical arrows"
@@ -43,7 +43,7 @@ msgstr "Válasszon évet"
 
 #. Translators: The title of the Date Dialog.
 msgid "Get the day of the week"
-msgstr "A hét napja"
+msgstr "A hét napjának meghatározása"
 
 #. Translators: A label for a list in a dialog.
 msgid "Type or select a date"
@@ -68,11 +68,11 @@ msgstr "Hosszú"
 
 #. Translators: Level to disable announces of labels.
 msgid "Off"
-msgstr "Ki"
+msgstr "Kikapcsolva"
 
 #. Translators: The label of the checkbox to enable or disable the date selector accessibility.
 msgid "En&able the accessibility of the date selector:"
-msgstr ""
+msgstr "A d&átumválasztó akadálymentesítésének engedélyezése"
 
 #. Translators: The label for an item to select the level of the announces of labels (short, long or disabled).
 msgid "Level of the announces of &labels:"
@@ -117,9 +117,9 @@ msgid "Allows you to find the day of the week corresponding to a chosen date."
 msgstr "Meghatározza egy kiválasztott dátumhoz tartozó napját a hétnek."
 
 #. Translators: Message presented in input help mode.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Allows you to open the {0} add-on settings dialog."
-msgstr "A hét napja bővítmény beállításainak megnyitása"
+msgstr "Megnyitja a {0} bővítmény beállításainak ablakát."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.

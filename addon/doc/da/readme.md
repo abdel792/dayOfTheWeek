@@ -34,8 +34,10 @@ Det tilføjer en undermenu i NVDA-menuen under indstillinger ved navn
 
 ## Ændringer i 5.0 ##
 
-*	 Added the compatibility of the add-on with wxPython 4.0 and Python3;
-*	 Fixed a bug with add-on paths that contain non-ASCII characters.
+*	 Tilføjet kompatibilitet af tilføjelsesprogrammet med wxPython 4.0 og
+   Python3;
+*	 Rettede en fejl med stier tilhørende tilføjelsespakken der indholder
+   non-ASCII-tegn.
 
 ## Ændringer i4.0  ##
 
