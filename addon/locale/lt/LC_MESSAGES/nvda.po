@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 1.4\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-02-03 04:00+1000\n"
-"PO-Revision-Date: 2018-07-07 22:40+0300\n"
+"PO-Revision-Date: 2018-07-13 00:12+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: lt\n"
@@ -118,9 +118,9 @@ msgid "Allows you to find the day of the week corresponding to a chosen date."
 msgstr "Leidžia surasti savaitės dieną, atitinkančią pasirinktą datą"
 
 #. Translators: Message presented in input help mode.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Allows you to open the {0} add-on settings dialog."
-msgstr "Leidžia atverti papildinio Savaitės diena parametrų dialogo langą."
+msgstr "Leidžia atverti papildinio {0} parametrų dialogo langą."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
