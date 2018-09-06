@@ -1,0 +1,136 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the dayOfTheWeek package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dayOfTheWeek 1.4\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2017-02-03 04:00+1000\n"
+"PO-Revision-Date: 2018-09-02 11:32+0700\n"
+"Last-Translator: Cuong Dang Manh <dangmanhcuong@gmail.com>\n"
+"Language-Team: \n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.1.1\n"
+
+#. Translators: The long label of the days field.
+msgid "You can select a day with the vertical arrows"
+msgstr "Bạn có thể chọn ngày bằng mũi tên lên xuống"
+
+#. Translators: The short label of the days field.
+msgid "Select a day"
+msgstr "Chọn ngày"
+
+#. Translators: The long label of the months field.
+msgid "You can select a month with the vertical arrows"
+msgstr "Bạn có thể chọn tháng bằng mũi tên lên xuống"
+
+#. Translators: The short label of the months field.
+msgid "Select a month"
+msgstr "Chọn tháng"
+
+#. Translators: The long label of the years field.
+msgid "You can select a year with the vertical arrows"
+msgstr "Bạn có thể chọn năm bằng mũi tên lên xuống"
+
+#. Translators: The short label of the years field.
+msgid "Select a year"
+msgstr "Chọn năm"
+
+#. Translators: The title of the Date Dialog.
+msgid "Get the day of the week"
+msgstr "Lấy ngày trong tuần"
+
+#. Translators: A label for a list in a dialog.
+msgid "Type or select a date"
+msgstr "Nhập hoặc chọn ngày"
+
+#. Translators: The title of a dialog.
+msgid "Your day"
+msgstr "Ngày của bạn"
+
+#. Translators: The title of the add-on configuration dialog box.
+#, python-brace-format
+msgid "Configuration of the addon {0}"
+msgstr "Cấu hình của addon {0}"
+
+#. Translators: Level for short announces of labels.
+msgid "Short"
+msgstr "Ngắn"
+
+#. Translators: Level for long announces of labels.
+msgid "Long"
+msgstr "Dài"
+
+#. Translators: Level to disable announces of labels.
+msgid "Off"
+msgstr "Tắt"
+
+#. Translators: The label of the checkbox to enable or disable the date selector accessibility.
+msgid "En&able the accessibility of the date selector:"
+msgstr "Bậ&t khả năng truy cập của bộ chọn ngày:"
+
+#. Translators: The label for an item to select the level of the announces of labels (short, long or disabled).
+msgid "Level of the announces of &labels:"
+msgstr "Cấp độ thông báo của &nhãn:"
+
+#. Translators: The label of the checkbox to enable or disable the current date field value only announcement when moving vertically.
+msgid ""
+"Enable announcements of the current date field value only, when moving "
+"&vertically:"
+msgstr ""
+"Bật chỉ thông báo giá trị của trường ngày hiện tại khi di chuyển theo cột "
+"dọc:"
+
+#. Translators: Item in the preferences menu for the Addon dayOfTheWeek.
+msgid "Day of the &week..."
+msgstr "Day of the &week..."
+
+#. Translators: The tooltyp text for the dayOfTheWeek submenu.
+#, python-brace-format
+msgid "{0} add-on and its settings"
+msgstr "{0} cài đặt &add-on"
+
+#. Translators: The name of the first item in the dayOfTheWeek add-on submenu.
+msgid "Search a &day"
+msgstr "Tìm một &ngày"
+
+#. Translators: The tooltyp text for the first item in the dayOfTheWeek add-on submenu.
+msgid "Search a day in the calendar"
+msgstr "Tìm ngày trong lịch"
+
+#. Translators: The name of the second item in the dayOfTheWeek add-on submenu.
+#, python-brace-format
+msgid "{0} add-on se&ttings"
+msgstr "{0} &cài đặt add-on"
+
+#. Translators: The tooltyp text for the second item in the dayOfTheWeek add-on submenu.
+#, python-brace-format
+msgid "Configure the {0} add-on"
+msgstr "Cấu hình {0} add-on"
+
+#. Translators: Message presented in input help mode.
+msgid "Allows you to find the day of the week corresponding to a chosen date."
+msgstr "Cho phép bạn tìm ngày trong tuần dựa theo ngày đã chọn."
+
+#. Translators: Message presented in input help mode.
+#, fuzzy, python-brace-format
+msgid "Allows you to open the {0} add-on settings dialog."
+msgstr "Cho phép bạn mở hộp thoại cài đặt của add-on dayOfTheWeek."
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Day of the week"
+msgstr "Day of the week"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"With this add-on, you'll be able to find the day of the week corresponding "
+"to a chosen date."
+msgstr ""
+"Với add-on này, bạn sẽ tìm được ngày trong tuần cắn cứ theo ngày đã chọn."
