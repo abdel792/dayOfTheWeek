@@ -5,7 +5,7 @@
 
 This add-on allows you to find a day of the week corresponding to a chosen date.
 
-It adds a submenu in the NVDA Preferences menu named "Day of the week", containing 2 items:
+It adds a submenu in the NVDA Tools menu named "Day of the week", containing 2 items:
 
 
 *	The first one named "Search a day", opens a dialog composed of 3 controls:
@@ -26,7 +26,13 @@ It adds a submenu in the NVDA Preferences menu named "Day of the week", containi
 ## Notes ##
 
 *	 You can close these dialogs just by pressing Escape.
-*	 You can assign a shortcut to open these dialogs in "Input gestures" menu and, more precisely, in the "Day of the week" category.
+*	 You can assign a shortcut to open these dialogs in "Input gestures" menu and, more precisely, in the "Day of the week" category.;
+*	 If you use NVDA 2018.2 or higher, you'll find only one item in the tool menu for searching your day, the add-on settings will be in the NVDA settings panel.
+
+## Changes for 6.0 ##
+*	 added the addon settings to the NVDA settings panel for NVDA 2018.2 and higher;
+*	 Moved the item  for  searching a day to the tools menu;
+*	 Added the backward compatibility of the add-on with the NVDA versions that preceded 2018.2, which included the settings panel.
 
 ## Changes for 5.0 ##
 *	 Added the compatibility of the add-on with wxPython 4.0 and Python3;
@@ -57,6 +63,6 @@ It adds a submenu in the NVDA Preferences menu named "Day of the week", containi
 
 *	 Initial version.
 
-[1]: https://github.com/abdel792/dayOfTheWeek/releases/download/v5.3/dayOfTheWeek-5.3.nvda-addon
+[1]: https://github.com/abdel792/dayOfTheWeek/releases/download/v6.0/dayOfTheWeek-6.0.nvda-addon
 
-[2]: https://github.com/abdel792/dayOfTheWeek/releases/download/v5.3/dayOfTheWeek-5.3.nvda-addon
+[2]: https://github.com/abdel792/dayOfTheWeek/releases/download/v6.0/dayOfTheWeek-6.0.nvda-addon

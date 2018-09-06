@@ -22,9 +22,15 @@ import os
 import controlTypes
 import wx
 import gui
-from gui.settingsDialogs import SettingsDialog
 from NVDAObjects.IAccessible import IAccessible
 import config
+
+# This block ensures compatibility with NVDA versions prior to 2018.2 which includes the settings panel.
+try:
+	from gui import SettingsPanel as SettingsDialog
+except ImportError:
+	from gui.settingsDialogs import SettingsDialog
+
 
 ### Constants
 ADDON_SUMMARY = addonHandler.getCodeAddon ().manifest["summary"]
@@ -157,7 +163,7 @@ class DateDialog (wx.Dialog):
 class DayOfWeekSettingsDialog (SettingsDialog):
 
 	# Translators: The title of the add-on configuration dialog box.
-	title = _("Configuration of the addon {0}").format (ADDON_NAME)
+	title = _("Configuration of the addon {0}").format (ADDON_NAME) if not hasattr (gui, "NVDASettingsDialog") else _("Day of the week")
 	LABEL_ANNOUNCE_LEVELS = (
 		("short",
 		# Translators: Level for short announces of labels.
@@ -198,8 +204,6 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 			if level == curLevel:
 				self.labelAnnounceLevelsList.SetSelection(index)
 				break
-			else:
-				log.debugWarning("Could not set level list to current level of the announces of labels")
 		self.labelAnnounceLevelsList.Enabled = self.enableAnnouncesCheckBox.IsChecked ()
 
 		self.reportDateFieldValuesCheckBox = wx.CheckBox (self, label = self.valueAnnounce)
@@ -223,8 +227,6 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 			if level == curLevel:
 				self.labelAnnounceLevelsList.SetSelection(index)
 				break
-			else:
-				log.debugWarning("Could not set level list to current level of the announces of labels")
 		dialogSizer.Add (self.labelAnnounceLevelsList)
 		self.labelAnnounceLevelsList.Enabled = self.enableAnnouncesCheckBox.IsChecked ()
 
@@ -252,6 +254,12 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 		config.conf["dayOfWeek"]["labelAnnounceLevel"] = labelAnnounceLevel
 		config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"] = self.reportDateFieldValuesCheckBox.GetValue ()
 		super (DayOfWeekSettingsDialog, self).onOk (evt)
+
+	def onSave (self):
+		config.conf["dayOfWeek"]["enableAnnounces"] = self.enableAnnouncesCheckBox.GetValue ()
+		labelAnnounceLevel = self.LABEL_ANNOUNCE_LEVELS[self.labelAnnounceLevelsList.GetSelection()][0]
+		config.conf["dayOfWeek"]["labelAnnounceLevel"] = labelAnnounceLevel
+		config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"] = self.reportDateFieldValuesCheckBox.GetValue ()
 
 class AnnounceFieldsLabels (IAccessible):
 
@@ -511,17 +519,33 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 
 	def __init__(self, *args, **kwargs):
 		super (GlobalPlugin, self).__init__(*args, **kwargs)
-		self.createSubMenu ()
+		# This block ensures compatibility with NVDA versions prior to 2018.2 which includes the settings panel.
+		if hasattr (gui, "NVDASettingsDialog"):
+			from gui import NVDASettingsDialog
+			NVDASettingsDialog.categoryClasses.append(DayOfWeekSettingsDialog)
+			self.createMenu ()
+		else:
+			self.createSubMenu ()
 
 	def chooseNVDAObjectOverlayClasses (self, obj, clsList):
 		if obj.value and obj.role == controlTypes.ROLE_DROPLIST and isDatepickerDate (obj.value) and config.conf["dayOfWeek"]["enableAnnounces"]:
 			clsList.insert (0, AnnounceFieldsLabels)
 
+	def createMenu (self):
+		self.toolsMenu = gui.mainFrame.sysTrayIcon.toolsMenu
+		self.mainItem = self.toolsMenu.Append (wx.ID_ANY,
+		# Translators: Item in the tools menu for the Addon dayOfTheWeek.
+		_("Day of the &week..."),
+		# Translators: The tooltyp text for the dayOfTheWeek item.
+		_("Search a day in the calendar"))
+
+		gui.mainFrame.sysTrayIcon.Bind (wx.EVT_MENU, self.onDateDialog, self.mainItem)
+
 	def createSubMenu (self):
-		self.menu = gui.mainFrame.sysTrayIcon.preferencesMenu
+		self.toolsMenu = gui.mainFrame.sysTrayIcon.toolsMenu
 		dowMenu = wx.Menu ()
-		self.mainItem = self.menu.AppendSubMenu (dowMenu,
-		# Translators: Item in the preferences menu for the Addon dayOfTheWeek.
+		self.mainItem = self.toolsMenu.AppendSubMenu (dowMenu,
+		# Translators: Item in the tools menu for the Addon dayOfTheWeek.
 		_("Day of the &week..."),
 		# Translators: The tooltyp text for the dayOfTheWeek submenu.
 		_("{0} add-on and its settings").format (ADDON_NAME))
@@ -541,9 +565,14 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		gui.mainFrame.sysTrayIcon.Bind (wx.EVT_MENU, self.onAddonSettingsDialog, addonSettings)
 
 	def terminate (self):
+		if hasattr (gui, "NVDASettingsDialog"):
+			gui.NVDASettingsDialog.categoryClasses.remove(DayOfWeekSettingsDialog)
 		try:
-			self.menu.RemoveItem (self.mainItem)
-		except wx.PyDeadObjectError:
+			if wx.version().startswith("4"):
+				self.toolsMenu.Remove(self.mainItem)
+			else:
+				self.toolsMenu.RemoveItem(self.mainItem)
+		except:
 			pass
 
 	def onDateDialog (self, evt):
