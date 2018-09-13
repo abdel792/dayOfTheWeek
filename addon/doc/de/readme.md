@@ -1,13 +1,13 @@
-# Tag der Woche #
+# Wochentag #
 
 *	 Autoren: Abdel, Noelia.
-*	 [stabile Version herunterladen][1]
+*	 [Stabile Version herunterladen][1]
 *	 [Entwicklerversion herunterladen][2]
 
 Diese Erweiterung erlaubt Ihnen die Ermittlung des Wochentags für ein
 angegebenes Datum.
 
-Es fügt ein Untermenü im NVDA-Einstellungsmenü mit dem Namen "Tag der Woche"
+Es fügt ein Untermenü im NVDA-Einstellungsmenü mit dem Namen "Wochentag"
 hinzu, das 2 Einträge enthält:
 
 
@@ -28,8 +28,8 @@ hinzu, das 2 Einträge enthält:
 
 ## Anmerkungen ##
 
-*	 Sie können den Dialog auch durch Drücken der Taste ESC schließen.
-*	 Über den NVDA-Einstellungsdialog "Eingaben" können Sie
+*	 Sie können den Dialog auch durch Drücken der Escape-Taste schließen.
+*	 Über den NVDA-Einstellungsdialog "Eingaben..." können Sie
    Tastenkombinationen zuweisen, um diese Dialoge zu öffnen.
 
 ## Änderungen in V5.0 ##
@@ -64,7 +64,7 @@ hinzu, das 2 Einträge enthält:
 
 *	 Nun wird das gui.guiHelper-Modul verwendet,um die korrekte Darstellung
    des Dialogfelds zu gewährleisten, welches nach dem Datum fragt.
-*	 Die Erweiterung wurde unter der GPL lizensiert.
+*	 Die Erweiterung wurde unter der GPL lizenziert.
 *	 Die Wochentage sind übersetzt worden, damit das Add-on ordnungsgemäß in
    den verschiedenen Sprachen funktioniert;
 *	 Nun wird das Format %w für Daten verwendet, um Kodierungsfehler zu
@@ -72,7 +72,7 @@ hinzu, das 2 Einträge enthält:
 
 ## Änderungen in Version 1.0 ##
 
-*	 anfängliche Version
+*	 Erstversion
 
 [[!tag dev stable]]
 
