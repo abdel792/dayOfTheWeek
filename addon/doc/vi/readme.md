@@ -24,12 +24,21 @@ Add-on này thêm một trình đơn con trong trình đơn tùy chọn của NV
 	*	Nút "Đồng ý" để lưu cấu hình;
 	*	Nút "Hủy" để hủy và đóng hộp thoại.
 
-
 ## Lưu ý ##
 
-*	 Bạn có thể đóng các hộp thoại này bằng cách bấm Escape.
+*	 Bạn có thể đóng các hộp thoại này bằng cách bấm Escape;
 *	 Bạn có thể gán thao tác để mở các hộp thoại này từ trình đơn "Quản lý các
-   thao tác" hoặc trong phân loại "Day of the week".
+   thao tác" hoặc trong phân loại "Day of the week";
+*	 Nếu dùng NVDA 2018.2 trở lên, bạn sẽ chỉ tìm thấy một mục trong trình đơn
+   công cụ cho việc tìm kiếm ngày của bạn, phần cài đặt add-on sẽ ở trong
+   bản tùy chỉnh của NVDA.
+
+## Các thay đổi cho phiên bản 6.0 ##
+
+*	 đã thêm cài đặt addon vào bản tùy chỉnh NVDA cho NVDA 2018.2 trở lên;
+*	 Đã chuyển tùy chọn tìm kiếm ngày vào trình đơn công cụ;
+*	 Đã thêm tương thích ngược của add-on với các phiên bản NVDA trước 2018.2,
+   bao gồm bản các thiết lập.
 
 ## Các thay đổi cho phiên bản 5.0 ##
 

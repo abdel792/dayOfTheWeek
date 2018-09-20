@@ -25,12 +25,23 @@ contendo 2 itens:
 * Um botão "OK" para salvar a sua configuração;
 * Um botão "Cancelar" para cancelar e fechar a caixa de diálogo.
 
-
 ## Notas: ##
 
-*	 Pode fechar essas caixas de diálogo, pressionando Escape.
-*	 Pode atribuir um atalho para abrir essas caixas de diálogo no menu
+*	 You can close these dialogs just by pressing Escape;
+*	 Pode atribuir um atalho, para abrir essas caixas de diálogo, no menu
    "Definir comandos" e, mais precisamente, na categoria "Dia da semana".
+*	 Se estiver a usar o NVDA 2018.2 ou superior, encontrará apenas um item no
+   menu de ferramentas para procurar o seu dia, as configurações do add-on
+   estarão no painel de configurações do NVDA.
+
+## Alterações para 6.0 ##
+
+*	 adicionaram-se as configurações de addon ao painel de configurações do
+   NVDA para o NVDA 2018.2 e superior;
+*	 Movido o item para pesquisar um dia para o menu de ferramentas;
+*	 Adicionada a compatibilidade com versões anteriores do complemento com as
+   versões do NVDA anteriores a 2018.2, que incluíam o painel de
+   configurações.
 
 ## Alterações para 5.0 ##
 

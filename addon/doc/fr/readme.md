@@ -25,13 +25,24 @@ semaine", contenant 2 éléments :
 	*	Un bouton "OK" pour sauvegarder votre configuration ;
 	*	Un bouton "Annuler" pour annuler et fermer la boîte de dialogue.
 
-
 ## Notes ##
 
-*	 Vous pouvez fermer cette boîte de dialogue en appuyant sur Échap.
+*	 Vous pouvez fermer cette boîte de dialogue en appuyant sur Échap;
 *	 Vous pouvez assigner un raccourci pour ouvrir la boîte de dialogue dans
    le menu "Gestes de Commandes" et, plus précisément, dans la catégorie
-   "Jour de la semaine".
+   "Jour de la semaine";
+*	 Si vous utilisez NVDA 2018.2 ou une version ultérieure, vous ne trouverez
+   qu'un seul élément dans le menu Outil pour rechercher votre jour, les
+   paramètres du module complémentaire se trouvent dans le panneau
+   Paramètres NVDA.
+
+## Changements pour la version 6.0 ##
+
+*	 ajout des paramètres du module complémentaire au panneau Paramètres NVDA
+   pour NVDA 2018.2 et les versions ultérieures;
+*	 Déplacement de l'élément pour rechercher un jour dans le menu Outils;
+*	 Ajout de la rétrocompatibilité du module avec les versions NVDA
+   antérieures à la version 2018.2, qui incluait le panneau Paramètres.
 
 ## Changements pour la version 5.0 ##
 

@@ -25,12 +25,22 @@ care conține două elemente:
 	*	Un buton "OK" pentru salvarea configurației;
 	*	Un buton de anulare pentru anularea modificărilor efectuate și închiderea dialogului.
 
-
 ## Note ##
 
-*	 Puteți închide aceste dialoguri apăsând tasta Escape.
+*	 Puteți închide aceste dialoguri apăsând tasta Escape;
 *	 Puteți aloca o comandă rapidă pentru a deschide dialogul în meniul
-   „Gesturi de intrare” și, mai precis, în categoria /„Day of the Week/”.
+   „Gesturi de intrare” și, mai precis, în categoria /„Day of the Week/”;
+*	 Dacă folosiți NVDA 2018.2 sau mai nou, veți găsi un singur element în
+   meniul instrumente pentru căutarea zilei dumneavoastră, setările
+   suplimentului vor fi în panoul de setări al NVDA.
+
+## Modificări în versiunea 6.0 ##
+
+*	 S-au adăugat setările suplimentului în de setări al NVDA pentru NVDA
+   2018.2 și mai nou;
+*	 Elementul pentru căutarea unei zile s-a mutat în meniul instrumente;
+*	 A fost adăugată înapoi compatibilitatea suplimentului cu versiunile NVDA
+   care au precedat versiunea 2018.2, care a inclus panoul de setări.
 
 ## Modificări în versiunea 5.0 ##
 

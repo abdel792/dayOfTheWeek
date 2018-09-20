@@ -25,13 +25,21 @@ kohdetta:
 	*	"OK"-painike asetusten tallentamiseen;
 	*	"Peruuta"-painike muutosten perumiseen ja valintaikkunan sulkemiseen.
 
-
 ## Huomautuksia ##
 
-*	 Voit sulkea nämä valintaikkunat painamalla Esc-näppäintä.
-*	 Voit liittää näppäinkomennon näiden valintaikkunoiden avaamista varten
-   NVDA:n Asetukset-valikon Syötekomennot-kohdasta ja valitsemalla
-   avautuvasta valintaikkunasta Viikonpäivä-kategorian.
+*	 Valintaikkunat voidaan sulkea painamalla Esc-näppäintä;
+*	 Valintaikkunoiden avaamista varten on mahdollista määrittää
+   näppäinkomento Syötekomennot-valintaikkunan Viikonpäivä-kategoriasta;
+*	 Työkalut-valikossa on nyt vain yksi vaihtoehto päivän etsimiseen, mikäli
+   käytössä on NVDA 2018.2 tai uudempi. Lisäosan asetukset löytyvät NVDA:n
+   asetuspaneelista.
+
+## Muutokset versiossa 6.0 ##
+
+*	 Lisäosan asetukset lisätty NVDA:n asetuspaneeliin versiossa 2018.2 ja
+   uudemmissa;
+*	 Siirretty päivän etsimiseen tarkoitettu vaihtoehto Työkalut-valikkoon;
+*	 Lisätty taaksepäin yhteensopivuus NVDA 2018.2:ta edeltäneille versioille.
 
 ## Muutokset versiossa 5.0 ##
 

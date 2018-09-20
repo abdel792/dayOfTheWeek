@@ -24,12 +24,22 @@
 	*	زِرٌّ "OK" لحفظ الإعدادات;
 	*	زِرٌّ لإلغاء التغييرات.
 
-
 ## ملاحظات ##
 
-*	 يمكنكم إغلاقُ هذه الحوارات بالضغط على زر escape.
-*	 يمكنكم تعيينُ مفتاح اختصار لفتح حِوارات الإضافة بالذهاب إلى مُحاورةِ
-   "تخصيص اختصارات NVDA" و اختيار الفئة "يوم الأسبوع".
+*	 You can close these dialogs just by pressing Escape;
+*	 You can assign a shortcut to open these dialogs in "Input gestures" menu
+   and, more precisely, in the "Day of the week" category;
+*	 If you use NVDA 2018.2 or higher, you'll find only one item in the tool
+   menu for searching your day, the add-on settings will be in the NVDA
+   settings panel.
+
+## Changes for 6.0 ##
+
+*	 added the addon settings to the NVDA settings panel for NVDA 2018.2 and
+   higher;
+*	 Moved the item for searching a day to the tools menu;
+*	 Added the backward compatibility of the add-on with the NVDA versions
+   that preceded 2018.2, which included the settings panel.
 
 ## Changes for 5.0 ##
 
