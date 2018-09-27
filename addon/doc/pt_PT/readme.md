@@ -27,7 +27,7 @@ contendo 2 itens:
 
 ## Notas: ##
 
-*	 You can close these dialogs just by pressing Escape;
+*	 Pode fechar essas caixas de diálogo, pressionando Escape.
 *	 Pode atribuir um atalho, para abrir essas caixas de diálogo, no menu
    "Definir comandos" e, mais precisamente, na categoria "Dia da semana".
 *	 Se estiver a usar o NVDA 2018.2 ou superior, encontrará apenas um item no

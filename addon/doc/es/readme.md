@@ -27,20 +27,22 @@ que contiene 2 elementos:
 
 ## Notas ##
 
-*	 You can close these dialogs just by pressing Escape;
-*	 You can assign a shortcut to open these dialogs in "Input gestures" menu
-   and, more precisely, in the "Day of the week" category;
-*	 If you use NVDA 2018.2 or higher, you'll find only one item in the tool
-   menu for searching your day, the add-on settings will be in the NVDA
-   settings panel.
+*	 Puedes cerrar estos diálogos tan sólo pulsando Escape.
+*	 Puedes asignar un atajo de teclado para abrir estos diálogos en el menú
+   "Gestos de Entrada" y, más concretamente, en la categoría "Día de la
+   semana".
+*	 Si utilizas NVDA 2018.2 o superior, sólo encontrarás un elemento en el
+   menú herramientas para buscar el día, las opciones del complemento
+   estarán en el panel opciones de NVDA.
 
-## Changes for 6.0 ##
+## Cambios para 6.0 ##
 
-*	 added the addon settings to the NVDA settings panel for NVDA 2018.2 and
-   higher;
-*	 Moved the item for searching a day to the tools menu;
-*	 Added the backward compatibility of the add-on with the NVDA versions
-   that preceded 2018.2, which included the settings panel.
+*	 Añadidas las opciones del complemento al panel opciones de NVDA para NVDA
+   2018.2 y superiores;
+*	 Movido el elemento para buscar un día al menú herramientas;
+*	 Añadida la compatibilidad hacia atrás del complemento con las versiones
+   de NVDA que precedieron a la versión 2018.2, que incluye el panel de
+   opciones.
 
 ## Cambios para 5.0 ##
 
