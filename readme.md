@@ -63,6 +63,6 @@ It adds a submenu in the NVDA Tools menu named "Day of the week", containing 2 i
 
 *	 Initial version.
 
-[1]: https://github.com/abdel792/dayOfTheWeek/releases/download/v6.2/dayOfTheWeek-6.2.nvda-addon
+[1]: https://github.com/abdel792/dayOfTheWeek/releases/download/v6.2.1/dayOfTheWeek-6.2.1.nvda-addon
 
-[2]: https://github.com/abdel792/dayOfTheWeek/releases/download/v6.2/dayOfTheWeek-6.2.nvda-addon
+[2]: https://github.com/abdel792/dayOfTheWeek/releases/download/v6.2.1/dayOfTheWeek-6.2.1.nvda-addon
