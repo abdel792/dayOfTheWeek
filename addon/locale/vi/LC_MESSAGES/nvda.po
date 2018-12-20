@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 1.4\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-02-03 04:00+1000\n"
-"PO-Revision-Date: 2018-09-07 09:16+0700\n"
-"Last-Translator: Cuong Dang Manh <dangmanhcuong@gmail.com>\n"
+"PO-Revision-Date: 2018-12-18 14:14+0700\n"
+"Last-Translator: Dang Manh Cuong <dangmanhcuong@gmail.com>\n"
 "Language-Team: \n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2\n"
 
 #. Translators: The long label of the days field.
 msgid "You can select a day with the vertical arrows"
@@ -88,7 +88,7 @@ msgstr ""
 
 #. Translators: Item in the preferences menu for the Addon dayOfTheWeek.
 msgid "Day of the &week..."
-msgstr "Day of the &week..."
+msgstr "Ngày của &tuần..."
 
 #. Translators: The tooltyp text for the dayOfTheWeek submenu.
 #, python-brace-format
@@ -125,7 +125,7 @@ msgstr "Cho phép bạn mở hộp thoại cài đặt add-on {0}"
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Day of the week"
-msgstr "Day of the week"
+msgstr "Ngày của tuần"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager

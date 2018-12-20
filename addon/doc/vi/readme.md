@@ -1,4 +1,4 @@
-# Day of the week #
+# Ngày của tuần #
 
 *	 Tác giả: Abdel, Noelia.
 *	 tải về [phiên bản chính thức][1]
