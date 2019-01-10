@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2015-10-30 04:04+1000\n"
-"PO-Revision-Date: 2018-12-13 11:12+0100\n"
-"Last-Translator: Simone Dal Maso <simone.dalmaso@gmail.com>\n"
+"PO-Revision-Date: 2019-01-04 15:31+0100\n"
+"Last-Translator: Chris Leo Mameli <llajta2012@gmail.com>\n"
 "Language-Team: Simone Dal Maso <simone.dalmaso@gmail.com>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.6.3\n"
 
 #. Translators: The long label of the days field.
 msgid "You can select a day with the vertical arrows"
@@ -88,7 +88,7 @@ msgstr ""
 
 #. Translators: Item in the preferences menu for the Addon dayOfTheWeek.
 msgid "Day of the &week..."
-msgstr "Giorno Della settimana (w) ..."
+msgstr "Giorno Della &settimana"
 
 #. Translators: The tooltyp text for the dayOfTheWeek submenu.
 #, python-brace-format
@@ -97,7 +97,7 @@ msgstr "il componente aggiuntivo {0} e le sue impostazioni"
 
 #. Translators: The name of the first item in the dayOfTheWeek add-on submenu.
 msgid "Search a &day"
-msgstr "Cerca un giorno (d)"
+msgstr "Cerca un gio&rno"
 
 #. Translators: The tooltyp text for the first item in the dayOfTheWeek add-on submenu.
 msgid "Search a day in the calendar"
@@ -121,8 +121,7 @@ msgstr ""
 #. Translators: Message presented in input help mode.
 #, python-brace-format
 msgid "Allows you to open the {0} add-on settings dialog."
-msgstr ""
-"Consente di aprire le {0} impostazioni di questo componente aggiuntivo"
+msgstr "Consente di aprire le {0} impostazioni di questo componente aggiuntivo"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
