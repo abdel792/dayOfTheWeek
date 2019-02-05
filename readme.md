@@ -33,6 +33,10 @@ It adds a submenu in the NVDA Tools menu named "Day of the week", containing 2 i
 * You can assign a shortcut to open these dialogs in "Input gestures" menu and, more precisely, in the "Day of the week" category.;
 * If you use NVDA 2018.2 or higher, you'll find only one item in the tool menu for searching your day, the add-on settings will be in the NVDA settings panel.
 
+## Compatibility ##
+
+* This add-on is compatible with the versions of NVDA ranging from 2014.3 until 2019.1.
+
 ## Changes for 19.02 ##
 
 * Changed version numbering using YY.MM (The year in 2 digits, followed by a dot, followed by the month in 2 digits);
@@ -74,6 +78,6 @@ It adds a submenu in the NVDA Tools menu named "Day of the week", containing 2 i
 
 * Initial version.
 
-[1]: https://github.com/abdel792/dayOfTheWeek/releases/download/v6.2.1/dayOfTheWeek-6.2.1.nvda-addon
+[1]: https://addons.nvda-project.org/files/get.php?file=dw
 
-[2]: https://github.com/abdel792/dayOfTheWeek/releases/download/v6.2.1/dayOfTheWeek-6.2.1.nvda-addon
+[2]: https://addons.nvda-project.org/files/get.php?file=dw-dev
