@@ -56,7 +56,7 @@ contenant 2 éléments :
 * Modification de la numérotation des versions en utilisant YY.MM (L'année
   en 2 chiffres, suivie d'un point, suivie du mois en 2 chiffres);
 * Ajout de la compatibilité avec le nouveau format de gestion des versions
-  du module complémentaire, apparu depuis la nvda 2019.1.
+  du module complémentaire, apparu depuis nvda 2019.1.
 
 ## Changements pour la version 6.0 ##
 
