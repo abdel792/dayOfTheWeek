@@ -7,51 +7,52 @@
 Este extra permite que encontre um dia da semana correspondente a uma data
 escolhida.
 
-It adds a submenu in the NVDA Tools menu named "Day of the week", containing
-2 items:
+Adiciona um submenu no menu Preferências do NVDA chamado "Dia da semana",
+que contém 2 itens:
 
-* The first one named "Search a day", opens a dialog composed of 3 controls:
+* O primeiro, chamado "Pesquisar um dia" abre uma caixa de diálogo composta
+  por 3 controlos:
 
-    * A listbox to choose or type your date;
-    * An "OK" button to display a messageBox containing your day;
-    * A "Cancel" button to close the dialog.
+    * Uma caixa de lista para escolher ou escrever a sua data;
+    * Um botão "OK" para mostrar uma caixa de mensagem que contém o seu dia;
+    * Um botão "Cancelar" para fechar a caixa de diálogo.
 
-* The second one named "dayOfTheWeek add-on settings" opens the parameters
-  of the add-on to specify whether you want to report labels for date fields
-  or not, it is composed of the following elements:
+* O segundo, denominado "Configuração do extra dayOfTheWeek" abre os
+  parâmetros do extra para indicar se deseja escrever rótulos para campos de
+  data ou não, é composto pelos seguintes elementos:
 
-    * Enable accessibility of the date selector;
-    * Level of the announces of labels, you will then have 3 choices:
+    * Activar acessibilidade do selector de datas;
+    * Nível dos anúncios dos rótulos, onde terá 3 opções:
 
-        * Long (it's the default choice);
-        * Short (for short announcements);
-        * Off (to disable labels announcements).
+        * Longo (é a escolha padrão);
+        * Curto (para indicações curtas)
+        * off (para desactivar os anúncios).
 
-    * Enable announcement of the current date field value only, when moving
-      vertically;
-    * An "OK" button to save your configuration;
-    * A "Cancel" button to cancel and close the dialog.
+    * Activar o anúncio do valor do campo de data actual somente quando se
+      mover verticalmente;
+    * Um botão "OK" para guardar a sua configuração;
+    * Um botão "Cancelar" para cancelar e fechar a caixa de diálogo.
 
 ## Notas: ##
 
-* You can close these dialogs just by pressing Escape.
-* You can assign a shortcut to open these dialogs in "Input gestures" menu
-  and, more precisely, in the "Day of the week" category.;
+* Pode fechar essas caixas de diálogo, pressionando escape.
+* Pode atribuir um atalho, para abrir estas caixas de diálogo, no menu
+  "Definir comandos" e, mais precisamente, na categoria "Dia da semana".
 * Se estiver a usar o NVDA 2018.2 ou superior, encontrará apenas um item no
   menu de ferramentas para procurar o seu dia, as configurações do add-on
   estarão no painel de configurações do NVDA.
 
-## Compatibility ##
+## Compatibilidade ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2014.3
-  until 2019.1.
+* Este extra é compatível com as versões do NVDA desde a 2014.3 até a
+  2019.1.
 
-## Changes for 19.02 ##
+## Alterações para 19.0.2 ##
 
-* Changed version numbering using YY.MM (The year in 2 digits, followed by a
-  dot, followed by the month in 2 digits);
-* Added compatibility with the new versioning format of add-on, appeared
-  since nvda 2019.1.
+* Alterada a Numeração de versão, usando AA.MM (O ano em 2 dígitos, seguido
+  por um ponto, seguido pelo mês em 2 dígitos);
+* Acrescentada a compatibilidade com o novo formato de versão do extra, que
+  irá surgir a partir desde o nvda 2019.1.
 
 ## Alterações para 6.0 ##
 

@@ -7,51 +7,51 @@
 Med dette tilføjelsesprogram kan du finde den ugedag, som svarer til en
 valgt dato.
 
-It adds a submenu in the NVDA Tools menu named "Day of the week", containing
-2 items:
+Denne pakke tilføjer en undermenu i NVDA-menuen under Værktøjer ved navn
+"Ugedag", der indeholder 2 elementer:
 
-* The first one named "Search a day", opens a dialog composed of 3 controls:
+* Den første med navnet "Find en dag" åbner en dialog bestående af 3
+  kontroller:
 
-    * A listbox to choose or type your date;
-    * An "OK" button to display a messageBox containing your day;
+    * En listeboks, hvor du kan vælge eller indtaste din dato;
+    * En OK-knap, som vil vise en meddelelsesboks med din ugedag;
     * En Annuller-knap, som lukker dialogen.
 
-* The second one named "dayOfTheWeek add-on settings" opens the parameters
-  of the add-on to specify whether you want to report labels for date fields
-  or not, it is composed of the following elements:
+* Den anden med navnet "Indstillinger for tilføjelsesprogrammet Ugedag"
+  åbner parametrene for tilføjelsen for at angive, om du vil have etiketter
+  til datafelter oplyst eller ej. Den består af følgende indstillinger:
 
-    * Enable accessibility of the date selector;
-    * Level of the announces of labels, you will then have 3 choices:
+    * Gør datovælgeren tilgængelig;
+    * Annonceringsniveau for etiketter har tre valg:
 
-        * Long (it's the default choice);
-        * Short (for short announcements);
-        * Off (to disable labels announcements).
+        * Lang (det er standardvalg);
+        * Kort (for korte meddelelser);
+        * Fra (Deaktiverer annoncering af etiketter).
 
-    * Enable announcement of the current date field value only, when moving
-      vertically;
-    * An "OK" button to save your configuration;
-    * A "Cancel" button to cancel and close the dialog.
+    * Annoncér kun det aktuelle datofelt, når der flyttes &lodret;
+    * En OK-knap der gemmer dine indstillinger;
+    * En Annuller-knap, som lukker dialogen.
 
 ## Noter ##
 
-* You can close these dialogs just by pressing Escape.
-* You can assign a shortcut to open these dialogs in "Input gestures" menu
-  and, more precisely, in the "Day of the week" category.;
+* Du kan lukke disse dialoger bare ved at trykke på Escape.
+* Du kan tilknytte en genvejstast til at åbne dialogen under
+  Inputbevægelser, nærmere bestemt under kategorien "Ugedag";
 * Hvis du bruger NVDA 2018.2 eller nyere, finder du kun et punkt i
   værktøjsmenuen for at søge efter dage, og tilføjelsesindstillingerne er i
   NVDA-indstillingspanelet.
 
-## Compatibility ##
+## Kompatibilitet ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2014.3
-  until 2019.1.
+* Denne tilføjelse er kompatibel med versionerne af NVDA fra 2014.3 til
+  2019.1.
 
-## Changes for 19.02 ##
+## Ændringer for 19.02 ##
 
-* Changed version numbering using YY.MM (The year in 2 digits, followed by a
-  dot, followed by the month in 2 digits);
-* Added compatibility with the new versioning format of add-on, appeared
-  since nvda 2019.1.
+* Ændret versionsnummerering til åå.MM (År i 2 cifre efterfulgt af et
+  punktum, efterfulgt af måneden i 2 cifre);
+* Tilføjede kompatibilitet med det nye versionsformat af der fra nu af
+  benyttes i tilføjelser, der blev aktuelt siden NVDA 2019.1.
 
 ## Ændringer i 6.0 ##
 
