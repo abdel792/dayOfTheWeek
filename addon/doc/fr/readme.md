@@ -40,7 +40,7 @@ contenant 2 éléments :
 * Vous pouvez fermer cette boîte de dialogue en appuyant sur Échap ;
 * Vous pouvez assigner un raccourci pour ouvrir la boîte de dialogue dans le
   menu "Gestes de Commandes" et, plus précisément, dans la catégorie "Jour
-  de la semaine";
+  de la semaine" ;
 * Si vous utilisez NVDA 2018.2 ou une version ultérieure, vous ne trouverez
   qu'un seul élément dans le menu Outil pour rechercher votre jour, les
   paramètres du module complémentaire se trouvent dans le panneau Paramètres

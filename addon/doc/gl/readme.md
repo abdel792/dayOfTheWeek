@@ -36,9 +36,9 @@ contén 2 elementos:
 
 ## Notas ##
 
-* Podes pechar estes diálogos só premendo Escape.
+* Podes pechar estes diálogos só premendo Escape;
 * Podes asignar un atallo de teclado para abrir estes diálogos no menú
-  "Xestos de Entrada" e, máis concretamente, na categoría "Día da semana".
+  "Xestos de Entrada" e, máis concretamente, na categoría "Día da semana";
 * Se usas NVDA 2018.2 ou superior, só atoparás un elemento no menú
   ferramentas para procurar o día, as opcións do complemento estarán no
   panel opcións de NVDA.

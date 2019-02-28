@@ -34,9 +34,9 @@ the week", có hai mục con:
 
 ## Lưu ý ##
 
-* Bạn có thể đóng các hộp thoại này bằng cách bấm Escape.
+* Bạn có thể đóng các hộp thoại này bằng cách bấm Escape;
 * Bạn có thể gán thao tác để mở các hộp thoại này từ trình đơn "Quản lý các
-  thao tác" hoặc trong phân loại "Day of the week".;
+  thao tác" hoặc trong phân loại "Ngày của tuần";
 * Nếu dùng NVDA 2018.2 trở lên, bạn sẽ chỉ tìm thấy một mục trong trình đơn
   công cụ cho việc tìm kiếm ngày của bạn, phần cài đặt add-on sẽ ở trong bản
   tùy chỉnh của NVDA.

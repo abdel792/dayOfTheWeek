@@ -35,9 +35,9 @@ kohdetta:
 
 ## Huomautuksia ##
 
-* Valintaikkunat voidaan sulkea painamalla Esc-näppäintä.
-* Valintaikkunoiden avaamista varten on mahdollista määrittää näppäinkomento
-  Syötekomennot-valintaikkunan Viikonpäivä-kategoriasta.
+* You can close these dialogs just by pressing Escape;
+* You can assign a shortcut to open these dialogs in "Input gestures" menu
+  and, more precisely, in the "Day of the week" category;
 * Mikäli käytössä on NVDA 2018.2 tai uudempi, Työkalut-valikossa on nyt vain
   yksi vaihtoehto päivän etsimiseen. Lisäosan asetukset löytyvät NVDA:n
   asetuspaneelista.

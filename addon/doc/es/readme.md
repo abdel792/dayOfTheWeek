@@ -35,7 +35,7 @@ que contiene 2 elementos:
 
 ## Notas ##
 
-* Puedes cerrar estos diálogos tan sólo pulsando Escape.
+* Puedes cerrar estos diálogos tan sólo pulsando Escape;
 * Puedes asignar un atajo de teclado para abrir estos diálogos en el menú
   "Gestos de Entrada" y, más concretamente, en la categoría "Día de la
   semana".;

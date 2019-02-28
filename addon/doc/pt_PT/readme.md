@@ -35,9 +35,10 @@ que contém 2 itens:
 
 ## Notas: ##
 
-* Pode fechar essas caixas de diálogo, pressionando escape.
-* Pode atribuir um atalho, para abrir estas caixas de diálogo, no menu
-  "Definir comandos" e, mais precisamente, na categoria "Dia da semana".
+* Pode fechar estas caixas de diálogo, pressionando escape.
+* Pode atribuir uma tecla de atalho, para abrir estas caixas de diálogo, no
+  menu "Definir comandos" e, mais precisamente, na categoria "Dia da
+  semana".
 * Se estiver a usar o NVDA 2018.2 ou superior, encontrará apenas um item no
   menu de ferramentas para procurar o seu dia, as configurações do add-on
   estarão no painel de configurações do NVDA.

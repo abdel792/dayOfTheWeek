@@ -39,9 +39,9 @@ It adds a submenu in the NVDA Tools menu named "Day of the week", containing
 
 ## Anmerkungen ##
 
-* You can close these dialogs just by pressing Escape.
-* Im Dialog "Eingaben" oder in der Kategorie "Wochentag" können Sie diesen
-  Dialogen eine Verknüpfung zuweisen;
+* You can close these dialogs just by pressing Escape;
+* You can assign a shortcut to open these dialogs in "Input gestures" menu
+  and, more precisely, in the "Day of the week" category;
 * Wenn Sie NVDA 2018.2 oder höher verwenden, finden Sie im Extras-Menü nur
   einen Eintrag für die Suche nach Ihrem Tag, die zusätzlichen Einstellungen
   befinden sich im NVDA-Einstellungsfenster.

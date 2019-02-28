@@ -34,9 +34,9 @@ It adds a submenu in the NVDA Tools menu named "Day of the week", containing
 
 ## Note ##
 
-* You can close these dialogs just by pressing Escape.
+* You can close these dialogs just by pressing Escape;
 * You can assign a shortcut to open these dialogs in "Input gestures" menu
-  and, more precisely, in the "Day of the week" category.;
+  and, more precisely, in the "Day of the week" category;
 * Dacă folosiți NVDA 2018.2 sau mai nou, veți găsi un singur element în
   meniul instrumente pentru căutarea zilei dumneavoastră, setările
   suplimentului vor fi în panoul de setări al NVDA.
