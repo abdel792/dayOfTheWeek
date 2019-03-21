@@ -7,8 +7,8 @@
 Diese Erweiterung erlaubt Ihnen die Ermittlung des Wochentags für ein
 angegebenes Datum.
 
-It adds a submenu in the NVDA Tools menu named "Day of the week", containing
-2 items:
+Es fügt ein Untermenü im NVDA-Extras-Menü mit dem Namen "Wochentag" hinzu,
+das 2 Einträge enthält:
 
 * Der erste mit dem Namen "Tag suchen" öffnet einen Dialog bestehend aus 3
   Elementen:
@@ -39,9 +39,9 @@ It adds a submenu in the NVDA Tools menu named "Day of the week", containing
 
 ## Anmerkungen ##
 
-* You can close these dialogs just by pressing Escape;
-* You can assign a shortcut to open these dialogs in "Input gestures" menu
-  and, more precisely, in the "Day of the week" category;
+* Sie können diese Dialoge einfach durch Drücken der Escape-Taste schließen.
+* Im Dialog "Eingaben" und genauer in der Kategorie "Wochentag" können Sie
+  diesen Dialogen eine Tastenkombinationzuweisen;
 * Wenn Sie NVDA 2018.2 oder höher verwenden, finden Sie im Extras-Menü nur
   einen Eintrag für die Suche nach Ihrem Tag, die zusätzlichen Einstellungen
   befinden sich im NVDA-Einstellungsfenster.
