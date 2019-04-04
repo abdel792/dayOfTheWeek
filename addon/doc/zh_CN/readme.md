@@ -6,49 +6,41 @@
 
 此插件允许您查找与所选日期对应的星期是星期几。
 
-It adds a submenu in the NVDA Tools menu named "Day of the week", containing
-2 items:
+此插件在NVDA工具菜单中添加了一个名为“星期几”的子菜单，其中包含2个项目：
 
-* The first one named "Search a day", opens a dialog composed of 3 controls:
+* 第一个名为“搜索一天”，打开一个由3个控件组成的对话框：
 
-    * A listbox to choose or type your date;
-    * An "OK" button to display a messageBox containing your day;
-    * A "Cancel" button to close the dialog.
+    * 用于选择或输入日期的列表框;
+    * “确定”按钮，显示包含您一天的消息框;
+    * “取消”按钮关闭对话框。
 
-* The second one named "dayOfTheWeek add-on settings" opens the parameters
-  of the add-on to specify whether you want to report labels for date fields
-  or not, it is composed of the following elements:
+* 第二个名为 "dayoftheweek 插件设置" 的设置项将打开插件的参数, 以指定是否要朗读日期字段的标签, 它由以下元素组成:
 
-    * Enable accessibility of the date selector;
-    * Level of the announces of labels, you will then have 3 choices:
+    * 启用日期选择器的无障碍功能;
+    * 标签朗读级别, 你将有3个选择:
 
-        * Long (it's the default choice);
-        * Short (for short announcements);
-        * Off (to disable labels announcements).
+        * 很长（这是默认选择）;
+        * 短（读短标签）
+        * 关闭（禁用标签朗读）。
 
-    * Enable announcement of the current date field value only, when moving
-      vertically;
-    * An "OK" button to save your configuration;
-    * A "Cancel" button to cancel and close the dialog.
+    * 当垂直移动时，仅朗读启用当前日期字段值的通知;
+    * 一个“确定”按钮，用于保存配置;
+    * “取消”按钮取消并关闭对话框。
 
 ## 注意 ##
 
-* You can close these dialogs just by pressing Escape;
-* You can assign a shortcut to open these dialogs in "Input gestures" menu
-  and, more precisely, in the "Day of the week" category;
+* 你可以按“Esc”来关闭这些对话框;
+* 您可以在“输入手势”菜单中分配一个快捷手势来打开这些对话框，更确切地说，在“星期几”类别中指定一个快捷手势;
 * 如果您使用NVDA 2018.2或更高版本，您只会在工具菜单中找到一个用于搜索当天的项目，插件设置将位于NVDA设置面板中。
 
-## Compatibility ##
+## 兼容性 ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2014.3
-  until 2019.1.
+* 此插件与2014.3到2019.1的NVDA版本兼容。
 
-## Changes for 19.02 ##
+## 19.02版的更改 ##
 
-* Changed version numbering using YY.MM (The year in 2 digits, followed by a
-  dot, followed by the month in 2 digits);
-* Added compatibility with the new versioning format of add-on, appeared
-  since nvda 2019.1.
+* 现在使用YY.MM形式的版本号（年份为2位数，后跟一个点，后跟月份为2位数）;
+* 兼容nvda 2019.1的插件新版本格式。
 
 ## 版本6.0 ##
 
