@@ -34,9 +34,9 @@ Denne pakke tilføjer en undermenu i NVDA-menuen under Værktøjer ved navn
 
 ## Noter ##
 
-* You can close these dialogs just by pressing Escape;
-* You can assign a shortcut to open these dialogs in "Input gestures" menu
-  and, more precisely, in the "Day of the week" category;
+* Du kan lukke disse dialoger bare ved at trykke på Escape.
+* Du kan tilknytte en genvejstast til at åbne dialogen under
+  Inputbevægelser, nærmere bestemt under kategorien "Ugedag";
 * Hvis du bruger NVDA 2018.2 eller nyere, finder du kun et punkt i
   værktøjsmenuen for at søge efter dage, og tilføjelsesindstillingerne er i
   NVDA-indstillingspanelet.
