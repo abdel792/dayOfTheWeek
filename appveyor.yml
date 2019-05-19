@@ -5,13 +5,13 @@ install:
 - cmd: >-
     set PATH=C:\Python37\Scripts;%PATH%
 
-    python -m pip install -U pip
+    - python -m pip install -U pip
 
-    py -m pip install wheel
+    - pip install wheel
     
-    py -m pip install scons
+    - pip install scons
 
-    py -m pip install markdown
+    - pip install markdown
 build_script:
 - cmd: scons
 artifacts:
