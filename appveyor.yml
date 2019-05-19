@@ -21,12 +21,15 @@ artifacts:
 before_deploy:
 - ps: $env:REPO_NAME =  $env:APPVEYOR_REPO_NAME.Substring($env:APPVEYOR_REPO_NAME.IndexOf('/') + 1)
 deploy:
-- provider: GitHub
-  tag: $(APPVEYOR_REPO_TAG_NAME)
-  release: Release $(APPVEYOR_REPO_TAG_NAME)
-  description: This is the release $(APPVEYOR_REPO_TAG_NAME) of the $(REPO_NAME) addon for the NVDA screen reader built and uploaded to GitHub using Appveyor.
-  auth_token:
-    secure: OMSQRuEvMJ93KUPktLhYCHWU2y9SphJ7k8WLcEleLBVfYlRtt7DZq2kAOA8AFj9T
+  provider: FTP
+  protocol: ftps
+  host:
+    secure: bDtLCP8Qj8t2OTKKDEB9LEH4bSHgjmE94Qd3kmsElrg=
+  username:
+    secure: UdaIlHk5Q87ZnydXu7PpBw==
+  password:
+    secure: AEek9TcPnue50zqLctJujQ==
+  folder: /nvda-addons
   artifact: addon
   on:
     appveyor_repo_tag: true
