@@ -31,6 +31,7 @@ deploy:
     secure: AEek9TcPnue50zqLctJujQ==
   folder: /nvda-addons
   active_mode: false
+  beta: true
   debug: true
   artifact: addon
   on:
