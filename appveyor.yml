@@ -30,6 +30,8 @@ deploy:
   password:
     secure: AEek9TcPnue50zqLctJujQ==
   folder: /nvda-addons
+  active_mode: false
+  debug: true
   artifact: addon
   on:
     appveyor_repo_tag: true
