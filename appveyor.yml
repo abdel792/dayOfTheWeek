@@ -28,7 +28,7 @@ deploy:
   username:
     secure: UdaIlHk5Q87ZnydXu7PpBw==
   password:
-    secure: AEek9TcPnue50zqLctJujQ==
+    secure: jdngQAtlVxo7GQokRXAhAQ==
   folder: /nvda-addons
   active_mode: false
   beta: true
