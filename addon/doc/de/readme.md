@@ -102,8 +102,7 @@ das 2 Einträge enthält:
 * Die Erweiterung wurde unter der GPL lizenziert;
 * Die Wochentage sind übersetzt worden, damit das Add-on ordnungsgemäß in
   den verschiedenen Sprachen funktioniert;
-* Nun wird das Format "%w" für Daten verwendet, um Kodierungsfehler zu
-  vermeiden. Zuvor wurde "%a" verwendet.
+* Das Tagesformat wurde geändert, um Kodierungsfehler zu vermeiden.
 
 ## Änderungen in 1.0 ##
 
