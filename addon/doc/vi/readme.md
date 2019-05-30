@@ -43,7 +43,7 @@ the week", có hai mục con:
 
 ## Tương thích ##
 
-* Add-on này tương thích với các phiên bản NVDA từ 2014.3 đến 2019.1.
+* Add-on này tương thích với các phiên bản NVDA từ 2014.3 đến 2019.3.
 
 ## Các thay đổi cho phiên bản 19.02 ##
 

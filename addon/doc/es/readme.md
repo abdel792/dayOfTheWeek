@@ -46,7 +46,7 @@ que contiene 2 elementos:
 ## Compatibilidad ##
 
 * Este complemento es compatible con las versiones de NVDA desde la 2014.3 a
-  la 2019.1.
+  la 2019.3.
 
 ## Cambios para 19.02 ##
 

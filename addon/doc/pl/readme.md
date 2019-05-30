@@ -42,7 +42,7 @@ It adds a submenu in the NVDA Tools menu named "Day of the week", containing
 ## Compatibility ##
 
 * This add-on is compatible with the versions of NVDA ranging from 2014.3
-  until 2019.1.
+  until 2019.3.
 
 ## Changes for 19.02 ##
 

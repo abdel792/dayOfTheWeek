@@ -46,7 +46,7 @@ que contém 2 itens:
 ## Compatibilidade ##
 
 * Este extra é compatível com as versões do NVDA desde a 2014.3 até a
-  2019.1.
+  2019.3.
 
 ## Alterações para 19.0.2 ##
 
