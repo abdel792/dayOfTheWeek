@@ -48,8 +48,8 @@ das 2 Einträge enthält:
 
 ## Kompatibilität ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2014.3
-  until 2019.3.
+* Diese Erweiterung ist kompatibel mit den NVDA-Versionen von 2014.3 bis
+  2019.3.
 
 ## Änderungen in 19.02 ##
 
