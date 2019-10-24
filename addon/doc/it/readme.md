@@ -7,20 +7,20 @@
 Questo componente aggiuntivo permette di conoscere il giorno della settimana
 a apartire da una data conosciuta.
 
-It adds a submenu in the NVDA Tools menu named "Day of the week", containing
-2 items:
+Aggiunge un elemento nel menu strumenti di NVDA chiamato "Giorno della
+settimana", contenente due elementi:
 
 * The first one named "Search a day", opens a dialog composed of 3 controls:
 
-    * A listbox to choose or type your date;
-    * An "OK" button to display a messageBox containing your day;
+    * Una casella ad elenco per selezionare o digitare la data desiderata.
+    * Un pulsante "OK" per visualizzare un messaggio contenente il giorno. 
     * Un pulsante annulla per chiudere la finestra.
 
 * The second one named "dayOfTheWeek add-on settings" opens the parameters
   of the add-on to specify whether you want to report labels for date fields
   or not, it is composed of the following elements:
 
-    * Enable accessibility of the date selector;
+    * attiva l'accessibilità del selettore date.
     * Level of the announces of labels, you will then have 3 choices:
 
         * Long (it's the default choice);
@@ -29,24 +29,24 @@ It adds a submenu in the NVDA Tools menu named "Day of the week", containing
 
     * Enable announcement of the current date field value only, when moving
       vertically;
-    * An "OK" button to save your configuration;
-    * A "Cancel" button to cancel and close the dialog.
+    * Un pulsante "OK" per salvare la configurazione.
+    * Un pulsante annulla per chiudere la finestra.
 
 ## Note ##
 
-* You can close these dialogs just by pressing Escape;
-* You can assign a shortcut to open these dialogs in "Input gestures" menu
-  and, more precisely, in the "Day of the week" category;
+* è possibile chiudere queste finestre semplicemente premendo esc.
+* È possibile assegnare una combinazione di tasti per aprire queste finestre
+  di dialogo nel menu "gesti e tasti di immissione" e, più precisamente,
+  nella categoria  "Giorno della settimana".
 * Se si utilizza NVDA 2018.2 o superiore, troverete solo una voce nel menu '
   strumenti per la ricerca del giorno, le impostazioni del componente
   aggiuntivo verranno visualizzate nelle impostazioni di NVDA. 
 
 ## Compatibility ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2014.3
-  until 2019.3.
+* Il componente è compatibile a partire da NVDA 2014.3 fino a 2019.3
 
-## Changes for 19.02 ##
+## Modifiche per 19.02 ##
 
 * Changed version numbering using YY.MM (The year in 2 digits, followed by a
   dot, followed by the month in 2 digits);
