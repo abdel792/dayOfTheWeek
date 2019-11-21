@@ -1,100 +1,99 @@
 # Dan u tjednu #
 
 * Autori: Abdels, Noelia.
-* preuzmi [stable version][1]
-* preuzmi [development version][2]
+* Preuzmi [stabilnu verziju][1]
+* Preuzmi [razvojnu verziju][2]
 
-Ovaj dodatak omogućuje vam da pronađete dan u tjednu koji odgovara odabranom
-datumu.
+S ovim dodatkom je moguće naći dan u tjednu za određeni datum.
 
-It adds a submenu in the NVDA Tools menu named "Day of the week", containing
-2 items:
+U NVDA izborniku „Alati” dodaje podizbornik „Dan u tjednu”, koji sadrži
+dvije stavke:
 
-* The first one named "Search a day", opens a dialog composed of 3 controls:
+* Prva stavka se zove „Traži dan”. Otvara dijaloški okvir s tri kontrole:
 
-    * A listbox to choose or type your date;
-    * An "OK" button to display a messageBox containing your day;
-    * "Otkaži" gumb za zatvaranje dijaloškog okvira.
+    * Popisni okvir s mogućnošću biranja ili upisivanja datuma;
+    * Gumb „U redu” za prikaz poruke koja sadrži tvoj dan;
+    * Gumb „Odustani” za zatvaranje dijaloškog okvira.
 
-* The second one named "dayOfTheWeek add-on settings" opens the parameters
-  of the add-on to specify whether you want to report labels for date fields
-  or not, it is composed of the following elements:
+* Druga stavka se zove „Postavke dodatka Dan u tjednu”. Otvara parametre
+  dodatka za određivanje izgovaranja ili neizgovaranja oznaka za polja
+  datuma. Sastoji se od sljedećih elemenata:
 
-    * Enable accessibility of the date selector;
-    * Level of the announces of labels, you will then have 3 choices:
+    * Uključi pristupačnost za odabir datuma;
+    * Razina najave oznaka, za koju postoje tri opcije:
 
-        * Long (it's the default choice);
-        * Short (for short announcements);
-        * Off (to disable labels announcements).
+        * Dugo (ovo je standardni izbor);
+        * Kratko (za kratke izgovore);
+        * Isključeno (deaktivira izgovaranje oznaka).
 
-    * Enable announcement of the current date field value only, when moving
-      vertically;
-    * An "OK" button to save your configuration;
-    * A "Cancel" button to cancel and close the dialog.
+    * Uključi izgovaranje datuma trenutačnog polja samo pri okomitom
+      kretanju;
+    * Gumb „U redu” za spremanje konfiguracije;
+    * Gumb „Odustani” za prekid i zatvaranje dijaloškog okvira.
 
 ## Napomene ##
 
-* You can close these dialogs just by pressing Escape;
-* You can assign a shortcut to open these dialogs in "Input gestures" menu
-  and, more precisely, in the "Day of the week" category;
-* If you use NVDA 2018.2 or higher, you'll find only one item in the tool
-  menu for searching your day, the add-on settings will be in the NVDA
-  settings panel.
+* Ove dijaloške okvire je moguće zatvoriti jednostavnim pritiskom tipke
+  Escape;
+* Moguće je odrediti tipovnički prečac za otvaranje dijaloškog okvira u
+  izborniku „Ulazne geste” i još preciznije, u kategoriji „Dan u tjednu”;
+* Ako se koristi NVDA verzija 2018.2 ili novija, u izborniku će se prikazati
+  samo jedna stavka za traženje dana. Postavke dodatka se nalaze u ploči
+  NVDA postavki.
 
-## Compatibility ##
+## Kompatibilnost ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2014.3
-  until 2019.3.
+* Ovaj dodatak je kompatibilan s NVDA verzijom 2014.3 do 2019.3.
 
-## Changes for 19.02 ##
+## Promjene u 19.02 ##
 
-* Changed version numbering using YY.MM (The year in 2 digits, followed by a
-  dot, followed by the month in 2 digits);
-* Added compatibility with the new versioning format of add-on, appeared
-  since nvda 2019.1.
+* Promijenjeno je numeriranje verzija koristeći YY.MM (Dvije znamenke za
+  godinu, slijedi točka, a zatim dvije znamenke za mjesec);
+* Dodana je kompatibilnost s novim formatom za određivanje verzije, pojavila
+  se u nvda 2019.1.
 
-## Changes for 6.0 ##
+## Promjene u 6.0 ##
 
-* added the addon settings to the NVDA settings panel for NVDA 2018.2 and
-  higher;
-* Moved the item for searching a day to the tools menu;
-* Added the backward compatibility of the add-on with the NVDA versions that
-  preceded 2018.2, which included the settings panel.
+* Postavke dodatka su dodane u ploču NVDA postavki za NVDA verziju 2018.2 i
+  noviju;
+* Stavka za traženje dana je promještena u izbornik „Alati”;
+* Dodatak je sada kompatibilan sa NVDA verzijama starijima od 2018.2, koje
+  su uključivale ploču s postavkama.
 
-## Changes for 5.0 ##
+## Promjene u 5.0 ##
 
-* Dodana kompatibilnost dodatka sa wxPython 4.0 i Python 3;
+* Dodana je kompatibilnost sa wxPython 4.0 i Python 3;
 * Ispravljena greška u dijelovima dodatka koji sadrže znakove koji nisu
-  ASCi.
+  ASCII.
 
-## Changes for 4.0 ##
+## Promjene u 4.0 ##
 
 * Dodatak sada može prepoznati sve regionalne formate datuma koje korisnik
   može odabrati;
-* Dodatak je sada kompatibilan sa starijim inačicama NVDA, koje su
-  uključivale gui.guiHelper
+* Dodatak je sada kompatibilan sa NVDA verzijama starijima od 2016.4, koje
+  su uključivale modul gui.guiHelper.
 
-## Changes for 3.1 ##
+## Promjene u 3.1 ##
 
 * Povratak na prethodni format dana u tjednu, jer to omogućava prepoznavanje
   većeg broja jezika;
-* Poboljšana pristupačnost polja za odabir datuma sa prepoznavanjem 3 polja:
-  'Dan', 'Mjesec i 'Godina', te pripadajućih vrijednosti;
+* Poboljšana pristupačnost za odabir datuma s prepoznavanjem triju polja:
+  „Dan”, „Mjesec” i „Godina”, te pripadajućih vrijednosti;
 * Dodana tehnika za integriranje gruzijskog jezika za prepoznavanje dana u
   tjednu;
 * Dodan podizbornik za omogućavanje ili onemogućavanje pristupačnosti polja
   za odabir datuma;
-* Premješten podizbornik dodatka iz "Alati" u "Postavke";
-* Premještena kategorija dodatka u "Dan u tjednu".
+* Premješten podizbornik dodatka iz „Alati” u „Postavke”;
+* Premještena kategorija dodatka u „Dan u tjednu”.
 
-## Izmjene u inačici 2.0 ##
+## Promjene u 2.0 ##
 
 * Korišten je gui.guiHelper kako bi se pojavio ispravan dijaloški okvir za
-  odabir datuma
-* Dodana GPL licenca u dodatak
-* Days of the week have been translated, so that the add-on works properly
-  in the different languages;
-* Changed the day format to avoid encoding errors.
+  odabir datuma;
+* Dodana GPL licenca u dodatak;
+* Dani u tjednu su prevedeni, tako da dodatak sada radi ispravno na
+  različitim jezicima;
+* Promijenjen je format za dan, kako bi se izbjegle greške u kodiranju.
 
 ## Promjene u 1.0 ##
 
