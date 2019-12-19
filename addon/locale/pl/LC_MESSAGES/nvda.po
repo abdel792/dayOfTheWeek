@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 1.4\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-02-03 04:00+1000\n"
-"PO-Revision-Date: 2019-04-01 15:33+0200\n"
+"PO-Revision-Date: 2019-12-14 17:43+0100\n"
 "Last-Translator: zvonimir Stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: \n"
 "Language: pl\n"
@@ -47,7 +47,7 @@ msgstr "Podaj dzień tygodnia"
 
 #. Translators: A label for a list in a dialog.
 msgid "Type or select a date"
-msgstr "Napisz, lub zaznacz datę"
+msgstr "Wpisz, lub zaznacz datę"
 
 #. Translators: The title of a dialog.
 msgid "Your day"
@@ -86,7 +86,7 @@ msgstr "włącz oznajmianie aktualnego pola daty przy &poziomym poruszaniu się"
 
 #. Translators: Item in the preferences menu for the Addon dayOfTheWeek.
 msgid "Day of the &week..."
-msgstr "dzień tygodnia &tygodnia..."
+msgstr "dzień &tygodnia..."
 
 #. Translators: The tooltyp text for the dayOfTheWeek submenu.
 #, python-brace-format
