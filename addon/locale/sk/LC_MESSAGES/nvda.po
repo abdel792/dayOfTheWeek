@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 6.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2018-11-30 04:00+1000\n"
-"PO-Revision-Date: 2019-02-06 01:48+0100\n"
+"PO-Revision-Date: 2020-01-12 14:17+0100\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Ján Kulik <johny.kulik452@gmail.com>\n"
+"Last-Translator: Ondrej Rosík <ondrej.rosik@gmail.com>\n"
 "Language-Team: \n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 1.6.11\n"
 
 #. Translators: The long label of the days field.
 msgid "You can select a day with the vertical arrows"
-msgstr "Umožňuje vybrať deň pomocou šípky"
+msgstr "šípkou hore a dole vyberte deň"
 
 #. Translators: The short label of the days field.
 msgid "Select a day"
@@ -27,7 +27,7 @@ msgstr "Vyberte deň"
 
 #. Translators: The long label of the months field.
 msgid "You can select a month with the vertical arrows"
-msgstr "Umožňuje vybrať mesiac pomocou šípky"
+msgstr "šípkou hore a dole vyberte deň"
 
 #. Translators: The short label of the months field.
 msgid "Select a month"
@@ -35,7 +35,7 @@ msgstr "Vyberte mesiac"
 
 #. Translators: The long label of the years field.
 msgid "You can select a year with the vertical arrows"
-msgstr "Umožňuje vybrať rok pomocou šípky"
+msgstr "šípkou horea dole vyberte rok"
 
 #. Translators: The short label of the years field.
 msgid "Select a year"
@@ -43,7 +43,7 @@ msgstr "Vyberte rok"
 
 #. Translators: The title of the Date Dialog.
 msgid "Get the day of the week"
-msgstr "Poskytuje vám deň v týždni"
+msgstr "Zistiť deň"
 
 #. Translators: A label for a list in a dialog.
 msgid "Type or select a date"
@@ -56,7 +56,7 @@ msgstr "Deň je"
 #. Translators: The title of the add-on configuration dialog box.
 #, python-brace-format
 msgid "Configuration of the addon {0}"
-msgstr "Konfigurovať doplnok {0}"
+msgstr "nastavenie pre {0}"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -65,11 +65,11 @@ msgstr "Deň v týždni"
 
 #. Translators: Level for short announces of labels.
 msgid "Short"
-msgstr "Krátky"
+msgstr "krátke"
 
 #. Translators: Level for long announces of labels.
 msgid "Long"
-msgstr "Dlhý"
+msgstr "dlhé"
 
 #. Translators: Level to disable announces of labels.
 msgid "Off"
@@ -77,19 +77,17 @@ msgstr "Vypnuté"
 
 #. Translators: The label of the checkbox to enable or disable the date selector accessibility.
 msgid "En&able the accessibility of the date selector:"
-msgstr "P&ovoliť prístup k dátumu"
+msgstr "&Povoliť sprístupnenie prvku na výber dátumu"
 
 #. Translators: The label for an item to select the level of the announces of labels (short, long or disabled).
 msgid "Level of the announces of &labels:"
-msgstr "Úroveň oz&namovania"
+msgstr "&Úroveň oznamovania prvkov"
 
 #. Translators: The label of the checkbox to enable or disable the current date field value only announcement when moving vertically.
 msgid ""
 "Enable announcements of the current date field value only, when moving "
 "&vertically:"
-msgstr ""
-"Po&voliť oznamovanie aktuálneho hodnotu poľa dátumu iba pri vertikálnom "
-"pohybe:"
+msgstr "Počas nastavovania &dátumu upozorniť na dnešný deň"
 
 #. Translators: Item in the tools menu for the Addon dayOfTheWeek.
 msgid "Day of the &week..."
@@ -98,40 +96,39 @@ msgstr "De&ň v týždni..."
 #. Translators: The tooltyp text for the dayOfTheWeek item.
 #. Translators: The tooltyp text for the first item in the dayOfTheWeek add-on submenu.
 msgid "Search a day in the calendar"
-msgstr "Vyhľadajte deň v kalendári"
+msgstr "Vyhľadá deň v kalendári"
 
 #. Translators: The tooltyp text for the dayOfTheWeek submenu.
 #, python-brace-format
 msgid "{0} add-on and its settings"
-msgstr "{0} doplnok nastavení"
+msgstr "nastavenia pre {0}"
 
 #. Translators: The name of the first item in the dayOfTheWeek add-on submenu.
 msgid "Search a &day"
-msgstr "Vy&hľadajte deň"
+msgstr "&Hľadať deň"
 
 #. Translators: The name of the second item in the dayOfTheWeek add-on submenu.
 #, python-brace-format
 msgid "{0} add-on se&ttings"
-msgstr "{0} nastavenia doplnku"
+msgstr "nas&tavenia pre {0}"
 
 #. Translators: The tooltyp text for the second item in the dayOfTheWeek add-on submenu.
 #, python-brace-format
 msgid "Configure the {0} add-on"
-msgstr "Konfigurovať {0}"
+msgstr "nastavenia pre {0}"
 
 #. Translators: Message presented in input help mode.
 msgid "Allows you to find the day of the week corresponding to a chosen date."
-msgstr "Umožňuje vám nájsť deň v týždni zodpovedajúci zvolenému dátumu."
+msgstr "Mmôžete zistiť, na ktorý deň v týždni pripadá zadaný dátum."
 
 #. Translators: Message presented in input help mode.
 #, python-brace-format
 msgid "Allows you to open the {0} add-on settings dialog."
-msgstr "Umožňuje vám otvoriť  {0} nastavenie doplnku"
+msgstr "Umožňuje vám otvoriť nastavenie {0}"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
 "With this add-on, you'll be able to find the day of the week corresponding "
 "to a chosen date."
-msgstr ""
-"Pomocou doplnku môžete nájsť deň v týždni zodpovedajúceho podľa dátumu."
+msgstr "Môžete zistiť, na ktorý deň v týždni pripadá zadaný dátum."
