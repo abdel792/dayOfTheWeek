@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 5.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2015-12-04 04:04+1000\n"
-"PO-Revision-Date: 2019-01-09 07:47+0800\n"
+"PO-Revision-Date: 2020-01-05 12:28+0800\n"
 "Last-Translator: dingpengyu <dingpengyu06@gmail.com>\n"
 "Language-Team: NVDASimplified Chinese team All volunteers <Copyright (C) "
 "2010-2019>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.4\n"
 
 #. Translators: The long label of the days field.
 msgid "You can select a day with the vertical arrows"
@@ -114,7 +114,7 @@ msgstr "配置{0}插件"
 
 #. Translators: Message presented in input help mode.
 msgid "Allows you to find the day of the week corresponding to a chosen date."
-msgstr "允许您查看所选日期是星期几"
+msgstr "允许您查看所选日期是星期几。"
 
 #. Translators: Message presented in input help mode.
 #, python-brace-format
@@ -131,4 +131,4 @@ msgstr "某天星期几"
 msgid ""
 "With this add-on, you'll be able to find the day of the week corresponding "
 "to a chosen date."
-msgstr "借助此插件，您可以找到与所选日期对应的星期"
+msgstr "借助此插件，您可以找到与所选日期对应的星期。"
