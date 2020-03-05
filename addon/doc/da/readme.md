@@ -43,8 +43,8 @@ Denne pakke tilføjer en undermenu i NVDA-menuen under Værktøjer ved navn
 
 ## Kompatibilitet ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2014.3
-  until 2019.3.
+* Denne tilføjelse er kompatibel med versionerne af NVDA fra 2014.3 til
+  2019.3.
 
 ## Ændringer for 19.02 ##
 
@@ -68,7 +68,7 @@ Denne pakke tilføjer en undermenu i NVDA-menuen under Værktøjer ved navn
 * Rettede en fejl med stier tilhørende tilføjelsespakken der indholder
   non-ASCII-tegn.
 
-## Ændringer i4.0  ##
+## Ændringer i4.0 ##
 
 * Tilføjelsesprogrammet er nu i stand til at genkende alle de regionale
   datoformater, som brugeren kan vælge;
