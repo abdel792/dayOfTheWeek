@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2015-10-30 04:04+1000\n"
-"PO-Revision-Date: 2015-11-19 11:07-0800\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2020-03-05 22:37+0000\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 2.3\n"
+"Last-Translator: Stanley Chung <stanley@mail.com>\n"
+"Language-Team: \n"
 
 #. Translators: The long label of the days field.
 msgid "You can select a day with the vertical arrows"
@@ -90,7 +90,6 @@ msgid ""
 msgstr "위 아래로 이동할 때 선택된 날짜 입력창의 값만 읽습니다.(&v)"
 
 #. Translators: Item in the tools menu for the Addon dayOfTheWeek.
-#, fuzzy
 msgid "Day of the &week..."
 msgstr "요일(&w)..."
 
@@ -123,9 +122,9 @@ msgid "Allows you to find the day of the week corresponding to a chosen date."
 msgstr "선택한 날짜에 대한 요일을 찾아줍니다."
 
 #. Translators: Message presented in input help mode.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Allows you to open the {0} add-on settings dialog."
-msgstr "요일 애드온 설정 창을 열 수 있게 해줍니다."
+msgstr "{0} 애드온 설정 창을 열 수 있게 해줍니다."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
