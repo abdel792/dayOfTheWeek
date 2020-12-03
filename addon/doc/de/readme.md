@@ -39,7 +39,7 @@ das 2 Einträge enthält:
 
 ## Anmerkungen ##
 
-* Sie können diese Dialoge einfach durch Drücken der Escape-Taste schließen.
+* Sie können diese Dialoge einfach durch Drücken der Escape-Taste schließen;
 * Im Dialog "Eingaben" und genauer in der Kategorie "Wochentag" können Sie
   diesen Dialogen eine Tastenkombinationzuweisen;
 * Wenn Sie NVDA 2018.2 oder höher verwenden, finden Sie im Extras-Menü nur
