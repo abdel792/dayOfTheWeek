@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 6.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2018-11-30 04:00+1000\n"
-"PO-Revision-Date: 2020-02-21 09:41+0100\n"
+"PO-Revision-Date: 2021-02-09 11:20+0100\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +27,7 @@ msgstr "Vyberte deň"
 
 #. Translators: The long label of the months field.
 msgid "You can select a month with the vertical arrows"
-msgstr "šípkou hore a dole vyberte deň"
+msgstr "šípkou hore a dole vyberte mesiac"
 
 #. Translators: The short label of the months field.
 msgid "Select a month"
