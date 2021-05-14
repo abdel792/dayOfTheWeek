@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: dayOfTheWeek 1.4\n"
-"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2017-02-03 04:00+1000\n"
 "PO-Revision-Date: 2018-12-18 14:14+0700\n"
 "Last-Translator: Dang Manh Cuong <dangmanhcuong@gmail.com>\n"
