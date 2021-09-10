@@ -4,104 +4,102 @@
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
 
-Diese Erweiterung erlaubt Ihnen die Ermittlung des Wochentags für ein
-angegebenes Datum.
+Mit diesem Add-on können Sie einen Wochentag finden, der einem ausgewählten
+Datum entspricht.
 
-Es fügt ein Untermenü im NVDA-Extras-Menü mit dem Namen "Wochentag" hinzu,
-das 2 Einträge enthält:
+Es wird im NVDA-Menü unter "Werkzeuge" einen Eintrag mit dem Namen
+"Wochentag" hinzugefügt, welches zwei Elemente enthält:
 
-* Der erste mit dem Namen "Tag suchen" öffnet einen Dialog bestehend aus 3
-  Elementen:
+* Der erste mit der Suche nach dem Tag öffnet einen Dialog, der aus drei
+  Steuerelementen besteht:
 
-    * Eine Liste, um das Datum einzugeben oder auszuwählen;
-    * Ein OK-Schalter, der ein Meldungsfenster mit dem Wochentag zum
-      betreffenden Datum anzeigt;
-    * Einen Schalter "abbrechen", der den dialog schließt.
+    * Ein Listenfeld zum Auswählen oder Eingeben des Datums.
+    * Eine Schaltfläche "OK", um das Dialogfeld anzuzeigen, mit dem Tag.
+    * Eine Schaltfläche "Abbrechen", um das Dialogfeld zu schließen.
 
-* Der zweite Eintrag mit dem Namen "Wochentag-Einstellungen" öffnet die
-  Parameter der Erweiterung, um festzulegen, ob Beschriftungen für
-  Datumsfelder gemelden werden sollen oder nicht. Der Dialog besteht aus
-  folgenden Elementen:
+* Das zweite mit den Einstellungen für Wochentag öffnet die Parameter der
+  Erweiterung, um anzugeben, ob Sie Beschriftungen für Datumsfelder
+  mitgeteilt möchten oder nicht, es besteht aus den folgenden Elementen:
 
     * Es wurde ein Konfigurationsdialogfeld hinzugefügt, um die
       Zugänglichkeit der Datumsauswahl zu aktivieren oder zu deaktivieren;
-    * Ebene der Ankündigungen von Beschriftungen, bestehend aus 3
+    * Ebene der Ankündigungen von Beschriftungen, bestehend aus drei
       Auswahlmöglichkeiten:
 
-        * Lang (ist standardmäßig ausgewählt);
-        * Kurz (für kurze Ankündigungen);
+        * Lang (ist standardmäßig ausgewählt).
+        * Kurz (für kurze Ankündigungen).
         * Aus (deaktiviert die Ankündigungen von Beschriftungen).
 
     * Aktiviert die Ankündigung des aktuellen Wertes für das Datumsfeld nur
       bei vertikaler Bewegung;
-    * Ein OK-Schalter zum Speichern der Konfiguration;
-    * Einen Schalter "abbrechen", der den dialog schließt.
+    * Ein Schalter "OK" zum Speichern der Konfiguration;
+    * Einen Schalter "Abbrechen", zum Schließen des Dialogfelds.
 
 ## Anmerkungen ##
 
-* Sie können diese Dialoge einfach durch Drücken der Escape-Taste schließen;
-* Im Dialog "Eingaben" und genauer in der Kategorie "Wochentag" können Sie
-  diesen Dialogen eine Tastenkombinationzuweisen;
-* Wenn Sie NVDA 2018.2 oder höher verwenden, finden Sie im Extras-Menü nur
-  einen Eintrag für die Suche nach Ihrem Tag, die zusätzlichen Einstellungen
-  befinden sich im NVDA-Einstellungsfenster.
+* Sie können diese Dialogfelder mit der Escape-Taste schließen.
+* Sie können Tastenkombinationenzum für diese Dialogfelder im Menü für die
+  Tastenbefehle öffnen und in der Kategorie "Wochentag" zuweisen.
+* Wenn Sie NVDA 2018.2 oder neuer verwenden, finden Sie im Menü "Werkzeuge"
+  nur einen Eintrag für die Suche nach dem Tag. Die Einstellungen für die
+  Erweiterung befinden sich in den NVDA-Einstellungen.
 
 ## Kompatibilität ##
 
-* Diese Erweiterung ist kompatibel mit den NVDA-Versionen von 2014.3 bis
-  2019.3.
+* Diese Erweiterung ist mit den NVDA-Versionen von 2014.3 bis 2019.3
+  kompatibel.
 
 ## Änderungen in 19.02 ##
 
-* Die Versionsnummerierung wurde in JJ.MM geändert (das Jahr in 2 Ziffern,
-  gefolgt von einem Punkt, gefolgt von dem Monat in 2 Ziffern);
+* Versionsnummerierung mit JJ.MM geändert (das Jahr in zwei Stellen, gefolgt
+  von einem Punkt, gefolgt vom Monat in zwei Stellen).
 * Die Kompatibilität mit dem neuen Versionierungsformat der Erweiterung
   wurde gesichert, erschienen seit nvda 2019.1.
 
 ## Änderungen in 6.0 ##
 
-* Die Einstellungen der Erweiterung zum NVDA-Einstellungsfenster für NVDA
-  2018.2 und höher hinzugefügt;
-* Das Element für die Suche nach einem Tag wurde in das Extras-Menü
-  verschoben;
-* Die Abwärtskompatibilität der Erweiterung mit den NVDA-Versionen vor
-  2018.2, einschließlich des Einstellungsbereichs, wurde hinzugefügt.
+* Einstellungen der Erweiterung zum NVDA-Einstellungsfenster für NVDA 2018.2
+  und neuer wurde hinzugefügt.
+* Das Element für die Suche nach einem Tag wurde in das Menü "Werkzeuge"
+  verschoben.
+* Abwärtskompatibilität der Erweiterung mit den NVDA-Versionen vor 2018.2
+  wurde hinzugefügt, die das Einstellungsfeld enthielten.
 
 ## Änderungen in 5.0 ##
 
-* Die Kompatibilität der Erweiterung mit wxPython 4.0 und Python3 wurde
-  hinzugefügt;
-* Ein Fehler wurde behoben, bei dem manche Pfade der Erweiterung
-  Nicht-ASCII-Zeichen enthielten.
+* Kompatibilität des Add-Ons mit wxPython 4.0 und Python 3 wurde
+  hinzugefügt.
+* Ein Fehler mit Pfaden zur Erweiterung, die Nicht-ASCII-Zeichen enthalten,
+  wurde behoben.
 
 ## Änderungen in 4.0 ##
 
-* Die Erweiterung ist nun in der Lage, alle regionalen Datumsformate zu
-  erkennen;
-* Abwärtskompatibilität der Erweiterung mit den NVDA-Versionen vor 2016.4,
-  die das Modul gui.guiHelper enthielten wurde hinzugefügt.
+* Die Erweiterung erkennt nun alle regionalen Datumsformate, die der
+  Benutzer auswählen kann.
+* Abwärtskompatibilität der Erweiterung mit den NVDA-Versionen vor 2016.4
+  wurde hinzugefügt, die das Modul "gui.guiHelper" enthielten.
 
 ## Änderungen in 3.1 ##
 
-* Zurück zum vorherigen Format für den Wochentag, weil es eine größere
-  Anzahl von Sprachen erkennt;
-* Die Zugänglichkeit der Datumsauswahl wurde verbessert, indem die 3 Felder
-  "Tag", "Monat" und "Jahr" mit ihren jeweiligen Werten erkannt werden;
-* Eine Modalität für die Integration der georgischen Sprache zur Erkennung
-  der Wochentage wurde hinzugefügt;
-* Es wurde ein Konfigurationsdialogfeld hinzugefügt, um die Zugänglichkeit
-  der Datumsauswahl zu aktivieren oder zu deaktivieren;
-* Das Erweiterungsuntermenü wurde von "Extras" nach "Einstellungen"
-  verschoben;
+* Zurück zum vorherigen Format für den Wochentag, da es die Erkennung einer
+  größeren Anzahl von Sprachen ermöglicht.
+* Verbesserte Zugänglichkeit der Datumsauswahl durch Erkennung der drei
+  Felder "Tag", "Monat" und "Jahr" und deren Werte.
+* Eine Technik zur Integration der georgischen Sprache zur Erkennung der
+  Wochentage wurde hinzugefügt.
+* Ein Konfigurationsdialogfeld wurde hinzugefügt, um die Zugänglichkeit der
+  Datumsauswahl zu aktivieren oder zu deaktivieren.
+* Das Untermenü der Erweiterung wurde von "Werkzeuge" nach "Einstellungen"
+  verschoben.
 * Die Erweiterungskategorie wurde in "Wochentag" geändert.
 
 ## Änderungen in 2.0 ##
 
-* Nun wird das "gui.guiHelper-Modul" verwendet, um die korrekte Darstellung
-  des Dialogfelds zu gewährleisten, welches nach dem Datum fragt;
-* Die Erweiterung wurde unter der GPL lizenziert;
-* Die Wochentage sind übersetzt worden, damit das Add-on ordnungsgemäß in
-  den verschiedenen Sprachen funktioniert;
+* Verwendet das Modul "gui.guiHelper", um die korrekte Darstellung des
+  Dialogfelds, der nach einem Datum fragt, sicherzustellen.
+* GPL-Lizenz zur Erweiterung hinzugefügt.
+* Die Wochentage sind übersetzt worden, damit die Erweiterung ordnungsgemäß
+  in den verschiedenen Sprachen funktioniert.
 * Das Tagesformat wurde geändert, um Kodierungsfehler zu vermeiden.
 
 ## Änderungen in 1.0 ##
