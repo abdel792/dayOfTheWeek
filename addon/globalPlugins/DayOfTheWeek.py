@@ -528,7 +528,7 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 			self.createSubMenu ()
 
 	def chooseNVDAObjectOverlayClasses (self, obj, clsList):
-		if obj.value and obj.role == controlTypes.ROLE_DROPLIST and isDatepickerDate (obj.value) and config.conf["dayOfWeek"]["enableAnnounces"]:
+		if obj.value and obj.role == (controlTypes.ROLE_DROPLIST if hasattr(controlTypes, "ROLE_DROPLIST") else controlTypes.Role.DROPLIST) and isDatepickerDate (obj.value) and config.conf["dayOfWeek"]["enableAnnounces"]:
 			clsList.insert (0, AnnounceFieldsLabels)
 
 	def createMenu (self):
