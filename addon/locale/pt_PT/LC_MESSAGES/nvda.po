@@ -8,31 +8,31 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2015-10-30 04:04+1000\n"
-"PO-Revision-Date: 2020-06-23 20:33+0100\n"
+"PO-Revision-Date: 2021-10-30 19:32+0100\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com; rui.fontes>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 #. Translators: The long label of the days field.
 msgid "You can select a day with the vertical arrows"
-msgstr "Pode seleccionar um dia, pressionando as setas verticais."
+msgstr "Pode seleccionar um dia, pressionando as setas verticais"
 
 #. Translators: The short label of the days field.
 msgid "Select a day"
-msgstr "Seleccione um dia."
+msgstr "Seleccione um dia"
 
 #. Translators: The long label of the months field.
 msgid "You can select a month with the vertical arrows"
-msgstr "Pode seleccionar um mês com as setas verticais."
+msgstr "Pode seleccionar um mês com as setas verticais"
 
 #. Translators: The short label of the months field.
 msgid "Select a month"
-msgstr "Seleccione um mês."
+msgstr "Seleccione um mês"
 
 #. Translators: The long label of the years field.
 msgid "You can select a year with the vertical arrows"
@@ -94,7 +94,7 @@ msgstr "{0} extra e suas configurações"
 
 #. Translators: The name of the first item in the dayOfTheWeek add-on submenu.
 msgid "Search a &day"
-msgstr "Procure um &dia;"
+msgstr "Procure um &dia"
 
 #. Translators: The tooltyp text for the first item in the dayOfTheWeek add-on submenu.
 msgid "Search a day in the calendar"
@@ -112,12 +112,12 @@ msgstr "Configure o {0} extra"
 
 #. Translators: Message presented in input help mode.
 msgid "Allows you to find the day of the week corresponding to a chosen date."
-msgstr "permite-lhe encontrar o dia correspondente a uma data escolhida"
+msgstr "permite-lhe encontrar o dia correspondente a uma data escolhida."
 
 #. Translators: Message presented in input help mode.
 #, python-brace-format
 msgid "Allows you to open the {0} add-on settings dialog."
-msgstr "Permite-lhe abrir o diálogo de configurações {0} do extra"
+msgstr "Permite-lhe abrir o diálogo de configurações {0} do extra."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
