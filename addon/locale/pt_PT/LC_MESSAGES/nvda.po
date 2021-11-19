@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2015-10-30 04:04+1000\n"
-"PO-Revision-Date: 2021-10-30 19:32+0100\n"
+"PO-Revision-Date: 2021-11-18 23:08+0000\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com; rui.fontes>\n"
 "Language: pt_PT\n"
@@ -112,7 +112,7 @@ msgstr "Configure o {0} extra"
 
 #. Translators: Message presented in input help mode.
 msgid "Allows you to find the day of the week corresponding to a chosen date."
-msgstr "permite-lhe encontrar o dia correspondente a uma data escolhida."
+msgstr "Permite-lhe encontrar o dia correspondente a uma data escolhida."
 
 #. Translators: Message presented in input help mode.
 #, python-brace-format
