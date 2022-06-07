@@ -1,60 +1,60 @@
 # Day of the week #
 
 * Autorzy: Abdel, Noelia.
-* Pobierz [wersja stabilna][1]
-* Pobierz [wersja rozwojowa][2]
+* Pobierz [Wersja stabilna][1]
+* Pobierz [Wersja rozwojowa][2]
 
 Ten dodatek pomaga znaleźć dzień tygodnia odpowiadający wybranej dacie.
 
-It adds a submenu in the NVDA Tools menu named "Day of the week", containing
-2 items:
+Dodaje podmenu w menu Narzędzia NVDA o nazwie "Dzień tygodnia", zawierające
+2 pozycje:
 
-* The first one named "Search a day", opens a dialog composed of 3 controls:
+* Pierwszy o nazwie "Wyszukaj dzień", otwiera okno dialogowe złożone z 3
+  kontrolek:
 
-    * A listbox to choose or type your date;
-    * An "OK" button to display a messageBox containing your day;
-    * A "Cancel" button to close the dialog.
+    * Pole listy do wyboru lub wpisania daty;
+    * Przycisk "OK" do wyświetlania messageBox zawierającego Twój dzień;
+    * Przycisk "Anuluj", aby zamknąć okno dialogowe.
 
-* The second one named "dayOfTheWeek add-on settings" opens the parameters
-  of the add-on to specify whether you want to report labels for date fields
-  or not, it is composed of the following elements:
+* Drugi o nazwie "dayOfTheWeek add-on settings" otwiera parametry dodatku,
+  aby określić, czy chcesz raportować etykiety dla pól daty, czy nie, składa
+  się z następujących elementów:
 
-    * Enable accessibility of the date selector;
-    * Level of the announces of labels, you will then have 3 choices:
+    * Włącz dostępność selektora daty;
+    * Poziom ogłoszeń etykiet, będziesz miał wtedy 3 opcje:
 
-        * Long (it's the default choice);
-        * Short (for short announcements);
-        * Off (to disable labels announcements).
+        * Długi (jest to domyślny wybór);
+        * Krótki (dla krótkich ogłoszeń);
+        * Wyłączone (aby wyłączyć anonsy etykiet).
 
-    * Enable announcement of the current date field value only, when moving
-      vertically;
-    * An "OK" button to save your configuration;
-    * A "Cancel" button to cancel and close the dialog.
+    * Włącz ogłaszanie bieżącej wartości pola daty tylko podczas przesuwania
+      w pionie;
+    * Przycisk "OK", aby zapisać konfigurację;
+    * Przycisk "Anuluj", aby anulować i zamknąć okno dialogowe.
 
 ## Uwagi ##
 
-* You can close these dialogs just by pressing Escape;
-* You can assign a shortcut to open these dialogs in "Input gestures" menu
-  and, more precisely, in the "Day of the week" category;
+* Możesz zamknąć te okna dialogowe, naciskając Escape;
+* Możesz przypisać skrót do otwierania tych okien dialogowych w menu "Gesty
+  wprowadzania", a dokładniej w kategorii "Dzień tygodnia";
 * Od NVDA 2018.2, w meni dodatku znajduje się tylko jednen
   element. Ustawienia dodatku zostały dołączone do panelu ustawień NVDA.
 
-## Compatibility ##
+## Zgodność ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2014.3
-  until 2019.3.
+* Ten dodatek jest kompatybilny z wersjami NVDA od 2014.3 do 2019.3.
 
-## Changes for 19.02 ##
+## Zmiany na 19.02 ##
 
-* Changed version numbering using YY.MM (The year in 2 digits, followed by a
-  dot, followed by the month in 2 digits);
-* Added compatibility with the new versioning format of add-on, appeared
-  since nvda 2019.1.
+* Zmieniono numerację wersji przy użyciu YY. MM (Rok w 2 cyfrach, po którym
+  następuje kropka, a następnie miesiąc w 2 cyfrach);
+* Dodano kompatybilność z nowym formatem wersjonowania dodatku, pojawił się
+  od nvda 2019.1.
 
 ## Zmiany w wersji 6.0 ##
 
-* Od wersji NVDA 2018.2, meni ustawień dodatku znajduje się w panelu
-  ustawień NVDA;
+* dodano ustawienia dodatku do panelu ustawień NVDA dla NVDA 2018.2 i
+  nowszych;
 * Element służący do wyszukiwania został przeniesiony do meni Narzędzia;
 * Dodano zgodność wsteczną z wersjami NVDA starszymi niż 2018.2, co dotyczy
   np. panelu ustawień.

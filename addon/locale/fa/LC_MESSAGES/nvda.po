@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 1.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2016-02-12 04:04+1000\n"
-"PO-Revision-Date: 2017-12-14 08:46-0800\n"
+"PO-Revision-Date: 2022-04-29 13:13+0330\n"
 "Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
 "Language-Team: NVDA Translation Team <nvda-translations@groups.io>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #. Translators: The long label of the days field.
 msgid "You can select a day with the vertical arrows"
@@ -83,7 +83,8 @@ msgid ""
 "Enable announcements of the current date field value only, when moving "
 "&vertically:"
 msgstr ""
-"فعالسازیِ اعلامِ فیلدِ جاریِ تاریخ، تنها وقتی با &جهت‌نماهای بالا و پایین حرکت میکنید"
+"فعالسازیِ اعلامِ فیلدِ جاریِ تاریخ، تنها وقتی با &جهت‌نماهای بالا و پایین حرکت "
+"میکنید"
 
 #. Translators: Item in the preferences menu for the Addon dayOfTheWeek.
 msgid "Day of the &week..."
@@ -118,9 +119,9 @@ msgstr ""
 "به شما اجازه می‌دهد تا روزِ هفته‌ی متناظر با یک تاریخِ انتخاب‌شده را پیدا کنید."
 
 #. Translators: Message presented in input help mode.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Allows you to open the {0} add-on settings dialog."
-msgstr "اجازه می‌دهد تا پنجره‌ی تنظیماتِ افزونه‌ی روزِ هفته را باز کنید."
+msgstr "اجازه می‌دهد تا پنجره‌ی تنظیماتِ افزونه‌ی {0} را باز کنید."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -130,7 +131,7 @@ msgstr "روزِ هفته"
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
-"With this add-on, you'll be able to find the day of the week corresponding to a "
-"chosen date."
+"With this add-on, you'll be able to find the day of the week corresponding "
+"to a chosen date."
 msgstr ""
 "با این افزونه، میتوانید روزِ هفته‌ی متناظر با یک تاریخِ انتخاب‌شده را پیدا کنید."
