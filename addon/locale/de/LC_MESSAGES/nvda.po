@@ -8,21 +8,20 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2015-10-30 04:04+1000\n"
-"PO-Revision-Date: 2019-08-11 21:17+0200\n"
-"Last-Translator: Adriani <adriani.botez@gmail.com>\n"
+"PO-Revision-Date: 2022-06-13 08:43+0200\n"
+"Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 3.1\n"
 "X-Poedit-Bookmarks: -1,-1,2,-1,-1,-1,-1,-1,-1,-1\n"
 
 #. Translators: The long label of the days field.
 msgid "You can select a day with the vertical arrows"
 msgstr ""
-"Sie können einen Tag mit den Pfeiltasten nach oben oder nach unten "
-"auswählen."
+"Sie können einen Tag mit den Pfeiltasten nach oben oder nach unten auswählen"
 
 #. Translators: The short label of the days field.
 msgid "Select a day"
@@ -32,7 +31,7 @@ msgstr "Tag auswählen"
 msgid "You can select a month with the vertical arrows"
 msgstr ""
 "Sie können einen Monat mit den Pfeiltasten nach oben oder nach unten "
-"auswählen."
+"auswählen"
 
 #. Translators: The short label of the months field.
 msgid "Select a month"
@@ -41,7 +40,7 @@ msgstr "Monat auswählen"
 #. Translators: The long label of the years field.
 msgid "You can select a year with the vertical arrows"
 msgstr ""
-"Sie können ein Jahr mit den Pfeiltasten nach oben oder nach unten auswählen."
+"Sie können ein Jahr mit den Pfeiltasten nach oben oder nach unten auswählen"
 
 #. Translators: The short label of the years field.
 msgid "Select a year"
@@ -53,7 +52,7 @@ msgstr "Wochentag ermitteln"
 
 #. Translators: A label for a list in a dialog.
 msgid "Type or select a date"
-msgstr "Geben Sie ein Datum ein oder wählen Sie es aus."
+msgstr "Geben Sie ein Datum ein oder wählen Sie es aus"
 
 #. Translators: The title of a dialog.
 msgid "Your day"
@@ -73,11 +72,11 @@ msgstr "Lang"
 
 #. Translators: Level to disable announces of labels.
 msgid "Off"
-msgstr "Aus"
+msgstr "Ausgeschaltet"
 
 #. Translators: The label of the checkbox to enable or disable the date selector accessibility.
 msgid "En&able the accessibility of the date selector:"
-msgstr "Ak&tivieren der Zugänglichkeit des Datums"
+msgstr "Ak&tivieren der Zugänglichkeit des Datums:"
 
 #. Translators: The label for an item to select the level of the announces of labels (short, long or disabled).
 msgid "Level of the announces of &labels:"
@@ -109,7 +108,7 @@ msgstr "Tag im Kalender suchen"
 
 #. Translators: The name of the second item in the dayOfTheWeek add-on submenu.
 msgid "{0} add-on se&ttings"
-msgstr "{0}-Einstellungen"
+msgstr "Eins&tellungen für die Erweiterung {0}"
 
 #. Translators: The tooltyp text for the second item in the dayOfTheWeek add-on submenu.
 msgid "Configure the {0} add-on"
