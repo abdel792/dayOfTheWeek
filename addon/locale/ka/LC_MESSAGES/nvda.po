@@ -1,25 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the 'dayOfTheWeek' package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 'dayOfTheWeek' '3.0-dev'\n"
+"Project-Id-Version: 'dayOfTheWeek' '22.06'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2017-10-19 18:02+0200\n"
-"PO-Revision-Date: 2018-08-31 08:40+0200\n"
+"POT-Creation-Date: 2022-07-24 11:23+0400\n"
+"PO-Revision-Date: 2022-07-24 11:38+0400\n"
+"Last-Translator: Dragan Ratkovich\n"
+"Language-Team: \n"
+"Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"X-Generator: Poedit 2.0.2\n"
-"Language: ka\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #. Translators: The long label of the days field.
 msgid "You can select a day with the vertical arrows"
-msgstr "თქვენ შეგიძლიათ აირჩიოთ დღე ვერტიკალური ისრებით"
+msgstr "შეგიძლიათ აირჩიოთ დღე ვერტიკალური ისრებით"
 
 #. Translators: The short label of the days field.
 msgid "Select a day"
@@ -27,7 +28,7 @@ msgstr "აირჩიეთ დღე"
 
 #. Translators: The long label of the months field.
 msgid "You can select a month with the vertical arrows"
-msgstr "თქვენ შეგიძლიათ აირჩიოთ თვე ვერტიკალური ისრებით"
+msgstr "შეგიძლიათ აირჩიოთ თვე ვერტიკალური ისრებით"
 
 #. Translators: The short label of the months field.
 msgid "Select a month"
@@ -35,7 +36,7 @@ msgstr "აირჩიეთ თვე"
 
 #. Translators: The long label of the years field.
 msgid "You can select a year with the vertical arrows"
-msgstr "თქვენ შეგიძლიათ აირჩიოთ წელი ვერტიკალური ისრებით"
+msgstr "შეგიძლიათ აირჩიოთ წელი ვერტიკალური ისრებით"
 
 #. Translators: The short label of the years field.
 msgid "Select a year"
@@ -51,12 +52,17 @@ msgstr "შეიყვანეთ ან აირჩიეთ თარიღ
 
 #. Translators: The title of a dialog.
 msgid "Your day"
-msgstr "თქვენი დღე"
+msgstr "კვირის დღე"
 
 #. Translators: The title of the add-on configuration dialog box.
 #, python-brace-format
 msgid "Configuration of the addon {0}"
-msgstr "მოდულის კონფიგურაცია {0}"
+msgstr "{0} დამატების კონფიგურაცია"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Day of the week"
+msgstr "კვირის დღე"
 
 #. Translators: Level for short announces of labels.
 msgid "Short"
@@ -64,7 +70,7 @@ msgstr "მოკლე"
 
 #. Translators: Level for long announces of labels.
 msgid "Long"
-msgstr "ხანგრძლივი"
+msgstr "გრძელი"
 
 #. Translators: Level to disable announces of labels.
 msgid "Off"
@@ -72,21 +78,28 @@ msgstr "გამორთული"
 
 #. Translators: The label of the checkbox to enable or disable the date selector accessibility.
 msgid "En&able the accessibility of the date selector:"
-msgstr "კალენდრის ხელმისაწვდომობის ჩართვა"
+msgstr "თარიღის ამომრჩევის &ხელმისაწვდომობის ჩართვა:"
 
 #. Translators: The label for an item to select the level of the announces of labels (short, long or disabled).
 msgid "Level of the announces of &labels:"
-msgstr "&ლეიბლების გამოცხადების დონე"
+msgstr "&ლეიბლების გამოცხადების დონე:"
 
 #. Translators: The label of the checkbox to enable or disable the current date field value only announcement when moving vertically.
 msgid ""
 "Enable announcements of the current date field value only, when moving "
 "&vertically:"
-msgstr "მიმდინარე ღირებულების წაკითხვა მხოლოდ ვერტიკალური ნავიგაციის დროს"
+msgstr ""
+"&ვერტიკალურად მოძრაობისას, თარიღის ველის მხოლოდ მიმდინარე ნიშნის "
+"გამოცხადების ჩართვა:"
 
-#. Translators: Item in the preferences menu for the Addon dayOfTheWeek.
+#. Translators: Item in the tools menu for the Addon dayOfTheWeek.
 msgid "Day of the &week..."
-msgstr "კვირის დღე"
+msgstr "კვირის &დღე..."
+
+#. Translators: The tooltyp text for the dayOfTheWeek item.
+#. Translators: The tooltyp text for the first item in the dayOfTheWeek add-on submenu.
+msgid "Search a day in the calendar"
+msgstr "კალენდარში დღის ძიება"
 
 #. Translators: The tooltyp text for the dayOfTheWeek submenu.
 #, python-brace-format
@@ -95,11 +108,7 @@ msgstr "დამატება {0} და მისი პარამეტ�
 
 #. Translators: The name of the first item in the dayOfTheWeek add-on submenu.
 msgid "Search a &day"
-msgstr "მოძებნეთ დღე"
-
-#. Translators: The tooltyp text for the first item in the dayOfTheWeek add-on submenu.
-msgid "Search a day in the calendar"
-msgstr "კალენდარში დღის ძიება"
+msgstr "დღ&ის ძიება"
 
 #. Translators: The name of the second item in the dayOfTheWeek add-on submenu.
 #, python-brace-format
@@ -109,22 +118,16 @@ msgstr "{0} დამატების პა&რამეტრები"
 #. Translators: The tooltyp text for the second item in the dayOfTheWeek add-on submenu.
 #, python-brace-format
 msgid "Configure the {0} add-on"
-msgstr "{0} დამატების კონფიგურირება"
+msgstr "{0} დამატების კონფიგურაცია"
 
 #. Translators: Message presented in input help mode.
 msgid "Allows you to find the day of the week corresponding to a chosen date."
-msgstr ""
-"საშუალებას გაძლევთ იპოვოთ კვირის დღე, რომელიც შეესაბამება შერჩეულ თარიღს."
+msgstr "საშუალებას გაძლევთ იპოვოთ არჩეული თარიღის შესაბამისი კვირის დღე."
 
 #. Translators: Message presented in input help mode.
 #, python-brace-format
 msgid "Allows you to open the {0} add-on settings dialog."
-msgstr "საშუალებას გაძლევთ გახსნათ {0} დამატების პარამეტრები."
-
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Day of the week"
-msgstr "კვირის დღე"
+msgstr "საშუალებას გაძლევთ გახსნათ {0} დამატების პარამეტრების დიალოგი.."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -132,5 +135,5 @@ msgid ""
 "With this add-on, you'll be able to find the day of the week corresponding "
 "to a chosen date."
 msgstr ""
-"ამ დამატებით შეგიძლიათ იხილოთ კვირის დღე, რომელიც შეესაბამება შერჩეულ "
-"თარიღს."
+"ამ დამატების საშუალებით, შეგიძლიათ იპოვოთ კვირის დღე, რომელიც შეესაბამება "
+"არჩეულ თარიღს."
