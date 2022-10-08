@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 'dayOfTheWeek' '22.06'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2022-07-24 11:23+0400\n"
-"PO-Revision-Date: 2022-07-24 11:38+0400\n"
+"PO-Revision-Date: 2022-10-06 20:01+0400\n"
 "Last-Translator: Dragan Ratkovich\n"
 "Language-Team: \n"
 "Language: ka\n"
@@ -48,7 +48,7 @@ msgstr "მიიღეთ კვირის დღე"
 
 #. Translators: A label for a list in a dialog.
 msgid "Type or select a date"
-msgstr "შეიყვანეთ ან აირჩიეთ თარიღი"
+msgstr "აკრიფეთ ან აირჩიეთ თარიღი"
 
 #. Translators: The title of a dialog.
 msgid "Your day"
