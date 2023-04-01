@@ -57,7 +57,7 @@ msgstr "Votre jour"
 #. Translators: The title of the add-on configuration dialog box.
 #, python-brace-format
 msgid "Configuration of the addon {0}"
-msgstr "Configuration du module complémentaire {0}"
+msgstr "Configuration de l'extension {0}"
 
 #. Translators: Level for short announces of labels.
 msgid "Short"
@@ -94,7 +94,7 @@ msgstr "Jour de la &semaine..."
 #. Translators: The tooltyp text for the dayOfTheWeek submenu.
 #, python-brace-format
 msgid "{0} add-on and its settings"
-msgstr "Module complémentaire {0} et ses paramètres"
+msgstr "Extension {0} et ses paramètres"
 
 #. Translators: The name of the first item in the dayOfTheWeek add-on submenu.
 msgid "Search a &day"
@@ -107,12 +107,12 @@ msgstr "Trouver un jour dans le calendrier"
 #. Translators: The name of the second item in the dayOfTheWeek add-on submenu.
 #, python-brace-format
 msgid "{0} add-on se&ttings"
-msgstr "Paramè&tres du module complémentaire {0}"
+msgstr "Paramè&tres de l'extension {0}"
 
 #. Translators: The tooltyp text for the second item in the dayOfTheWeek add-on submenu.
 #, python-brace-format
 msgid "Configure the {0} add-on"
-msgstr "Configurer le module complémentaire {0}"
+msgstr "Configurer l'extension {0}"
 
 #. Translators: Message presented in input help mode.
 msgid "Allows you to find the day of the week corresponding to a chosen date."
@@ -124,8 +124,8 @@ msgstr ""
 #, python-brace-format
 msgid "Allows you to open the {0} add-on settings dialog."
 msgstr ""
-"Vous permet d'ouvrir la boîte de dialogue Paramètres du module "
-"complémentaire {0}."
+"Vous permet d'ouvrir la boîte de dialogue Paramètres de "
+"l'extension {0}."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -138,5 +138,5 @@ msgid ""
 "With this add-on, you'll be able to find the day of the week corresponding "
 "to a chosen date."
 msgstr ""
-"Avec ce module complémentaire, vous serez en mesure de trouver le jour de la "
+"Avec cette extension vous serez en mesure de trouver le jour de la "
 "semaine correspondant à une date choisie."

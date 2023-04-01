@@ -43,8 +43,7 @@ contenant 2 éléments :
   de la semaine" ;
 * Si vous utilisez NVDA 2018.2 ou une version ultérieure, vous ne trouverez
   qu'un seul élément dans le menu Outil pour rechercher votre jour, les
-  paramètres du module complémentaire se trouvent dans le panneau Paramètres
-  NVDA.
+  paramètres de l'extension se trouvent dans le panneau Paramètres NVDA.
 
 ## Compatibilité ##
 
@@ -97,8 +96,8 @@ contenant 2 éléments :
 * Utilisé le module gui.guiHelper pour assurer la bonne apparence de la
   boîte de dialogue demandant une date ;
 * Ajout de la licence GPL pour l'extension;
-* Les jours de la semaine ont été traduits, de sorte que le module
-  complémentaire fonctionne correctement dans les différentes langues ;
+* Les jours de la semaine ont été traduits, de sorte que l'extension
+  fonctionne correctement dans les différentes langues ;
 * Changé le format de jour pour éviter les erreurs d'encodage.
 
 ## Changements pour la version 1.0 ##
