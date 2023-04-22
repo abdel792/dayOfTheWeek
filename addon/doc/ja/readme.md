@@ -82,6 +82,6 @@ NVDAツールメニューに、"Day of the week"というサブメニューが�
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=dw
+[1]: https://www.nvaccess.org/addonStore/legacy?file=dw
 
-[2]: https://addons.nvda-project.org/files/get.php?file=dw-dev
+[2]: https://www.nvaccess.org/addonStore/legacy?file=dw-dev
