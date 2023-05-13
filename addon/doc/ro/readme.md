@@ -103,6 +103,6 @@ It adds a submenu in the NVDA Tools menu named "Day of the week", containing
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=dw
+[1]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
 
-[2]: https://www.nvaccess.org/addonStore/legacy?file=dw-dev
+[2]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek

@@ -106,6 +106,6 @@ contenant 2 éléments :
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=dw
+[1]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
 
-[2]: https://www.nvaccess.org/addonStore/legacy?file=dw-dev
+[2]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
