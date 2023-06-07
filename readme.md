@@ -35,7 +35,19 @@ It adds a submenu in the NVDA Tools menu named "Day of the week", containing 2 i
 
 ## Compatibility ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2014.3 until 2021.2.
+* This add-on is compatible with the versions of NVDA ranging from 2014.3 until 2023.1.
+
+## Changes for 20230607.0.0 ##
+
+* Added the following workflows:
+ * auto-update-translations - to automatically update translations from NVDA's translation system.
+ * release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;
+ * manual-release.yaml: to build and release new versions of the add-on manually.
+* Updated translations.
+
+## Changes for version 20230508.0.0 and beyond ##
+
+* • Changed version number, minimum NVDA version and download link according to store conventions/requirements.
 
 ## Changes for 19.02 ##
 
@@ -78,6 +90,6 @@ It adds a submenu in the NVDA Tools menu named "Day of the week", containing 2 i
 
 * Initial version.
 
-[1]: https://addons.nvda-project.org/files/get.php?file=dw
+[1]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
 
-[2]: https://addons.nvda-project.org/files/get.php?file=dw-dev
+[2]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
