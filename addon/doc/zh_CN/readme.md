@@ -35,7 +35,13 @@
 
 ## 兼容性 ##
 
-* 此插件与2014.3至2019.3的NVDA版本兼容。
+* This add-on is compatible with the versions of NVDA ranging from 2014.3
+  and beyond.
+
+## Changes for 20230508.0.0 and beyond ##
+
+* � Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
 ## 19.02版的更改 ##
 

@@ -47,8 +47,13 @@ contenant 2 éléments :
 
 ## Compatibilité ##
 
-* Cette extension est compatible avec les versions de NVDA allant de 2014.3
-  à 2019.3.
+* This add-on is compatible with the versions of NVDA ranging from 2014.3
+  and beyond.
+
+## Changes for 20230508.0.0 and beyond ##
+
+* � Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
 ## Changements pour la version 19.02 ##
 

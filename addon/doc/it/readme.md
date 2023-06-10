@@ -48,8 +48,13 @@ settimana", contenente due elementi:
 
 ## Compatibilità ##
 
-* Questo componente è compatibile con le versioni di NVDA dalla 2014.3 alla
-  2019.3.
+* This add-on is compatible with the versions of NVDA ranging from 2014.3
+  and beyond.
+
+## Changes for 20230508.0.0 and beyond ##
+
+* � Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
 ## Novità nella versione 19.02 ##
 

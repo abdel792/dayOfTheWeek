@@ -45,8 +45,13 @@ que contiene 2 elementos:
 
 ## Compatibilidad ##
 
-* Este complemento es compatible con las versiones de NVDA desde la 2014.3 a
-  la 2019.3.
+* Este complemento es compatible con las versiones de NVDA desde la 2014.3
+  en adelante.
+
+## Cambios para 20230508.0.0 y posteriores ##
+
+* Cambiado el número de versión, la versión mínima de NVDA y el enlace de
+  descarga según las convenciones y los requisitos de la tienda.
 
 ## Cambios para 19.02 ##
 

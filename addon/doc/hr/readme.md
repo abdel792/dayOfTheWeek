@@ -43,7 +43,13 @@ dvije stavke:
 
 ## Kompatibilnost ##
 
-* Ovaj dodatak je kompatibilan s NVDA verzijom 2014.3 do 2019.3.
+* This add-on is compatible with the versions of NVDA ranging from 2014.3
+  and beyond.
+
+## Changes for 20230508.0.0 and beyond ##
+
+* � Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
 ## Promjene u 19.02 ##
 

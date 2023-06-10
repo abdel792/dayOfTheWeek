@@ -43,7 +43,13 @@ the week", có hai mục con:
 
 ## Tương thích ##
 
-* Add-on này tương thích với các phiên bản NVDA từ 2014.3 đến 2019.3.
+* This add-on is compatible with the versions of NVDA ranging from 2014.3
+  and beyond.
+
+## Changes for 20230508.0.0 and beyond ##
+
+* � Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
 ## Các thay đổi cho phiên bản 19.02 ##
 

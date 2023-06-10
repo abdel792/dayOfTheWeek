@@ -37,7 +37,13 @@ NVDAツールメニューに、"Day of the week"というサブメニューが�
 
 ## 互換性 ##
 
-* このアドオンはNVDAの2014.3から2019.3までの範囲のバージョンに互換しています。
+* This add-on is compatible with the versions of NVDA ranging from 2014.3
+  and beyond.
+
+## Changes for 20230508.0.0 and beyond ##
+
+* � Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
 ## 19.2の変更点 ##
 
