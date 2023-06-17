@@ -49,13 +49,13 @@
 
 ## Съвместимост ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2014.3
-  and beyond.
+* Тази добавка е съвместима с версиите на NVDA в диапазона от 2014.3 и
+  по-нови.
 
-## Changes for 20230508.0.0 and beyond ##
+## Промени във версия 20230508.0.0 and beyond ##
 
-* � Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
+* Променени са номера на версията, минималната версия на NVDA и връзката за
+  изтегляне според конвенциите/изискванията на магазина.
 
 ## Промени във версия 19.02 ##
 

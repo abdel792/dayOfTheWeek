@@ -44,13 +44,13 @@ kohdetta:
 
 ## Yhteensopivuus ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2014.3
-  and beyond.
+* NVDA:n versiot 2014.3:sta eteenpäin ovat yhteensopivia tämän lisäosan
+  kanssa.
 
-## Changes for 20230508.0.0 and beyond ##
+## Muutokset versiossa 20230508.0.0 ja sitä uudemmissa ##
 
-* � Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
+*   Versionumerointi, NVDA-version vähimmäisvaatimus ja latauslinkki
+  muutettu lisäosakaupan käytäntöjen/vaatimusten mukaisiksi.
 
 ## Muutokset versiossa 19.02 ##
 

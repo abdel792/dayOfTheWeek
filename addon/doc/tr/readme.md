@@ -15,7 +15,7 @@ NVDA araçlar menüsüne iki öğe içeren haftanın günleri altmenüsü ekler:
     * İstediğiniz tarihi seçebileceğiniz veya yazabileceğiniz bir seçim
       kutusu;
     * Seçtiğiniz tarihe denk gelen günü gösteren bir mesaj kutusu açan
-      "tamam" düğmesi,
+      "tamam" düğmesi;
     * İletişim kutusunu kapatmaya yarayan "iptal" düğmesi.
 
 * İkinci öğe olan "haftanın günleri eklenti ayarları" öğesi, eklenti
@@ -31,7 +31,7 @@ NVDA araçlar menüsüne iki öğe içeren haftanın günleri altmenüsü ekler:
         * Kapalı (etiket duyurularını devredışı bırakmak için).
 
     * Sadece üzerinde bulunulan tarih alanının değeri okunsun, dikey dolaşım
-      yaparken kullanılır,
+      yaparken kullanılır;
     * Ayarları kaydetmeye yarayan "tamam" düğmesi;
     * Ayarlamayı iptal etmeye ve iletişim kutusunu kapatmaya yarayan "iptal"
       düğmesi.
@@ -48,18 +48,17 @@ NVDA araçlar menüsüne iki öğe içeren haftanın günleri altmenüsü ekler:
 
 ## Uyumluluk ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2014.3
-  and beyond.
+* Bu eklenti, NVDA'nın 2014.3 ve sonrası sürümleriyle uyumludur.
 
-## Changes for 20230508.0.0 and beyond ##
+## 20230508.0.0 ve sonrası için değişiklikler ##
 
-* � Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
+*   Sürüm numarası, minimum NVDA sürümü ve indirme bağlantısı mağaza
+  kurallarına/gereksinimlerine göre değiştirildi.
 
 ## 19.02 sürümündeki değişiklikler ##
 
 * Sürüm biçimi yy.aa (iki rakam ile yıl, nokta, iki rakam ile ay) olarak
-  değiştirildi,
+  değiştirildi;
 * NvDA 2019.1 sürümünden itibaren kullanılmaya başlanan eklenti sürüm
   biçimiyle uyumluluk sağlandı.
 

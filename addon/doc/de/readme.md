@@ -46,13 +46,14 @@ Es wird im NVDA-Menü unter "Werkzeuge" einen Eintrag mit dem Namen
 
 ## Kompatibilität ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2014.3
-  and beyond.
+* Diese NVDA-Erweiterung ist kompatibel mit den NVDA-Versionen ab 2014.3 und
+  neuer.
 
-## Changes for 20230508.0.0 and beyond ##
+## Änderungen in 20230508.0.0 und neuer ##
 
-* � Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
+* Die Versionsnummer, die minimale NVDA-Version und der Download-Link wurden
+  entsprechend den Konventionen/Anforderungen für den Store für
+  NVDA-Erweiterungen geändert.
 
 ## Änderungen in 19.02 ##
 
