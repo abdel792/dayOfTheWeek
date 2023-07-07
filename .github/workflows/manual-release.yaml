@@ -77,10 +77,10 @@ jobs:
     - name: Add add-on version
       run: |
         import re
+        version='${{ env.BUILD_VERSION }}'
+        year='${{ env.CUR_YEAR }}'
         with open("buildVars.py", 'r+', encoding='utf-8') as f:
           text=f.read()
-          version='${{ env.BUILD_VERSION }}'
-          year='${{ env.CUR_YEAR }}'
           text=re.sub(r"\"addon_version\": .*?,", f"\"addon_version\": \"{version}\",", text)
           text=re.sub(r"\"addon_lastTestedNVDAVersion\": .*?,", f"\"addon_lastTestedNVDAVersion\": \"{year}.1.0\",", text)
           f.seek(0)
@@ -88,13 +88,20 @@ jobs:
           f.truncate()
         with open("changelog.md", 'r+', encoding='utf-8') as f:
           text=f.read()
-          text=re.sub("# Changes for .*?$", f"## Changes for {version}", text)
+          text=re.sub("Changes for [^\r\n]+", f"Changes for {version}", text)
           f.seek(0)
           f.write(text)
           f.truncate()
       shell: python 
 
-    - name: Push changes
+
+    - name: Check if there are any changes
+      id: verify_diff
+      run: |
+        git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
+
+    - name: Commit and push changes
+      if: steps.verify_diff.outputs.changed == 'true'
       run: |
         git config --local user.name 'github-actions'
         git config --local user.email 'github-actions@github.com'
