@@ -29,8 +29,10 @@ import config
 try:
 	from gui import SettingsPanel as SettingsDialog
 except ImportError:
-	from gui.settingsDialogs import SettingsDialog
-
+	try:
+		from gui.settingsDialogs import SettingsPanel as SettingsDialog
+	except ImportError:
+		from gui.SettingsDialog import SettingsDialog
 
 ### Constants
 ADDON_SUMMARY = addonHandler.getCodeAddon ().manifest["summary"]
@@ -594,7 +596,10 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 	script_activateDayOfTheWeekDialog.__doc__ = _("Allows you to find the day of the week corresponding to a chosen date.")
 
 	def script_activateDayOfTheWeekSettingsDialog (self, gesture):
-		wx.CallAfter (self.onAddonSettingsDialog, gui.mainFrame)
+		if hasattr (gui.settingsDialogs, "NVDASettingsDialog"):
+			wx.CallAfter ((gui.mainFrame.popupSettingsDialog if hasattr(gui.mainFrame, "popupSettingsDialog") else gui.mainFrame._popupSettingsDialog), gui.settingsDialogs.NVDASettingsDialog, DayOfWeekSettingsDialog)
+		else:
+			wx.CallAfter (self.onAddonSettingsDialog, gui.mainFrame)
 
 	# Translators: Message presented in input help mode.
 	script_activateDayOfTheWeekSettingsDialog.__doc__ = _("Allows you to open the {0} add-on settings dialog.").format (ADDON_NAME)
