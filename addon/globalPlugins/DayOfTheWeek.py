@@ -34,16 +34,16 @@ ADDON_NAME = addonHandler.getCodeAddon().manifest["name"]
 fieldLabels = (
 	# Translators: The long label of the days field.
 	(_("You can select a day with the vertical arrows"),
-		# Translators: The short label of the days field.
-		_("Select a day")),
+	 # Translators: The short label of the days field.
+	 _("Select a day")),
 	# Translators: The long label of the months field.
 	(_("You can select a month with the vertical arrows"),
-		# Translators: The short label of the months field.
-		_("Select a month")),
+	 # Translators: The short label of the months field.
+	 _("Select a month")),
 	# Translators: The long label of the years field.
 	(_("You can select a year with the vertical arrows"),
-		# Translators: The short label of the years field.
-		_("Select a year"))
+	 # Translators: The short label of the years field.
+	 _("Select a year"))
 )
 
 # The following dictionary was created to list the Georgian days that are not recognized by the %A format,
@@ -170,14 +170,14 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 		else _("Day of the week")
 	LABEL_ANNOUNCE_LEVELS = (
 		("short",
-			# Translators: Level for short announces of labels.
-			_("Short")),
+		 # Translators: Level for short announces of labels.
+		 _("Short")),
 		("long",
-			# Translators: Level for long announces of labels.
-			_("Long")),
+		 # Translators: Level for long announces of labels.
+		 _("Long")),
 		("off",
-			# Translators: Level to disable announces of labels.
-			_("Off"))
+		 # Translators: Level to disable announces of labels.
+		 _("Off"))
 	)
 
 	def makeSettings(self, settingsSizer):
@@ -565,7 +565,7 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		if obj.value and obj.role == (
 			controlTypes.ROLE_DROPLIST if hasattr(controlTypes, "ROLE_DROPLIST") else controlTypes.Role.DROPLIST
 		) and isDatepickerDate(obj.value) and\
-			config.conf["dayOfWeek"]["enableAnnounces"]:
+		   config.conf["dayOfWeek"]["enableAnnounces"]:
 			clsList.insert(0, AnnounceFieldsLabels)
 
 	def createMenu(self):
@@ -641,7 +641,7 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		if hasattr(gui.settingsDialogs, "NVDASettingsDialog"):
 			wx.CallAfter(
 				(gui.mainFrame.popupSettingsDialog if hasattr(gui.mainFrame, "popupSettingsDialog")
-					else gui.mainFrame._popupSettingsDialog),
+				 else gui.mainFrame._popupSettingsDialog),
 				gui.settingsDialogs.NVDASettingsDialog, DayOfWeekSettingsDialog
 			)
 		else:
