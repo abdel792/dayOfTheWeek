@@ -13,6 +13,7 @@ from __future__ import unicode_literals  # To ensure coding compatibility with p
 import addonHandler
 import globalPluginHandler
 import re
+from typing import Callable
 import keyboardHandler
 import api
 import controlTypes
@@ -23,10 +24,13 @@ import config
 
 # This block ensures compatibility with NVDA versions prior to 2018.2 which includes the settings panel.
 try:
-	SettingsDialog = gui.SettingsPanel or gui.settingsDialog.SettingsPanel
-except AttributeError:
+	from gui.settingsDialogs import SettingsPanel as SettingsDialog
+except ImportError:
+	from gui import SettingsPanel as SettingsDialog
+except ImportError:
 	from gui.settingsDialogs import SettingsDialog
-
+addonHandler.initTranslation()
+_: Callable[[str], str]
 # Constants
 ADDON_SUMMARY = addonHandler.getCodeAddon().manifest["summary"]
 ADDON_NAME = addonHandler.getCodeAddon().manifest["name"]
