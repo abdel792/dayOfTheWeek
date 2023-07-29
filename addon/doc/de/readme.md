@@ -46,8 +46,14 @@ Es wird im NVDA-Menü unter "Werkzeuge" einen Eintrag mit dem Namen
 
 ## Kompatibilität ##
 
-* Diese NVDA-Erweiterung ist kompatibel mit den NVDA-Versionen ab 2014.3 und
-  neuer.
+* This add-on is compatible with the versions of NVDA ranging from 2019.3
+  and beyond.
+
+## Changes for 20230728.0.0 ##
+
+* Applied the flake8 and mypy rules to the code;
+* Changed the minimum supported NVDA version to 2019.3 to support
+  annotations introduced in Python 3.
 
 ## Änderungen in 20230508.0.0 und neuer ##
 

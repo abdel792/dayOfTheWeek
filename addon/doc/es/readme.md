@@ -45,8 +45,14 @@ que contiene 2 elementos:
 
 ## Compatibilidad ##
 
-* Este complemento es compatible con las versiones de NVDA desde la 2014.3
+* Este complemento es compatible con las versiones de NVDA desde la 2019.3
   en adelante.
+
+## Cambios para 20230728.0.0 ##
+
+* Aplicadas las reglas de Flake8 y Mipy al código;
+* Changed the minimum supported NVDA version to 2019.3 to support
+  annotations introduced in Python 3.
 
 ## Cambios para 20230508.0.0 y posteriores ##
 

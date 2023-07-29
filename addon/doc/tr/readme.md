@@ -23,10 +23,10 @@ NVDA araçlar menüsüne iki öğe içeren haftanın günleri altmenüsü ekler:
   söylenip söylenmeyeceğini ayarlayabilirsiniz. İletişim kutusunda şu öğeler
   bulunur:
 
-    * Tarih seçicinin erişilebilirliğini etkinleştir,
+    * Tarih seçicinin erişilebilirliğini etkinleştir;
     * Etiket duyuru seviyesi, 3 öğe içerir:
 
-        * Uzun (varsayılan seçenektir),
+        * Uzun (varsayılan seçenektir);
         * Kısa (etiketlerin kısa biçimde söylenmesi için);
         * Kapalı (etiket duyurularını devredışı bırakmak için).
 
@@ -48,7 +48,13 @@ NVDA araçlar menüsüne iki öğe içeren haftanın günleri altmenüsü ekler:
 
 ## Uyumluluk ##
 
-* Bu eklenti, NVDA'nın 2014.3 ve sonrası sürümleriyle uyumludur.
+* Bu eklenti, NVDA'nın 2019.3 ve sonrası sürümleriyle uyumludur.
+
+## 20230728.0.0 için değişiklikler ##
+
+* Flake8 ve mypy kuralları koda uygulandı;
+* Python 3'te tanıtılan ek açıklamaları desteklemek için desteklenen minimum
+  NVDA sürümü 2019.3 olarak değiştirildi.
 
 ## 20230508.0.0 ve sonrası için değişiklikler ##
 
@@ -87,17 +93,17 @@ NVDA araçlar menüsüne iki öğe içeren haftanın günleri altmenüsü ekler:
 * Daha fazla sayıda dil tanınabildiği için haftanın günlerinde eski biçime
   dönüldü;
 * Tarih seçicinin erişilebilirliği, "gün", "ay" ve "yıl" alanları ve onların
-  değerlerinin okunması konusunda geliştirildi,
+  değerlerinin okunması konusunda geliştirildi;
 * Gürcüce haftanın günlerini tanımak için bir teknik eklendi;
 * Tarih seçicinin erişilebilirliğini etkinleştirmek veya devredışı bırakmak
-  için ayarlar iletişim kutusu eklendi,
+  için ayarlar iletişim kutusu eklendi;
 * Eklenti altmenüsü "araçlar" menüsünden "tercihler" menüsüne taşındı;
 * Eklenti kategorisi haftanın günleri olarak değiştirildi.
 
 ## 2.0 sürümü için değişiklikler ##
 
 * Tarih iletişim kutusunun düzgün görünmesi için gui.guiHelper modülü
-  kullanıldı,
+  kullanıldı;
 * Eklentiye GPL lisansı eklendi;
 * Günler, eklentinin farklı dillerde düzgün çalışabilmesi için çevrildi;
 * Kodlama hatalarını gidermek için gün biçimi değiştirildi.
