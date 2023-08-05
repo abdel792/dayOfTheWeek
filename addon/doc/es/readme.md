@@ -51,8 +51,8 @@ que contiene 2 elementos:
 ## Cambios para 20230728.0.0 ##
 
 * Aplicadas las reglas de Flake8 y Mipy al código;
-* Changed the minimum supported NVDA version to 2019.3 to support
-  annotations introduced in Python 3.
+* Cambiada la versión mínima soportada de NVDA a la 2019.3 para soportar las
+  anotaciones de tipos introducidas en Python 3.
 
 ## Cambios para 20230508.0.0 y posteriores ##
 
