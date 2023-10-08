@@ -20,6 +20,7 @@ on:
         - dev
         - beta
         default: stable
+        required: false
 
 jobs:
   buildAndUpload:
