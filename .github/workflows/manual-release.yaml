@@ -57,7 +57,6 @@ jobs:
     - name: Environment variable for stable
       if: ${{ inputs.prerelease == false && inputs.channel == 'stable' }}
       run: echo 'MINOR_PATCH=0.0' >> $GITHUB_ENV
-        echo 'TAG_NAME=${{ env.TAG_NAME }}-dev' >> $GITHUB_ENV
 
     - name: Set build version when version is empty
       if: ${{ inputs.version == '' }}
