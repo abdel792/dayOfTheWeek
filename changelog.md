@@ -1,3 +1,3 @@
 ## Changes for 20231009.0.1
 
-* testing compatibility with nvda-2024.1.0.
+* Fixed a bug when using up arrow in the date selector.
