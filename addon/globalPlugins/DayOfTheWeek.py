@@ -544,10 +544,12 @@ class AnnounceFieldsLabels (IAccessible):
 	def script_verticalMovements(self, gesture):
 		self.vertical = 1
 		gesture.send()
-		if gesture.mainKeyName == "upArrow":
+		if config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"]:
 			speech.setSpeechMode(speech.SpeechMode.off)
 			api.processPendingEvents()
 			speech.setSpeechMode(speech.SpeechMode.talk)
+		else:
+			api.processPendingEvents()
 		self.calculateCurField()
 
 	def script_horizontalMovements(self, gesture):

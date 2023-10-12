@@ -1,3 +1,3 @@
 ## Changes for 20231012.1.0
 
-* Fixed a bug when using up arrow in the date selector.
+* Second attempt to fix the up arrow navigation bug in the date picker.
