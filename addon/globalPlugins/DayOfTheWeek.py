@@ -12,6 +12,7 @@
 from __future__ import unicode_literals  # To ensure coding compatibility with python 2 and 3.
 import addonHandler
 import globalPluginHandler
+import speech
 import re
 from typing import Callable
 import keyboardHandler
@@ -543,6 +544,12 @@ class AnnounceFieldsLabels (IAccessible):
 	def script_verticalMovements(self, gesture):
 		self.vertical = 1
 		gesture.send()
+		if config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"]:
+			speech.setSpeechMode(speech.SpeechMode.off)
+			api.processPendingEvents()
+			speech.setSpeechMode(speech.SpeechMode.talk)
+		else:
+			api.processPendingEvents()
 		self.calculateCurField()
 
 	def script_horizontalMovements(self, gesture):
