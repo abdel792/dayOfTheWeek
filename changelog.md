@@ -1,4 +1,3 @@
-## Changes for 20231008.0.0
+## Changes for 20231012.1.0
 
-* Applied the flake8 and mypy rules to the code;
-* Changed the minimum supported NVDA version to 2019.3 to support annotations introduced in Python 3.
+* Second attempt to fix the up arrow navigation bug in the date picker.
