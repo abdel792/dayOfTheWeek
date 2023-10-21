@@ -50,6 +50,11 @@ contenant 2 éléments :
 * Cette extension est compatible avec les versions de NVDA allant de 2019.3
   et au-delà.
 
+## Changements pour la version 20231015.0.0 ##
+
+* Correction d'un bug détecté lors de la navigation avec la flèche haut
+  depuis le sélecteur de date dans les dernières versions de NVDA.
+
 ## Changements pour la version 20230728.0.0 ##
 
 * Appliqué les règles flake8 et mypy au code ;
