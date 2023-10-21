@@ -38,6 +38,11 @@
 * This add-on is compatible with the versions of NVDA ranging from 2019.3
   and beyond.
 
+## Changes for 20231015.0.0 ##
+
+* Fixed a bug detected when navigating with up arrow from the date picker in
+  the latest versions of NVDA.
+
 ## Changes for 20230728.0.0 ##
 
 * Applied the flake8 and mypy rules to the code;

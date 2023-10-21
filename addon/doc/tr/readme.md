@@ -50,6 +50,11 @@ NVDA araçlar menüsüne iki öğe içeren haftanın günleri altmenüsü ekler:
 
 * Bu eklenti, NVDA'nın 2019.3 ve sonrası sürümleriyle uyumludur.
 
+## 20231015.0.0 için değişiklikler ##
+
+* NVDA'nın en son sürümlerinde tarih seçicide yukarı okla gezinirken tespit
+  edilen bir hata düzeltildi.
+
 ## 20230728.0.0 için değişiklikler ##
 
 * Flake8 ve mypy kuralları koda uygulandı;

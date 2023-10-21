@@ -47,6 +47,11 @@ kohdetta:
 * Tämä lisäosa on yhteensopiva NVDA 2019.3:n ja sitä uudempien versioiden
   kanssa.
 
+## Muutokset versiossa 20231015.0.0 ##
+
+* Korjattu bugi, joka ilmeni liikuttaessa ylänuolinäppäimellä
+  päivämääränvalitsimessa NVDA:n uusimpia versioita käytettäessä.
+
 ## Muutokset versiossa 20230728.0.0 ##
 
 * Sovellettu koodiin flake8- ja mypy-sääntöjä.

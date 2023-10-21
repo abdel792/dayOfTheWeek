@@ -48,6 +48,11 @@ que contiene 2 elementos:
 * Este complemento es compatible con las versiones de NVDA desde la 2019.3
   en adelante.
 
+## Cambios para 20231015.0.0 ##
+
+* Se corrige un fallo detectado al navegar con flecha arriba en el selector
+  de fecha en las versiones más recientes de NVDA.
+
 ## Cambios para 20230728.0.0 ##
 
 * Aplicadas las reglas de Flake8 y Mipy al código;

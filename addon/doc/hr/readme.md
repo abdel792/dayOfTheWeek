@@ -45,6 +45,11 @@ dvije stavke:
 
 * Ovaj je dodatak kompatibilan s NVDA verzijom 2019.3 i novijim verzijama.
 
+## Changes for 20231015.0.0 ##
+
+* Fixed a bug detected when navigating with up arrow from the date picker in
+  the latest versions of NVDA.
+
 ## Promjene u 20230728.0.0 ##
 
 * Programskom kodu su dodana flake8 i mypy pravila.

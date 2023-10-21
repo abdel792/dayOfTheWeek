@@ -1,3 +1,4 @@
-## Changes for 20231013.0.1
+## Changes for 20231021.0.0
 
-* Second attempt to fix the up arrow navigation bug in the date picker.
+* Update translations.
+
