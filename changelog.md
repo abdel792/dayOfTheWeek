@@ -1,4 +1,5 @@
 ## Changes for 20231021.0.1
 
-* Update translations.
+* Added first usability tests with nvda-2024.1-beta;
+* Added support for speak on demand mode.
 
