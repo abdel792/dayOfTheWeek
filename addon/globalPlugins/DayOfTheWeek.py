@@ -12,6 +12,8 @@
 from __future__ import unicode_literals  # To ensure coding compatibility with python 2 and 3.
 import addonHandler
 import globalPluginHandler
+import versionInfo
+from scriptHandler import script
 import speech
 import re
 from typing import Callable
@@ -35,6 +37,9 @@ _: Callable[[str], str]
 # Constants
 ADDON_SUMMARY = addonHandler.getCodeAddon().manifest["summary"]
 ADDON_NAME = addonHandler.getCodeAddon().manifest["name"]
+
+# To provide support for speak on demand mode.
+speakOnDemand = {"speakOnDemand": True} if versionInfo.version_year > 2023 else {}
 
 fieldLabels = (
 	# Translators: The long label of the days field.
@@ -300,12 +305,6 @@ class AnnounceFieldsLabels (IAccessible):
 		"kb:rightArrow"
 	)
 
-	def initOverlayClass(self):
-		for vKey in self.vMovementKeys:
-			self.bindGesture(vKey, "verticalMovements")
-		for hKey in self.hMovementKeys:
-			self.bindGesture(hKey, "horizontalMovements")
-
 	def event_gainFocus(self):
 		global curDateField
 		super(AnnounceFieldsLabels, self).event_gainFocus()
@@ -541,6 +540,10 @@ class AnnounceFieldsLabels (IAccessible):
 		self.whatChanged(val1, val2)
 		self.increment = 0
 
+	@script(
+		gestures=vMovementKeys,
+		**speakOnDemand,
+	)
 	def script_verticalMovements(self, gesture):
 		self.vertical = 1
 		gesture.send()
@@ -552,6 +555,10 @@ class AnnounceFieldsLabels (IAccessible):
 			api.processPendingEvents()
 		self.calculateCurField()
 
+	@script(
+		gestures=hMovementKeys,
+		**speakOnDemand,
+	)
 	def script_horizontalMovements(self, gesture):
 		gesture.send()
 		self.vertical = 0
@@ -640,14 +647,21 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		d.Show()
 		gui.mainFrame.postPopup()
 
+	@script(
+		# Translators: Message presented in input help mode.
+		description=_("Allows you to find the day of the week "
+		              "corresponding to a chosen date."),
+		**speakOnDemand,
+	)
 	def script_activateDayOfTheWeekDialog(self, gesture):
 		wx.CallAfter(self.onDateDialog, gui.mainFrame)
 
-	# Translators: Message presented in input help mode.
-	script_activateDayOfTheWeekDialog.__doc__ = _(
-		"Allows you to find the day of the week corresponding to a chosen date."
+	@script(
+		# Translators: Message presented in input help mode.
+		description=_("Allows you to open the {0} add-on settings dialog."
+		).format(ADDON_NAME),
+		**speakOnDemand,
 	)
-
 	def script_activateDayOfTheWeekSettingsDialog(self, gesture):
 		if hasattr(gui.settingsDialogs, "NVDASettingsDialog"):
 			wx.CallAfter(
@@ -657,8 +671,3 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 			)
 		else:
 			wx.CallAfter(self.onAddonSettingsDialog, gui.mainFrame)
-
-	# Translators: Message presented in input help mode.
-	script_activateDayOfTheWeekSettingsDialog.__doc__ = _(
-		"Allows you to open the {0} add-on settings dialog."
-	).format(ADDON_NAME)
