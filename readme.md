@@ -37,6 +37,11 @@ It adds a submenu in the NVDA Tools menu named "Day of the week", containing 2 i
 
 * This add-on is compatible with the versions of NVDA ranging from 2019.3 and beyond.
 
+
+## Changes for 20231229.0.0 ##
+
+* Added a backward compatible implementation to support speak on demand mode, which will soon be available with nvda-2024.1.
+
 ## Changes for 20231015.0.0 ##
 
 * Fixed a bug detected when navigating with up arrow from the date picker in the latest versions of NVDA.
@@ -99,6 +104,6 @@ It adds a submenu in the NVDA Tools menu named "Day of the week", containing 2 i
 
 * Initial version.
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
+[1]: https://github.com/abdel792/dayOfTheWeek/releases/download/v23.12.29/dayOfTheWeek-20231229.0.0.nvda-addon
 
-[2]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
+[2]: https://github.com/abdel792/dayOfTheWeek/releases/download/v23.12.29-beta/dayOfTheWeek-20231229.0.1.nvda-addon
