@@ -1,8 +1,6 @@
 # Day of the week #
 
 * Authors: Abdel, Noelia.
-* download [stable version][1]
-* download [development version][2]
 
 This add-on allows you to find a day of the week corresponding to a chosen date.
 
@@ -37,6 +35,10 @@ It adds a submenu in the NVDA Tools menu named "Day of the week", containing 2 i
 
 * This add-on is compatible with the versions of NVDA ranging from 2019.3 and beyond.
 
+## Changes for 20240326.0.0
+
+* Updated compatibility for nvda-2024.1.;
+* Deleted download link from readme, the download link for future updates will now only be available from the add-on store.
 
 ## Changes for 20231229.0.0 ##
 
@@ -103,7 +105,3 @@ It adds a submenu in the NVDA Tools menu named "Day of the week", containing 2 i
 ## Changes for 1.0 ##
 
 * Initial version.
-
-[1]: https://github.com/abdel792/dayOfTheWeek/releases/download/v23.12.29/dayOfTheWeek-20231229.0.0.nvda-addon
-
-[2]: https://github.com/abdel792/dayOfTheWeek/releases/download/v23.12.29-beta/dayOfTheWeek-20231229.0.1.nvda-addon
