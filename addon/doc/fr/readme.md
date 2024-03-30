@@ -1,8 +1,6 @@
 # Day of the week #
 
 * Auteurs : Abdel, Noelia.
-* Télécharger [version stable][1]
-* Télécharger [version de développement][2]
 
 Cette extension vous permet de trouver un jour de la semaine correspondant à
 une date choisie.
@@ -50,6 +48,17 @@ contenant 2 éléments :
 * Cette extension est compatible avec les versions de NVDA allant de 2019.3
   et au-delà.
 
+## Changes for 20240326.0.0
+
+* Updated compatibility for nvda-2024.1.;
+* Deleted download link from readme, the download link for future updates
+  will now only be available from the add-on store.
+
+## Changements pour la version 20231229.0.0 ##
+
+* Ajout d'une implémentation rétrocompatible pour prendre en charge le mode
+  Parler à la demande, qui sera bientôt disponible avec nvda-2024.1.
+
 ## Changements pour la version 20231015.0.0 ##
 
 * Correction d'un bug détecté lors de la navigation avec la flèche haut
@@ -63,7 +72,7 @@ contenant 2 éléments :
 
 ## Changements pour la version 20230508.0.0 et au-delà ##
 
-*   Numéro de version modifiée, version minimale NVDA et lien de
+* Numéro de version modifiée, version minimale NVDA et lien de
   téléchargement en fonction des conventions / exigences de la store.
 
 ## Changements pour la version 19.02 ##
@@ -121,7 +130,3 @@ contenant 2 éléments :
 * Première version.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek

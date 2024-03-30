@@ -1,8 +1,6 @@
 # Wochentag #
 
 * Autoren: Abdel, Noelia.
-* [Stabile Version herunterladen][1]
-* [Entwicklerversion herunterladen][2]
 
 Mit diesem Add-on können Sie einen Wochentag finden, der einem ausgewählten
 Datum entspricht.
@@ -49,6 +47,17 @@ Es wird im NVDA-Menü unter "Werkzeuge" einen Eintrag mit dem Namen
 * This add-on is compatible with the versions of NVDA ranging from 2019.3
   and beyond.
 
+## Changes for 20240326.0.0
+
+* Updated compatibility for nvda-2024.1.;
+* Deleted download link from readme, the download link for future updates
+  will now only be available from the add-on store.
+
+## Changes for 20231229.0.0 ##
+
+* Added a backward compatible implementation to support speak on demand
+  mode, which will soon be available with nvda-2024.1.
+
 ## Changes for 20231015.0.0 ##
 
 * Fixed a bug detected when navigating with up arrow from the date picker in
@@ -62,9 +71,8 @@ Es wird im NVDA-Menü unter "Werkzeuge" einen Eintrag mit dem Namen
 
 ## Änderungen in 20230508.0.0 und neuer ##
 
-* Die Versionsnummer, die minimale NVDA-Version und der Download-Link wurden
-  entsprechend den Konventionen/Anforderungen für den Store für
-  NVDA-Erweiterungen geändert.
+* Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
 ## Änderungen in 19.02 ##
 
@@ -124,7 +132,3 @@ Es wird im NVDA-Menü unter "Werkzeuge" einen Eintrag mit dem Namen
 * Erstveröffentlichung.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek

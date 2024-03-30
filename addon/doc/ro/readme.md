@@ -1,8 +1,6 @@
 # Day of the week #
 
 * Autori: Abdel, Noelia.
-* Descărcați [versiunea stabilă][1]
-* Descărcați [versiunea în dezvoltare][2]
 
 Acest supliment vă permite să găsiți o zi din săptămână care corespunde cu o
 dată aleasă.
@@ -46,6 +44,17 @@ It adds a submenu in the NVDA Tools menu named "Day of the week", containing
 * This add-on is compatible with the versions of NVDA ranging from 2019.3
   and beyond.
 
+## Changes for 20240326.0.0
+
+* Updated compatibility for nvda-2024.1.;
+* Deleted download link from readme, the download link for future updates
+  will now only be available from the add-on store.
+
+## Changes for 20231229.0.0 ##
+
+* Added a backward compatible implementation to support speak on demand
+  mode, which will soon be available with nvda-2024.1.
+
 ## Changes for 20231015.0.0 ##
 
 * Fixed a bug detected when navigating with up arrow from the date picker in
@@ -59,7 +68,7 @@ It adds a submenu in the NVDA Tools menu named "Day of the week", containing
 
 ## Changes for 20230508.0.0 and beyond ##
 
-* � Changed version number, minimum NVDA version and download link according
+* Changed version number, minimum NVDA version and download link according
   to store conventions/requirements.
 
 ## Changes for 19.02 ##
@@ -118,7 +127,3 @@ It adds a submenu in the NVDA Tools menu named "Day of the week", containing
 * Versiunea inițială.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek

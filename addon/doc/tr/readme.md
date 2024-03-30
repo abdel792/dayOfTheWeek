@@ -1,8 +1,6 @@
 # Haftanın günleri #
 
 * Yazarlar: Abdel, Noelia.
-* [kararlı sürümü indir][1]
-* [geliştirme sürümünü indir][2]
 
 Bu eklenti, herhangi bir tarihin haftanın hangi gününe denk geldiğini
 bulmanıza yarar.
@@ -50,6 +48,18 @@ NVDA araçlar menüsüne iki öğe içeren haftanın günleri altmenüsü ekler:
 
 * Bu eklenti, NVDA'nın 2019.3 ve sonrası sürümleriyle uyumludur.
 
+## 20240326.0.0 için değişiklikler
+
+* NVDA-2024.1 için güncellenmiş uyumluluk;
+* Readme dosyasındaki indirme bağlantısı silindi, gelecekteki güncellemeler
+  için indirme bağlantısı artık yalnızca eklenti mağazasında mevcut olacak.
+
+## 20231229.0.0 için değişiklikler ##
+
+* İsteğe bağlı konuşma modunu desteklemek için geriye dönük olarak uyumlu
+  bir uygulama eklendi ve bu uygulama yakında nvda-2024.1 ile kullanıma
+  sunulacak.
+
 ## 20231015.0.0 için değişiklikler ##
 
 * NVDA'nın en son sürümlerinde tarih seçicide yukarı okla gezinirken tespit
@@ -63,8 +73,8 @@ NVDA araçlar menüsüne iki öğe içeren haftanın günleri altmenüsü ekler:
 
 ## 20230508.0.0 ve sonrası için değişiklikler ##
 
-*   Sürüm numarası, minimum NVDA sürümü ve indirme bağlantısı mağaza
-  kurallarına/gereksinimlerine göre değiştirildi.
+* Mağaza kurallarına/gereksinimlerine göre sürüm numarası, minimum NVDA
+  sürümü ve indirme bağlantısı değiştirildi.
 
 ## 19.02 sürümündeki değişiklikler ##
 
@@ -75,8 +85,8 @@ NVDA araçlar menüsüne iki öğe içeren haftanın günleri altmenüsü ekler:
 
 ## 6.0 sürümündeki değişiklikler ##
 
-* NVDA 2018.2 ve üzeri sürümleri için eklenti ayarları NVDA ayarları
-  iletişim kutusuna taşındı;
+* eklenti ayarları NVDA 2018.2 ve üzeri sürümlerde NVDA ayarlar paneline
+  eklendi;
 * Gün aramak için kullanılan menü öğesi araçlar menüsüne taşındı;
 * Eklenti NVDA 2018.2 sürümünden önceki sürümler için uyumlu hâle
   getirildi. Ayarlar iletişim kutusu için de uyumluluk sağlandı.
@@ -118,7 +128,3 @@ NVDA araçlar menüsüne iki öğe içeren haftanın günleri altmenüsü ekler:
 * İlk sürüm.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek

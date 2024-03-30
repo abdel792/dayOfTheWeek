@@ -1,8 +1,6 @@
 # Day of the week #
 
 * Автори: Abdel, Noelia.
-* завантажити [стабільну версію][1]
-* завантажити [версію в розробці][2]
 
 Цей додаток дозволяє дізнатися, який день тижня відповідає вказаній даті.
 
@@ -45,6 +43,17 @@
 
 * Цей додаток сумісний із NVDA, починаючи з версії 2019.3 та пізнішими.
 
+## Changes for 20240326.0.0
+
+* Updated compatibility for nvda-2024.1.;
+* Deleted download link from readme, the download link for future updates
+  will now only be available from the add-on store.
+
+## Changes for 20231229.0.0 ##
+
+* Added a backward compatible implementation to support speak on demand
+  mode, which will soon be available with nvda-2024.1.
+
 ## Зміни у версії 20231015.0.0 ##
 
 * Виправлено помилку, виявлену під час навігації стрілкою вгору у вікні
@@ -58,8 +67,8 @@
 
 ## Зміни у версії 20230508.0.0 і пізніших ##
 
-* Змінено номер версії, мінімально необхідну версію  NVDA і посилання на
-  завантаження, щоб відповідати правилам магазину.
+* Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
 ## Зміни у версії 19.02 ##
 
@@ -114,7 +123,3 @@
 * Перша версія.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek

@@ -1,8 +1,6 @@
 # Deň v týždni #
 
 * Autori: Abdel, Noelia.
-* Stiahnuť [stabilnú verziu][1]
-* Stiahnuť [vývojovú verziu][2]
 
 Doplnok umožňuje zistiť, ktorý deň pripadá na zadaný dátum.
 
@@ -41,6 +39,17 @@ dostupné dve položky:
 * This add-on is compatible with the versions of NVDA ranging from 2019.3
   and beyond.
 
+## Changes for 20240326.0.0
+
+* Updated compatibility for nvda-2024.1.;
+* Deleted download link from readme, the download link for future updates
+  will now only be available from the add-on store.
+
+## Changes for 20231229.0.0 ##
+
+* Added a backward compatible implementation to support speak on demand
+  mode, which will soon be available with nvda-2024.1.
+
 ## Changes for 20231015.0.0 ##
 
 * Fixed a bug detected when navigating with up arrow from the date picker in
@@ -54,7 +63,7 @@ dostupné dve položky:
 
 ## Changes for 20230508.0.0 and beyond ##
 
-* � Changed version number, minimum NVDA version and download link according
+* Changed version number, minimum NVDA version and download link according
   to store conventions/requirements.
 
 ## Verzia 19.02 ##
@@ -105,7 +114,3 @@ dostupné dve položky:
 * Prvé vydanie.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek

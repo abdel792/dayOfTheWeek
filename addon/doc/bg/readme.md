@@ -1,8 +1,6 @@
 # Ден от седмицата (Day of the week) #
 
 * Автори: Abdel, Noelia.
-* Изтегляне на [стабилна версия][1]
-* Изтегляне на [тестова версия][2]
 
 Тази добавка ви позволява да намерите деня от седмицата, съответстващ на
 посочена от вас дата.
@@ -51,6 +49,17 @@
 
 * Тази добавка е съвместима с версиите на NVDA в диапазона от 2019.3 и
   по-нови.
+
+## Changes for 20240326.0.0
+
+* Updated compatibility for nvda-2024.1.;
+* Deleted download link from readme, the download link for future updates
+  will now only be available from the add-on store.
+
+## Промени във версия 20231229.0.0 ##
+
+* Добавена е обратно съвместима имплементация за поддръжка на режим на реч
+  при поискване, което скоро ще бъде налично в NVDA 2024.1.
 
 ## Промени във версия 20231015.0.0 ##
 
@@ -124,7 +133,3 @@
 * Първоначално издание.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek

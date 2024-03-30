@@ -1,8 +1,6 @@
 # Giorno della settimana #
 
 * Autori: Abdel, Noelia.
-* scarica la [versione stabile][1]
-* scarica la [versione in sviluppo][2]
 
 Questo componente aggiuntivo permette di conoscere il giorno della settimana
 corrispondente a una data conosciuta.
@@ -51,6 +49,17 @@ settimana", contenente due elementi:
 * This add-on is compatible with the versions of NVDA ranging from 2019.3
   and beyond.
 
+## Changes for 20240326.0.0
+
+* Updated compatibility for nvda-2024.1.;
+* Deleted download link from readme, the download link for future updates
+  will now only be available from the add-on store.
+
+## Changes for 20231229.0.0 ##
+
+* Added a backward compatible implementation to support speak on demand
+  mode, which will soon be available with nvda-2024.1.
+
 ## Changes for 20231015.0.0 ##
 
 * Fixed a bug detected when navigating with up arrow from the date picker in
@@ -64,7 +73,7 @@ settimana", contenente due elementi:
 
 ## Changes for 20230508.0.0 and beyond ##
 
-* � Changed version number, minimum NVDA version and download link according
+* Changed version number, minimum NVDA version and download link according
   to store conventions/requirements.
 
 ## Novità nella versione 19.02 ##
@@ -122,7 +131,3 @@ settimana", contenente due elementi:
 * Versione iniziale.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek

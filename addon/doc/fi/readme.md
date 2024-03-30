@@ -1,8 +1,6 @@
 # Viikonpäivä #
 
 * Tekijät: Abdel, Noelia.
-* Lataa [vakaa versio][1]
-* Lataa [kehitysversio][2]
 
 Tällä lisäosalla on mahdollista selvittää valittua päivämäärää vastaava
 viikonpäivä.
@@ -47,6 +45,17 @@ kohdetta:
 * Tämä lisäosa on yhteensopiva NVDA 2019.3:n ja sitä uudempien versioiden
   kanssa.
 
+## Changes for 20240326.0.0
+
+* Updated compatibility for nvda-2024.1.;
+* Deleted download link from readme, the download link for future updates
+  will now only be available from the add-on store.
+
+## Muutokset versiossa 20231229.0.0 ##
+
+* Lisätty taaksepäin yhteensopiva toteutus pyydettäessä-puhetilalle, joka on
+  pian saatavilla NVDA 2024.1:ssä.
+
 ## Muutokset versiossa 20231015.0.0 ##
 
 * Korjattu bugi, joka ilmeni liikuttaessa ylänuolinäppäimellä
@@ -60,8 +69,8 @@ kohdetta:
 
 ## Muutokset versiossa 20230508.0.0 ja sitä uudemmissa ##
 
-*   Versionumerointi, NVDA-version vähimmäisvaatimus ja latauslinkki
-  muutettu lisäosakaupan käytäntöjen/vaatimusten mukaisiksi.
+* Versionumero, NVDA-version vähimmäisvaatimus ja latauslinkki muutettu
+  lisäosakaupan käytäntöjen/vaatimusten mukaisiksi.
 
 ## Muutokset versiossa 19.02 ##
 
@@ -116,7 +125,3 @@ kohdetta:
 * Ensimmäinen versio.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
