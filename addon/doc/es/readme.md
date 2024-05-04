@@ -46,11 +46,12 @@ que contiene 2 elementos:
 * Este complemento es compatible con las versiones de NVDA desde la 2019.3
   en adelante.
 
-## Changes for 20240326.0.0
+## Cambios para 20240326.0.0
 
-* Updated compatibility for nvda-2024.1.;
-* Deleted download link from readme, the download link for future updates
-  will now only be available from the add-on store.
+* Se actualiza la compatibilidad para NVDA 2024.1.;
+* Se elimina el enlace de descarga de la documentación, el enlace de
+  descarga de futuras actualizaciones ahora sólo estará disponible desde la
+  tienda de complementos.
 
 ## Cambios para 20231229.0.0 ##
 
