@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dayOfTheWeek 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2015-10-30 04:04+1000\n"
-"PO-Revision-Date: 2019-03-08 08:21+0200\n"
-"Last-Translator: Kostadin Kolev <k_kolev1985@mail.bg>\n"
+"PO-Revision-Date: 2024-05-03 16:49+0300\n"
+"Last-Translator: Kostadin Kolev <k.kolev1985@gmail.com>\n"
+"Language-Team: \n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
-"Language-Team: \n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. Translators: The long label of the days field.
 msgid "You can select a day with the vertical arrows"
@@ -126,7 +126,7 @@ msgstr "Позволява ви да отворите настройките н�
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Day of the week"
-msgstr "Ден от седмицата"
+msgstr "Ден от седмицата (Day of the week)"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
