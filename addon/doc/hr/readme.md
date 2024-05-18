@@ -43,32 +43,32 @@ dvije stavke:
 
 * Ovaj je dodatak kompatibilan s NVDA verzijom 2019.3 i novijim verzijama.
 
-## Changes for 20240326.0.0
+## Promjene u 20240326.0.0
 
 * Updated compatibility for nvda-2024.1.;
 * Deleted download link from readme, the download link for future updates
   will now only be available from the add-on store.
 
-## Changes for 20231229.0.0 ##
+## Promjene u 20231229.0.0 ##
 
 * Added a backward compatible implementation to support speak on demand
   mode, which will soon be available with nvda-2024.1.
 
-## Changes for 20231015.0.0 ##
+## Promjene u 20231015.0.0 ##
 
 * Fixed a bug detected when navigating with up arrow from the date picker in
   the latest versions of NVDA.
 
 ## Promjene u 20230728.0.0 ##
 
-* Programskom kodu su dodana flake8 i mypy pravila.
+* Programskom kodu su dodana flake8 i mypy pravila;
 * Namjanja podržana NVDA verzija je promijenjena na 2019.3 kako bi se
   podržale zabilješke koje su uvedene u Python 3.
 
 ## Promjene u 20230508.0.0 i novijim verzijama ##
 
-* Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
+* Promijenjen je broj verzije, minimalna NVDA verzija i poveznica za
+  preuzimanje prema konvencijama/zahtjevima trgovine.
 
 ## Promjene u 19.02 ##
 
@@ -79,7 +79,7 @@ dvije stavke:
 
 ## Promjene u 6.0 ##
 
-* Postavke dodatka su dodane u ploču NVDA postavki za NVDA verziju 2018.2 i
+* postavke dodatka su dodane u ploču NVDA postavki za NVDA verziju 2018.2 i
   noviju;
 * Stavka za traženje dana je promještena u izbornik „Alati”;
 * Dodatak je sada kompatibilan sa NVDA verzijama starijima od 2018.2, koje
