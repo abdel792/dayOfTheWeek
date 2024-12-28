@@ -43,35 +43,36 @@ contém 2 itens:
 
 ## Compatibilidade ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2019.3
-  and beyond.
+* Esse complemento é compatível com as versões do NVDA a partir da versão
+  2019.3 e além.
 
-## Changes for 20240326.0.0
+## Alterações para 20240326.0.0
 
-* Updated compatibility for nvda-2024.1.;
-* Deleted download link from readme, the download link for future updates
-  will now only be available from the add-on store.
+* Compatibilidade atualizada para nvda-2024.1;
+* Excluído o link de download do readme, o link de download para futuras
+  atualizações agora só estará disponível na loja de complementos.
 
-## Changes for 20231229.0.0 ##
+## Alterações para 2.0 ##
 
-* Added a backward compatible implementation to support speak on demand
-  mode, which will soon be available with nvda-2024.1.
+* Foi adicionada uma implementação compatível com versões anteriores para
+  oferecer suporte ao modo falar sob demanda, que em breve estará disponível
+  com o nvda-2024.1.
 
-## Changes for 20231015.0.0 ##
+## Alterações para 20231015.0.0 ##
 
-* Fixed a bug detected when navigating with up arrow from the date picker in
-  the latest versions of NVDA.
+* Foi corrigido um erro detectado ao navegar com a seta para cima do seletor
+  de datas nas versões mais recentes do NVDA.
 
-## Changes for 20230728.0.0 ##
+## Alterações para 20230728.0.0 ##
 
-* Applied the flake8 and mypy rules to the code;
-* Changed the minimum supported NVDA version to 2019.3 to support
-  annotations introduced in Python 3.
+* Aplicou as regras flake8 e mypy ao código;
+* Alterada a versão mínima suportada do NVDA para 2019.3 para suportar
+  anotações introduzidas no Python 3.
 
-## Changes for 20230508.0.0 and beyond ##
+## Alterações para 20230508.0.0 e além ##
 
-* Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
+* O número da versão, a versão mínima do NVDA e o link de download foram
+  alterados de acordo com as convenções/requisitos da loja.
 
 ## Alterações para 19.02 ##
 
