@@ -583,7 +583,8 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		if obj.value and obj.role == (
 			controlTypes.ROLE_DROPLIST if hasattr(controlTypes, "ROLE_DROPLIST") else controlTypes.Role.DROPLIST
 		) and isDatepickerDate(obj.value) and\
-		   config.conf["dayOfWeek"]["enableAnnounces"]:
+		   config.conf["dayOfWeek"]["enableAnnounces"] and\
+		   obj.parent.parent.name == _("Get the day of the week")::
 			clsList.insert(0, AnnounceFieldsLabels)
 
 	def createMenu(self):
