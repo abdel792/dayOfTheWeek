@@ -12,6 +12,7 @@
 from __future__ import unicode_literals  # To ensure coding compatibility with python 2 and 3.
 import addonHandler
 import globalPluginHandler
+import locale
 import versionInfo
 from scriptHandler import script
 import speech
@@ -162,6 +163,7 @@ class DateDialog (wx.Dialog):
 		import languageHandler
 		curNVDALang = languageHandler.getLanguage()
 		date = self.datePicker.GetValue()
+		locale.setlocale(locale.LC_TIME, '')
 		weekDay = date.Format("%A") if not curNVDALang == "ka" else georgianDays[date.Format("%w")]
 		gui.messageBox(
 			message=weekDay,
@@ -318,7 +320,6 @@ class AnnounceFieldsLabels (IAccessible):
 		super(AnnounceFieldsLabels, self).event_valueChange()
 
 	def isUS(self):
-		import locale
 		if "US" in locale.getdefaultlocale()[0]:
 			return True
 		return False
@@ -583,7 +584,8 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		if obj.value and obj.role == (
 			controlTypes.ROLE_DROPLIST if hasattr(controlTypes, "ROLE_DROPLIST") else controlTypes.Role.DROPLIST
 		) and isDatepickerDate(obj.value) and\
-		   config.conf["dayOfWeek"]["enableAnnounces"]:
+		   config.conf["dayOfWeek"]["enableAnnounces"] and \
+		   obj.parent.parent.name == _("Get the day of the week"):
 			clsList.insert(0, AnnounceFieldsLabels)
 
 	def createMenu(self):
