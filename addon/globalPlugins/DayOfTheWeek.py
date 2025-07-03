@@ -165,12 +165,15 @@ class DateDialog (wx.Dialog):
 		date = self.datePicker.GetValue()
 		locale.setlocale(locale.LC_TIME, '')
 		weekDay = date.Format("%A") if not curNVDALang == "ka" else georgianDays[date.Format("%w")]
-		gui.messageBox(
-			message=weekDay,
-			# Translators: The title of a dialog.
-			caption=_("Your day"),
-			style=wx.OK | wx.ICON_INFORMATION
-		)
+		try:
+			gui.messageBox(
+				message=weekDay,
+				# Translators: The title of a dialog.
+				caption=_("Your day"),
+				style=wx.OK | wx.ICON_INFORMATION
+			)
+		except RuntimeError:
+			pass
 
 
 class DayOfWeekSettingsDialog (SettingsDialog):
@@ -584,7 +587,7 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		if obj.value and obj.role == (
 			controlTypes.ROLE_DROPLIST if hasattr(controlTypes, "ROLE_DROPLIST") else controlTypes.Role.DROPLIST
 		) and isDatepickerDate(obj.value) and\
-		   config.conf["dayOfWeek"]["enableAnnounces"] and \
+		   config.conf["dayOfWeek"]["enableAnnounces"] and\
 		   obj.parent.parent.name == _("Get the day of the week"):
 			clsList.insert(0, AnnounceFieldsLabels)
 
