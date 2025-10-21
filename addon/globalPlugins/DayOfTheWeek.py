@@ -13,7 +13,7 @@ from __future__ import unicode_literals  # To ensure coding compatibility with p
 import addonHandler
 import globalPluginHandler
 import locale
-import versionInfo
+import buildVersion
 from scriptHandler import script
 import speech
 import re
@@ -40,7 +40,7 @@ ADDON_SUMMARY = addonHandler.getCodeAddon().manifest["summary"]
 ADDON_NAME = addonHandler.getCodeAddon().manifest["name"]
 
 # To provide support for speak on demand mode.
-speakOnDemand = {"speakOnDemand": True} if versionInfo.version_year > 2023 else {}
+speakOnDemand = {"speakOnDemand": True} if buildVersion.version_year > 2023 else {}
 
 fieldLabels = (
 	# Translators: The long label of the days field.
@@ -165,15 +165,13 @@ class DateDialog (wx.Dialog):
 		date = self.datePicker.GetValue()
 		locale.setlocale(locale.LC_TIME, '')
 		weekDay = date.Format("%A") if not curNVDALang == "ka" else georgianDays[date.Format("%w")]
-		try:
-			gui.messageBox(
-				message=weekDay,
-				# Translators: The title of a dialog.
-				caption=_("Your day"),
-				style=wx.OK | wx.ICON_INFORMATION
-			)
-		except RuntimeError:
-			pass
+		evt.Skip()
+		gui.messageBox(
+			message=weekDay,
+			# Translators: The title of a dialog.
+			caption=_("Your day"),
+			style=wx.OK | wx.ICON_INFORMATION
+		)
 
 
 class DayOfWeekSettingsDialog (SettingsDialog):
