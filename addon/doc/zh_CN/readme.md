@@ -1,104 +1,107 @@
-# 星期查询
+# Day of the week #
 
-* 作者：Abdel, Noelia。
-* 下载[稳定版][1]
-* 下载[开发版][2]
+* Authors: Abdel, Noelia.
 
-此插件可查询指定日期对应的星期信息。
+This add-on allows you to find a day of the week corresponding to a chosen date.
 
-在 NVDA 工具菜单中新增名为"星期查询"的子菜单，包含两个功能项：
+It adds a submenu in the NVDA Tools menu named "Day of the week", containing 2 items:
 
-* 第一项可查询星期，将打开包含3个控件的对话框：
+* The first one named "Search a day", opens a dialog composed of 3 controls:
 
-    * 用于选择或输入日期的组合框；
-    * "确定"按钮：显示包含星期信息的消息框；
-    * "取消"按钮：关闭对话框。
+    * A listbox to choose or type your date;
+    * An "OK" button to display a messageBox containing your day;
+    * A "Cancel" button to close the dialog.
 
-* 第二项星期查询插件设置可打开参数设置界面，用于指定是否播报日期字段标签，包含以下元素：
+* The second one named "dayOfTheWeek add-on settings" opens the parameters of the add-on to specify whether you want to report labels for date fields or not, it is composed of the following elements:
 
-    * 启用日期选择器的无障碍访问；
-    * 标签播报级别（提供3种选项）：
+    * Enable accessibility of the date selector;
+    * Level of the announces of labels, you will then have 3 choices:
 
-        * 详细（默认选择）；
-        * 简略（简短播报）；
-        * 关闭（禁用标签播报）。
+        * Long (it's the default choice);
+        * Short (for short announcements);
+        * Off (to disable labels announcements).
 
-    * 垂直移动时仅播报当前日期字段值；
-    * "确定"按钮：保存配置；
-    * "取消"按钮：取消并关闭对话框。
+    * Enable announcement of the current date field value only, when moving vertically;
+    * An "OK" button to save your configuration;
+    * A "Cancel" button to cancel and close the dialog.
 
-## 注意事项 ##
+## Notes ##
 
-* 按 Esc 键可快速关闭对话框；
-* 可在"输入手势"菜单的"星期查询"类别中为这些对话框分配快捷键；
-* 若使用 NVDA 2018.2 或更高版本，工具菜单中仅显示日期查询项，插件设置将整合至 NVDA 设置面板。
+* You can close these dialogs just by pressing Escape;
+* You can assign a shortcut to open these dialogs in "Input gestures" menu and, more precisely, in the "Day of the week" category;
+* If you use NVDA 2018.2 or higher, you'll find only one item in the tool menu for searching your day, the add-on settings will be in the NVDA settings panel.
 
-## 兼容性 ##
+## Compatibility ##
 
-* 此插件兼容 NVDA 2019.3 及更高版本。
+* This add-on is compatible with the versions of NVDA ranging from 2019.3 and beyond.
 
-## 20231015.0.0 版本变更 ##
+## Changes for 20240326.0.0
 
-* 修复了在最新版 NVDA 中使用上光标导航日期选择器时检测到的错误。
+* Updated compatibility for nvda-2024.1.;
+* Deleted download link from readme, the download link for future updates will now only be available from the add-on store.
 
-## 20230728.0.0 版本变更 ##
+## Changes for 20231229.0.0 ##
 
-* 对代码应用 flake8 和 mypy 规范；
-* 将最低支持的 NVDA 版本改为 2019.3 以支持 Python 3 的类型注解。
+* Added a backward compatible implementation to support speak on demand mode, which will soon be available with nvda-2024.1.
 
-## 20230607.0.0 版本变更 ##
+## Changes for 20231015.0.0 ##
 
-* 新增以下工作流：
- * auto-update-translations：自动从 NVDA 翻译系统更新翻译。
- * release-on-tag.yaml：推送新标签时自动构建和发布插件；
- * manual-release.yaml：手动构建和发布新版本插件。
-* 更新翻译。
+* Fixed a bug detected when navigating with up arrow from the date picker in the latest versions of NVDA.
 
-## 20230508.0.0 及后续版本变更 ##
+## Changes for 20230728.0.0 ##
 
-* 根据商店规范/要求调整版本号、最低 NVDA 版本要求和下载链接。
+* Applied the flake8 and mypy rules to the code;
+* Changed the minimum supported NVDA version to 2019.3 to support annotations introduced in Python 3.
 
-## 19.02 版本变更 ##
+## Changes for 20230607.0.0 ##
 
-* 采用 YY.MM 格式版本编号（2位数年份+小数点+2位数月份）；
-* 适配 NVDA 2019.1 起启用的新插件版本格式。
+* Added the following workflows:
+ * auto-update-translations - to automatically update translations from NVDA's translation system.
+ * release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;
+ * manual-release.yaml: to build and release new versions of the add-on manually.
+* Updated translations.
 
-## 6.0 版本变更 ##
+## Changes for version 20230508.0.0 and beyond ##
 
-* 为 NVDA 2018.2 及以上版本将插件设置整合至 NVDA 设置面板；
-* 将日期查询功能移至工具菜单；
-* 实现插件与 2018.2 之前版本（含设置面板）的向后兼容。
+* • Changed version number, minimum NVDA version and download link according to store conventions/requirements.
 
-## 5.0 版本变更 ##
+## Changes for 19.02 ##
 
-* 增加对 wxPython 4.0 和 Python 3 的兼容性；
-* 修复插件路径包含非 ASCII 字符时的错误。
+* Changed version numbering using YY.MM (The year in 2 digits, followed by a dot, followed by the month in 2 digits);
+* Added compatibility with the new versioning format of add-on, appeared since nvda 2019.1.
 
-## 4.0 版本变更 ##
+## Changes for 6.0 ##
 
-* 现可识别用户选择的所有区域日期格式；
-* 实现插件与 2016.4 之前版本（含 gui.guiHelper 模块）的向后兼容。
+* added the addon settings to the NVDA settings panel for NVDA 2018.2 and higher;
+* Moved the item  for  searching a day to the tools menu;
+* Added the backward compatibility of the add-on with the NVDA versions that preceded 2018.2, which included the settings panel.
 
-## 3.1 版本变更 ##
+## Changes for 5.0 ##
 
-* 恢复原有星期格式以支持更多语言识别；
-* 改进日期选择器无障碍访问，支持识别"日"、"月"、"年"三个字段及其对应值；
-* 新增格鲁吉亚语的星期识别支持；
-* 增加配置对话框用于启用/禁用日期选择器的无障碍访问；
-* 将插件子菜单从"工具"移至"选项"；
-* 更改插件类别为"星期查询"。
+* Added the compatibility of the add-on with wxPython 4.0 and Python3;
+* Fixed a bug with add-on paths that contain non-ASCII characters.
 
-## 2.0 版本变更 ##
+## Changes for 4.0 ##
 
-* 采用 gui.guiHelper 模块确保日期查询对话框正确显示；
-* 为插件添加 GPL 许可证；
-* 翻译星期名称以实现多语言正常运作；
-* 更改日期格式以避免编码错误。
+* The add-on is now able to recognize all the regional date formats that the user can choose;
+* Added the backward compatibility of the add-on with the NVDA versions that preceded 2016.4, which included the gui.guiHelper module.
 
-## 1.0 版本变更 ##
+## Changes for 3.1 ##
 
-* 初始版本。
+* Back to the previous format for the day of the week because it allows to recognize a greater number of languages;
+* Improved the accessibility of the date selector with recognition of the 3 fields 'Day', 'Month' and 'Year', and their respective values;
+* Added a technique for the integration of the Georgian language for the recognition of the days of the week;
+* Added a configuration dialog box to enable or disable the accessibility of the date selector;
+* Moved the add-on submenu from "Tools" to "Preferences";
+* Changed the add-on category to "Day of the week".
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
+## Changes for 2.0 ##
 
-[2]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
+* Used the gui.guiHelper module to ensure the correct appearance of the dialog asking for a date;
+* Added the GPL license to the addon;
+* Days of the week have been translated, so that the add-on works properly in the different languages;
+* Changed the day format to avoid encoding errors.
+
+## Changes for 1.0 ##
+
+* Initial version.
