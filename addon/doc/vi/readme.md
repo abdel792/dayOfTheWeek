@@ -1,107 +1,125 @@
-# Day of the week #
+# Ngày của tuần #
 
-* Authors: Abdel, Noelia.
+* Tác giả: Abdel, Noelia.
 
-This add-on allows you to find a day of the week corresponding to a chosen date.
+Add-on này cho phép bạn tìm kiếm ngày trong tuần căn cứ theo này đã chọn.
 
-It adds a submenu in the NVDA Tools menu named "Day of the week", containing 2 items:
+Nó thêm một trình đơn con trong trình đơn tùy chọn của NVDA với tên "Day of
+the week", có hai mục con:
 
-* The first one named "Search a day", opens a dialog composed of 3 controls:
+* Mục đầu tiên tên gọi "Tìm một ngày", mở một hộp thoại được thiết kế với ba
+  điều khiển:
 
-    * A listbox to choose or type your date;
-    * An "OK" button to display a messageBox containing your day;
-    * A "Cancel" button to close the dialog.
+    * Một hộp danh sách để chọn hoặc nhập ngày của bạn;
+    * Nút "OK" để hiển thị hộp thông điệp chứa ngày của bạn;
+    * Nút "Cancel" để đóng hộp thoại.
 
-* The second one named "dayOfTheWeek add-on settings" opens the parameters of the add-on to specify whether you want to report labels for date fields or not, it is composed of the following elements:
+* Mục thứ hai tên gọi "cài đặt add-on ngày trong tuần" mở các tham số của
+  add-on để quy định có thông báo nhãn cho trường ngày hay không, bao gồm
+  các thành phần sau:
 
-    * Enable accessibility of the date selector;
-    * Level of the announces of labels, you will then have 3 choices:
+    * Bật khả năng truy cập cho bộ chọn ngày;
+    * Cấp độ thông báo nhãn, bạn sẽ có ba lựa chọn:
 
-        * Long (it's the default choice);
-        * Short (for short announcements);
-        * Off (to disable labels announcements).
+        * Dài (là lựa chọn mặc định);
+        * Ngắn (cho thông báo ngắn gọn);
+        * Tắt (vô hiệu hóa thông báo).
 
-    * Enable announcement of the current date field value only, when moving vertically;
-    * An "OK" button to save your configuration;
-    * A "Cancel" button to cancel and close the dialog.
+    * Chỉ bật thông báo giá trị của trường ngày hiện tại, khi di chuyển theo
+      hàng dọc;
+    * Nút "OK" để lưu cấu hình của bạn;
+    * Nút "Cancel" để hủy và đóng hộp thoại.
 
-## Notes ##
+## Lưu ý ##
 
-* You can close these dialogs just by pressing Escape;
-* You can assign a shortcut to open these dialogs in "Input gestures" menu and, more precisely, in the "Day of the week" category;
-* If you use NVDA 2018.2 or higher, you'll find only one item in the tool menu for searching your day, the add-on settings will be in the NVDA settings panel.
+* Bạn có thể đóng các hộp thoại này bằng cách bấm Escape;
+* Bạn có thể gán thao tác để mở các hộp thoại này từ trình đơn "Quản lý các
+  thao tác" hoặc trong phân loại "Ngày của tuần";
+* Nếu dùng NVDA 2018.2 trở lên, bạn sẽ chỉ tìm thấy một mục trong trình đơn
+  công cụ cho việc tìm kiếm ngày của bạn, phần cài đặt add-on sẽ ở trong bản
+  tùy chỉnh của NVDA.
 
-## Compatibility ##
+## Tương thích ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2019.3 and beyond.
+* This add-on is compatible with the versions of NVDA ranging from 2019.3
+  and beyond.
 
 ## Changes for 20240326.0.0
 
 * Updated compatibility for nvda-2024.1.;
-* Deleted download link from readme, the download link for future updates will now only be available from the add-on store.
+* Deleted download link from readme, the download link for future updates
+  will now only be available from the add-on store.
 
 ## Changes for 20231229.0.0 ##
 
-* Added a backward compatible implementation to support speak on demand mode, which will soon be available with nvda-2024.1.
+* Added a backward compatible implementation to support speak on demand
+  mode, which will soon be available with nvda-2024.1.
 
 ## Changes for 20231015.0.0 ##
 
-* Fixed a bug detected when navigating with up arrow from the date picker in the latest versions of NVDA.
+* Fixed a bug detected when navigating with up arrow from the date picker in
+  the latest versions of NVDA.
 
 ## Changes for 20230728.0.0 ##
 
 * Applied the flake8 and mypy rules to the code;
-* Changed the minimum supported NVDA version to 2019.3 to support annotations introduced in Python 3.
+* Changed the minimum supported NVDA version to 2019.3 to support
+  annotations introduced in Python 3.
 
-## Changes for 20230607.0.0 ##
+## Changes for 20230508.0.0 and beyond ##
 
-* Added the following workflows:
- * auto-update-translations - to automatically update translations from NVDA's translation system.
- * release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;
- * manual-release.yaml: to build and release new versions of the add-on manually.
-* Updated translations.
+* Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
-## Changes for version 20230508.0.0 and beyond ##
+## Các thay đổi cho phiên bản 19.02 ##
 
-* • Changed version number, minimum NVDA version and download link according to store conventions/requirements.
+* Thay đổi cách đặt số phiên bản bằng YY.MM (hai chữ số năm, một dấu chấm,
+  hai chữ số tháng);
+* Thêm tương thích với định dạng phiên bản mới của add-on, xuất hiện từ nvda
+  2019.1.
 
-## Changes for 19.02 ##
+## Các thay đổi cho phiên bản 6.0 ##
 
-* Changed version numbering using YY.MM (The year in 2 digits, followed by a dot, followed by the month in 2 digits);
-* Added compatibility with the new versioning format of add-on, appeared since nvda 2019.1.
+* đã thêm cài đặt addon vào bản tùy chỉnh NVDA cho NVDA 2018.2 trở lên;
+* Đã chuyển tùy chọn tìm kiếm ngày vào trình đơn công cụ;
+* Đã thêm tương thích ngược của add-on với các phiên bản NVDA trước 2018.2,
+  bao gồm bản các thiết lập.
 
-## Changes for 6.0 ##
+## Các thay đổi cho phiên bản 5.0 ##
 
-* added the addon settings to the NVDA settings panel for NVDA 2018.2 and higher;
-* Moved the item  for  searching a day to the tools menu;
-* Added the backward compatibility of the add-on with the NVDA versions that preceded 2018.2, which included the settings panel.
+* Thêm tương thích của add-on với wxPython 4.0 và Python3;
+* Sửa lỗi với đường dẫn add-on có kí tự không phải mã ASCII.
 
-## Changes for 5.0 ##
+## Các thay đổi cho phiên bản 4.0 ##
 
-* Added the compatibility of the add-on with wxPython 4.0 and Python3;
-* Fixed a bug with add-on paths that contain non-ASCII characters.
+* Add-on giờ đây đã nhận dạng được tất cả các định dạng ngày theo khu vực mà
+  người dùng có thể chọn;
+* Thêm tương thích ngược của add-on với các phiên bản NVDA trước 2016.4, bao
+  gồm module gui.guiHelper.
 
-## Changes for 4.0 ##
+## Các thay đổi cho phiên bản 3.1 ##
 
-* The add-on is now able to recognize all the regional date formats that the user can choose;
-* Added the backward compatibility of the add-on with the NVDA versions that preceded 2016.4, which included the gui.guiHelper module.
+* Trở về định dạng trước của day of the week vì nó cho phép nhận dạng số
+  lượng ngôn ngữ lớn hơn;
+* Cải thiện khả năng truy cập của bộ chọn ngày với việc nhận dạng ba trường
+  'Ngày', 'Tháng' và 'Năm', và giá trị tương ứng của nó;
+* Đã thêm công nghệ để tích hợp Tiếng Gruzia vào nhận dạng ngày trong tuần;
+* Thêm hộp thoại cấu hình để  bật hoặc tắt khả năng truy cập của bộ chọn
+  ngày;
+* Chuyển trình đơn của add-on từ "Công cụ" sang "Tùy chọn";
+* Đổi phân loại của add-on thành "Day of the week".
 
-## Changes for 3.1 ##
+## Các thay đổi cho phiên bản 2.0 ##
 
-* Back to the previous format for the day of the week because it allows to recognize a greater number of languages;
-* Improved the accessibility of the date selector with recognition of the 3 fields 'Day', 'Month' and 'Year', and their respective values;
-* Added a technique for the integration of the Georgian language for the recognition of the days of the week;
-* Added a configuration dialog box to enable or disable the accessibility of the date selector;
-* Moved the add-on submenu from "Tools" to "Preferences";
-* Changed the add-on category to "Day of the week".
+* Dùng module gui.guiHelper để đảm bảo hiển thị chính xác của hộp thoại hỏi
+  ngày;
+* Thêm giấy phép GPL vào addon;
+* Đã phiên dịch ngày trong tuần, vậy nên add-on làm việc chính xác ở các
+  ngôn ngữ khác nhau;
+* Thay đổi định dạng ngày để tránh lỗi mã hóa.
 
-## Changes for 2.0 ##
+## Các thay đổi cho phiên bản 1.0 ##
 
-* Used the gui.guiHelper module to ensure the correct appearance of the dialog asking for a date;
-* Added the GPL license to the addon;
-* Days of the week have been translated, so that the add-on works properly in the different languages;
-* Changed the day format to avoid encoding errors.
+* Phiên bản đầu tiên.
 
-## Changes for 1.0 ##
-
-* Initial version.
+[[!tag dev stable]]

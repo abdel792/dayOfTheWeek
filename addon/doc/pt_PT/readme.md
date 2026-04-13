@@ -1,107 +1,131 @@
-# Day of the week #
+# Dia da semana #
 
-* Authors: Abdel, Noelia.
+* Autores: Abdel, Noelia.
 
-This add-on allows you to find a day of the week corresponding to a chosen date.
+Este extra permite que encontre um dia da semana correspondente a uma data
+escolhida.
 
-It adds a submenu in the NVDA Tools menu named "Day of the week", containing 2 items:
+Adiciona um submenu no menu Preferências do NVDA chamado "Dia da semana",
+que contém 2 itens:
 
-* The first one named "Search a day", opens a dialog composed of 3 controls:
+* O primeiro, chamado "Pesquisar um dia" abre uma caixa de diálogo composta
+  por 3 controlos:
 
-    * A listbox to choose or type your date;
-    * An "OK" button to display a messageBox containing your day;
-    * A "Cancel" button to close the dialog.
+    * Uma caixa de lista para escolher ou escrever a sua data;
+    * Um botão "OK" para mostrar uma caixa de mensagem que contém o seu dia;
+    * Um botão "Cancelar" para fechar a caixa de diálogo.
 
-* The second one named "dayOfTheWeek add-on settings" opens the parameters of the add-on to specify whether you want to report labels for date fields or not, it is composed of the following elements:
+* O segundo, denominado "Configuração do extra dayOfTheWeek" abre os
+  parâmetros do extra para indicar se deseja escrever rótulos para campos de
+  data ou não, é composto pelos seguintes elementos:
 
-    * Enable accessibility of the date selector;
-    * Level of the announces of labels, you will then have 3 choices:
+    * Activar acessibilidade do selector de datas;
+    * Nível dos anúncios dos rótulos, onde terá 3 opções:
 
-        * Long (it's the default choice);
-        * Short (for short announcements);
-        * Off (to disable labels announcements).
+        * Longo (é a escolha padrão);
+        * Curto (para indicações curtas)
+        * off (para desactivar os anúncios).
 
-    * Enable announcement of the current date field value only, when moving vertically;
-    * An "OK" button to save your configuration;
-    * A "Cancel" button to cancel and close the dialog.
+    * Activar o anúncio do valor do campo de data actual somente quando se
+      mover verticalmente;
+    * Um botão "OK" para guardar a sua configuração;
+    * Um botão "Cancelar" para cancelar e fechar a caixa de diálogo.
 
-## Notes ##
+## Notas: ##
 
-* You can close these dialogs just by pressing Escape;
-* You can assign a shortcut to open these dialogs in "Input gestures" menu and, more precisely, in the "Day of the week" category;
-* If you use NVDA 2018.2 or higher, you'll find only one item in the tool menu for searching your day, the add-on settings will be in the NVDA settings panel.
+* Pode fechar estas caixas de diálogo, pressionando escape.
+* Pode atribuir uma tecla de atalho, para abrir estas caixas de diálogo, no
+  menu "Definir comandos" e, mais precisamente, na categoria "Dia da
+  semana".
+* Se estiver a usar o NVDA 2018.2 ou superior, encontrará apenas um item no
+  menu de ferramentas para procurar o seu dia, as configurações do add-on
+  estarão no painel de configurações do NVDA.
 
-## Compatibility ##
+## Compatibilidade ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2019.3 and beyond.
+* This add-on is compatible with the versions of NVDA ranging from 2019.3
+  and beyond.
 
 ## Changes for 20240326.0.0
 
 * Updated compatibility for nvda-2024.1.;
-* Deleted download link from readme, the download link for future updates will now only be available from the add-on store.
+* Deleted download link from readme, the download link for future updates
+  will now only be available from the add-on store.
 
 ## Changes for 20231229.0.0 ##
 
-* Added a backward compatible implementation to support speak on demand mode, which will soon be available with nvda-2024.1.
+* Added a backward compatible implementation to support speak on demand
+  mode, which will soon be available with nvda-2024.1.
 
 ## Changes for 20231015.0.0 ##
 
-* Fixed a bug detected when navigating with up arrow from the date picker in the latest versions of NVDA.
+* Fixed a bug detected when navigating with up arrow from the date picker in
+  the latest versions of NVDA.
 
 ## Changes for 20230728.0.0 ##
 
 * Applied the flake8 and mypy rules to the code;
-* Changed the minimum supported NVDA version to 2019.3 to support annotations introduced in Python 3.
+* Changed the minimum supported NVDA version to 2019.3 to support
+  annotations introduced in Python 3.
 
-## Changes for 20230607.0.0 ##
+## Changes for 20230508.0.0 and beyond ##
 
-* Added the following workflows:
- * auto-update-translations - to automatically update translations from NVDA's translation system.
- * release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;
- * manual-release.yaml: to build and release new versions of the add-on manually.
-* Updated translations.
+* Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
-## Changes for version 20230508.0.0 and beyond ##
+## Alterações para 19.0.2 ##
 
-* • Changed version number, minimum NVDA version and download link according to store conventions/requirements.
+* Alterada a Numeração de versão, usando AA.MM (O ano em 2 dígitos, seguido
+  por um ponto, seguido pelo mês em 2 dígitos);
+* Acrescentada a compatibilidade com o novo formato de versão do extra, que
+  irá surgir a partir desde o nvda 2019.1.
 
-## Changes for 19.02 ##
+## Alterações para 6.0 ##
 
-* Changed version numbering using YY.MM (The year in 2 digits, followed by a dot, followed by the month in 2 digits);
-* Added compatibility with the new versioning format of add-on, appeared since nvda 2019.1.
+* adicionaram-se as configurações de addon ao painel de configurações do
+  NVDA para o NVDA 2018.2 e superior;
+* Movido o item para pesquisar um dia para o menu de ferramentas;
+* Adicionada a compatibilidade com versões anteriores do complemento com as
+  versões do NVDA anteriores a 2018.2, que incluíam o painel de
+  configurações.
 
-## Changes for 6.0 ##
+## Alterações para 5.0 ##
 
-* added the addon settings to the NVDA settings panel for NVDA 2018.2 and higher;
-* Moved the item  for  searching a day to the tools menu;
-* Added the backward compatibility of the add-on with the NVDA versions that preceded 2018.2, which included the settings panel.
+* Adicionada a compatibilidade do add-on com wxPython 4.0 e Python3;
+* Corrigido um bug com caminhos do extra, que contenham caracteres
+  não-ASCII.
 
-## Changes for 5.0 ##
+## Alterações para 4.0 ##
 
-* Added the compatibility of the add-on with wxPython 4.0 and Python3;
-* Fixed a bug with add-on paths that contain non-ASCII characters.
+* O extra agora é capaz de reconhecer todos os formatos regionais de data
+  que o utilizador possa escolher;
+* Adicionada a compatibilidade com as versões NVDA que precederam a 2016.4,
+  que incluíam o módulo gui.guiHelper.
 
-## Changes for 4.0 ##
+## Mudanças para 3.1 ##
 
-* The add-on is now able to recognize all the regional date formats that the user can choose;
-* Added the backward compatibility of the add-on with the NVDA versions that preceded 2016.4, which included the gui.guiHelper module.
+* Voltar ao formato anterior para o dia da semana porque permite reconhecer
+  um maior número de idiomas;
+* Melhorada a acessibilidade do selector de data com o reconhecimento dos 3
+  campos "Dia", "Mês" e "Ano", e seus respectivos valores;
+* Adicionada uma técnica para a integração da língua georgiana para o
+  reconhecimento dos dias da semana;
+* Adicionada uma caixa de diálogo de configuração para activar ou desactivar
+  a acessibilidade do selector de data;
+* O menu do extra foi movido de ferramentas para preferências.
+* Alterada a categoria do extra para "Dia da semana".
 
-## Changes for 3.1 ##
+## Mudanças para 2.0 ##
 
-* Back to the previous format for the day of the week because it allows to recognize a greater number of languages;
-* Improved the accessibility of the date selector with recognition of the 3 fields 'Day', 'Month' and 'Year', and their respective values;
-* Added a technique for the integration of the Georgian language for the recognition of the days of the week;
-* Added a configuration dialog box to enable or disable the accessibility of the date selector;
-* Moved the add-on submenu from "Tools" to "Preferences";
-* Changed the add-on category to "Day of the week".
+* passou a Usar-se o módulo gui.guiHelper para garantir a aparência correcta
+  da caixa de diálogo solicitando uma data;
+* Adicionada a licença GPL ao extra.
+* Os dias da semana foram traduzidos, de modo que, agora, o extra funciona
+  correctamente nos diferentes idiomas;
+* Alterado o formato do dia para evitar erros de codificação.
 
-## Changes for 2.0 ##
+## Alterações para 1.0 ##
 
-* Used the gui.guiHelper module to ensure the correct appearance of the dialog asking for a date;
-* Added the GPL license to the addon;
-* Days of the week have been translated, so that the add-on works properly in the different languages;
-* Changed the day format to avoid encoding errors.
+* Versão inicial.
 
-## Changes for 1.0 ##
-
-* Initial version.
+[[!tag dev stable]]
