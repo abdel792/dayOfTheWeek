@@ -98,8 +98,8 @@ foreach ($dir in Get-ChildItem -Path "_addonL10n/$addonId" -Directory) {
     # --- 3.1 PO FILE PROCESSING ---
     $poImported = $false
     if (Test-Path $remotePo) {
-        Write-Host "DEBUG: Checking Remote PO progress for $langShort..."
-        uv run python .github/scripts/checkTranslation.py "$addonId.po" $langShort
+        Write-Host "DEBUG: Checking Remote PO progress for $crowdinLang..."
+        uv run python .github/scripts/checkTranslation.py "$addonId.po" $crowdinLang
         if ($LASTEXITCODE -eq 0) {
             Write-Host "SUCCESS: Remote PO is valid. Importing to $localPoPath"
             New-Item -ItemType Directory -Force -Path (Split-Path $localPoPath) | Out-Null
@@ -121,7 +121,7 @@ foreach ($dir in Get-ChildItem -Path "_addonL10n/$addonId" -Directory) {
 
     if (Test-Path $remoteMd) {
         Write-Host "DEBUG: Evaluating Remote Markdown score..."
-        $res = uv run python .github/scripts/checkTranslation.py "$addonId.md" $langShort
+        $res = uv run python .github/scripts/checkTranslation.py "$addonId.md" $crowdinLang
         $scoreMd = [double]($res | Select-String "mdScore=").ToString().Split("=")[1]
     } else {
         Write-Host "DEBUG: No remote Markdown file found for this language."
@@ -129,7 +129,7 @@ foreach ($dir in Get-ChildItem -Path "_addonL10n/$addonId" -Directory) {
 
     if (Test-Path $remoteXliff) {
         Write-Host "DEBUG: Evaluating Remote XLIFF score..."
-        $res = uv run python .github/scripts/checkTranslation.py "$addonId.xliff" $langShort
+        $res = uv run python .github/scripts/checkTranslation.py "$addonId.xliff" $crowdinLang
         $scoreXliff = [double]($res | Select-String "translationRatio=").ToString().Split("=")[1]
     } else {
         Write-Host "DEBUG: No remote XLIFF file found for this language."
