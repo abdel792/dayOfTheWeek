@@ -80,12 +80,10 @@ foreach ($dir in Get-ChildItem -Path "_addonL10n/$addonId" -Directory) {
         $crowdinLang = $langCode.Replace('_', '-') 
     }
 
-    Write-Host "--- Processing Language: $langCode (Mapped to Crowdin: $crowdinLang) ---"
-
     # Map to local NVDA directory
     $localLangDir = uv run python .github/scripts/langCodes.py $langCode
     
-    Write-Host "`n--- Processing Language: $langCode (Mapped to local: $localLangDir) ---"
+    Write-Host "--- Processing Language: $langCode (Crowdin: $crowdinLang) ---" -ForegroundColor Cyan
 
     # Paths
     $remoteMd = Join-Path $dir.FullName "$addonId.md"
