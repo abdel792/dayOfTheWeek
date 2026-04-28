@@ -67,10 +67,20 @@ foreach ($dir in Get-ChildItem -Path "_addonL10n/$addonId" -Directory) {
     
     if ($langCode -eq "en") { continue }
 
-    # Identify codes
-    $crowdinLang = $languageMappings[$langCode]
-    if (-not $crowdinLang) { $crowdinLang = $langCode }
-    $langShort = $langCode.Split('-')[0].Split('_')[0]
+    # --- Identify codes
+    $crowdinLang = $null
+    
+    # Use the ."variable" syntax to correctly read the PSCustomObject from JSON
+    if ($languageMappings.PSObject.Properties.Name -contains $langCode) {
+        $crowdinLang = $languageMappings."$langCode"
+    }
+
+    # Fallback: If no mapping is found, replace underscores with dashes for Crowdin compatibility
+    if (-not $crowdinLang) { 
+        $crowdinLang = $langCode.Replace('_', '-') 
+    }
+
+    Write-Host "--- Processing Language: $langCode (Mapped to Crowdin: $crowdinLang) ---"
 
     # Map to local NVDA directory
     $localLangDir = uv run python .github/scripts/langCodes.py $langCode
