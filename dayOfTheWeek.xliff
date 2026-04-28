@@ -1,0 +1,725 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en">
+<file id="readme.md" original="https://raw.githubusercontent.com/abdel792/dayOfTheWeek/0722be203837f5e5130331043bed50422e5c2dd7/readme.md">
+<skeleton>
+# $(ID:e8b44740-1d7e-4f78-ba39-b5d41c1111d5)
+
+* $(ID:6707d00b-77f8-432f-b87b-760772500ff4)
+
+$(ID:ccffd147-9a12-467b-ad33-7f98c339dbd5)
+
+$(ID:32bf4e4f-08ed-4f43-b50f-1d2527951e06)
+
+* $(ID:2dc425a6-be4b-4930-82e9-05dca78965c1)
+
+    * $(ID:7ae4b5e0-51ee-4cb1-9b39-c456ba0b9d5a)
+    * $(ID:bc4fad54-f2e6-42ec-a502-3ed69ee61245)
+    * $(ID:16fbddfd-79f9-4f1a-831a-3f86f86c3829)
+
+* $(ID:678ad63a-1a47-4150-aead-2aa100e53881)
+
+    * $(ID:c14dddd1-b927-46b0-a1a0-b9cd47264559)
+    * $(ID:dcd16c89-1d99-4f74-8445-b79a471fab30)
+
+        * $(ID:fe4edf45-173b-4627-9ca5-9d0094924953)
+        * $(ID:1ec20dd3-b9f4-434f-b756-323dbebdd22a)
+        * $(ID:840f5192-5242-40f8-8ad7-31a8c46bee87)
+
+    * $(ID:b16399c5-0324-4a0e-98dd-83eca64375ab)
+    * $(ID:020fe712-5144-44c8-9c29-ca842e324c36)
+    * $(ID:4e71dcd5-855f-41d2-b67b-62330ab40551)
+
+## $(ID:213ca5f3-c3c6-4459-ad56-9de24af3a4c3)
+
+* $(ID:e2d8f5be-eab5-42a7-878c-37732ed45060)
+* $(ID:07371d37-6fef-4945-9da7-ac3b15af69c8)
+* $(ID:4166ff38-6e11-4b15-a272-f267d54981be)
+
+## $(ID:9dcc3463-47bb-41a3-bda4-cdc3ce68a86f)
+
+* $(ID:d9738eb9-b140-4234-98a5-ff74f742936c)
+
+## $(ID:42a564d9-9c5f-488a-9a21-287310579025)
+
+* $(ID:62c69398-3946-44e6-846c-09211de96372)
+* $(ID:94b9ba69-9c1b-4c41-8123-b69100321f22)
+
+## $(ID:4d9ed136-ce7c-4054-99da-07c9c95a83c3)
+
+* $(ID:e98a6bff-26f2-46aa-ab68-f22f3fc09367)
+
+## $(ID:aef3926e-752e-4147-9006-9975caec45ae)
+
+* $(ID:3d77f3c3-9fa7-4f8b-89d2-edb0cfb02697)
+
+## $(ID:017777d6-1c05-4340-80a5-51c98f4cf170)
+
+* $(ID:4e79afaf-480e-47dd-9650-89480f93c10a)
+* $(ID:8ca5515d-614b-439a-9ffe-bb719c457ae4)
+
+## $(ID:cc85543a-4f3e-4bc3-8ab7-1d156a1d36e2)
+
+* $(ID:f299030b-b708-4c73-bd44-9bea4226a21f)
+ * $(ID:6afdc940-b22d-4df8-ad97-650824a92263)
+ * $(ID:a2981ebd-fbcc-492c-bd97-b528f8359866)
+ * $(ID:00dacac6-4a6d-4ee6-9fad-0fb38e58129e)
+* $(ID:024ede3d-829f-411e-bb37-a5b375056405)
+
+## $(ID:5bd22fb0-c574-437b-9182-59464f94666b)
+
+* $(ID:fdbdf227-85d0-4d80-9938-fc3889f5f955)
+
+## $(ID:80307f5f-b3bb-47c9-9404-0817ba2871df)
+
+* $(ID:44ce895e-a530-4709-987c-90070897d16a)
+* $(ID:b64c9837-ca10-444b-932e-e4afcea96587)
+
+## $(ID:67994f44-6ad7-4743-a8d4-5daa698821df)
+
+* $(ID:2a7bcdb7-2070-42c2-b80f-329d9e9a9cd9)
+* $(ID:4d4134f8-fa18-4094-944b-4cbf41f2e8dc)
+* $(ID:e0d244d0-a5ce-4374-84b5-bf2bad48c0bb)
+
+## $(ID:ae44cc15-4bb3-4fee-a2b9-66353165636c)
+
+* $(ID:e4df9014-11e2-4d00-82d2-565a93994001)
+* $(ID:1129c43f-d20e-4cb8-ab20-2472b62c4b73)
+
+## $(ID:eec88a2f-b559-42cd-ba97-f8ba53e888b9)
+
+* $(ID:d7318e55-f48b-449e-92c6-4bc54388a130)
+* $(ID:e065ee76-b26b-491d-8ade-cbf1497f4edc)
+
+## $(ID:edb2aab4-fd2b-403c-ad35-386be9b8cd14)
+
+* $(ID:1a890d53-e762-4318-a803-55f2792195c7)
+* $(ID:a5cc02ca-f813-4615-899d-e283d54a88dc)
+* $(ID:ae8dc7a0-b7ba-4d36-9bda-15fb15205351)
+* $(ID:96d63875-127f-45f9-994f-f71fa976e04f)
+* $(ID:75f1f33a-7479-4f7e-9ff9-acaed69ec446)
+* $(ID:629e7d78-7d14-437e-ae90-a561023fe3db)
+
+## $(ID:a83a29b0-0cd9-4a24-88d8-ed250fcdf4e3)
+
+* $(ID:d0fa5c11-3037-400e-813f-6999e2cc7928)
+* $(ID:fb6d272d-c1df-47db-96a7-114641903d9a)
+* $(ID:73ab8be5-c88f-4101-8542-fa9064223071)
+* $(ID:b5555d94-93b7-4397-b587-90ffa828450b)
+
+## $(ID:41444730-26f2-43c6-9afc-1ec1eb0ea480)
+
+* $(ID:94df48e4-59bc-418a-9177-d0e71e233b49)
+
+</skeleton>
+<unit id="e8b44740-1d7e-4f78-ba39-b5d41c1111d5">
+<notes>
+<note appliesTo="source">line: 2</note>
+<note appliesTo="source">prefix: # </note>
+</notes>
+<segment>
+<source>Day of the week #</source>
+</segment>
+</unit>
+<unit id="6707d00b-77f8-432f-b87b-760772500ff4">
+<notes>
+<note appliesTo="source">line: 4</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Authors: Abdel, Noelia.</source>
+</segment>
+</unit>
+<unit id="ccffd147-9a12-467b-ad33-7f98c339dbd5">
+<notes>
+<note appliesTo="source">line: 6</note>
+</notes>
+<segment>
+<source>This add-on allows you to find a day of the week corresponding to a chosen date.</source>
+</segment>
+</unit>
+<unit id="32bf4e4f-08ed-4f43-b50f-1d2527951e06">
+<notes>
+<note appliesTo="source">line: 8</note>
+</notes>
+<segment>
+<source>It adds a submenu in the NVDA Tools menu named "Day of the week", containing 2 items:</source>
+</segment>
+</unit>
+<unit id="2dc425a6-be4b-4930-82e9-05dca78965c1">
+<notes>
+<note appliesTo="source">line: 10</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>The first one named "Search a day", opens a dialog composed of 3 controls:</source>
+</segment>
+</unit>
+<unit id="7ae4b5e0-51ee-4cb1-9b39-c456ba0b9d5a">
+<notes>
+<note appliesTo="source">line: 12</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>A listbox to choose or type your date;</source>
+</segment>
+</unit>
+<unit id="bc4fad54-f2e6-42ec-a502-3ed69ee61245">
+<notes>
+<note appliesTo="source">line: 13</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>An "OK" button to display a messageBox containing your day;</source>
+</segment>
+</unit>
+<unit id="16fbddfd-79f9-4f1a-831a-3f86f86c3829">
+<notes>
+<note appliesTo="source">line: 14</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>A "Cancel" button to close the dialog.</source>
+</segment>
+</unit>
+<unit id="678ad63a-1a47-4150-aead-2aa100e53881">
+<notes>
+<note appliesTo="source">line: 16</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>The second one named "dayOfTheWeek add-on settings" opens the parameters of the add-on to specify whether you want to report labels for date fields or not, it is composed of the following elements:</source>
+</segment>
+</unit>
+<unit id="c14dddd1-b927-46b0-a1a0-b9cd47264559">
+<notes>
+<note appliesTo="source">line: 18</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Enable accessibility of the date selector;</source>
+</segment>
+</unit>
+<unit id="dcd16c89-1d99-4f74-8445-b79a471fab30">
+<notes>
+<note appliesTo="source">line: 19</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Level of the announces of labels, you will then have 3 choices:</source>
+</segment>
+</unit>
+<unit id="fe4edf45-173b-4627-9ca5-9d0094924953">
+<notes>
+<note appliesTo="source">line: 21</note>
+<note appliesTo="source">prefix:         * </note>
+</notes>
+<segment>
+<source>Long (it's the default choice);</source>
+</segment>
+</unit>
+<unit id="1ec20dd3-b9f4-434f-b756-323dbebdd22a">
+<notes>
+<note appliesTo="source">line: 22</note>
+<note appliesTo="source">prefix:         * </note>
+</notes>
+<segment>
+<source>Short (for short announcements);</source>
+</segment>
+</unit>
+<unit id="840f5192-5242-40f8-8ad7-31a8c46bee87">
+<notes>
+<note appliesTo="source">line: 23</note>
+<note appliesTo="source">prefix:         * </note>
+</notes>
+<segment>
+<source>Off (to disable labels announcements).</source>
+</segment>
+</unit>
+<unit id="b16399c5-0324-4a0e-98dd-83eca64375ab">
+<notes>
+<note appliesTo="source">line: 25</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Enable announcement of the current date field value only, when moving vertically;</source>
+</segment>
+</unit>
+<unit id="020fe712-5144-44c8-9c29-ca842e324c36">
+<notes>
+<note appliesTo="source">line: 26</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>An "OK" button to save your configuration;</source>
+</segment>
+</unit>
+<unit id="4e71dcd5-855f-41d2-b67b-62330ab40551">
+<notes>
+<note appliesTo="source">line: 27</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>A "Cancel" button to cancel and close the dialog.</source>
+</segment>
+</unit>
+<unit id="213ca5f3-c3c6-4459-ad56-9de24af3a4c3">
+<notes>
+<note appliesTo="source">line: 29</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Notes ##</source>
+</segment>
+</unit>
+<unit id="e2d8f5be-eab5-42a7-878c-37732ed45060">
+<notes>
+<note appliesTo="source">line: 31</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>You can close these dialogs just by pressing Escape;</source>
+</segment>
+</unit>
+<unit id="07371d37-6fef-4945-9da7-ac3b15af69c8">
+<notes>
+<note appliesTo="source">line: 32</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>You can assign a shortcut to open these dialogs in "Input gestures" menu and, more precisely, in the "Day of the week" category;</source>
+</segment>
+</unit>
+<unit id="4166ff38-6e11-4b15-a272-f267d54981be">
+<notes>
+<note appliesTo="source">line: 33</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>If you use NVDA 2018.2 or higher, you'll find only one item in the tool menu for searching your day, the add-on settings will be in the NVDA settings panel.</source>
+</segment>
+</unit>
+<unit id="9dcc3463-47bb-41a3-bda4-cdc3ce68a86f">
+<notes>
+<note appliesTo="source">line: 35</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Compatibility ##</source>
+</segment>
+</unit>
+<unit id="d9738eb9-b140-4234-98a5-ff74f742936c">
+<notes>
+<note appliesTo="source">line: 37</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>This add-on is compatible with the versions of NVDA ranging from 2019.3 and beyond.</source>
+</segment>
+</unit>
+<unit id="42a564d9-9c5f-488a-9a21-287310579025">
+<notes>
+<note appliesTo="source">line: 39</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 20240326.0.0</source>
+</segment>
+</unit>
+<unit id="62c69398-3946-44e6-846c-09211de96372">
+<notes>
+<note appliesTo="source">line: 41</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Updated compatibility for nvda-2024.1.;</source>
+</segment>
+</unit>
+<unit id="94b9ba69-9c1b-4c41-8123-b69100321f22">
+<notes>
+<note appliesTo="source">line: 42</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Deleted download link from readme, the download link for future updates will now only be available from the add-on store.</source>
+</segment>
+</unit>
+<unit id="4d9ed136-ce7c-4054-99da-07c9c95a83c3">
+<notes>
+<note appliesTo="source">line: 44</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 20231229.0.0 ##</source>
+</segment>
+</unit>
+<unit id="e98a6bff-26f2-46aa-ab68-f22f3fc09367">
+<notes>
+<note appliesTo="source">line: 46</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added a backward compatible implementation to support speak on demand mode, which will soon be available with nvda-2024.1.</source>
+</segment>
+</unit>
+<unit id="aef3926e-752e-4147-9006-9975caec45ae">
+<notes>
+<note appliesTo="source">line: 48</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 20231015.0.0 ##</source>
+</segment>
+</unit>
+<unit id="3d77f3c3-9fa7-4f8b-89d2-edb0cfb02697">
+<notes>
+<note appliesTo="source">line: 50</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Fixed a bug detected when navigating with up arrow from the date picker in the latest versions of NVDA.</source>
+</segment>
+</unit>
+<unit id="017777d6-1c05-4340-80a5-51c98f4cf170">
+<notes>
+<note appliesTo="source">line: 52</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 20230728.0.0 ##</source>
+</segment>
+</unit>
+<unit id="4e79afaf-480e-47dd-9650-89480f93c10a">
+<notes>
+<note appliesTo="source">line: 54</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Applied the flake8 and mypy rules to the code;</source>
+</segment>
+</unit>
+<unit id="8ca5515d-614b-439a-9ffe-bb719c457ae4">
+<notes>
+<note appliesTo="source">line: 55</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Changed the minimum supported NVDA version to 2019.3 to support annotations introduced in Python 3.</source>
+</segment>
+</unit>
+<unit id="cc85543a-4f3e-4bc3-8ab7-1d156a1d36e2">
+<notes>
+<note appliesTo="source">line: 57</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 20230607.0.0 ##</source>
+</segment>
+</unit>
+<unit id="f299030b-b708-4c73-bd44-9bea4226a21f">
+<notes>
+<note appliesTo="source">line: 59</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added the following workflows:</source>
+</segment>
+</unit>
+<unit id="6afdc940-b22d-4df8-ad97-650824a92263">
+<notes>
+<note appliesTo="source">line: 60</note>
+<note appliesTo="source">prefix:  * </note>
+</notes>
+<segment>
+<source>auto-update-translations - to automatically update translations from NVDA's translation system.</source>
+</segment>
+</unit>
+<unit id="a2981ebd-fbcc-492c-bd97-b528f8359866">
+<notes>
+<note appliesTo="source">line: 61</note>
+<note appliesTo="source">prefix:  * </note>
+</notes>
+<segment>
+<source>release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;</source>
+</segment>
+</unit>
+<unit id="00dacac6-4a6d-4ee6-9fad-0fb38e58129e">
+<notes>
+<note appliesTo="source">line: 62</note>
+<note appliesTo="source">prefix:  * </note>
+</notes>
+<segment>
+<source>manual-release.yaml: to build and release new versions of the add-on manually.</source>
+</segment>
+</unit>
+<unit id="024ede3d-829f-411e-bb37-a5b375056405">
+<notes>
+<note appliesTo="source">line: 63</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Updated translations.</source>
+</segment>
+</unit>
+<unit id="5bd22fb0-c574-437b-9182-59464f94666b">
+<notes>
+<note appliesTo="source">line: 65</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for version 20230508.0.0 and beyond ##</source>
+</segment>
+</unit>
+<unit id="fdbdf227-85d0-4d80-9938-fc3889f5f955">
+<notes>
+<note appliesTo="source">line: 67</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>• Changed version number, minimum NVDA version and download link according to store conventions/requirements.</source>
+</segment>
+</unit>
+<unit id="80307f5f-b3bb-47c9-9404-0817ba2871df">
+<notes>
+<note appliesTo="source">line: 69</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 19.02 ##</source>
+</segment>
+</unit>
+<unit id="44ce895e-a530-4709-987c-90070897d16a">
+<notes>
+<note appliesTo="source">line: 71</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Changed version numbering using YY.MM (The year in 2 digits, followed by a dot, followed by the month in 2 digits);</source>
+</segment>
+</unit>
+<unit id="b64c9837-ca10-444b-932e-e4afcea96587">
+<notes>
+<note appliesTo="source">line: 72</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added compatibility with the new versioning format of add-on, appeared since nvda 2019.1.</source>
+</segment>
+</unit>
+<unit id="67994f44-6ad7-4743-a8d4-5daa698821df">
+<notes>
+<note appliesTo="source">line: 74</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 6.0 ##</source>
+</segment>
+</unit>
+<unit id="2a7bcdb7-2070-42c2-b80f-329d9e9a9cd9">
+<notes>
+<note appliesTo="source">line: 76</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>added the addon settings to the NVDA settings panel for NVDA 2018.2 and higher;</source>
+</segment>
+</unit>
+<unit id="4d4134f8-fa18-4094-944b-4cbf41f2e8dc">
+<notes>
+<note appliesTo="source">line: 77</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Moved the item  for  searching a day to the tools menu;</source>
+</segment>
+</unit>
+<unit id="e0d244d0-a5ce-4374-84b5-bf2bad48c0bb">
+<notes>
+<note appliesTo="source">line: 78</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added the backward compatibility of the add-on with the NVDA versions that preceded 2018.2, which included the settings panel.</source>
+</segment>
+</unit>
+<unit id="ae44cc15-4bb3-4fee-a2b9-66353165636c">
+<notes>
+<note appliesTo="source">line: 80</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 5.0 ##</source>
+</segment>
+</unit>
+<unit id="e4df9014-11e2-4d00-82d2-565a93994001">
+<notes>
+<note appliesTo="source">line: 82</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added the compatibility of the add-on with wxPython 4.0 and Python3;</source>
+</segment>
+</unit>
+<unit id="1129c43f-d20e-4cb8-ab20-2472b62c4b73">
+<notes>
+<note appliesTo="source">line: 83</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Fixed a bug with add-on paths that contain non-ASCII characters.</source>
+</segment>
+</unit>
+<unit id="eec88a2f-b559-42cd-ba97-f8ba53e888b9">
+<notes>
+<note appliesTo="source">line: 85</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 4.0 ##</source>
+</segment>
+</unit>
+<unit id="d7318e55-f48b-449e-92c6-4bc54388a130">
+<notes>
+<note appliesTo="source">line: 87</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>The add-on is now able to recognize all the regional date formats that the user can choose;</source>
+</segment>
+</unit>
+<unit id="e065ee76-b26b-491d-8ade-cbf1497f4edc">
+<notes>
+<note appliesTo="source">line: 88</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added the backward compatibility of the add-on with the NVDA versions that preceded 2016.4, which included the gui.guiHelper module.</source>
+</segment>
+</unit>
+<unit id="edb2aab4-fd2b-403c-ad35-386be9b8cd14">
+<notes>
+<note appliesTo="source">line: 90</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 3.1 ##</source>
+</segment>
+</unit>
+<unit id="1a890d53-e762-4318-a803-55f2792195c7">
+<notes>
+<note appliesTo="source">line: 92</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Back to the previous format for the day of the week because it allows to recognize a greater number of languages;</source>
+</segment>
+</unit>
+<unit id="a5cc02ca-f813-4615-899d-e283d54a88dc">
+<notes>
+<note appliesTo="source">line: 93</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Improved the accessibility of the date selector with recognition of the 3 fields 'Day', 'Month' and 'Year', and their respective values;</source>
+</segment>
+</unit>
+<unit id="ae8dc7a0-b7ba-4d36-9bda-15fb15205351">
+<notes>
+<note appliesTo="source">line: 94</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added a technique for the integration of the Georgian language for the recognition of the days of the week;</source>
+</segment>
+</unit>
+<unit id="96d63875-127f-45f9-994f-f71fa976e04f">
+<notes>
+<note appliesTo="source">line: 95</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added a configuration dialog box to enable or disable the accessibility of the date selector;</source>
+</segment>
+</unit>
+<unit id="75f1f33a-7479-4f7e-9ff9-acaed69ec446">
+<notes>
+<note appliesTo="source">line: 96</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Moved the add-on submenu from "Tools" to "Preferences";</source>
+</segment>
+</unit>
+<unit id="629e7d78-7d14-437e-ae90-a561023fe3db">
+<notes>
+<note appliesTo="source">line: 97</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Changed the add-on category to "Day of the week".</source>
+</segment>
+</unit>
+<unit id="a83a29b0-0cd9-4a24-88d8-ed250fcdf4e3">
+<notes>
+<note appliesTo="source">line: 99</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 2.0 ##</source>
+</segment>
+</unit>
+<unit id="d0fa5c11-3037-400e-813f-6999e2cc7928">
+<notes>
+<note appliesTo="source">line: 101</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Used the gui.guiHelper module to ensure the correct appearance of the dialog asking for a date;</source>
+</segment>
+</unit>
+<unit id="fb6d272d-c1df-47db-96a7-114641903d9a">
+<notes>
+<note appliesTo="source">line: 102</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added the GPL license to the addon;</source>
+</segment>
+</unit>
+<unit id="73ab8be5-c88f-4101-8542-fa9064223071">
+<notes>
+<note appliesTo="source">line: 103</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Days of the week have been translated, so that the add-on works properly in the different languages;</source>
+</segment>
+</unit>
+<unit id="b5555d94-93b7-4397-b587-90ffa828450b">
+<notes>
+<note appliesTo="source">line: 104</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Changed the day format to avoid encoding errors.</source>
+</segment>
+</unit>
+<unit id="41444730-26f2-43c6-9afc-1ec1eb0ea480">
+<notes>
+<note appliesTo="source">line: 106</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 1.0 ##</source>
+</segment>
+</unit>
+<unit id="94df48e4-59bc-418a-9177-d0e71e233b49">
+<notes>
+<note appliesTo="source">line: 108</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Initial version.</source>
+</segment>
+</unit>
+</file>
+</xliff>
