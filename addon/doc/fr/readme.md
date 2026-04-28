@@ -1,6 +1,6 @@
-# Day of the week #
+# Day of the week
 
-* Auteurs : Abdel, Noelia.
+- Auteurs : Abdel, Noelia.
 
 Cette extension vous permet de trouver un jour de la semaine correspondant à
 une date choisie.
@@ -8,126 +8,135 @@ une date choisie.
 Il ajoute un sous-menu dans le menu Outils NVDA nommé "Jour de la semaine",
 contenant 2 éléments :
 
-* Le premier nommé "Trouver un jour", ouvre une boîte de dialogue composée
+- Le premier nommé "Trouver un jour", ouvre une boîte de dialogue composée
   de 3 contrôles :
 
-    * Une zone de liste pour choisir ou tapez votre date ;
-    * Un bouton "OK" pour afficher une boîte de messages contenant votre
-      jour ;
-    * Un bouton "Annuler" pour fermer la boîte de dialogue.
+  - Une zone de liste pour choisir ou tapez votre date ;
+  - Un bouton "OK" pour afficher une boîte de messages contenant votre
+    jour ;
+  - Un bouton "Annuler" pour fermer la boîte de dialogue.
 
-* Le deuxième nommé "Paramètres de l'extension dayOfTheWeek" ouvre les
+- Le deuxième nommé "Paramètres de l'extension dayOfTheWeek" ouvre les
   paramètres de l'extension pour spécifier si vous souhaitez annoncer les
   étiquettes pour les champs de date ou non, il se compose des éléments
   suivants :
 
-    * Activer l'accessibilité du sélecteur de date ;
-    * Niveau des annonces d'étiquettes, vous aurez alors 3 choix :
+  - Activer l'accessibilité du sélecteur de date ;
 
-        * Long (c'est le choix par défaut) ;
-        * Court (pour les annonces courtes) ;
-        * Désactiver (désactiver les annonces d'étiquettes).
+  - Niveau des annonces d'étiquettes, vous aurez alors 3 choix :
 
-    * Activer les annonces de la valeur actuelle du champ de la date
-      uniquement lorsque vous vous déplacez verticalement ;
-    * Un bouton "OK" pour sauvegarder votre configuration ;
-    * Un bouton "Annuler" pour annuler et fermer la boîte de dialogue.
+    - Long (c'est le choix par défaut) ;
+    - Court (pour les annonces courtes) ;
+    - Désactiver (désactiver les annonces d'étiquettes).
 
-## Notes ##
+  - Activer les annonces de la valeur actuelle du champ de la date
+    uniquement lorsque vous vous déplacez verticalement ;
 
-* Vous pouvez fermer cette boîte de dialogue en appuyant sur Échap ;
-* Vous pouvez assigner un raccourci pour ouvrir la boîte de dialogue dans le
+  - Un bouton "OK" pour sauvegarder votre configuration ;
+
+  - Un bouton "Annuler" pour annuler et fermer la boîte de dialogue.
+
+## Notes
+
+- Vous pouvez fermer cette boîte de dialogue en appuyant sur Échap ;
+- Vous pouvez assigner un raccourci pour ouvrir la boîte de dialogue dans le
   menu "Gestes de Commandes" et, plus précisément, dans la catégorie "Jour
   de la semaine" ;
-* Si vous utilisez NVDA 2018.2 ou une version ultérieure, vous ne trouverez
+- Si vous utilisez NVDA 2018.2 ou une version ultérieure, vous ne trouverez
   qu'un seul élément dans le menu Outil pour rechercher votre jour, les
   paramètres de l'extension se trouvent dans le panneau Paramètres NVDA.
 
-## Compatibilité ##
+## Compatibilité
 
-* Cette extension est compatible avec les versions de NVDA allant de 2019.3
+- Cette extension est compatible avec les versions de NVDA allant de 2019.3
   et au-delà.
 
 ## Changements pour la version 20240326.0.0
 
-* Compatibilité mise à jour pour NVDA-2024.1. ;
-* Lien de téléchargement supprimé du fichier readme, le lien de
+- Compatibilité mise à jour pour NVDA-2024.1. ;
+- Lien de téléchargement supprimé du fichier readme, le lien de
   téléchargement pour les futures mises à jour ne sera désormais disponible
   que dans l'add-on store.
 
-## Changements pour la version 20231229.0.0 ##
+## Changements pour la version 20231229.0.0
 
-* Ajout d'une implémentation rétrocompatible pour prendre en charge le mode
+- Ajout d'une implémentation rétrocompatible pour prendre en charge le mode
   Parler à la demande, qui sera bientôt disponible avec nvda-2024.1.
 
-## Changements pour la version 20231015.0.0 ##
+## Changements pour la version 20231015.0.0
 
-* Correction d'un bug détecté lors de la navigation avec la flèche haut
+- Correction d'un bug détecté lors de la navigation avec la flèche haut
   depuis le sélecteur de date dans les dernières versions de NVDA.
 
-## Changements pour la version 20230728.0.0 ##
+## Changements pour la version 20230728.0.0
 
-* Appliqué les règles flake8 et mypy au code ;
-* Modifiée la version minimale de NVDA prise en charge vers la 2019.3 pour
+- Appliqué les règles flake8 et mypy au code ;
+- Modifiée la version minimale de NVDA prise en charge vers la 2019.3 pour
   prendre en charge les annotations introduites dans Python 3.
 
-## Changements pour la version 20230508.0.0 et au-delà ##
+## Changements pour la version 20230508.0.0 et au-delà
 
-* Numéro de version modifiée, version minimale NVDA et lien de
+- Added the following workflows:
+- auto-update-translations - to automatically update translations from NVDA's translation system.
+- release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;
+- manual-release.yaml: to build and release new versions of the add-on manually.
+- Updated translations.
+
+## Changements pour la version 19.02
+
+- Numéro de version modifiée, version minimale NVDA et lien de
   téléchargement en fonction des conventions / exigences de la store.
 
-## Changements pour la version 19.02 ##
+## Changes for 19.02
 
-* Modification de la numérotation des versions en utilisant YY.MM (L'année
+- Modification de la numérotation des versions en utilisant YY.MM (L'année
   en 2 chiffres, suivie d'un point, suivie du mois en 2 chiffres);
-* Ajout de la compatibilité avec le nouveau format de gestion des versions
+- Ajout de la compatibilité avec le nouveau format de gestion des versions
   des extensions, apparu depuis nvda 2019.1.
 
-## Changements pour la version 6.0 ##
+## Changements pour la version 5.0
 
-* ajout des paramètres de l'extension au panneau Paramètres NVDA pour NVDA
+- ajout des paramètres de l'extension au panneau Paramètres NVDA pour NVDA
   2018.2 et les versions ultérieures;
-* Déplacement de l'élément pour rechercher un jour dans le menu Outils;
-* Ajout de la rétrocompatibilité de l'extension avec les versions NVDA
+- Déplacement de l'élément pour rechercher un jour dans le menu Outils;
+- Ajout de la rétrocompatibilité de l'extension avec les versions NVDA
   antérieures à la version 2018.2, qui incluait le panneau Paramètres.
 
-## Changements pour la version 5.0 ##
+## Changements pour la version 4.0
 
-* Ajout de la compatibilité de l'extension avec wxPython 4.0 et Python3 ;
-* Correction d'un bug avec les chemins d'extension contenant des caractères
+- Ajout de la compatibilité de l'extension avec wxPython 4.0 et Python3 ;
+- Correction d'un bug avec les chemins d'extension contenant des caractères
   non-ASCII.
 
-## Changements pour la version 4.0 ##
+## Changements pour la version 3.1
 
-* L'extension est maintenant en mesure de reconnaître tous les formats de
+- L'extension est maintenant en mesure de reconnaître tous les formats de
   date régional que l'utilisateur peut choisir ;
-* Ajout de la rétrocompatibilité de l'extension avec les versions NVDA
+- Ajout de la rétrocompatibilité de l'extension avec les versions NVDA
   antérieures à la version 2016.4, qui incluait le module gui.guiHelper.
 
-## Changements pour la version 3.1 ##
+## Changements pour la version 2.0
 
-* Retour au format précédent pour le jour de la semaine car il permet de
+- Retour au format précédent pour le jour de la semaine car il permet de
   reconnaître un plus grand nombre de langues ;
-* Amélioré l'accessibilité du sélecteur de date avec la reconnaissance des 3
+- Amélioré l'accessibilité du sélecteur de date avec la reconnaissance des 3
   champs "Jour", "Mois" et "Année", et leurs valeurs respectives ;
-* Ajout d'une technique pour l'intégration de la langue Géorgienne pour la
+- Ajout d'une technique pour l'intégration de la langue Géorgienne pour la
   reconnaissance des jours de la semaine ;
-* Ajout d'une boîte de dialogue de configuration pour activer ou désactiver
+- Ajout d'une boîte de dialogue de configuration pour activer ou désactiver
   l'accessibilité du sélecteur de date ;
-* Déplacé le sous-menu de l'extension de "Outils" à "Préférences" ;
-* Changé la catégorie de l'extension à "Jour de la semaine".
+- Déplacé le sous-menu de l'extension de "Outils" à "Préférences" ;
+- Changé la catégorie de l'extension à "Jour de la semaine".
 
-## Changements pour la version 2.0 ##
+## Changements pour la version 1.0
 
-* Utilisé le module gui.guiHelper pour assurer la bonne apparence de la
+- Utilisé le module gui.guiHelper pour assurer la bonne apparence de la
   boîte de dialogue demandant une date ;
-* Ajout de la licence GPL pour l'extension;
-* Les jours de la semaine ont été traduits, de sorte que l'extension
+- Ajout de la licence GPL pour l'extension;
+- Les jours de la semaine ont été traduits, de sorte que l'extension
   fonctionne correctement dans les différentes langues ;
-* Changé le format de jour pour éviter les erreurs d'encodage.
+- Changé le format de jour pour éviter les erreurs d'encodage.
 
-## Changements pour la version 1.0 ##
+## Changes for 1.0
 
-* Première version.
-
-[[!tag dev stable]]
+- Première version.

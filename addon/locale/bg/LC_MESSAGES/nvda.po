@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-04-06 03:59+0000\n"
-"PO-Revision-Date: 2026-04-22 21:03\n"
+"POT-Creation-Date: 2026-04-28 18:26+0000\n"
+"PO-Revision-Date: 2026-04-28 18:29\n"
 "Last-Translator: \n"
 "Language-Team: Bulgarian\n"
 "Language: bg_BG\n"
@@ -72,7 +72,7 @@ msgstr "Конфигуриране на добавката {0}"
 #. Add-on summary/title, usually the user visible name of the add-on
 #. Translators: Summary/title for this add-on
 #. to be shown on installation and add-on information found in add-on store
-#: addon\globalPlugins\DayOfTheWeek.py:183 buildVars.py:21
+#: addon\globalPlugins\DayOfTheWeek.py:183 buildVars.py:20
 msgid "Day of the week"
 msgstr "Ден от седмицата (Day of the week)"
 
@@ -154,13 +154,13 @@ msgstr "Позволява ви да отворите настройките н�
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
-#: buildVars.py:24
+#: buildVars.py:23
 msgid "With this add-on, you'll be able to find the day of the week corresponding to a chosen date."
 msgstr "С тази добавка ще можете да намерите деня от седмицата, съответстващ на посочена от вас дата."
 
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
-#: buildVars.py:29
+#: buildVars.py:28
 msgid "Used the latest version of addonTemplate.\n"
 msgstr ""
 

@@ -1,104 +1,110 @@
-# Bu Tarih Hangi Gün #
+# Day of the week
 
-* Yazarlar: Abdel, Noelia.
-* [Kararlı Sürümü İndir][1]
-* [Geliştirici sürümünü indir][2]
+- Yazarlar: Abdel, Noelia.
 
-Bu eklenti, herhangi bir tarihin haftanın hangi gününe denk geldiğini bulmanıza yarar.
+This add-on allows you to find a day of the week corresponding to a chosen date.
 
 NVDA araçlar menüsüne iki öğe içeren Bu tarih hangi gün altmenüsü ekler:
 
-* Birinci öğe olan "Gün ara" öğesi 3 denetimden oluşan bir iletişim kutusu açar:
+- Birinci öğe olan "Gün ara" öğesi 3 denetimden oluşan bir iletişim kutusu açar:
 
-    * İstediğiniz tarihi seçebileceğiniz veya yazabileceğiniz bir seçim kutusu;
-    * Seçtiğiniz tarihe denk gelen günü gösteren bir mesaj kutusu açan "tamam" düğmesi;
-    * İletişim kutusunu kapatmaya yarayan "iptal" düğmesi.
+  - İstediğiniz tarihi seçebileceğiniz veya yazabileceğiniz bir seçim kutusu;
+  - Seçtiğiniz tarihe denk gelen günü gösteren bir mesaj kutusu açan "tamam" düğmesi;
+  - İletişim kutusunu kapatmaya yarayan "iptal" düğmesi.
 
-* İkinci öğe olan "Bu tarih hangi gün eklenti ayarları" öğesi, eklenti ayarlarını açar. Bu iletişim kutusundan tarih alanlarının etiketlerinin söylenip söylenmeyeceğini ayarlayabilirsiniz. İletişim kutusunda şu öğeler bulunur:
+- İkinci öğe olan "Bu tarih hangi gün eklenti ayarları" öğesi, eklenti ayarlarını açar. Bu iletişim kutusundan tarih alanlarının etiketlerinin söylenip söylenmeyeceğini ayarlayabilirsiniz. İletişim kutusunda şu öğeler bulunur:
 
-    * Tarih seçicinin erişilebilirliğini etkinleştir;
-    * Etiket duyuru seviyesi, 3 öğe içerir:
+  - Tarih seçicinin erişilebilirliğini etkinleştir;
 
-        * Uzun (varsayılan seçenektir);
-        * Kısa (etiketlerin kısa biçimde söylenmesi için);
-        * Kapalı (etiket duyurularını devredışı bırakmak için).
+  - Etiket duyuru seviyesi, 3 öğe içerir:
 
-    * Sadece üzerinde bulunulan tarih alanının değeri okunsun, dikey dolaşım yaparken kullanılır;
-    * Ayarları kaydetmeye yarayan "tamam" düğmesi;
-    * Ayarlamayı iptal etmeye ve iletişim kutusunu kapatmaya yarayan "iptal" düğmesi.
+    - Uzun (varsayılan seçenektir);
+    - Kısa (etiketlerin kısa biçimde söylenmesi için);
+    - Kapalı (etiket duyurularını devredışı bırakmak için).
 
-## Notlar ##
+  - Sadece üzerinde bulunulan tarih alanının değeri okunsun, dikey dolaşım yaparken kullanılır;
 
-* İletişim kutularını escape tuşuna basarak kapatabilirsiniz;
-* İletişim kutularını açmak için "girdi hareketleri" iletişim kutusunun "haftanın günleri" kategorisinden kısayol tuşları ayarlayabilirsiniz;
-* NVDA 2018.2 veya üzeri sürümlerini kullanıyorsanız araçlar menüsünde sadece bir öğe görünür, bu öğe istediğiniz tarihin hangi güne denk geldiğini görmenizi sağlar. Eklenti ayarları NVDA ayarları iletişim kutusunda bulunur.
+  - Ayarları kaydetmeye yarayan "tamam" düğmesi;
 
-## Uyumluluk ##
+  - Ayarlamayı iptal etmeye ve iletişim kutusunu kapatmaya yarayan "iptal" düğmesi.
 
-* Bu eklenti, NVDA'nın 2019.3 ve sonrası sürümleriyle uyumludur.
+## Notlar
 
-## 20231015.0.0 için değişiklikler ##
+- İletişim kutularını escape tuşuna basarak kapatabilirsiniz;
+- İletişim kutularını açmak için "girdi hareketleri" iletişim kutusunun "haftanın günleri" kategorisinden kısayol tuşları ayarlayabilirsiniz;
+- NVDA 2018.2 veya üzeri sürümlerini kullanıyorsanız araçlar menüsünde sadece bir öğe görünür, bu öğe istediğiniz tarihin hangi güne denk geldiğini görmenizi sağlar. Eklenti ayarları NVDA ayarları iletişim kutusunda bulunur.
 
-* NVDA'nın en son sürümlerinde tarih seçicide yukarı okla gezinirken tespit edilen bir hata düzeltildi.
+## Compatibility
 
-## 20230728.0.0 için değişiklikler ##
+- Bu eklenti, NVDA'nın 2019.3 ve sonrası sürümleriyle uyumludur.
 
-* Flake8 ve mypy kuralları koda uygulandı;
-* Python 3'te tanıtılan ek açıklamaları desteklemek için desteklenen minimum NVDA sürümü 2019.3 olarak değiştirildi.
+## 20231015.0.0 için değişiklikler
 
-## 20230607.0.0 için değişiklikler ##
+- Updated compatibility for nvda-2024.1.;
+- Deleted download link from readme, the download link for future updates will now only be available from the add-on store.
 
-* Aşağıdaki iş akışları eklendi:
- * auto-update-translations - NVDA'nın çeviri sisteminden çevirileri otomatik olarak güncellemek için.
- * release-on-tag..yaml: yeni bir etiket gönderilir gönderilmez eklentiyi oluşturmak ve yayınlamak;
- * manual-release.yaml: Eklentinin yeni sürümlerini el ile derlemek ve yayınlamak için.
-* Güncellenmiş Çeviriler.
+## 20230728.0.0 için değişiklikler
 
-## 20230508.0.0 için değişiklikler ##
+- Added a backward compatible implementation to support speak on demand mode, which will soon be available with nvda-2024.1.
 
-* • Mağaza kurallarına/gereksinimlerine göre sürüm numarası, minimum NVDA sürümü ve indirme bağlantısı değiştirildi.
+## 20230607.0.0 için değişiklikler
 
-## 19.02 için değişiklikler ##
+- NVDA'nın en son sürümlerinde tarih seçicide yukarı okla gezinirken tespit edilen bir hata düzeltildi.
 
-* Sürüm biçimi yy.aa (iki rakam ile yıl, nokta, iki rakam ile ay) olarak değiştirildi;
-* NVDA 2019.1 sürümünden itibaren kullanılmaya başlanan eklenti sürüm biçimiyle uyumluluk sağlandı.
+## 20230508.0.0 için değişiklikler
 
-## 6.0 için değişiklikler ##
+- Flake8 ve mypy kuralları koda uygulandı;
+- Python 3'te tanıtılan ek açıklamaları desteklemek için desteklenen minimum NVDA sürümü 2019.3 olarak değiştirildi.
 
-* eklenti ayarları NVDA 2018.2 ve üzeri sürümlerde NVDA ayarlar paneline eklendi;
-* Gün aramak için kullanılan menü öğesi araçlar menüsüne taşındı;
-* Eklenti NVDA 2018.2 sürümünden önceki sürümler için uyumlu hâle getirildi. Ayarlar iletişim kutusu için de uyumluluk sağlandı.
+## 19.02 için değişiklikler
 
-## 5.0 için değişiklikler ##
+- Aşağıdaki iş akışları eklendi:
+- auto-update-translations - NVDA'nın çeviri sisteminden çevirileri otomatik olarak güncellemek için.
+- release-on-tag..yaml: yeni bir etiket gönderilir gönderilmez eklentiyi oluşturmak ve yayınlamak;
+- manual-release.yaml: Eklentinin yeni sürümlerini el ile derlemek ve yayınlamak için.
+- Güncellenmiş Çeviriler.
 
-* Eklenti wxPython 4.0 ve Python3 ile uyumlu hâle getirildi;
-* ASCII olmayan karakterler içeren eklenti dizinleriyle ilgili bir sorun düzeltildi.
+## Changes for version 20230508.0.0 and beyond
 
-## 4.0 için değişiklikler ##
+- • Mağaza kurallarına/gereksinimlerine göre sürüm numarası, minimum NVDA sürümü ve indirme bağlantısı değiştirildi.
 
-* Eklenti kullanıcının seçebileceği tüm bölgesel tarih biçimlerini tanıyor;
-* Eklenti NVDA 2016.4 sürümünden önceki sürümler için uyumlu hâle getirildi. Gui.guiHelper modülü de uyumlu hâle getirildi.
+## Changes for 19.02
 
-## 3.1 için değişiklikler ##
+- Sürüm biçimi yy.aa (iki rakam ile yıl, nokta, iki rakam ile ay) olarak değiştirildi;
+- NVDA 2019.1 sürümünden itibaren kullanılmaya başlanan eklenti sürüm biçimiyle uyumluluk sağlandı.
 
-* Daha fazla sayıda dil tanınabildiği için haftanın günlerinde eski biçime dönüldü;
-* Tarih seçicinin erişilebilirliği, "gün", "ay" ve "yıl" alanları ve onların değerlerinin okunması konusunda geliştirildi;
-* Gürcüce haftanın günlerini tanımak için bir teknik eklendi;
-* Tarih seçicinin erişilebilirliğini etkinleştirmek veya devredışı bırakmak için ayarlar iletişim kutusu eklendi;
-* Eklenti altmenüsü "araçlar" menüsünden "tercihler" menüsüne taşındı;
-* Eklenti kategorisi Bu tarih hangi gün olarak değiştirildi.
+## 4.0 için değişiklikler
 
-## 2.0 için değişiklikler ##
+- eklenti ayarları NVDA 2018.2 ve üzeri sürümlerde NVDA ayarlar paneline eklendi;
+- Gün aramak için kullanılan menü öğesi araçlar menüsüne taşındı;
+- https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
 
-* Tarih iletişim kutusunun düzgün görünmesi için gui.guiHelper modülü kullanıldı;
-* Eklentiye GPL lisansı eklendi;
-* Günler, eklentinin farklı dillerde düzgün çalışabilmesi için çevrildi;
-* Kodlama hatalarını gidermek için gün biçimi değiştirildi.
+## 3.1 için değişiklikler
 
-## 1.0 için değişiklikler ##
+- Eklenti wxPython 4.0 ve Python3 ile uyumlu hâle getirildi;
+- ASCII olmayan karakterler içeren eklenti dizinleriyle ilgili bir sorun düzeltildi.
 
-* İlk Sürüm.
+## 2.0 için değişiklikler
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
+- Eklenti kullanıcının seçebileceği tüm bölgesel tarih biçimlerini tanıyor;
+- Eklenti NVDA 2016.4 sürümünden önceki sürümler için uyumlu hâle getirildi. Gui.guiHelper modülü de uyumlu hâle getirildi.
 
-[2]: https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
+## 1.0 için değişiklikler
+
+- Daha fazla sayıda dil tanınabildiği için haftanın günlerinde eski biçime dönüldü;
+- Tarih seçicinin erişilebilirliği, "gün", "ay" ve "yıl" alanları ve onların değerlerinin okunması konusunda geliştirildi;
+- Gürcüce haftanın günlerini tanımak için bir teknik eklendi;
+- Tarih seçicinin erişilebilirliğini etkinleştirmek veya devredışı bırakmak için ayarlar iletişim kutusu eklendi;
+- Eklenti altmenüsü "araçlar" menüsünden "tercihler" menüsüne taşındı;
+- Eklenti kategorisi Bu tarih hangi gün olarak değiştirildi.
+
+## 5.0 için değişiklikler
+
+- Tarih iletişim kutusunun düzgün görünmesi için gui.guiHelper modülü kullanıldı;
+- Eklentiye GPL lisansı eklendi;
+- Günler, eklentinin farklı dillerde düzgün çalışabilmesi için çevrildi;
+- Kodlama hatalarını gidermek için gün biçimi değiştirildi.
+
+## 6.0 için değişiklikler
+
+- İlk Sürüm.
