@@ -11,7 +11,7 @@ dialog composed of 3 controls:
 
 *	 A listbox to choose or type your date.
 *	 An "OK" button to display a messageBox containing your day.
-*	 पातो बन्द गर्नका लागि  बन्द भन्ने टाँकको प्रयोग गर । 
+*	 पातो बन्द गर्नका लागि  बन्द भन्ने टाँकको प्रयोग गर ।
 
 ## टिप्पणी: ##
 *	 You can close this dialog just by pressing Escape.
