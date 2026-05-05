@@ -3,8 +3,8 @@ name: Crowdin l10n
 on:
   workflow_dispatch:
   schedule:
-    # Every Friday at 09:33 UTC
-    - cron: '33 9 * * 5'
+    # Every Monday at 00:00 UTC
+    - cron: '0 0 * * 1'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -15,6 +15,7 @@ env:
   downloadTranslationsBranch: l10n
   GH_TOKEN: ${{ github.token }}
   CROWDIN_PROJECT_ID: ${{ vars.CROWDIN_PROJECT_ID || 780748 }}
+  L10N_UTIL_CONFIG: ${{ vars.L10N_UTIL_CONFIG || 'addon' }}
 
 jobs:
   crowdinSync:
@@ -23,6 +24,13 @@ jobs:
       contents: write
 
     steps:
+      - name: Random startup delay (0-5 minutes)
+        if: github.event_name == 'schedule'
+        shell: pwsh
+        run: |
+          $delaySeconds = Get-Random -Minimum 0 -Maximum 301
+          Write-Host "Sleeping for $delaySeconds seconds..."
+          Start-Sleep -Seconds $delaySeconds
       - name: Checkout add-on
         uses: actions/checkout@v6
         with:
