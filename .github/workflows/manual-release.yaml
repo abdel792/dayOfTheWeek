@@ -7,23 +7,26 @@ on:
         description: "Add-on version, if not defined, will be set to today's date in the format recommended by nvaccess/addonStore"
         required: false
         default: ''
+
       prerelease:
-              description: 'True if this is a prerelease'
+        description: 'True if this is a prerelease'
         type: boolean
         required: false
         default: false
-    updateYear:
+
+      updateYear:
         description: 'Update addon_lastTestedNVDAVersion in buildVars.py to current year (optional for stable, automatic for beta/dev)'
         type: boolean
         required: false
         default: false
+
       channel:
         type: choice
         description: Choose a channel for your release
         options:
-        - stable
-        - dev
-        - beta
+          - stable
+          - dev
+          - beta
         default: stable
         required: false
 
