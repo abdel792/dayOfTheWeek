@@ -110,7 +110,7 @@ jobs:
         import re
         version='${{ env.BUILD_VERSION }}'
         year='${{ env.CUR_YEAR }}'
-        updateYear=${{ inputs.updateYear }}
+        updateYear='${{ inputs.updateYear }}' == 'true'
         channel='${{ inputs.channel }}'
 
         with open("buildVars.py", "r", encoding="utf-8") as f:
