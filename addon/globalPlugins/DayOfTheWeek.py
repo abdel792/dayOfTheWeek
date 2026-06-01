@@ -44,17 +44,23 @@ speakOnDemand = {"speakOnDemand": True} if buildVersion.version_year > 2023 else
 
 fieldLabels = (
 	# Translators: The long label of the days field.
-	(_("You can select a day with the vertical arrows"),
-	 # Translators: The short label of the days field.
-	 _("Select a day")),
+	(
+		_("You can select a day with the vertical arrows"),
+		# Translators: The short label of the days field.
+		_("Select a day"),
+	),
 	# Translators: The long label of the months field.
-	(_("You can select a month with the vertical arrows"),
-	 # Translators: The short label of the months field.
-	 _("Select a month")),
+	(
+		_("You can select a month with the vertical arrows"),
+		# Translators: The short label of the months field.
+		_("Select a month"),
+	),
 	# Translators: The long label of the years field.
-	(_("You can select a year with the vertical arrows"),
-	 # Translators: The short label of the years field.
-	 _("Select a year"))
+	(
+		_("You can select a year with the vertical arrows"),
+		# Translators: The short label of the years field.
+		_("Select a year"),
+	),
 )
 
 # The following dictionary was created to list the Georgian days that are not recognized by the %A format,
@@ -68,7 +74,7 @@ georgianDays = {
 	"3": "ოთხშაბათი",
 	"4": "ხუთშაბათი",
 	"5": "პარასკევი",
-	"6": "შაბათი"
+	"6": "შაბათი",
 }
 
 curDateField = 0
@@ -76,7 +82,7 @@ curDateField = 0
 confSpec = {
 	"enableAnnounces": "boolean(default=True)",
 	"labelAnnounceLevel": "string(default=long)",
-	"reportFieldsValuesWhenMovingVertically": "boolean(default=False)"
+	"reportFieldsValuesWhenMovingVertically": "boolean(default=False)",
 }
 config.conf.spec["dayOfWeek"] = confSpec
 
@@ -91,8 +97,7 @@ def isDatepickerDate(value):
 	return bool(rg.match(value))
 
 
-class DateDialog (wx.Dialog):
-
+class DateDialog(wx.Dialog):
 	_instance = None
 
 	def __new__(cls, *args, **kwargs):
@@ -161,36 +166,45 @@ class DateDialog (wx.Dialog):
 
 	def onOk(self, evt):
 		import languageHandler
+
 		curNVDALang = languageHandler.getLanguage()
 		date = self.datePicker.GetValue()
-		locale.setlocale(locale.LC_TIME, '')
+		locale.setlocale(locale.LC_TIME, "")
 		weekDay = date.Format("%A") if not curNVDALang == "ka" else georgianDays[date.Format("%w")]
 		evt.Skip()
 		gui.messageBox(
 			message=weekDay,
 			# Translators: The title of a dialog.
 			caption=_("Your day"),
-			style=wx.OK | wx.ICON_INFORMATION
+			style=wx.OK | wx.ICON_INFORMATION,
 		)
 
 
-class DayOfWeekSettingsDialog (SettingsDialog):
-
+class DayOfWeekSettingsDialog(SettingsDialog):
 	# Translators: The title of the add-on configuration dialog box.
-	title = _("Configuration of the addon {0}").format(
-		ADDON_NAME
-	) if not hasattr(gui, "NVDASettingsDialog")\
+	title = (
+		_("Configuration of the addon {0}").format(
+			ADDON_NAME,
+		)
+		if not hasattr(gui, "NVDASettingsDialog")
 		else _("Day of the week")
+	)
 	LABEL_ANNOUNCE_LEVELS = (
-		("short",
-		 # Translators: Level for short announces of labels.
-		 _("Short")),
-		("long",
-		 # Translators: Level for long announces of labels.
-		 _("Long")),
-		("off",
-		 # Translators: Level to disable announces of labels.
-		 _("Off"))
+		(
+			"short",
+			# Translators: Level for short announces of labels.
+			_("Short"),
+		),
+		(
+			"long",
+			# Translators: Level for long announces of labels.
+			_("Long"),
+		),
+		(
+			"off",
+			# Translators: Level to disable announces of labels.
+			_("Off"),
+		),
 	)
 
 	def makeSettings(self, settingsSizer):
@@ -200,7 +214,7 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 		self.labelAnnounceLevelText = _("Level of the announces of &labels:")
 		# Translators: The label of vertical navigation announcements.
 		self.valueAnnounce = _(
-			"Enable announcements of the current date field value only, when moving &vertically:"
+			"Enable announcements of the current date field value only, when moving &vertically:",
 		)
 		# This condition has been added to ensure the compatibility of the add-on
 		# with the NVDA versions that preceded version 2016.4,
@@ -220,7 +234,7 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 		self.labelAnnounceLevelsList = settingsSizerHelper.addLabeledControl(
 			self.labelAnnounceLevelText,
 			wx.Choice,
-			choices=labelAnnounceLevelChoices
+			choices=labelAnnounceLevelChoices,
 		)
 		curLevel = config.conf["dayOfWeek"]["labelAnnounceLevel"]
 		for index, (level, name) in enumerate(self.LABEL_ANNOUNCE_LEVELS):
@@ -231,7 +245,7 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 
 		self.reportDateFieldValuesCheckBox = wx.CheckBox(self, label=self.valueAnnounce)
 		self.reportDateFieldValuesCheckBox.SetValue(
-			config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"]
+			config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"],
 		)
 		settingsSizerHelper.addItem(self.reportDateFieldValuesCheckBox)
 		self.reportDateFieldValuesCheckBox.Enabled = self.enableAnnouncesCheckBox.IsChecked()
@@ -257,7 +271,7 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 
 		self.reportDateFieldValuesCheckBox = wx.CheckBox(self, label=self.valueAnnounce)
 		self.reportDateFieldValuesCheckBox.SetValue(
-			config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"]
+			config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"],
 		)
 		dialogSizer.Add(self.reportDateFieldValuesCheckBox)
 		settingsSizer.Add(dialogSizer, border=10, flag=wx.BOTTOM)
@@ -279,33 +293,32 @@ class DayOfWeekSettingsDialog (SettingsDialog):
 		config.conf["dayOfWeek"]["enableAnnounces"] = self.enableAnnouncesCheckBox.GetValue()
 		labelAnnounceLevel = self.LABEL_ANNOUNCE_LEVELS[self.labelAnnounceLevelsList.GetSelection()][0]
 		config.conf["dayOfWeek"]["labelAnnounceLevel"] = labelAnnounceLevel
-		config.conf["dayOfWeek"][
-			"reportFieldsValuesWhenMovingVertically"
-		] = self.reportDateFieldValuesCheckBox.GetValue()
+		config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"] = (
+			self.reportDateFieldValuesCheckBox.GetValue()
+		)
 		super(DayOfWeekSettingsDialog, self).onOk(evt)
 
 	def onSave(self):
 		config.conf["dayOfWeek"]["enableAnnounces"] = self.enableAnnouncesCheckBox.GetValue()
 		labelAnnounceLevel = self.LABEL_ANNOUNCE_LEVELS[self.labelAnnounceLevelsList.GetSelection()][0]
 		config.conf["dayOfWeek"]["labelAnnounceLevel"] = labelAnnounceLevel
-		config.conf["dayOfWeek"][
-			"reportFieldsValuesWhenMovingVertically"
-		] = self.reportDateFieldValuesCheckBox.GetValue()
+		config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"] = (
+			self.reportDateFieldValuesCheckBox.GetValue()
+		)
 
 
-class AnnounceFieldsLabels (IAccessible):
-
+class AnnounceFieldsLabels(IAccessible):
 	increment = 0
 	vertical = 0
 	vMovementKeys = (
 		"kb:upArrow",
 		"kb:downArrow",
 		"kb:home",
-		"kb:end"
+		"kb:end",
 	)
 	hMovementKeys = (
 		"kb:leftArrow",
-		"kb:rightArrow"
+		"kb:rightArrow",
 	)
 
 	def event_gainFocus(self):
@@ -327,6 +340,7 @@ class AnnounceFieldsLabels (IAccessible):
 
 	def sayField(self, curValue, columnID=None):
 		import ui
+
 		labelAnnounce = ""
 		if columnID:
 			if config.conf["dayOfWeek"]["labelAnnounceLevel"] != "off":
@@ -567,8 +581,7 @@ class AnnounceFieldsLabels (IAccessible):
 		self.calculateCurField()
 
 
-class GlobalPlugin (globalPluginHandler.GlobalPlugin):
-
+class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = ADDON_SUMMARY
 
 	def __init__(self, *args, **kwargs):
@@ -576,17 +589,25 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		# This block ensures compatibility with NVDA versions prior to 2018.2 which includes the settings panel.
 		if hasattr(gui, "NVDASettingsDialog"):
 			from gui import NVDASettingsDialog
+
 			NVDASettingsDialog.categoryClasses.append(DayOfWeekSettingsDialog)
 			self.createMenu()
 		else:
 			self.createSubMenu()
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		if obj.value and obj.role == (
-			controlTypes.ROLE_DROPLIST if hasattr(controlTypes, "ROLE_DROPLIST") else controlTypes.Role.DROPLIST
-		) and isDatepickerDate(obj.value) and\
-		   config.conf["dayOfWeek"]["enableAnnounces"] and\
-		   obj.parent.parent.name == _("Get the day of the week"):
+		if (
+			obj.value
+			and obj.role
+			== (
+				controlTypes.ROLE_DROPLIST
+				if hasattr(controlTypes, "ROLE_DROPLIST")
+				else controlTypes.Role.DROPLIST
+			)
+			and isDatepickerDate(obj.value)
+			and config.conf["dayOfWeek"]["enableAnnounces"]
+			and obj.parent.parent.name == _("Get the day of the week")
+		):
 			clsList.insert(0, AnnounceFieldsLabels)
 
 	def createMenu(self):
@@ -596,7 +617,7 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 			# Translators: Item in the tools menu for the Addon dayOfTheWeek.
 			_("Day of the &week..."),
 			# Translators: The tooltyp text for the dayOfTheWeek item.
-			_("Search a day in the calendar")
+			_("Search a day in the calendar"),
 		)
 
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onDateDialog, self.mainItem)
@@ -609,7 +630,7 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 			# Translators: Item in the tools menu for the Addon dayOfTheWeek.
 			_("Day of the &week..."),
 			# Translators: The tooltyp text for the dayOfTheWeek submenu.
-			_("{0} add-on and its settings").format(ADDON_NAME)
+			_("{0} add-on and its settings").format(ADDON_NAME),
 		)
 
 		dateChoice = dowMenu.Append(
@@ -617,7 +638,7 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 			# Translators: The name of the first item in the dayOfTheWeek add-on submenu.
 			_("Search a &day"),
 			# Translators: The tooltyp text for the first item in the dayOfTheWeek add-on submenu.
-			_("Search a day in the calendar")
+			_("Search a day in the calendar"),
 		)
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onDateDialog, dateChoice)
 
@@ -626,7 +647,7 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 			# Translators: The name of the second item in the dayOfTheWeek add-on submenu.
 			_("{0} add-on se&ttings").format(ADDON_NAME),
 			# Translators: The tooltyp text for the second item in the dayOfTheWeek add-on submenu.
-			_("Configure the {0} add-on").format(ADDON_NAME)
+			_("Configure the {0} add-on").format(ADDON_NAME),
 		)
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onAddonSettingsDialog, addonSettings)
 
@@ -652,8 +673,9 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 
 	@script(
 		# Translators: Message presented in input help mode.
-		description=_("Allows you to find the day of the week "
-		              "corresponding to a chosen date."),
+		description=_(
+			"Allows you to find the day of the week corresponding to a chosen date.",
+		),
 		**speakOnDemand,
 	)
 	def script_activateDayOfTheWeekDialog(self, gesture):
@@ -661,16 +683,21 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 
 	@script(
 		# Translators: Message presented in input help mode.
-		description=_("Allows you to open the {0} add-on settings dialog."
+		description=_(
+			"Allows you to open the {0} add-on settings dialog.",
 		).format(ADDON_NAME),
 		**speakOnDemand,
 	)
 	def script_activateDayOfTheWeekSettingsDialog(self, gesture):
 		if hasattr(gui.settingsDialogs, "NVDASettingsDialog"):
 			wx.CallAfter(
-				(gui.mainFrame.popupSettingsDialog if hasattr(gui.mainFrame, "popupSettingsDialog")
-				 else gui.mainFrame._popupSettingsDialog),
-				gui.settingsDialogs.NVDASettingsDialog, DayOfWeekSettingsDialog
+				(
+					gui.mainFrame.popupSettingsDialog
+					if hasattr(gui.mainFrame, "popupSettingsDialog")
+					else gui.mainFrame._popupSettingsDialog
+				),
+				gui.settingsDialogs.NVDASettingsDialog,
+				DayOfWeekSettingsDialog,
 			)
 		else:
 			wx.CallAfter(self.onAddonSettingsDialog, gui.mainFrame)
