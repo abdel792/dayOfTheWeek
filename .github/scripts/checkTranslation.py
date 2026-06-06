@@ -100,7 +100,7 @@ def getScoreFromApi(fileNameToSearch: str, langId: str) -> float:
 				# Also handles underscore to dash conversion for Crowdin compatibility
 				if langApi.lower().startswith(langId.lower().replace("_", "-")):
 					progress = float(item["data"]["translationProgress"])
-					return progress / 100
+					return progress
 
 			# Check pagination total.
 			total = resp["pagination"]["totalCount"]
