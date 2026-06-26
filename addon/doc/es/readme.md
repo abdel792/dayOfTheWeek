@@ -1,142 +1,107 @@
-# Day of the week
+# Día de la semana
 
-- Autores: Abdel, Noelia.
+* Autores: Abdel, Noelia.
 
-Este complemento te permite encontrar un día de la semana correspondiente a
-una fecha elegida.
+Este complemento permite averiguar el día de la semana correspondiente a una fecha determinada.
 
-Añade un submenú en el menú Herramientas de NVDA llamado "Día de la semana",
-que contiene 2 elementos:
+Añade un submenú al menú Herramientas de NVDA denominado «Día de la semana», que contiene 2 elementos:
 
-- El primero, llamado "Buscar un día", abre un diálogo con 3 controles:
+* El primero, denominado «Buscar un día», abre un cuadro de diálogo compuesto por 3 controles:
 
-  - Un cuadro de lista para elegir o teclear tu fecha;
-  - Un botón "Aceptar" para mostrar un cuadro de mensaje que contenga tu
-    día;
-  - Un botón "Cancelar" para cerrar el diálogo.
+    * Un cuadro combinado para elegir o escribir la fecha;
+    * Un botón «Aceptar» para mostrar un cuadro de mensaje con el día correspondiente;
+    * Un botón «Cancelar» para cerrar el cuadro de diálogo.
 
-- El segundo, llamado "Ajustes del complemento DayOfTheWeek" abre los
-  parámetros del complemento para especificar si deben anunciarse etiquetas
-  para los campos de fecha o no. Lo componen los siguientes elementos:
+* El segundo, denominado «Configuración del complemento Día de la semana», abre los parámetros del complemento para especificar si deseas anunciar las etiquetas de los campos de fecha o no. Está compuesto por los siguientes elementos:
 
-  - Habilita la accesibilidad del selector de fecha;
+    * Activar la accesibilidad del selector de fecha;
+    * Nivel de anuncio de las etiquetas, con las 3 opciones siguientes:
 
-  - Nivel de anuncio de las etiquetas, que ofrece las siguientes opciones:
+        * Largo (opción predeterminada);
+        * Corto (para anuncios abreviados);
+        * Desactivado (para desactivar el anuncio de las etiquetas).
 
-    - Largo (opción por defecto);
-    - Corto (para anuncios cortos);
-    - Desactivado (para desactivar el anuncio de etiquetas).
-
-  - Activar anuncio solamente del campo de fecha actual, al moverse
-    verticalmente;
-
-  - Un botón "Aceptar" para guardar la configuración;
-
-  - Un botón "Cancelar" para cancelar y cerrar el diálogo.
+    * Activar el anuncio únicamente del valor del campo de fecha actual al desplazarse verticalmente;
+    * Un botón «Aceptar» para guardar la configuración;
+    * Un botón «Cancelar» para cancelar y cerrar el cuadro de diálogo.
 
 ## Notas
 
-- Puedes cerrar estos diálogos tan sólo pulsando Escape;
-- Puedes asignar un atajo de teclado para abrir estos diálogos en el menú
-  "Gestos de Entrada" y, más concretamente, en la categoría "Día de la
-  semana".;
-- Si utilizas NVDA 2018.2 o superior, sólo encontrarás un elemento en el
-  menú herramientas para buscar el día, las opciones del complemento estarán
-  en el panel opciones de NVDA.
+* Puedes cerrar estos cuadros de diálogo simplemente pulsando Escape;
+* Puedes asignar un atajo para abrir estos cuadros de diálogo en el menú «Gestos de entrada» y, más concretamente, en la categoría «Día de la semana»;
+* Si utilizas NVDA 2018.2 o una versión posterior, solo encontrarás un elemento en el menú Herramientas para buscar un día; la configuración del complemento estará disponible en el panel de configuración de NVDA.
 
 ## Compatibilidad
 
-- Este complemento es compatible con las versiones de NVDA desde la 2019.3
-  en adelante.
+* Este complemento es compatible con las versiones de NVDA a partir de la 2019.3.
 
-## Cambios para 20240326.0.0
+## Cambios de la versión 20240326.0.0
 
-- Se actualiza la compatibilidad para NVDA 2024.1.;
-- Se elimina el enlace de descarga de la documentación, el enlace de
-  descarga de futuras actualizaciones ahora sólo estará disponible desde la
-  tienda de complementos.
+* Compatibilidad actualizada para NVDA 2024.1.;
+* Se eliminó el enlace de descarga del README; el enlace de descarga de las futuras actualizaciones solo estará disponible en la tienda de complementos.
 
-## Cambios para 20231229.0.0
+## Cambios de la versión 20231229.0.0
 
-- Se ha añadido una implementación retrocompatible para soportar el modo de
-  voz a petición, que pronto estará disponible con NVDA 2024.1.
+* Se añadió una implementación retrocompatible para admitir el modo Hablar bajo demanda, que estará disponible próximamente con NVDA 2024.1.
 
-## Cambios para 20231015.0.0
+## Cambios de la versión 20231015.0.0
 
-- Se corrige un fallo detectado al navegar con flecha arriba en el selector
-  de fecha en las versiones más recientes de NVDA.
+* Se corrigió un error detectado al navegar con la flecha arriba desde el selector de fecha en las últimas versiones de NVDA.
 
-## Cambios para 20230728.0.0
+## Cambios de la versión 20230728.0.0
 
-- Aplicadas las reglas de Flake8 y Mipy al código;
-- Cambiada la versión mínima soportada de NVDA a la 2019.3 para soportar las
-  anotaciones de tipos introducidas en Python 3.
+* Se aplicaron las reglas de flake8 y mypy al código;
+* Se cambió la versión mínima compatible de NVDA a la 2019.3 para admitir las anotaciones introducidas en Python 3.
 
-## Cambios para 20230508.0.0 y posteriores
+## Cambios de la versión 20230607.0.0
 
-- Added the following workflows:
-- auto-update-translations - to automatically update translations from NVDA's translation system.
-- release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;
-- manual-release.yaml: to build and release new versions of the add-on manually.
-- Updated translations.
+* Se añadieron los siguientes flujos de trabajo:
+ * auto-update-translations: para actualizar automáticamente las traducciones desde el sistema de traducción de NVDA.
+ * release-on-tag.yaml: para compilar y publicar el complemento en cuanto se publique una nueva etiqueta;
+ * manual-release.yaml: para compilar y publicar manualmente nuevas versiones del complemento.
+* Se actualizaron las traducciones.
 
-## Changes for version 20230508.0.0 and beyond
+## Cambios a partir de la versión 20230508.0.0
 
-- Cambiado el número de versión, la versión mínima de NVDA y el enlace de
-  descarga según las convenciones y los requisitos de la tienda.
+* • Se cambiaron el número de versión, la versión mínima de NVDA y el enlace de descarga de acuerdo con las convenciones y los requisitos de la tienda.
 
-## Cambios para 19.02
+## Cambios de la versión 19.02
 
-- Se ha cambiado el número de versión usando el esquema AA.MM (dos dígitos
-  para el año, seguidos de un punto y dos dígitos para el mes);
-- Se ha añadido compatibilidad con el nuevo formato de versión de
-  complementos, disponible desde NVDA 2019.1.
+* Se cambió la numeración de las versiones al formato AA.MM (el año con 2 cifras, seguido de un punto y del mes con 2 cifras);
+* Se añadió compatibilidad con el nuevo formato de versiones de los complementos, disponible desde NVDA 2019.1.
 
-## Cambios para 5.0
+## Cambios de la versión 6.0
 
-- añadidas las opciones del complemento al panel opciones de NVDA para NVDA
-  2018.2 y superiores;
-- Movido el elemento para buscar un día al menú herramientas;
-- Añadida la compatibilidad hacia atrás del complemento con las versiones de
-  NVDA que precedieron a la versión 2018.2, que incluye el panel de
-  opciones.
+* Se añadieron los ajustes del complemento al panel de configuración de NVDA para NVDA 2018.2 y versiones posteriores;
+* Se trasladó el elemento para buscar un día al menú Herramientas;
+* Se añadió retrocompatibilidad del complemento con las versiones de NVDA anteriores a la 2018.2, que aún no incluían el panel de configuración.
 
-## Cambios para 4.0
+## Cambios de la versión 5.0
 
-- Añadido la compatibilidad del complemento con wxPython 4.0 y Python3;
-- Arreglado un error con rutas de complementos que no contienen caracteres
-  ASCII.
+* Se añadió compatibilidad del complemento con wxPython 4.0 y Python 3;
+* Se corrigió un error relacionado con las rutas del complemento que contenían caracteres no ASCII.
 
-## Cambios para 3.1
+## Cambios de la versión 4.0
 
-- El complemento es ahora capaz de reconocer todos los formatos de fecha
-  regional que el usuario puede elegir;
-- Añadido la compatibilidad hacia atrás del complemento con las versiones de
-  NVDA que precedieron a la versión 2016.4, que incluía el módulo
-  gui.guiHelper.
+* El complemento ahora es capaz de reconocer todos los formatos regionales de fecha que el usuario puede seleccionar;
+* Se añadió retrocompatibilidad del complemento con las versiones de NVDA anteriores a la 2016.4, que incluían el módulo gui.guiHelper.
 
-## Cambios para 2.0
+## Cambios de la versión 3.1
 
-- Retorno al formato anterior para el día de la semana porque permite
-  reconocer un mayor número de idiomas;
-- Mejora de la accesibilidad del selector de fechas con el reconocimiento de
-  los 3 campos "Día", "Mes" y "Año", y sus respectivos valores;
-- Añadida una técnica para la integración del idioma Georgiano para el
-  reconocimiento de los días de la semana;
-- Añadido un diálogo de configuración para habilitar o deshabilitar la
-  accesibilidad del selector de fecha;
-- Movido el submenú del complemento de "Herramientas" a "Preferencias";
-- Cambiada la categoría del complemento a "Día de la semana".
+* Se volvió al formato anterior para el día de la semana, ya que permite reconocer un mayor número de idiomas;
+* Se mejoró la accesibilidad del selector de fecha mediante el reconocimiento de los 3 campos «Día», «Mes» y «Año», así como de sus respectivos valores;
+* Se añadió una técnica para integrar el idioma georgiano en el reconocimiento de los días de la semana;
+* Se añadió un cuadro de diálogo de configuración para activar o desactivar la accesibilidad del selector de fecha;
+* Se trasladó el submenú del complemento de «Herramientas» a «Preferencias»;
+* Se cambió la categoría del complemento a «Día de la semana».
 
-## Cambios para 1.0
+## Cambios de la versión 2.0
 
-- Utiliza el módulo gui.guiHelper para asegurar la correcta apariencia del
-  diálogo pidiendo una fecha;
-- Añadida la licencia GPL para el complemento;
-- Los días de la semana se han traducido, para que el complemento funcione
-  correctamente en los distintos idiomas;
-- Cambiado el formato del día para evitar errores de codificación.
+* Se utilizó el módulo gui.guiHelper para garantizar la correcta presentación del cuadro de diálogo que solicita una fecha;
+* Se añadió la licencia GPL al complemento;
+* Se tradujeron los días de la semana para que el complemento funcione correctamente en los distintos idiomas;
+* Se modificó el formato del día para evitar errores de codificación.
 
-## Cambios para 6.0
+## Cambios de la versión 1.0
 
-- Versión inicial.
+* Versión inicial.
