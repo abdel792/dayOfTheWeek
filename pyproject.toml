@@ -32,7 +32,7 @@ dependencies = [
 	"markdown-link-attr-modifier==0.2.1",
 	"mdx-gh-links==0.4",
 	# Lint
-	"uv==0.11.15",
+	"uv==0.11.6",
 	"ruff==0.14.5",
 	"pre-commit==4.2.0",
 	"pyright[nodejs]==1.1.411",
@@ -103,9 +103,6 @@ exclude = [
 	".venv",
 	"site_scons",
 	".github/scripts",
-	# When excluding concrete paths relative to a directory,
-	# not matching multiple folders by name e.g. `__pycache__`,
-	# paths are relative to the configuration file.
 ]
 
 # Tell pyright where to load python code from
@@ -125,92 +122,101 @@ strictDictionaryInference = true
 strictSetInference = true
 
 # Compliant rules
-reportAbstractUsage = true
-reportArgumentType = false
 reportAssertAlwaysTrue = true
 reportAssertTypeFailure = true
-reportAssignmentType = true
-reportAttributeAccessIssue = false
-reportCallInDefaultInitializer = true
-reportCallIssue = false
-reportConstantRedefinition = true
 reportDuplicateImport = true
-reportFunctionMemberAccess = true
-reportGeneralTypeIssues = false
-reportImplicitOverride = false
-reportImplicitStringConcatenation = false
-reportImportCycles = true
-reportIncompatibleMethodOverride = true
-reportIncompatibleVariableOverride = true
 reportIncompleteStub = true
-reportInconsistentConstructor = true
 reportInconsistentOverload = true
-reportIndexIssue = false
+reportInconsistentConstructor = true
 reportInvalidStringEscapeSequence = true
 reportInvalidStubStatement = true
-reportInvalidTypeArguments = true
-reportInvalidTypeForm = true
 reportInvalidTypeVarUse = true
 reportMatchNotExhaustive = true
-reportMissingImports = true
 reportMissingModuleSource = true
-reportMissingParameterType = false
-reportMissingSuperCall = true
-reportMissingTypeArgument = true
+reportMissingImports = true
 reportNoOverloadImplementation = true
-reportOperatorIssue = false
-reportOptionalCall = true
 reportOptionalContextManager = true
-reportOptionalIterable = true
-reportOptionalMemberAccess = false
-reportOptionalOperand = true
-reportOptionalSubscript = true
 reportOverlappingOverload = true
-reportPossiblyUnboundVariable = true
 reportPrivateImportUsage = true
-reportPrivateUsage = false
 reportPropertyTypeMismatch = true
-reportRedeclaration = true
-reportReturnType = true
 reportSelfClsParameterName = true
 reportTypeCommentUsage = true
 reportTypedDictNotRequiredAccess = true
-reportUnboundVariable = true
 reportUndefinedVariable = true
+reportUnusedExpression = true
+reportUnboundVariable = true
 reportUnhashable = true
-reportUninitializedInstanceVariable = false
-reportUnknownArgumentType = false
-reportUnknownLambdaType = true
-reportUnknownMemberType = false
-reportUnknownParameterType = false
-reportUnknownVariableType = false
 reportUnnecessaryCast = true
-reportUnnecessaryComparison = true
 reportUnnecessaryContains = true
-reportUnnecessaryIsInstance = true
 reportUnnecessaryTypeIgnoreComment = true
-reportUnsupportedDunderAll = true
-reportUntypedBaseClass = false
 reportUntypedClassDecorator = true
 reportUntypedFunctionDecorator = true
-reportUntypedNamedTuple = true
-reportUnusedCallResult = false
 reportUnusedClass = true
 reportUnusedCoroutine = true
 reportUnusedExcept = true
-reportUnusedExpression = true
-reportUnusedFunction = true
-reportUnusedImport = true
-reportUnusedVariable = false
-reportWildcardImportFromLibrary = true
 
-reportDeprecated = true
+# Should switch to true when possible
+reportDeprecated = false
 
 # Can be enabled by generating type stubs for modules via pyright CLI
 reportMissingTypeStubs = false
 
 # Bad rules
-# These are sorted alphabetically and should be enabled and moved to compliant rules section when resolved.
+# These are roughly sorted by compliance to make it easier for devs to focus on enabling them.
+# 1-50 errors
+reportUnsupportedDunderAll = false
+reportAbstractUsage = false
+reportUntypedBaseClass = false
+reportOptionalIterable = false
+reportCallInDefaultInitializer = false
+reportInvalidTypeArguments = false
+reportUntypedNamedTuple = false
+reportRedeclaration = false
+reportOptionalCall = false
+reportConstantRedefinition = false
+reportWildcardImportFromLibrary = false
+reportIncompatibleVariableOverride = false
+reportInvalidTypeForm = false
+
+# 50-100 errors
+reportGeneralTypeIssues = false
+reportOptionalOperand = false
+reportUnnecessaryComparison = false
+reportFunctionMemberAccess = false
+reportUnnecessaryIsInstance = false
+reportUnusedFunction = false
+reportImportCycles = false
+reportUnusedImport = false
+reportUnusedVariable = false
+
+# 100-1000 errors
+reportOperatorIssue = false
+reportAssignmentType = false
+reportReturnType = false
+reportPossiblyUnboundVariable = false
+reportMissingSuperCall = false
+reportUninitializedInstanceVariable = false
+reportUnknownLambdaType = false
+reportMissingTypeArgument = false
+reportImplicitStringConcatenation = false
+reportIncompatibleMethodOverride = false
+reportPrivateUsage = false
+
+# 1000+ errors
+reportUnusedCallResult = false
+reportOptionalSubscript = false
+reportCallIssue = false
+reportOptionalMemberAccess = false
+reportImplicitOverride = false
+reportIndexIssue = false
+reportAttributeAccessIssue = false
+reportArgumentType = false
+reportUnknownParameterType = false
+reportMissingParameterType = false
+reportUnknownVariableType = false
+reportUnknownArgumentType = false
+reportUnknownMemberType = false
+
 [tool.mypy]
 warn_unused_configs = true
 ignore_missing_imports = true
