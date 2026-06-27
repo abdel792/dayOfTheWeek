@@ -76,7 +76,7 @@ config.conf.spec["dayOfWeek"] = confSpec
 
 def isDatepickerDate(value):
 	"""
-	Validates the format of the date string to determine 
+	Validates the format of the date string to determine
 	if the overlay class should be applied.
 	"""
 	ptrn = r"^[\d]{1,4}[/\.-][\da-zA-Z]{1,3}[/\.-][\d]{1,4}[/\.-]?$"
@@ -100,12 +100,12 @@ class DateDialog(wx.Dialog):
 		super(DateDialog, self).__init__(parent, title=dlgTitle)
 		self.mainSizer = wx.BoxSizer(wx.VERTICAL)
 		self.dateLabel = _("Type or select a date")
-		
+
 		sHelper = gui.guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
 		sHelper.addItem(wx.StaticText(self, label=self.dateLabel))
 		self.datePicker = sHelper.addItem(wx.adv.DatePickerCtrl(self))
 		sHelper.addDialogDismissButtons(self.CreateButtonSizer(wx.OK | wx.CANCEL))
-		
+
 		self.datePicker.Bind(wx.EVT_CHAR, self.onListChar)
 		self.Bind(wx.EVT_BUTTON, self.onOk, id=wx.ID_OK)
 		self.mainSizer.Add(sHelper.sizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
@@ -130,7 +130,7 @@ class DateDialog(wx.Dialog):
 		date = self.datePicker.GetValue()
 		locale.setlocale(locale.LC_TIME, "")
 		weekDay = date.Format("%A") if not curNVDALang == "ka" else georgianDays[date.Format("%w")]
-		
+
 		if not gui.message.isModalMessageBoxActive():
 			try:
 				gui.messageBox(
@@ -155,7 +155,9 @@ class DayOfWeekSettingsDialog(SettingsDialog):
 	def makeSettings(self, settingsSizer):
 		self.enableAnnounces = _("En&able the accessibility of the date selector:")
 		self.labelAnnounceLevelText = _("Level of the announces of &labels:")
-		self.valueAnnounce = _("Enable announcements of the current date field value only, when moving &vertically:")
+		self.valueAnnounce = _(
+			"Enable announcements of the current date field value only, when moving &vertically:",
+		)
 
 		settingsSizerHelper = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
 		self.enableAnnouncesCheckBox = wx.CheckBox(self, label=self.enableAnnounces)
@@ -258,21 +260,21 @@ class AnnounceFieldsLabels(IAccessible):
 		isMonthUS = False
 		val1 = val1.split(self.getDelimiter(val1))
 		val2 = val2.split(self.getDelimiter(val2))
-		
-		# Workaround: Initialize curValue to 1601 to handle and correct 
+
+		# Workaround: Initialize curValue to 1601 to handle and correct
 		# field identification errors when encountering the base year 1601.
 		curValue = "1601"
-		
+
 		if val1[0] != val2[0]:
 			curValue = val1[0]
 			if self.isUS() and len(val1[2]) == 4 and len(val1[1]) < 3:
 				isMonthUS = True
 				curDateField = 2
-				
+
 				# Compensation logic for the US layout when switching to shorter months.
 				# Since the detection simulation performs a 'down arrow' then 'up arrow',
 				# this can lead to an unintended decrease in the day value for shorter months.
-				# The following conditions handle common years (February with 28 days) 
+				# The following conditions handle common years (February with 28 days)
 				# and dynamically correct the active field context.
 				if val2[1] == "28":
 					if val1[1] == "31":
@@ -293,7 +295,7 @@ class AnnounceFieldsLabels(IAccessible):
 						keyboardHandler.KeyboardInputGesture.fromName("upArrow").send()
 						keyboardHandler.KeyboardInputGesture.fromName("leftArrow").send()
 						api.processPendingEvents()
-						
+
 				# Compensation logic for US layout during leap years (February with 29 days).
 				elif val2[1] == "29":
 					if val1[1] == "31":
@@ -307,7 +309,7 @@ class AnnounceFieldsLabels(IAccessible):
 						keyboardHandler.KeyboardInputGesture.fromName("upArrow").send()
 						keyboardHandler.KeyboardInputGesture.fromName("leftArrow").send()
 						api.processPendingEvents()
-						
+
 				# Compensation logic for US layout during 30-day months.
 				elif val2[1] == "30":
 					if val1[1] == "31":
@@ -319,8 +321,8 @@ class AnnounceFieldsLabels(IAccessible):
 				curDateField = 3 if len(curValue) == 4 else 1
 				if len(curValue) == 4:
 					isYear = True
-					
-					# Year field adjustment: Fixes day shifting issues when transitioning 
+
+					# Year field adjustment: Fixes day shifting issues when transitioning
 					# from a leap year to a common year during February.
 					if val2[2] == "28":
 						if val1[2] == "29" and val1[1] in ["2", "02"]:
@@ -334,8 +336,8 @@ class AnnounceFieldsLabels(IAccessible):
 				curDateField = 1 if self.isUS() and len(curValue) < 3 and len(val1[2]) == 4 else 2
 				if curDateField == 2:
 					isMonth = True
-					
-					# Standard layout compensation logic for common years (February with 28 days) 
+
+					# Standard layout compensation logic for common years (February with 28 days)
 					# when shifting fields across different month lengths.
 					if any(x == "28" for x in [val2[0], val2[2]]):
 						if any(x == "31" for x in [val1[0], val1[2]]):
@@ -356,7 +358,7 @@ class AnnounceFieldsLabels(IAccessible):
 							keyboardHandler.KeyboardInputGesture.fromName("upArrow").send()
 							self.leftOrRight(value=val1[0])
 							api.processPendingEvents()
-							
+
 					# Standard layout compensation logic for leap years (February with 29 days).
 					elif any(x == "29" for x in [val2[0], val2[2]]):
 						if any(x == "31" for x in [val1[0], val1[2]]):
@@ -370,7 +372,7 @@ class AnnounceFieldsLabels(IAccessible):
 							keyboardHandler.KeyboardInputGesture.fromName("upArrow").send()
 							self.leftOrRight(value=val1[0])
 							api.processPendingEvents()
-							
+
 					# Standard layout compensation logic for 30-day months.
 					elif any(x == "30" for x in [val2[0], val2[2]]):
 						if any(x == "31" for x in [val1[0], val1[2]]):
@@ -383,8 +385,7 @@ class AnnounceFieldsLabels(IAccessible):
 				curDateField = 3 if len(val1[2]) == 4 else 1
 				curValue = val1[2]
 				if len(curValue) == 4:
-					
-					# Dynamic alignment handling for the year field when navigating 
+					# Dynamic alignment handling for the year field when navigating
 					# and encountering February limit changes.
 					if any(x == "28" for x in [val2[0], val2[1]]):
 						if self.isUS():
@@ -421,7 +422,7 @@ class AnnounceFieldsLabels(IAccessible):
 
 	def calculateCurField(self):
 		"""
-		Simulates focus movement via arrow keys to safely determine the structure 
+		Simulates focus movement via arrow keys to safely determine the structure
 		and boundaries of the focused date field (useful for braille-only configurations).
 		"""
 		val1 = self.value
@@ -429,13 +430,13 @@ class AnnounceFieldsLabels(IAccessible):
 		self.increment = 1
 		api.processPendingEvents()
 		val2 = self.value
-		
+
 		# If values are identical, boundary limits are reached; step backwards instead.
 		if val1 == val2:
 			keyboardHandler.KeyboardInputGesture.fromName("upArrow").send()
 			self.increment = -1
 			api.processPendingEvents()
-			
+
 		# Restore the user's focus position to the original state.
 		if self.increment == 1:
 			keyboardHandler.KeyboardInputGesture.fromName("upArrow").send()
@@ -518,4 +519,3 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	)
 	def script_activateDayOfTheWeekSettingsDialog(self, gesture):
 		wx.CallAfter(gui.mainFrame.popupSettingsDialog, NVDASettingsDialog, DayOfWeekSettingsDialog)
-        
