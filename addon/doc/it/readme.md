@@ -1,142 +1,107 @@
-# Giorno della settimana
+# Giorno della settimana #
 
-- Autori: Abdel, Noelia.
+* Sviluppatori: Abdel, Noelia.
 
-Questo componente aggiuntivo permette di conoscere il giorno della settimana
-corrispondente a una data conosciuta.
+Questo componente aggiuntivo consente di trovare il giorno della settimana corrispondente a una data scelta.
 
-Aggiunge un elemento nel menu strumenti di NVDA chiamato "Giorno della
-settimana", contenente due elementi:
+Aggiunge un sottomenu nel menu Strumenti di NVDA chiamato "Giorno della settimana", contenente 2 voci:
 
-- Il primo, chiamato "Cerca un giorno", apre una finestra di dialogo
-  composta da tre controlli:
+* La prima, denominata "Cerca un giorno", apre una finestra di dialogo composta da 3 controlli:
 
-  - Una casella elenco per selezionare o digitare la data desiderata;
-  - Un pulsante "OK" per visualizzare un messaggio contenente il giorno
-    della settimana;
-  - Un pulsante annulla per chiudere la finestra.
+    * Una casella di riepilogo per scegliere o digitare la data;
+    * Un pulsante "OK" per visualizzare una casella di messaggio contenente il giorno;
+    * Un pulsante "Annulla" per chiudere la finestra di dialogo.
 
-- Il secondo, chiamato "impostazioni del componente aggiuntivo Giorno della
-  Settimana", apre i parametri del componente, per specificare se si
-  vogliono vocalizzare le etichette dei campi data o no; è composto dai
-  seguenti elementi:
+* La seconda, denominata "Impostazioni del componente aggiuntivo dayOfTheWeek", apre i parametri del componente aggiuntivo per specificare se si desidera o meno annunciare le etichette dei campi data, ed è composta dai seguenti elementi:
 
-  - attiva l'accessibilità del selettore date;
+    * Attiva l'accessibilità del selettore di data;
+    * Livello di annuncio delle etichette, avrai quindi 3 opzioni:
 
-  - Prolissità della vocalizzazione delle etichette; si avranno tre
-    scelte:
+        * Lungo (è l'opzione predefinita);
+        * Breve (per annunci brevi);
+        * Disattivato (per disattivare gli annunci delle etichette).
 
-    - Lunga (è la scelta predefinita);
-    - Breve (per messaggi brevi);
-    - Disattivato (per disabilitare la vocalizzazione delle etichette).
+    * Attiva l'annuncio del solo valore del campo data corrente, quando ci si sposta verticalmente;
+    * Un pulsante "OK" per salvare la configurazione;
+    * Un pulsante "Annulla" per annullare e chiudere la finestra di dialogo.
 
-  - Attiva la vocalizzazione del solo valore del campo data corrente,
-    quando ci si sposta verticalmente;
+## Note ##
 
-  - Un pulsante "OK" per salvare la configurazione;
+* È possibile chiudere queste finestre di dialogo semplicemente premendo Escape;
+* È possibile assegnare una scorciatoia per aprire queste finestre di dialogo nel menu "Gesti di immissione" e, più precisamente, nella categoria "Giorno della settimana";
+* Se usi NVDA 2018.2 o superiore, troverai solo una voce nel menu degli strumenti per cercare il giorno, e le impostazioni del componente aggiuntivo saranno nel pannello delle impostazioni di NVDA.
 
-  - Un pulsante annulla per annullare e chiudere la finestra.
+## Compatibilità ##
 
-## Note
+* Questo componente aggiuntivo è compatibile con le versioni di NVDA a partire dalla 2019.3 e successive.
 
-- è possibile chiudere queste finestre semplicemente premendo esc;
-- È possibile assegnare una combinazione di tasti per aprire queste finestre
-  di dialogo nel menu "gesti e tasti di immissione" e, più precisamente,
-  nella categoria  "Giorno della settimana";
-- Se si utilizza NVDA 2018.2 o superiore, troverete solo una voce nel menu
-  strumenti per la ricerca del giorno; le impostazioni del componente
-  aggiuntivo verranno visualizzate nelle impostazioni di NVDA.
+## Modifiche per 20240326.0.0
 
-## Compatibilità
+* Aggiornata la compatibilità per nvda-2024.1.;
+* Rimosso il collegamento per il download dal file readme, il collegamento per il download per i futuri aggiornamenti sarà ora disponibile solo nell'add-on store.
 
-- This add-on is compatible with the versions of NVDA ranging from 2019.3
-  and beyond.
+## Modifiche per 20231229.0.0 ##
 
-## Changes for 20240326.0.0
+* Aggiunta un'implementazione retrocompatibile per supportare la modalità di sintesi vocale su richiesta, che sarà presto disponibile con nvda-2024.1.
 
-- Updated compatibility for nvda-2024.1.;
-- Deleted download link from readme, the download link for future updates
-  will now only be available from the add-on store.
+## Modifiche per 20231015.0.0 ##
 
-## Changes for 20231229.0.0
+* Corretto un errore rilevato durante la navigazione con la freccia su dal selettore di data nelle ultime versioni di NVDA.
 
-- Added a backward compatible implementation to support speak on demand
-  mode, which will soon be available with nvda-2024.1.
+## Modifiche per 20230728.0.0 ##
 
-## Changes for 20231015.0.0
+* Applicate le regole di flake8 e mypy al codice;
+* Modificata la versione minima supportata di NVDA alla 2019.3 per supportare le annotazioni introdotte in Python 3.
 
-- Fixed a bug detected when navigating with up arrow from the date picker in
-  the latest versions of NVDA.
+## Modifiche per 20230607.0.0 ##
 
-## Changes for 20230728.0.0
+* Aggiunti i seguenti flussi di lavoro:
+ * auto-update-translations - per aggiornare automaticamente le traduzioni dal sistema di traduzione di NVDA.
+ * release-on-tag..yaml: per creare e pubblicare il componente aggiuntivo non appena viene inviato un nuovo tag;
+ * manual-release.yaml: per creare e rilasciare manualmente nuove versioni del componente aggiuntivo.
+* Traduzioni aggiornate.
 
-- Applied the flake8 and mypy rules to the code;
-- Changed the minimum supported NVDA version to 2019.3 to support
-  annotations introduced in Python 3.
+## Modifiche per la versione 20230508.0.0 e successive ##
 
-## Changes for 20230508.0.0 and beyond
+* • Modificato il numero di versione, la versione minima di NVDA e il collegamento per il download in conformità con le convenzioni/requisiti dello store.
 
-- Added the following workflows:
-- auto-update-translations - to automatically update translations from NVDA's translation system.
-- release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;
-- manual-release.yaml: to build and release new versions of the add-on manually.
-- Updated translations.
+## Modifiche per 19.02 ##
 
-## Changes for version 20230508.0.0 and beyond
+* Modificata la numerazione delle versioni utilizzando AA.MM (L'anno in 2 cifre, seguito da un punto, seguito dal mese in 2 cifre);
+* Aggiunta la compatibilità con il nuovo formato di versione dei componenti aggiuntivi, apparso a partire da nvda 2019.1.
 
-- Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
+## Modifiche per 6.0 ##
 
-## Novità nella versione 19.02
+* Aggiunte le impostazioni del componente aggiuntivo al pannello delle impostazioni di NVDA per NVDA 2018.2 e versioni successive;
+* Spostata la voce per cercare un giorno nel menu strumenti;
+* Aggiunta la retrocompatibilità del componente aggiuntivo con les versioni di NVDA precedenti alla 2018.2, che includevano il pannello delle impostazioni.
 
-- Cambiata la modalità di numerazione delle versioni; ora si utilizzano due
-  cifre per l'anno, seguite da un punto, seguito da due cifre per il mese
-  (aa.mm);
-- Aggiunta la compatibilità con il nuovo formato per il numero di versione
-  degli add-on, presente a partire da NVDA 2019.1.
+## Modifiche per 5.0 ##
 
-## Novità nella versione 5.0
+* Aggiunta la compatibilità del componente aggiuntivo con wxPython 4.0 e Python3;
+* Corretto un errore con i percorsi del componente aggiuntivo che contengono caratteri non ASCII.
 
-- Integrate le impostazioni del componente  nella finestra impostazioni di
-  NVDA 2018.2 e superiori;
-- Spostata la voce per la ricerca del giorno nel menu strumenti;
-- Mantenuta la compatibilità per versioni precedenti a NVDA 2018.2, che
-  include la finestra impostazioni.
+## Modifiche per 4.0 ##
 
-## Changes for 5.0
+* Il componente aggiuntivo è ora in grado di riconoscere tutti i formati di data regionali che l'utente può scegliere;
+* Aggiunta la retrocompatibilità del componente aggiuntivo con le versioni di NVDA precedenti alla 2016.4, che includevano il modulo gui.guiHelper.
 
-- Aggiunta compatibilità per wxPython 4 e Python 3;
-- Risolto un bug con i percorsi che contengono caratteri non ASCII.
+## Modifiche per 3.1 ##
 
-## Novità nella versione 4.0
+* Ritorno al formato precedente per il giorno della settimana perché consente di riconoscere un numero maggiore di lingue;
+* Migliorata l'accessibilità del selettore di data con il riconoscimento dei 3 campi 'Giorno', 'Mese' e 'Anno' e dei rispettivi valori;
+* Aggiunta una tecnica per l'integrazione della lingua georgiana per il riconoscimento dei giorni della settimana;
+* Aggiunta una finestra di dialogo di configurazione per abilitare o disabilitare l'accessibilità del selettore di data;
+* Spostato il sottomenu del componente aggiuntivo da "Strumenti" a "Preferenze";
+* Modificata la categoria del componente aggiuntivo in "Giorno della settimana".
 
-- L'add-on è ora in grado di riconoscere tutti i formati locali di data che
-  l'utente può scegliere;
-- Mantenuta la compatibilità per versioni precedenti a NVDA 2016.4, CHE
-  include IL MODULO gui-HELPER.
+## Modifiche per 2.0 ##
 
-## Novità nella versione 3.1
+* Utilizzato il modulo gui.guiHelper per garantire il corretto aspetto della finestra di dialogo che richiede una data;
+* Aggiunta la licenza GPL al componente aggiuntivo;
+* I giorni della settimana sono stati tradotti, in modo che il componente aggiuntivo funzioni correttamente nelle diverse lingue;
+* Modificato il formato del giorno per evitare errori di codifica.
 
-- Riutilizzo del formato precedente per il giorno della settimana, CHE
-  permette di riconoscere un numero maggiore di lingue;
-- Migliorata l'accessibilità del selettore di data con il riconoscimento dei
-  3 campi 'Giorno', 'Mese', 'Anno', e dei loro rispettivi valori;
-- Aggiunta una tecnica di integrazione per il riconoscimento dei giorni
-  della settimana nella lingua georgiana;
-- Aggiunta una finestra di configurazione per attivare o disattivare
-  l'accessibilità del selettore date;
-- Spostato il sottomenu del componente aggiuntivo da strumenti a preferenze;
-- Modificata la categoria dell'addon in "giorno della settimana".
+## Modifiche per 1.0 ##
 
-## Novità nella versione 2.0
-
-- Introdotto il modulo gui.guiHelper per garantire il corretto aspetto della
-  finestra di dialogo di richiesta di una data;
-- Aggiunta la licenza GPL al componente;
-- Sono stati tradotti i giorni della settimana, perciò il componente
-  aggiuntivo funzionerà in più lingue.
-- Modificato il formato del giorno per evitare errori di codifica.
-
-## Novità nella versione 1.0
-
-- Versione iniziale.
+* Versione iniziale.

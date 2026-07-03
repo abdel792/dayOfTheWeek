@@ -1,65 +1,107 @@
-# Dan u nedelji #
+# Дан у недељи #
 
-*	 Autori: Abdel, Noelia.
-*	 Preuzmi[stabilnu verziju][1]
-*	 Preuzmi[verziju u razvoju][2]
+* Развијаоци: Abdel, Noelia.
 
-Ovaj dodatak vam omogućava da saznate dan u nedelji koji odgovara određenom
-datumu.
+Овај додатак вам омогућава да пронађете дан у недељи који одговара изабраном датуму.
 
-It adds a submenu in the NVDA Preferences menu named "Day of the week",
-containing 2 items:
+Додаје подмени у NVDA мени „Алати” под називом „Дан у недељи”, који садржи 2 ставке:
 
+* Прва под називом „Тражи дан”, отвара дијалошко поље које се састоји од 3 контроле:
 
-*	The first one named "Search a day", opens a dialog composed of 3 controls:
-	*	A listbox to choose or type your date;
-	*	An "OK" button to display a messageBox containing your day;
-	*	A "Cancel" button to close the dialog.
-*	The second one named "dayOfTheWeek add-on settings" opens the parameters of the add-on to specify whether you want to report labels for date fields or not, it is composed of the following elements:
-	*	Enable accessibility of the date selector;
-	*	Level of the announces of labels, you will then have 3 choices:
-		*	Long (it's the default choice);
-		*	Short (for short announcements);
-		*	Off (to disable labels announcements).
-	*	Enable announcement of the current date field value only, when moving vertically;
-	*	An "OK" button to save your configuration;
-	*	A "Cancel" button to cancel and close the dialog.
+    * Оквир са листом за избор или унос вашег датума;
+    * Дугме „У реду” за приказ оквира са поруком која садржи ваш дан;
+    * Дугме „Откажи” за затварање дијалошког поља.
 
+* Друга под називом „Подешавања додатка dayOfTheWeek” отвара параметре додатка како бисте одредили желите ли да најављујете ознаке за поља датума или не, а састоји се од следећих елемената:
 
-## Napomene ##
+    * Омогући приступачност бирача датума;
+    * Ниво најаве ознака, где ћете имати 3 избора:
 
-*	 You can close these dialogs just by pressing Escape.
-*	 You can assign a shortcut to open these dialogs in "Input gestures" menu
-   and, more precisely, in the "Day of the week" category.
+        * Дуго (ово је подразумевани избор);
+        * Кратко (за кратке најаве);
+        * Искључено (за онемогућавање најаве ознака).
 
-## Changes for 3.1 ##
+    * Омогући најаву само тренутне вредности поља датума, приликом вертикалног померања;
+    * Дугме „У реду” за чување ваше конфигурације;
+    * Дугме „Откажи” за отказивање и затварање дијалошког поља.
 
-*	 Back to the old format for the day of the week because it allows to
-   recognize a greater number of languages;
-*	 Improved the accessibility of the date selector with recognition of the 3
-   fields 'Day', 'Month' and 'Year', and their respective values;
-*	 Added a technique for the integration of the Georgian language for the
-   recognition of the days of the week;
-*	 Added a configuration dialog box to enable or disable the accessibility
-   of the date selector;
-*	 Moved the add-on submenu from "Tools" to "Preferences";
-*	 Changed the add-on category to "Day of the week".
+## Напомене ##
 
-## Changes for 2.0 ##
+* Ова дијалошка поља можете затворити једноставним притиском на тастер Escape;
+* Можете доделити пречицу за отварање ових дијалошких поља у менију „Улазни гестови” и, тачније, у категорији „Дан у недељи”;
+* Ако користите NVDA 2018.2 или новију верзију, пронаћи ћете само једну ставку у менију алата за претраживање вашег дана, а подешавања додатка биће у NVDA панелу са подешавањима.
 
-*	 Used the gui.guiHelper module to ensure the correct appearance of the
-   dialog asking for a date;
-*	 Added the GPL license to the addon;
-*	 Days of the week have been translated, so that the add-on works properly
-   in the different languages.;
-*	 Used the %w format for the dates rather than %a to avoid encoding errors.
+## Компатибилност ##
 
-## Promene u 1.0 ##
+* Овај додатак је компатибилан са верзијама NVDA у распону од 2019.3 и новијим.
 
-*	 Prva verzija
+## Промене за 20240326.0.0
 
-[[!tag dev stable]]
+* Ажурирана компатибилност за nvda-2024.1.;
+* Избрисана веза за преузимање из датотеке readme, веза за преузимање за будућа ажурирања сада ће бити доступна само у продавници додатака.
 
-[1]: https://addons.nvda-project.org/files/get.php?file=dw
+## Промене за 20231229.0.0 ##
 
-[2]: https://addons.nvda-project.org/files/get.php?file=dw-dev
+* Додата уназад компатибилна имплементација за подршку режима говора на захтев, који ће ускоро бити доступан са nvda-2024.1.
+
+## Промене за 20231015.0.0 ##
+
+* Исправљена грешка откривена приликом навигације стрелицом нагоре из бирача датума у најновијим верзијама NVDA.
+
+## Промене за 20230728.0.0 ##
+
+* Примењена правила flake8 и mypy на код;
+* Промењена минимална подржана верзија NVDA на 2019.3 ради подршке за анотације уведене у Python-у 3.
+
+## Промене за 20230607.0.0 ##
+
+* Додати следећи токови рада (workflows):
+ * auto-update-translations - за аутоматско ажурирање превода из NVDA система за превођење.
+ * release-on-tag..yaml: за изградњу и објављивање додатка чим се пошаље нова ознака;
+ * manual-release.yaml: за ручну изградњу и објављивање нових верзија додатка.
+* Ажурирани преводи.
+
+## Промене за верзију 20230508.0.0 и новије ##
+
+* • Промењен број верзије, минимална верзија NVDA и веза за преузимање у складу са конвенцијама/захтевима продавнице.
+
+## Промене за 19.02 ##
+
+* Промењено нумерисање верзија помоћу ГГ.ММ (Година у 2 цифре, након које следи тачка, након које следи месец у 2 цифре);
+* Додата компатибилност са новим форматом означавања верзија додатака, који се појавио од верзије nvda 2019.1.
+
+## Промене за 6.0 ##
+
+* Додата подешавања додатка у NVDA панел са подешавањима за NVDA 2018.2 и новије;
+* Премештена ставка за тражење дана у мени алата;
+* Додата уназад компатибилност додатка са верзијама NVDA које су претходиле верзији 2018.2, а које су укључивале панел са подешавањима.
+
+## Промене за 5.0 ##
+
+* Додата компатибилност додатка са wxPython-ом 4.0 и Python-ом 3;
+* Исправљена грешка са путањама додатка које садрже знакове који нису ASCII.
+
+## Промене за 4.0 ##
+
+* Додатак је сада способан да препозна све регионалне формате датума које корисник може изабрати;
+* Додата уназад компатибилност додатка са верзијама NVDA које су претходиле верзији 2016.4, а које су укључивале модул gui.guiHelper.
+
+## Промене за 3.1 ##
+
+* Повратак на претходни формат за дан у недељи јер омогућава препознавање већег броја језика;
+* Побољшана приступачност бирача датума са препознавањем 3 поља „Дан”, „Месец” и „Година” и њихових одговарајућих вредности;
+* Додата техника за интеграцију грузијског језика за препознавање дана у недељи;
+* Додато конфигурационо дијалошко поље за омогућавање или онемогућавање приступачности бирача датума;
+* Премештен подмени додатка из „Алати” у „Опције”;
+* Промењена категорија додатка у „Дан у недељи”.
+
+## Промене за 2.0 ##
+
+* Коришћен модул gui.guiHelper како би се осигурао исправан изглед дијалошког поља које тражи датум;
+* Додата GPL лиценца додатку;
+* Дани у недељи су преведени како би додатак исправно радио на различитим језицима;
+* Промењен формат дана како би се избегле грешке у кодирању.
+
+## Промене за 1.0 ##
+
+* Почетна верзија.

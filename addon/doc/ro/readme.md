@@ -1,134 +1,107 @@
-# Day of the week
+# Ziua săptămânii #
 
-- Autori: Abdel, Noelia.
+* Dezvoltatori: Abdel, Noelia.
 
-Acest supliment vă permite să găsiți o zi din săptămână care corespunde cu o
-dată aleasă.
+Această extensie vă permite să găsiți ziua săptămânii corespunzătoare unei date alese.
 
-It adds a submenu in the NVDA Tools menu named "Day of the week", containing
-2 items:
+Ea adaugă un submeniu în meniul Instrumente al NVDA numit „Ziua săptămânii”, care conține 2 elemente:
 
-- The first one named "Search a day", opens a dialog composed of 3 controls:
+* Primul, numit „Caută o zi”, deschide o casetă de dialog compusă din 3 controale:
 
-  - A listbox to choose or type your date;
-  - An "OK" button to display a messageBox containing your day;
-  - Un buton „Anulare” pentru a închide dialogul.
+    * O casetă de listă pentru a alege sau a tasta data;
+    * Un buton „OK” pentru a afișa o casetă de mesaj care conține ziua dumneavoastră;
+    * Un buton „Anulează” pentru a închide caseta de dialog.
 
-- The second one named "dayOfTheWeek add-on settings" opens the parameters
-  of the add-on to specify whether you want to report labels for date fields
-  or not, it is composed of the following elements:
+* Al doilea, numit „Setările extensiei dayOfTheWeek”, deschide parametrii extensiei pentru a specifica dacă doriți sau nu să anunțați etichetele câmpurilor de dată, fiind compus din următoarele elemente:
 
-  - Enable accessibility of the date selector;
+    * Activează accesibilitatea selectorului de dată;
+    * Nivelul de anunțare a etichetelor, unde veți avea 3 opțiuni:
 
-  - Level of the announces of labels, you will then have 3 choices:
+        * Lung (aceasta este opțiunea implicită);
+        * Scurt (pentru anunțuri scurte);
+        * Dezactivat (pentru a dezactiva anunțurile etichetelor).
 
-    - Long (it's the default choice);
-    - Short (for short announcements);
-    - Off (to disable labels announcements).
+    * Activează anunțarea doar a valorii câmpului de dată curent, atunci când vă deplasați pe verticală;
+    * Un buton „OK” pentru a salva configurația;
+    * Un buton „Anulează” pentru a anula și a închide caseta de dialog.
 
-  - Enable announcement of the current date field value only, when moving
-    vertically;
+## Note ##
 
-  - An "OK" button to save your configuration;
+* Puteți închide aceste casete de dialog pur și simplu apăsând tasta Escape;
+* Puteți atribui o comandă rapidă pentru a deschide aceste casete de dialog în meniul „Gesturi de introducere” și, mai exact, în categoria „Ziua săptămânii”;
+* Dacă utilizați NVDA 2018.2 sau o versiune ulterioară, veți găsi un singur element în meniul de instrumente pentru a căuta ziua, iar setările extensiei vor fi în panoul de setări NVDA.
 
-  - A "Cancel" button to cancel and close the dialog.
+## Compatibilitate ##
 
-## Note
+* Această extensie este compatibilă cu versiunile NVDA începând de la 2019.3 și ulterioare.
 
-- You can close these dialogs just by pressing Escape;
-- You can assign a shortcut to open these dialogs in "Input gestures" menu
-  and, more precisely, in the "Day of the week" category;
-- Dacă folosiți NVDA 2018.2 sau mai nou, veți găsi un singur element în
-  meniul instrumente pentru căutarea zilei dumneavoastră, setările
-  suplimentului vor fi în panoul de setări al NVDA.
+## Modificări pentru 20240326.0.0
 
-## Compatibility
+* S-a actualizat compatibilitatea pentru nvda-2024.1.;
+* S-a șters linkul de descărcare din readme, linkul de descărcare pentru actualizările viitoare va fi acum disponibil doar din magazinul de extensii.
 
-- This add-on is compatible with the versions of NVDA ranging from 2019.3
-  and beyond.
+## Modificări pentru 20231229.0.0 ##
 
-## Changes for 20240326.0.0
+* S-a adăugat o implementare compatibilă cu versiunile anterioare pentru a asigura suportul modului de vorbire la cerere, care va fi disponibil în curând împreună cu versiunea nvda-2024.1.
 
-- Updated compatibility for nvda-2024.1.;
-- Deleted download link from readme, the download link for future updates
-  will now only be available from the add-on store.
+## Modificări pentru 20231015.0.0 ##
 
-## Changes for 20231229.0.0
+* S-a remediat o eroare detectată la navigarea cu săgeată în sus din selectorul de dată în cele mai recente versiuni de NVDA.
 
-- Added a backward compatible implementation to support speak on demand
-  mode, which will soon be available with nvda-2024.1.
+## Modificări pentru 20230728.0.0 ##
 
-## Changes for 20231015.0.0
+* S-au aplicat regulile flake8 și mypy asupra codului;
+* S-a modificat versiunea minimă de NVDA suportată la 2019.3 pentru a asigura suportul adnotărilor introduse în Python 3.
 
-- Fixed a bug detected when navigating with up arrow from the date picker in
-  the latest versions of NVDA.
+## Modificări pentru 20230607.0.0 ##
 
-## Changes for 20230728.0.0
+* S-au adăugat următoarele fluxuri de lucru (workflows):
+ * auto-update-translations - pentru a actualiza automat traducerile din sistemul de traducere al NVDA.
+ * release-on-tag..yaml: pentru a construi și a publica extensia de îndată ce este trimis un nou tag;
+ * manual-release.yaml: pentru a construi și a lansa manual noi versiuni ale extensiei.
+* Traduceri actualizate.
 
-- Applied the flake8 and mypy rules to the code;
-- Changed the minimum supported NVDA version to 2019.3 to support
-  annotations introduced in Python 3.
+## Modificări pentru versiunea 20230508.0.0 și ulterioare ##
 
-## Changes for 20230508.0.0 and beyond
+* • S-au modificat numărul versiunii, versiunea minimă de NVDA și linkul de descărcare în conformitate cu convențiile/cerințele magazinului.
 
-- Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
-- auto-update-translations - to automatically update translations from NVDA's translation system.
-- release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;
-- manual-release.yaml: to build and release new versions of the add-on manually.
-- Updated translations.
+## Modificări pentru 19.02 ##
 
-## Changes for version 20230508.0.0 and beyond
+* S-a modificat numerotarea versiunilor folosind AA.LL (Anul din 2 cifre, urmat de punct, urmat de luna din 2 cifre);
+* S-a adăugat compatibilitatea cu noul format de versiune pentru extensii, apărut începând cu versiunea nvda 2019.1.
 
-- Changed version numbering using YY.MM (The year in 2 digits, followed by a
-  dot, followed by the month in 2 digits);
+## Modificări pentru 6.0 ##
 
-## Changes for 19.02
+* S-au adăugat setările extensiei în panoul de setări NVDA pentru NVDA 2018.2 și versiuni ulterioare;
+* S-a mutat elementul pentru căutarea unei zile în meniul instrumente;
+* S-a adăugat compatibilitatea cu versiunile anterioare ale extensiei pentru versiunile NVDA precedente celei 2018.2, care includeau panoul de setări.
 
-- S-au adăugat setările suplimentului în de setări al NVDA pentru NVDA
-  2018.2 și mai nou;
-- Elementul pentru căutarea unei zile s-a mutat în meniul instrumente;
+## Modificări pentru 5.0 ##
 
-## Modificări în versiunea 5.0
+* S-a adăugat compatibilitatea extensiei cu wxPython 4.0 și Python3;
+* S-a remediat o eroare legată de căile extensiei care conțin caractere non-ASCII.
 
-- S-a adăugat compatibilitatea suplimentului cu wxPython 4.0 și Python3.
-- S-a rezolvat o problemă privind adresele suplimentului care conținea
-  caractere non-ASCII
-- Added the backward compatibility of the add-on with the NVDA versions that preceded 2018.2, which included the settings panel.
+## Modificări pentru 4.0 ##
 
-## Modificări în versiunea 4.0
+* Extensia este acum capabilă să recunoască toate formatele de dată regionale pe care utilizatorul le poate alege;
+* S-a adăugat compatibilitatea cu versiunile anterioare ale extensiei pentru versiunile NVDA precedente celei 2016.4, care includeau modulul gui.guiHelper.
 
-- Suplimentul poate recunoaște toate formatele datelor regionale p care le
-  poate alege un utilizator;
-- A fost adăugată înapoi compatibilitatea suplimentului cu versiunile NVDA
-  care au precedat versiunea 2016.4, care a inclus modulul gui.guiHelper.
+## Modificări pentru 3.1 ##
 
-## Modificări în versiunea 3.1
+* Revenire la formatul anterior pentru ziua săptămânii, deoarece acesta permite recunoașterea unui număr mai mare de limbi;
+* S-a îmbunătățit accesibilitatea selectorului de dată prin recunoașterea celor 3 câmpuri „Zi”, „Lună” și „An” și a valorilor respective ale acestora;
+* S-a adăugat o tehnică pentru integrarea limbii georgiene în vederea recunoașterii zilelor săptămânii;
+* S-a adăugat o casetă de dialog de configurare pentru a activa sau a dezactiva accesibilitatea selectorului de dată;
+* S-a mutat submeniul extensiei din „Instrumente” în „Preferințe”;
+* S-a modificat categoria extensiei în „Ziua săptămânii”.
 
-- S-a revenit la vechiul format al zilei săptămânii, deoarece permite
-  recunoașterea unui număr mare de limbi;
-- A fost îmbunătățită accesibilitatea selectorului de dată cu recunoașterea
-  a trei câmpuri 'zi, 'lună' și 'an', dar și respectivele valori ale
-  acestora;
+## Modificări pentru 2.0 ##
 
-## Modificări în versiunea 2.0
+* S-a utilizat modulul gui.guiHelper pentru a asigura aspectul corect al casetei de dialog care solicită o dată;
+* S-a adăugat licența GPL la extensie;
+* Zilele săptămânii au fost traduse, astfel încât extensia să funcționeze corect în diferitele limbi;
+* S-a modificat formatul zilei pentru a evita erorile de codare.
 
-- A fost folosit modulul gui.guiHelper pentru a asigura aspectul corect al
-  dialogului care cere o dată;
-- A fost adăugată licența GPL pentru supliment;
-- Zilele săptămânii au fost traduse, astfel încât suplimentul să funcționeze
-  corect în diferite limbi;
-- Formatul zilei a fost modificat pentru a evita erorile de codificare.
-- Moved the add-on submenu from "Tools" to "Preferences";
-- Changed the add-on category to "Day of the week".
+## Modificări pentru 1.0 ##
 
-## Modificări în versiunea 1.0
-
-- Versiunea inițială.
-- Added the GPL license to the addon;
-- Days of the week have been translated, so that the add-on works properly in the different languages;
-- Changed the day format to avoid encoding errors.
-
-## Changes for 1.0
-
-- Initial version.
+* Versiune inițială.

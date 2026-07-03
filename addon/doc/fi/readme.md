@@ -1,128 +1,107 @@
-# Viikonpäivä
+# Viikonpäivä #
 
-- Tekijät: Abdel, Noelia.
+* Kehittäjät: Abdel, Noelia.
 
-Tällä lisäosalla on mahdollista selvittää valittua päivämäärää vastaava
-viikonpäivä.
+Tämän lisäosan avulla voit selvittää valittua päivämäärää vastaavan viikonpäivän.
 
-NVDA:n Työkalut-valikkoon lisätään Viikonpäivä-alavalikko, jossa on kaksi
-kohdetta:
+Se lisää NVDA:n Työkalut-valikkoon alavalikon nimeltä "Viikonpäivä", joka sisältää 2 kohdetta:
 
-- Ensimmäinen, "Hae päivä", avaa valintaikkunan, jossa on kolme säädintä:
+* Ensimmäinen nimeltään "Etsi päivä", avaa valintaruudun, joka koostuu 3 säätimestä:
 
-  - Listaruutu, josta voi valita tai johon voi kirjoittaa päivämäärän;
-  - OK-painike, jota painettaessa tulee näkyviin valitun päivän näyttävä
-    ilmoitusruutu;
-  - Peruuta-painike, joka sulkee valintaikkunan.
+    * Luetteloruutu päivämäärän valitsemiseksi tai kirjoittamiseksi;
+    * "OK"-painike, joka näyttää viestiruudun, joka sisältää päiväsi;
+    * "Peruuta"-painike valintaruudun sulkemiseksi.
 
-- The second one named "dayOfTheWeek add-on settings" opens the parameters of the add-on to specify whether you want to report labels for date fields or not, it is composed of the following elements:
+* Toinen nimeltään "Viikonpäivä-lisäosan asetukset" avaa lisäosan parametrit, joissa voit määrittää, haluatko ilmoittaa päivämääräkenttien selitteet vai et. Se koostuu seuraavista osista:
 
-  - Ota käyttöön päivämäärävalitsimen saavutettavuus;
+    * Ota käyttöön päivämäärävalitsimen saavutettavuus;
+    * Selitteiden ilmoitustaso, jolloin sinulla on 3 vaihtoehtoa:
 
-  - Seliteilmoitusten taso, jossa on kolme vaihtoehtoa:
+        * Pitkä (tämä on oletusvaihtoehto);
+        * Lyhyt (lyhyitä ilmoituksia varten);
+        * Pois päältä (poistaa selitteiden ilmoitukset käytöstä).
 
-    - Pitkä (oletusarvoisesti valittuna);
-    - Lyhyt (lyhyet ilmoitukset);
-    - Ei käytössä (poistaa seliteilmoitukset käytöstä).
+    * Ota käyttöön vain nykyisen päivämääräkentän arvon ilmoittaminen pystysuunnassa liikuttaessa;
+    * "OK"-painike määritysten tallentamiseksi;
+    * "Peruuta"-painike peruuttamiseksi ja valintaruudun sulkemiseksi.
 
-  - Ota käyttöön nykyisen päivämääräkentän arvon ilmoittaminen vain
-    pystysuunnassa liikuttaessa;
+## Huomautukset ##
 
-  - OK-painike, jota painettaessa asetukset tallennetaan;
+* Voit sulkea nämä valintaruudut painamalla Esc-näppäintä;
+* Voit määrittää pikanäppäimen näiden valintaruutujen avaamiseen "Syötteet"-valikosta ja tarkemmin sanottuna luokasta "Viikonpäivä";
+* Jos käytät NVDA-versiota 2018.2 tai uudempaa, löydät työkalut-valikosta vain yhden kohdan päivän etsimistä varten, ja lisäosan asetukset ovat NVDA:n asetuspaneelissa.
 
-  - Peruuta-painike, joka peruuttaa ja sulkee valintaikkunan.
+## Yhteensopivuus ##
 
-## Huomautuksia
+* Tämä lisäosa on yhteensopiva NVDA-versioiden 2019.3 ja sitä uudempien kanssa.
 
-- Valintaikkunat voidaan sulkea painamalla Esc-näppäintä;
-- Valintaikkunoiden avaamista varten on mahdollista määrittää näppäinkomento
-  Näppäinkomennot-valintaikkunan Viikonpäivä-kategoriasta;
-- If you use NVDA 2018.2 or higher, you'll find only one item in the tool menu for searching your day, the add-on settings will be in the NVDA settings panel.
+## Muutokset versioon 20240326.0.0
 
-## Yhteensopivuus
+* Päivitetty yhteensopivuus nvda-2024.1-versiolle.;
+* Poistettu latauslinkki luettelotiedostosta, tulevien päivitysten latauslinkki on jatkossa saatavilla vain lisäosakaupasta.
 
-- Tämä lisäosa on yhteensopiva NVDA 2019.3:n ja sitä uudempien versioiden
-  kanssa.
+## Muutokset versioon 20231229.0.0 ##
 
-## Muutokset versiossa 20240326.0.0
+* Lisätty taaksepäin yhteensopiva toteutus tukemaan puhetta tarvittaessa -tilaa, joka on pian saatavilla nvda-2024.1-version myötä.
 
-- Päivitetty yhteensopivuus NVDA 2024.1:lle.
-- Deleted download link from readme, the download link for future updates will now only be available from the add-on store.
+## Muutokset versioon 20231015.0.0 ##
 
-## Muutokset versiossa 20231229.0.0
+* Korjattu virhe, joka havaittiin navigoitaessa ylänuolella päivämääränvalitsimesta NVDA:n uusimmissa versioissa.
 
-- Lisätty taaksepäin yhteensopiva toteutus pyydettäessä-puhetilalle, joka on
-  pian saatavilla NVDA 2024.1:ssä.
+## Muutokset versioon 20230728.0.0 ##
 
-## Muutokset versiossa 20231015.0.0
+* Sovellettu flake8- ja mypy-sääntöjä koodiin;
+* Muutettu pienin tuettu NVDA-versio versioon 2019.3 Python 3:ssa esiteltyjen annotaatioiden tukemiseksi.
 
-- Korjattu bugi, joka ilmeni liikuttaessa ylänuolinäppäimellä
-  päivämääränvalitsimessa NVDA:n uusimpia versioita käytettäessä.
+## Muutokset versioon 20230607.0.0 ##
 
-## Muutokset versiossa 20230728.0.0
+* Lisätty seuraavat työvaiheet:
+ * auto-update-translations - kääntämään käännökset automaattisesti NVDA:n käännösjärjestelmästä.
+ * release-on-tag..yaml: lisäosan kääntämiseksi ja julkaisemiseksi heti, kun uusi tagi on lähetetty;
+ * manual-release.yaml: lisäosan uusien versioiden kääntämiseksi ja julkaisemiseksi manuaalisesti.
+* Päivitetyt käännökset.
 
-- Sovellettu koodiin flake8- ja mypy-sääntöjä.
-- Muutettu NVDA:n tuetuksi vähimmäisversioksi 2019.3 Python 3:ssa
-  esiteltyjen merkintöjen tukemiseksi.
+## Muutokset versioon 20230508.0.0 ja uudempiin ##
 
-## Muutokset versiossa 20230508.0.0 ja sitä uudemmissa
+* • Muutettu versionumero, NVDA:n vähimmäisversio ja latauslinkki kaupan käytäntöjen/vaatimusten mukaisesti.
 
-- Versionumero, NVDA-version vähimmäisvaatimus ja latauslinkki muutettu
-  lisäosakaupan käytäntöjen/vaatimusten mukaisiksi.
-- auto-update-translations - to automatically update translations from NVDA's translation system.
-- release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;
-- manual-release.yaml: to build and release new versions of the add-on manually.
-- Updated translations.
+## Muutokset versioon 19.02 ##
 
-## Muutokset versiossa 19.02
+* Muutettu versionumerointi muotoon VV.KK (Vuosi 2 numerolla, jota seuraa piste, jota seuraa kuukausi 2 numerolla);
+* Lisätty yhteensopivuus uuden lisäosien versiointimuodon kanssa, joka on ilmestynyt nvda 2019.1 -versiosta lähtien.
 
-- Versionumerointi muutettu muotoon vv.kk (vuosi kahdella numerolla, piste
-  ja kuukausi kahdella numerolla);
+## Muutokset versioon 6.0 ##
 
-## Muutokset versiossa 6.0
+* Lisätty lisäosan asetukset NVDA:n asetuspaneeliin NVDA 2018.2:lle ja uudemmille;
+* Siirretty päivän etsimisen kohde työkalut-valikkoon;
+* Lisätty lisäosan taaksepäin yhteensopivuus NVDA-versioiden kanssa, jotka edelsivät versiota 2018.2, johon asetuspaneeli sisältyi.
 
-- Lisäosan asetukset lisätty NVDA:n asetuspaneeliin versiossa 2018.2 ja
-  uudemmissa;
-- Siirretty päivän etsimiseen tarkoitettu vaihtoehto Työkalut-valikkoon;
+## Muutokset versioon 5.0 ##
 
-## Muutokset versiossa 5.0
+* Lisätty lisäosan yhteensopivuus wxPython 4.0:n ja Python3:n kanssa;
+* Korjattu virhe lisäosan poluissa, jotka sisältävät muita kuin ASCII-merkkejä.
 
-- Lisätty wxPython 4.0:n ja Python 3:n yhteensopivuus;
-- Korjattu bugi, jota esiintyi, kun lisäosan hakemistopoluissa oli muita
-  kuin ASCII-merkkejä.
-- Added the backward compatibility of the add-on with the NVDA versions that preceded 2018.2, which included the settings panel.
+## Muutokset versioon 4.0 ##
 
-## Muutokset versiossa 4.0
+* Lisäosa pystyy nyt tunnistamaan kaikki alueelliset päivämäärämuodot, jotka käyttäjä voi valita;
+* Lisätty lisäosan taaksepäin yhteensopivuus NVDA-versioiden kanssa, jotka edelsivät versiota 2016.4, johon gui.guiHelper-moduuli sisältyi.
 
-- Lisäosa tunnistaa nyt kaikki käyttäjän valittavissa olevat alueelliset
-  päivämäärämuodot;
-- Lisätty taaksepäin yhteensopivuus gui.guiHelper-moduulin sisältävää NVDA
-  2016.4:ää vanhemmille versioille.
+## Muutokset versioon 3.1 ##
 
-## Muutokset versiossa 3.1
+* Palattu edelliseen viikonpäivämuotoon, koska se mahdollistaa useampien kielten tunnistamisen;
+* Parannettu päivämäärävalitsimen saavutettavuutta tunnistamalla 3 kenttää 'Päivä', 'Kuukausi' ja 'Vuosi' sekä niiden vastaavat arvot;
+* Lisätty tekniikka Georgian kielen integroimiseksi viikonpäivien tunnistamiseen;
+* Lisätty asetusten valintaruutu päivämäärävalitsimen saavutettavuuden käyttöönottamiseksi tai käytöstä poistamiseksi;
+* Siirretty lisäosan alavalikko "Työkalut"-valikosta "Asetukset"-valikkoon;
+* Muutettu lisäosan luokaksi "Viikonpäivä".
 
-- Palattu viikonpäivän vanhaan muotoon, koska se mahdollistaa useamman
-  kielen tunnistamisen;
-- Paranneltu päivämäärävalitsimen saavutettavuutta "Päivä"-, "Kuukausi"- ja
-  "Vuosi"-kenttien sekä niiden arvojen tunnistamisessa;
+## Muutokset versioon 2.0 ##
 
-## Muutokset versiossa 2.0
+* Käytetty gui.guiHelper-moduulia varmistamaan päivämäärää pyytävän valintaruudun oikea ulkoasu;
+* Lisätty GPL-lisenssi lisäosaan;
+* Viikonpäivät on käännetty, jotta lisäosa toimii oikein eri kielillä;
+* Muutettu päivän muotoa koodausvirheiden välttämiseksi.
 
-- Päivämääränkyselyvalintaikkunan asianmukaisen ulkoasun varmistamiseen
-  käytetään gui.guiHelper-moduulia;
-- Lisätty GPL-lisenssi;
-- Viikonpäivät on käännetty, jotta lisäosa toimii oikein eri kielillä;
-- Päivän muotoa muutettu koodausvirheiden välttämiseksi.
-- Moved the add-on submenu from "Tools" to "Preferences";
-- Changed the add-on category to "Day of the week".
+## Muutokset versioon 1.0 ##
 
-## Muutokset versiossa 1.0
-
-- Ensimmäinen versio.
-- Added the GPL license to the addon;
-- Days of the week have been translated, so that the add-on works properly in the different languages;
-- Changed the day format to avoid encoding errors.
-
-## Changes for 1.0
-
-- Initial version.
+* Alkuperäinen versio.

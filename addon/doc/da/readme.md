@@ -1,132 +1,107 @@
-# Day of the week (Ugedag)
+# Ugedag #
 
-- Forfattere: Abdel, Noelia.
+* Udviklere: Abdel, Noelia.
 
-Med dette tilføjelsesprogram kan du finde den ugedag, som svarer til en
-valgt dato.
+Denne tilføjelse giver dig mulighed for at finde ugedagen svarende til en valgt dato.
 
-Denne pakke tilføjer en undermenu i NVDA-menuen under Værktøjer ved navn
-"Ugedag", der indeholder 2 elementer:
+Den tilføjer en undermenu i NVDA-menuen Værktøjer med navnet "Ugedag", som indeholder 2 punkter:
 
-- Den første med navnet "Find en dag" åbner en dialog bestående af 3
-  kontroller:
+* Det første kaldet "Søg efter en dag", åbner en dialogboks bestående af 3 kontrolelementer:
 
-  - En listeboks, hvor du kan vælge eller indtaste din dato;
-  - En OK-knap, som vil vise en meddelelsesboks med din ugedag;
-  - En Annuller-knap, som lukker dialogen.
+    * En listeboks til at vælge eller skrive din dato;
+    * En "OK"-knap til at vise en meddelelsesboks, der indeholder din dag;
+    * En "Annuller"-knap til at lukke dialogboksen.
 
-- The second one named "dayOfTheWeek add-on settings" opens the parameters of the add-on to specify whether you want to report labels for date fields or not, it is composed of the following elements:
+* Det andet kaldet "Indstillinger for tilføjelsen Ugedag" åbner parametrene for tilføjelsen for at angive, om du vil rapportere mærkater for datofelter eller ej, den består af følgende elementer:
 
-  - Gør datovælgeren tilgængelig;
+    * Aktiver tilgængelighed for datovælgeren;
+    * Niveau for oplæsning af mærkater, hvor du derefter vil have 3 valgmuligheder:
 
-  - Annonceringsniveau for etiketter har tre valg:
+        * Lang (det er standardvalget);
+        * Kort (for korte meddelelser);
+        * Fra (for at deaktivere oplæsning af mærkater).
 
-    - Lang (det er standardvalg);
-    - Kort (for korte meddelelser);
-    - Fra (Deaktiverer annoncering af etiketter).
+    * Aktiver kun oplæsning af den aktuelle værdi i datofeltet, når du flytter dig lodret;
+    * En "OK"-knap til at gemme din konfiguration;
+    * En "Annuller"-knap til at annullere og lukke dialogboksen.
 
-  - Annoncér kun det aktuelle datofelt, når der flyttes &lodret;
+## Bemærkninger ##
 
-  - En OK-knap der gemmer dine indstillinger;
+* Du kan lukke disse dialogbokse blot ved at trykke på Escape;
+* Du kan tildele en genvej til at åbne disse dialogbokse i menuen "Input-bevægelser" og, mere præcist, i kategorien "Ugedag";
+* Hvis du bruger NVDA 2018.2 eller nyere, finder du kun ét punkt i værktøjsmenuen til at søge efter din dag, tilføjelsens indstillinger vil være i NVDA's indstillingspanel.
 
-  - En Annuller-knap, som lukker dialogen.
+## Kompatibilitet ##
 
-## Noter
+* Denne tilføjelse er kompatibel med versioner af NVDA fra 2019.3 og opefter.
 
-- Du kan lukke disse dialoger bare ved at trykke på Escape.
-- Du kan tilknytte en genvejstast til at åbne dialogen under
-  Inputbevægelser, nærmere bestemt under kategorien "Ugedag";
-- Hvis du bruger NVDA 2018.2 eller nyere, finder du kun et punkt i
-  værktøjsmenuen for at søge efter dage, og tilføjelsesindstillingerne er i
-  NVDA-indstillingspanelet.
+## Ændringer for 20240326.0.0
 
-## Kompatibilitet
+* Opdateret kompatibilitet for nvda-2024.1.;
+* Slettet downloadlink fra readme, downloadlinket til fremtidige opdateringer vil nu kun være tilgængeligt fra tilføjelsesbutikken.
 
-- This add-on is compatible with the versions of NVDA ranging from 2019.3
-  and beyond.
+## Ændringer for 20231229.0.0 ##
 
-## Changes for 20240326.0.0
+* Tilføjet en bagudkompatibel implementering til at understøtte tale-ved-efterspørgsel-tilstand, som snart vil være tilgængelig med nvda-2024.1.
 
-- Updated compatibility for nvda-2024.1.;
-- Deleted download link from readme, the download link for future updates
-  will now only be available from the add-on store.
+## Ændringer for 20231015.0.0 ##
 
-## Changes for 20231229.0.0
+* Rettet en fejl registreret ved navigering med pil op fra datovælgeren i de nyeste versioner af NVDA.
 
-- Added a backward compatible implementation to support speak on demand
-  mode, which will soon be available with nvda-2024.1.
+## Ændringer for 20230728.0.0 ##
 
-## Changes for 20231015.0.0
+* Anvendt flake8- og mypy-regler på koden;
+* Ændret den mindst understøttede NVDA-version til 2019.3 for at understøtte annoteringer introduceret i Python 3.
 
-- Fixed a bug detected when navigating with up arrow from the date picker in
-  the latest versions of NVDA.
+## Ændringer for 20230607.0.0 ##
 
-## Changes for 20230728.0.0
+* Tilføjet følgende arbejdsgange:
+ * auto-update-translations - til automatisk at opdatere oversættelser fra NVDA's oversættelsessystem.
+ * release-on-tag..yaml: til at bygge og udgive tilføjelsen, så snart et nyt tag pushes;
+ * manual-release.yaml: til at bygge og udgive nye versioner af tilføjelsen manuelt.
+* Opdaterede oversættelser.
 
-- Applied the flake8 and mypy rules to the code;
-- Changed the minimum supported NVDA version to 2019.3 to support
-  annotations introduced in Python 3.
+## Ændringer for version 20230508.0.0 og opefter ##
 
-## Changes for 20230508.0.0 and beyond
+* • Ændret versionsnummer, minimum NVDA-version og downloadlink i henhold til butikkens konventioner/krav.
 
-- Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
-- auto-update-translations - to automatically update translations from NVDA's translation system.
-- release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;
-- manual-release.yaml: to build and release new versions of the add-on manually.
-- Updated translations.
+## Ændringer for 19.02 ##
 
-## Ændringer for 19.02
+* Ændret versionsnummerering ved hjælp af ÅÅ.MM (Året med 2 cifre, efterfulgt af et punktum, efterfulgt af måneden med 2 cifre);
+* Tilføjet kompatibilitet med det nye versionsformat for tilføjelser, der dukkede op siden nvda 2019.1.
 
-- Ændret versionsnummerering til åå.MM (År i 2 cifre efterfulgt af et
-  punktum, efterfulgt af måneden i 2 cifre);
+## Ændringer for 6.0 ##
 
-## Ændringer i 6.0
+* Tilføjet tilføjelsens indstillinger til NVDA's indstillingspanel for NVDA 2018.2 og nyere;
+* Flyttet punktet til at søge efter en dag til værktøjsmenuen;
+* Tilføjet bagudkompatibilitet for tilføjelsen med de NVDA-versioner, der gik forud for 2018.2, som inkluderede indstillingspanelet.
 
-- tilføjede tilføjelsesindstillingerne til NVDA indstillingspanelet for NVDA
-  2018.2 og nyere;
-- Flyttet punktet til at søge en dag til værktøjsmenuen;
+## Ændringer for 5.0 ##
 
-## Ændringer i 5.0
+* Tilføjet kompatibilitet for tilføjelsen med wxPython 4.0 og Python3;
+* Rettet en fejl med tilføjelsesstier, der indeholder ikke-ASCII-tegn.
 
-- Tilføjet kompatibilitet af tilføjelsesprogrammet med wxPython 4.0 og
-  Python3;
-- Rettede en fejl med stier tilhørende tilføjelsespakken der indholder
-  non-ASCII-tegn.
-- Added the backward compatibility of the add-on with the NVDA versions that preceded 2018.2, which included the settings panel.
+## Ændringer for 4.0 ##
 
-## Ændringer i4.0
+* Tilføjelsen er nu i stand til at genkende alle de regionale datoformater, som brugeren kan vælge;
+* Tilføjet bagudkompatibilitet for tilføjelsen med de NVDA-versioner, der gik forud for 2016.4, som inkluderede modulet gui.guiHelper.
 
-- Tilføjelsesprogrammet er nu i stand til at genkende alle de regionale
-  datoformater, som brugeren kan vælge;
-- Tilføjet bagudkompatibilitet for tilføjelsesprogrammet med NVDA versioner,
-  der gik forud for 2016.4, som omfattede gui.guiHelper modul.
+## Ændringer for 3.1 ##
 
-## Ændringer i 3.1
+* Tilbage til det foregående format for ugedagen, fordi det gør det muligt at genkende et større antal sprog;
+* Forbedret tilgængeligheden af datovælgeren med genkendelse af de 3 felter 'Dag', 'Måned' og 'År' og deres respektive værdier;
+* Tilføjet en teknik til integration af det georgiske sprog til genkendelse af ugedagene;
+* Tilføjet en konfigurationsdialogboks til at aktivere eller deaktivere tilgængeligheden af datovælgeren;
+* Flyttet tilføjelsens undermenu fra "Værktøjer" til "Præferencer";
+* Ændret tilføjelsens kategori til "Ugedag".
 
-- Tilbage til det tidligere format for Ugedag, fordi det giver mulighed for
-  at genkende et større antal sprog;
-- Forbedret tilgængelighed af dato selector med anerkendelsen af de 3 felter
-  'Dag', 'Måned' og 'År', og deres respektive værdier;
+## Ændringer for 2.0 ##
 
-## Ændringer i 2.0
+* Brugt modulet gui.guiHelper for at sikre det korrekte udseende af dialogboksen, der beder om en dato;
+* Tilføjet GPL-licensen til tilføjelsen;
+* Ugedage er blevet oversat, så tilføjelsen fungerer korrekt på de forskellige sprog;
+* Ændret dagens format for at undgå kodningsfejl.
 
-- Brugt modulet gui.guiHelper for at sikre den korrekte udseende i
-  dialogboksen der beder om en dato;
-- Tilføjet GPL-licensen til tilføjelsen;
-- Ugedag er blevet oversat, således at tilføjelsen virker korrekt på de
-  forskellige sprog;
-- Ændret dagsformat for at undgå kodningsfejl.
-- Moved the add-on submenu from "Tools" to "Preferences";
-- Changed the add-on category to "Day of the week".
+## Ændringer for 1.0 ##
 
-## Ændringer i 1.0
-
-- Første version.
-- Added the GPL license to the addon;
-- Days of the week have been translated, so that the add-on works properly in the different languages;
-- Changed the day format to avoid encoding errors.
-
-## Changes for 1.0
-
-- Initial version.
+* Første version.

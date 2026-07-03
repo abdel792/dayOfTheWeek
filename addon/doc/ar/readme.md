@@ -1,132 +1,107 @@
-# Day of the week
+# يوم الأسبوع #
 
-- مطورو الإضافة: Abdel, Noelia.
+* المطورون: Abdel, Noelia.
 
-تتيح لك هذه الإضافةُ البرمجيةُ معرفةَ اليومِ المتعلقِ بتاريخٍ معين.
+يتيح لك هذا الملحق البرمجي العثور على يوم الأسبوع المقابل للتاريخ المختار.
 
-It adds a submenu in the NVDA Tools menu named "Day of the week", containing
-2 items:
+فهو يضيف قائمة فرعية في قائمة أدوات NVDA باسم "يوم الأسبوع"، تحتوي على عنصرين:
 
-- The first one named "Search a day", opens a dialog composed of 3 controls:
+* العنصر الأول باسم "البحث عن يوم"، ويفتح مربع حوار يتكون من 3 عناصر تحكم:
 
-  - A listbox to choose or type your date;
-  - An "OK" button to display a messageBox containing your day;
-  - وزر "إلغاء" لإغلاق المحاورة.
+    * صندوق قائمة لاختيار تاريخك أو كتابته؛
+    * زر "موافق" لعرض مربع رسالة يحتوي على اليوم الخاص بك；
+    * زر "إلغاء الأمر" لإغلاق مربع الحوار.
 
-- The second one named "dayOfTheWeek add-on settings" opens the parameters
-  of the add-on to specify whether you want to report labels for date fields
-  or not, it is composed of the following elements:
+* العنصر الثاني باسم "إعدادات الملحق البرمجي لليوم من الأسبوع" ويفتح معلمات الملحق البرمجي لتحديد ما إذا كنت تريد الإعلان عن تسميات حقول التاريخ أم لا، ويتكون من العناصر التالية:
 
-  - Enable accessibility of the date selector;
+    * تمكين إمكانية الوصول لمحدد التاريخ；
+    * مستوى الإعلان عن التسميات، وستكون لديك حينها 3 خيارات:
 
-  - Level of the announces of labels, you will then have 3 choices:
+        * طويل (وهو الخيار الافتراضي)；
+        * قصير (للإعلانات القصيرة)；
+        * معطل (لتعطيل الإعلانات عن التسميات).
 
-    - Long (it's the default choice);
-    - Short (for short announcements);
-    - Off (to disable labels announcements).
+    * تمكين الإعلان عن قيمة حقل التاريخ الحالي فقط، عند التحرك عموديًا؛
+    * زر "موافق" لحفظ التكوين الخاص بك؛
+    * زر "إلغاء الأمر" لإلغاء الأمر وإغلاق مربع الحوار.
 
-  - Enable announcement of the current date field value only, when moving
-    vertically;
+## ملاحظات ##
 
-  - An "OK" button to save your configuration;
+* يمكنك إغلاق مربعات الحوار هذه بمجرد الضغط على مفتاح الهروب؛
+* يمكنك تعيين اختصار لفتح مربعات الحوار هذه في قائمة "إيماءات الإدخال" وتحديدًا في فئة "يوم الأسبوع"؛
+* إذا كنت تستخدم NVDA 2018.2 أو إصدارًا أحدث، فستجد عنصرًا واحدًا فقط في قائمة الأدوات للبحث عن يومك، وستكون إعدادات الملحق البرمجي في لوحة إعدادات NVDA.
 
-  - A "Cancel" button to cancel and close the dialog.
+## التوافق ##
 
-## ملاحظات
+* هذا الملحق البرمجي متوافق مع إصدارات NVDA التي تتراوح من 2019.3 فما فوق.
 
-- You can close these dialogs just by pressing Escape;
-- You can assign a shortcut to open these dialogs in "Input gestures" menu
-  and, more precisely, in the "Day of the week" category;
-- If you use NVDA 2018.2 or higher, you'll find only one item in the tool
-  menu for searching your day, the add-on settings will be in the NVDA
-  settings panel.
+## مستجدات الإصدار 20240326.0.0
 
-## Compatibility
+* تحديث التوافق مع إصدار nvda-2024.1.；
+* حذف رابط التنزيل من ملف readme، وسيكون رابط التنزيل للتحديثات المستقبلية متاحًا الآن فقط من متجر الملحقات البرمجية.
 
-- This add-on is compatible with the versions of NVDA ranging from 2019.3
-  and beyond.
+## مستجدات الإصدار 20231229.0.0 ##
 
-## https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
+* إضافة تنفيذ متوافق مع الإصدارات السابقة لدعم وضع النطق عند الطلب، والذي سيكون متاحًا قريبًا مع إصدار nvda-2024.1.
 
-- Updated compatibility for nvda-2024.1.;
-- Deleted download link from readme, the download link for future updates will now only be available from the add-on store.
+## مستجدات الإصدار 20231015.0.0 ##
 
-## https://www.nvaccess.org/addonStore/legacy?file=dayOfTheWeek
+* إصلاح خطأ تم اكتشافه عند التنقل باستخدام السهم لأعلى من أداة اختيار التاريخ في أحدث إصدارات NVDA.
 
-- Added a backward compatible implementation to support speak on demand mode, which will soon be available with nvda-2024.1.
+## مستجدات الإصدار 20230728.0.0 ##
 
-## Changes for 20231015.0.0
+* تطبيق قواعد flake8 و mypy على الكود؛
+* تغيير الحد الأدنى لإصدار NVDA المدعوم إلى 2019.3 لدعم التعليقات التوضيجية التي تم تقديمها in Python 3.
 
-- Fixed a bug detected when navigating with up arrow from the date picker in
-  the latest versions of NVDA.
+## مستجدات الإصدار 20230607.0.0 ##
 
-## Changes for 20230728.0.0
+* إضافة سير العمل التالي:
+ * auto-update-translations - لتحديث الترجمات تلقائيًا من نظام ترجمة NVDA.
+ * release-on-tag..yaml: لبناء ونشر الملحق البرمجي بمجرد دفع علامة جديدة؛
+ * manual-release.yaml: لبناء وإصدار نسخ جديدة من الملحق البرمجي يدويًا.
+* تحديث الترجمات.
 
-- Applied the flake8 and mypy rules to the code;
-- Changed the minimum supported NVDA version to 2019.3 to support
-  annotations introduced in Python 3.
+## مستجدات الإصدار 20230508.0.0 وما بعده ##
 
-## تحميل [الإصدار التجريبي][2]
+* • تغيير رقم الإصدار والحد الأدنى لإصدار NVDA ورابط التنزيل وفقًا لاتفاقيات/متطلبات المتجر.
 
-- Added the following workflows:
-- auto-update-translations - to automatically update translations from NVDA's translation system.
-- release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;
-- manual-release.yaml: to build and release new versions of the add-on manually.
-- Updated translations.
+## مستجدات الإصدار 19.02 ##
 
-## Changes for 20230508.0.0 and beyond
+* تغيير ترقيم الإصدارات باستخدام YY.MM (السنة في رقمين، متبوعة بنقطة، متبوعة بالشهر في رقمين)；
+* إضافة التوافق مع تنسيق إصدارات الملحقات البرمجية الجديد، الذي ظهر منذ إصدار nvda 2019.1.
 
-- � Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
+## مستجدات الإصدار 6.0 ##
 
-## Changes for 19.02
+* إضافة إعدادات الملحق البرمجي إلى لوحة إعدادات NVDA لإصدار NVDA 2018.2 وأعلى؛
+* نقل عنصر البحث عن يوم إلى قائمة الأدوات؛
+* إضافة التوافق الرجعي للملحق البرمجي مع إصدارات NVDA التي سبقت 2018.2، والتي تضمنت لوحة الإعدادات.
 
-- Changed version numbering using YY.MM (The year in 2 digits, followed by a
-  dot, followed by the month in 2 digits);
-- Added compatibility with the new versioning format of add-on, appeared
-  since nvda 2019.1.
+## مستجدات الإصدار 5.0 ##
 
-## Changes for 6.0
+* إضافة توافق الملحق البرمجي مع wxPython 4.0 و Python3؛
+* إصلاح خطأ في مسارات الملحق البرمجي التي تحتوي على أحرف غير ASCII.
 
-- added the addon settings to the NVDA settings panel for NVDA 2018.2 and
-  higher;
-- Moved the item for searching a day to the tools menu;
-- Added the backward compatibility of the add-on with the NVDA versions that
-  preceded 2018.2, which included the settings panel.
+## مستجدات الإصدار 4.0 ##
 
-## Changes for 5.0
+* أصبح الملحق البرمجي الآن قادرًا على التعرف على جميع تنسيقات التاريخ الإقليمية التي يمكن للمستخدم اختيارها؛
+* إضافة التوافق الرجعي للملحق البرمجي مع إصدارات NVDA التي سبقت 2016.4، والتي تضمنت وحدة gui.guiHelper.
 
-- Added the compatibility of the add-on with wxPython 4.0 and Python3;
-- Fixed a bug with add-on paths that contain non-ASCII characters.
+## مستجدات الإصدار 3.1 ##
 
-## مستجدات الإصدار 4.0
+* العودة إلى التنسيق السابق ليوم الأسبوع لأنه يتيح التعرف على عدد أكبر من اللغات؛
+* تحسين إمكانية الوصول لمحدد التاريخ مع التعرف على الحقول الثلاثة 'اليوم' و'الشهر' و'السنة' وقيمها الخاصة؛
+* إضافة تقنية لدمج اللغة الجورجية للتعرف على أيام الأسبوع؛
+* إضافة مربع حوار تكوين لتمكين أو تعطيل إمكانية الوصول لمحدد التاريخ؛
+* نقل القائمة الفرعية للملحق البرمجي من "الأدوات" إلى "التفضيلات"；
+* تغيير فئة الملحق البرمجي إلى "يوم الأسبوع".
 
-- يُمكِن للإضافة الآن أن تتعرفَ على جميع التنسيقات المتعلقة بالتاريخ التي قد
-  يختارُها المستخدم;
-- إضافةُ التوافق الخَلفي للإضافة البرمجية مع إصدارات NVDA التي سبقَت 2016.4
-  التي شملت وحدة gui.guiHelper.
+## مستجدات الإصدار 2.0 ##
 
-## مستجدات الإصدار 3.1
+* استخدام وحدة gui.guiHelper لضمان المظهر الصحيح لمربع الحوار الذي يطلب تاريخًا؛
+* إضافة رخصة GPL إلى الملحق البرمجي؛
+* تم ترجمة أيام الأسبوع، لكي يعمل الملحق البرمجي بشكل صحيح في اللغات المختلفة؛
+* تغيير تنسيق اليوم لتجنب أخطاء الترميز.
 
-- العودةُ إلى التنسيق السابق للتاريخ لأنهُ يُتيح إستخدام عدَدٍ أكبر من
-  اللُغات;
-- تحسينُ استعمال محدِّدِ التاريخ مع قارء الشاشة و ذلك بمنح إمكانية التعرف
-  بشكلٍ جيد على كلٍ من الحقول : "يوم", "شهر" و "سنة" و مُحتوياتِها;
-- إضافةُ تِقنِيَّةٍ لِدمجِ اللغة الجيورجية حتى تتعرفَ بشكلٍ جيد على أيام
-  الأسبوع;
-- إضافةُ صندوق إعدادات لتشغيل أو تعطيل إمكانيةِ استعمال مُحَدِّد التاريخ
-  لمستعملي قارء الشاشة;
-- نقلُ قائمةِ الإضافةِ البمجيةِ من "أدوات" إلى "تفضيلات";
-- تغييرُ الفِءَةِ التي تنتمي إلَيها الإضافةُ البرمجيةُ إلى : "يوم الإسبوع".
+## مستجدات الإصدار 1.0 ##
 
-## مستجدات الإصدار 2.0
-
-- Used the gui.guiHelper module to ensure the correct appearance of the dialog asking for a date;
-- إضافةُ ترخيص GPL للإضافةِ البرمجية;
-- لقد عُرِضت أيام الأسبوع لِلترجمة و ذلك لِتُقرأَ بشكلٍ جيدْ مع اللغات
-  المستعملة;
-- تغييرُ تنسيقِ التاريخ و ذلك لتجنب الأخطاء المتعلقة بالترميز.
-
-## مستجدات الإصدار 1.0
-
-- إصدار أولي
+* الإصدار الأولي.

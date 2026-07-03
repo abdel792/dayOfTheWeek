@@ -1,121 +1,107 @@
-# Deň v týždni
+# Deň v týždni #
 
-- Autori: Abdel, Noelia.
+* Vývojári: Abdel, Noelia.
 
-Doplnok umožňuje zistiť, ktorý deň pripadá na zadaný dátum.
+Tento doplnok vám umožňuje nájsť deň v týždni zodpovedajúci zvolenému dátumu.
 
-It adds a submenu in the NVDA Tools menu named "Day of the week", containing 2 items:
+Pridáva podponuku do ponuky Nástroje NVDA s názvom „Deň v týždni“, ktorá obsahuje 2 položky:
 
-- Položka Hľadať deň otvorí dialóg, v ktorom sú tri prvky:
+* Prvá s názvom „Hľadať deň“, otvorí dialógové okno pozostávajúce z 3 ovládacích prvkov:
 
-  - Zoznam, v ktorom môžete vybrať alebo zadať dátum;
-  - Tlačidlo OK na zobrazenie dňa;
-  - Tlačidlo Zrušiť na zatvorenie dialógu.
+    * Zoznam na výber alebo zadanie dátumu;
+    * Tlačidlo „OK“ na zobrazenie okna so správou obsahujúcou váš deň;
+    * Tlačidlo „Zrušiť“ na zatvorenie dialógového okna.
 
-- Druhá položka s názvom Nastavenia deň v týždni obsahuje tieto možnosti:
+* Druhá s názvom „Nastavenia doplnku dayOfTheWeek“ otvorí parametre doplnku, kde môžete určiť, či chcete oznamovať menovky polí dátumu alebo nie. Skladá sa z nasledujúcich prvkov:
 
-  - Povoliť sprístupnenie prvku na výber dátumu;
+    * Povoliť prístupnosť výberu dátumu;
+    * Úroveň oznamovania menoviek, pričom budete mať na výber 3 možnosti:
 
-  - Úroveň oznamovania prvkov, kde máte tri možnosti:
+        * Dlhé (toto je predvolená možnosť);
+        * Krátke (pre krátke oznámenia);
+        * Vypnuté (na zakázanie oznamovania menoviek).
 
-    - Dlhé (predvolená možnosť);
-    - Krátke;
-    - Vypnuté (na vypnutie oznamovania popiskov).
+    * Povoliť oznamovanie iba aktuálnej hodnoty poľa dátumu pri vertikálnom pohybe;
+    * Tlačidlo „OK“ na uloženie vašej konfigurácie;
+    * Tlačidlo „Zrušiť“ na zrušenie a zatvorenie dialógového okna.
 
-  - Počas nastavovania dátumu upozorniť na dnešný deň;
+## Poznámky ##
 
-  - Tlačidlo OK na uloženie nastavení;
+* Tieto dialógové okná môžete zatvoriť jednoduchým stlačením klávesu Escape;
+* Skratku na otvorenie týchto dialógových okien môžete priradiť v ponuke „Vstupné gestá“ a presnejšie v kategórii „Deň v týždni“;
+* Ak používate NVDA 2018.2 alebo novšiu verziu, v ponuke nástrojov nájdete iba jednu položku na vyhľadávanie dňa a nastavenia doplnku budú v paneli nastavení NVDA.
 
-  - Tlačidlo zrušiť na zatvorenie dialógu.
+## Kompatibilita ##
 
-## Poznámky
+* Tento doplnok je kompatibilný s verziami NVDA od 2019.3 a vyššími.
 
-- Dialógi je možné zatvoriť tlačidlom escape;
-- Skratky na vyvolanie dialógov doplnku je možné nastaviť v menu nvda >
-  možnosti > Klávesové skratky, vo vetve Deň v týždni.
-- If you use NVDA 2018.2 or higher, you'll find only one item in the tool menu for searching your day, the add-on settings will be in the NVDA settings panel.
+## Zmeny vo verzii 20240326.0.0
 
-## Kompatibilita
+* Aktualizovaná kompatibilita pre nvda-2024.1.;
+* Odstránený odkaz na stiahnutie zo súboru readme, odkaz na stiahnutie pre budúce aktualizácie bude teraz dostupný iba v obchode s doplnkami.
 
-- This add-on is compatible with the versions of NVDA ranging from 2019.3
-  and beyond.
+## Zmeny vo verzii 20231229.0.0 ##
 
-## Changes for 20240326.0.0
+* Pridaná spätne kompatibilná implementácia na podporu režimu reči na požiadanie, ktorý bude čoskoro dostupný s nvda-2024.1.
 
-- Updated compatibility for nvda-2024.1.;
-- Deleted download link from readme, the download link for future updates
-  will now only be available from the add-on store.
+## Zmeny vo verzii 20231015.0.0 ##
 
-## Changes for 20231229.0.0
+* Opravená chyba zistená pri navigácii šípkou nahor z výberu dátumu v najnovších verziách NVDA.
 
-- Added a backward compatible implementation to support speak on demand
-  mode, which will soon be available with nvda-2024.1.
+## Zmeny vo verzii 20230728.0.0 ##
 
-## Changes for 20231015.0.0
+* Na kód boli aplikované pravidlá flake8 a mypy;
+* Minimálna podporovaná verzia NVDA bola zmenená na 2019.3 na podporu anotácií zavedených v Pythone 3.
 
-- Fixed a bug detected when navigating with up arrow from the date picker in
-  the latest versions of NVDA.
+## Zmeny vo verzii 20230607.0.0 ##
 
-## Changes for 20230728.0.0
+* Pridané nasledujúce pracovné postupy (workflows):
+ * auto-update-translations – na automatickú aktualizáciu prekladov zo systému prekladu NVDA.
+ * release-on-tag..yaml: na zostavenie a publikovanie doplnku hneď po odoslaní nového tagu;
+ * manual-release.yaml: na manuálne zostavenie a vydanie nových verzií doplnku.
+* Aktualizované preklady.
 
-- Applied the flake8 and mypy rules to the code;
-- Changed the minimum supported NVDA version to 2019.3 to support
-  annotations introduced in Python 3.
+## Zmeny vo verzii 20230508.0.0 a vyšších ##
 
-## Changes for 20230508.0.0 and beyond
+* • Zmenené číslo verzie, minimálna verzia NVDA a odkaz na stiahnutie v súlade s konvenciami/požiadavkami obchodu.
 
-- Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
-- auto-update-translations - to automatically update translations from NVDA's translation system.
-- release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;
-- manual-release.yaml: to build and release new versions of the add-on manually.
-- Updated translations.
+## Zmeny vo verzii 19.02 ##
 
-## Verzia 19.02
+* Zmenené číslovanie verzií pomocou RR.MM (rok dvoma číslicami, nasleduje bodka, nasleduje mesiac dvoma číslicami);
+* Pridaná kompatibilita s novým formátom verzií doplnkov, ktorý sa objavil od verzie nvda 2019.1.
 
-- • Changed version number, minimum NVDA version and download link according to store conventions/requirements.
+## Zmeny vo verzii 6.0 ##
 
-## Verzia 6.0
+* Pridané nastavenia doplnku do panelu nastavení NVDA pre NVDA 2018.2 a vyššie;
+* Položka na vyhľadávanie dňa bola presunutá do ponuky nástrojov;
+* Pridaná spätná kompatibilita doplnku s verziami NVDA predchádzajúcimi verzii 2018.2, ktoré obsahovali panel nastavení.
 
-- Nastavenia pridané do stromu nastavení pre NVDA od verzie 2018.2;
-- Položka vyhľadať deň presunutá do menu nástroje;
+## Zmeny vo verzii 5.0 ##
 
-## Verzia 5.0
+* Pridaná kompatibilita doplnku s wxPython 4.0 a Python3;
+* Opravená chyba s cestami doplnku, ktoré obsahujú iné ako ASCII znaky.
 
-- Pridaná kompatibilita s rozhraním wxPython 4.0 a Python3;
-- Opravené problémy, ktoré nastávali, ak sa doplnok pokúsil uložiť
-  nastavenia a cesta obsahovala znaky mimo ascii rozsahu.
-- Added the backward compatibility of the add-on with the NVDA versions that preceded 2018.2, which included the settings panel.
+## Zmeny vo verzii 4.0 ##
 
-## Verzia 4.0
+* Doplnok je teraz schopný rozpoznať všetky regionálne formáty dátumu, ktoré si používateľ môže vybrať;
+* Pridaná spätná kompatibilita doplnku s verziami NVDA predchádzajúcimi verzii 2016.4, ktoré obsahovali modul gui.guiHelper.
 
-- Doplnok rozpoznáva všetky regionálne dátumy;
-- Pridaná spätná kompatibilita s NVDA do verzie 2016.4, ktoré obsahovali
-  modul gui.guiHelper.
+## Zmeny vo verzii 3.1 ##
 
-## Verzia 3.1
+* Návrat k predchádzajúcemu formátu dňa v týždni, pretože umožňuje rozpoznanie väčšieho počtu jazykov;
+* Vylepšená prístupnosť výberu dátumu s rozpoznávaním 3 polí „Deň“, „Mesiac“ a „Rok“ a ich príslušných hodnôt;
+* Pridaná technika na integráciu gruzínskeho jazyka na rozpoznávanie dní v týždni;
+* Pridané konfiguračné dialógové okno na povolenie alebo zakázanie prístupnosti výberu dátumu;
+* Podponuka doplnku bola presunutá z „Nástroje“ do „Možnosti“;
+* Kategória doplnku bola zmenená na „Deň v týždni“.
 
-- Vraciame sa k predošlému formátu doplnku, ktorý podporoval viacero
-  jazykov;
-- Upravená prístupnosť prvku na výber dátumu, kde je možné vyrbať deň,
-  mesiac a rok;
+## Zmeny vo verzii 2.0 ##
 
-## Verzia 2.0
+* Použitý modul gui.guiHelper na zabezpečenie správneho vzhľadu dialógového okna požadujúceho dátum;
+* Do doplnku bola pridaná licencia GPL;
+* Dni v týždni boli preložené, aby doplnok správne fungoval v rôznych jazykoch;
+* Zmenený formát dňa, aby sa predišlo chybám v kódovaní.
 
-- Upravený vzhľad dialógov použitím gui.guiHelper;
-- Pridaná GPL licencia;
-- Preloľžené dni, takže doplnok je možné používať vo viacerých jazykoch;
-- Odstránené problémy s kódovaním.
-- Moved the add-on submenu from "Tools" to "Preferences";
-- Changed the add-on category to "Day of the week".
+## Zmeny vo verzii 1.0 ##
 
-## Verzia 1.0
-
-- Prvé vydanie.
-- Added the GPL license to the addon;
-- Days of the week have been translated, so that the add-on works properly in the different languages;
-- Changed the day format to avoid encoding errors.
-
-## Changes for 1.0
-
-- Initial version.
+* Počiatočná verzia.
