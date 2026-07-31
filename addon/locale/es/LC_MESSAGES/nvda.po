@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-07-03 11:53+0000\n"
-"PO-Revision-Date: 2026-07-21 06:05\n"
+"POT-Creation-Date: 2026-07-31 11:39+0000\n"
+"PO-Revision-Date: 2026-07-31 11:42\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
@@ -111,7 +111,6 @@ msgstr "Con este complemento, podrás encontrar el día de la semana correspondi
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:28
-msgid "* Updated translations from Crowdin\n"
-"* Added support for NVDA 2026 API"
+msgid "* Updated translations from Crowdin"
 msgstr ""
 
