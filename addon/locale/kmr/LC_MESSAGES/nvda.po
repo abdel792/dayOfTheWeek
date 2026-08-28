@@ -3,114 +3,114 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-07-31 11:39+0000\n"
-"PO-Revision-Date: 2026-08-28 17:06\n"
+"PO-Revision-Date: 2026-08-28 06:29\n"
 "Last-Translator: \n"
-"Language-Team: Hungarian\n"
-"Language: hu_HU\n"
+"Language-Team: Kurmanji (Kurdish)\n"
+"Language: kmr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: nvdaaddons\n"
 "X-Crowdin-Project-ID: 780748\n"
-"X-Crowdin-Language: hu\n"
+"X-Crowdin-Language: kmr\n"
 "X-Crowdin-File: dayOfTheWeek.pot\n"
 "X-Crowdin-File-ID: 376\n"
 
 #: addon\globalPlugins\dayOfTheWeek.py:43
 msgid "You can select a day with the vertical arrows"
-msgstr "A lenyíl és a felnyíl segítségével választhat napot"
+msgstr "Tu dikarî bi tîrên vertîkal rojekê hilbijêrî"
 
 #: addon\globalPlugins\dayOfTheWeek.py:44
 msgid "Select a day"
-msgstr "Válasszon napot"
+msgstr "Rojekê hilbijêre"
 
 #: addon\globalPlugins\dayOfTheWeek.py:47
 msgid "You can select a month with the vertical arrows"
-msgstr "A lenyíl és a felnyíl segítségével választhat hónapot"
+msgstr "Tu dikarî mehekê bi tîrên vertîkal hilbijêrî"
 
 #: addon\globalPlugins\dayOfTheWeek.py:48
 msgid "Select a month"
-msgstr "Válasszon hónapot"
+msgstr "Mehek hilbijêre"
 
 #: addon\globalPlugins\dayOfTheWeek.py:51
 msgid "You can select a year with the vertical arrows"
-msgstr "A lenyíl és a felnyíl segítségével választhat évet"
+msgstr "Tu dikarî salekê bi tîrên vertîkal hilbijêrî"
 
 #: addon\globalPlugins\dayOfTheWeek.py:52
 msgid "Select a year"
-msgstr "Válasszon évet"
+msgstr "Salekê hilbijêre"
 
 #: addon\globalPlugins\dayOfTheWeek.py:99
 #: addon\globalPlugins\dayOfTheWeek.py:483
 msgid "Get the day of the week"
-msgstr "A hét napjának meghatározása"
+msgstr "Roja hefteyê bigire"
 
 #: addon\globalPlugins\dayOfTheWeek.py:102
 msgid "Type or select a date"
-msgstr "Írjon be, vagy válasszon egy dátumot!"
+msgstr "Dîrokek binivîse an hilbijêre"
 
 #: addon\globalPlugins\dayOfTheWeek.py:138
 msgid "Your day"
-msgstr "A keresett nap"
+msgstr "Roja te"
 
 #. Add-on summary/title, usually the user visible name of the add-on
 #. Translators: Summary/title for this add-on
 #. to be shown on installation and add-on information found in add-on store
 #: addon\globalPlugins\dayOfTheWeek.py:148 buildVars.py:20
 msgid "Day of the week"
-msgstr "A hét napja"
+msgstr "Roja hefteyê"
 
 #: addon\globalPlugins\dayOfTheWeek.py:150
 msgid "Short"
-msgstr "Rövid"
+msgstr "Nizm"
 
 #: addon\globalPlugins\dayOfTheWeek.py:151
 msgid "Long"
-msgstr "Hosszú"
+msgstr "Dirêj"
 
 #: addon\globalPlugins\dayOfTheWeek.py:152
 msgid "Off"
-msgstr "Kikapcsolva"
+msgstr "Ji"
 
 #: addon\globalPlugins\dayOfTheWeek.py:156
 msgid "En&able the accessibility of the date selector:"
-msgstr "A d&átumválasztó akadálymentesítésének engedélyezése"
+msgstr "Gihîştina hilbijêra dîrokê çalak bike:"
 
 #: addon\globalPlugins\dayOfTheWeek.py:157
 msgid "Level of the announces of &labels:"
-msgstr "Címkék bemondásának szintje"
+msgstr "Asta ragihandinên &etîketan:"
 
 #: addon\globalPlugins\dayOfTheWeek.py:159
 msgid "Enable announcements of the current date field value only, when moving &vertically:"
-msgstr "Csak az aktuális dátummező értékének bemondása függőleges mozgás esetén"
+msgstr "Tenê ragihandinên nirxa qada dîroka niha çalak bike, dema ku bi &vertîkalî diçe:"
 
 #: addon\globalPlugins\dayOfTheWeek.py:491
 msgid "Day of the &week..."
-msgstr "A &hét napja"
+msgstr "Roja hefteyê..."
 
 #: addon\globalPlugins\dayOfTheWeek.py:492
 msgid "Search a day in the calendar"
-msgstr "Nap keresése a naptárban"
+msgstr "Rojekê di salnameyê de bigere"
 
 #: addon\globalPlugins\dayOfTheWeek.py:510
 msgid "Allows you to find the day of the week corresponding to a chosen date."
-msgstr "Meghatározza egy kiválasztott dátumhoz tartozó napját a hétnek."
+msgstr "Destûrê dide te ku roja hefteyê ya ku bi tarîxek bijartî re têkildar e bibînî."
 
 #: addon\globalPlugins\dayOfTheWeek.py:517
 #, python-brace-format
 msgid "Allows you to open the {0} add-on settings dialog."
-msgstr "Megnyitja a {0} bővítmény beállításainak ablakát."
+msgstr "Dihêle hûn diyaloga mîhengên pêveka {0} vekin."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
 #: buildVars.py:23
 msgid "With this add-on, you'll be able to find the day of the week corresponding to a chosen date."
-msgstr "Ezzel a kiegészítővel meghatározhatja egy kiválasztott dátumhoz tartozó napját a hétnek."
+msgstr "Bi vê pêvekê, hûn ê bikaribin roja hefteyê ya ku bi tarîxek bijartî re têkildar e bibînin."
 
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:28
 msgid "* Updated translations from Crowdin"
-msgstr ""
+msgstr "* Wergerên ji Crowdin hatine nûve kirin"
 
