@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # globalPlugins/dayOfTheWeek.py.
 
 # Allows you to find the day of the week corresponding to a chosen date
@@ -9,24 +7,25 @@
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
 
-from __future__ import unicode_literals
-import addonHandler
-import globalPluginHandler
 import locale
-import buildVersion
-from scriptHandler import script
-import speech
 import re
 from collections.abc import Callable
-import keyboardHandler
+
+import addonHandler
 import api
+import buildVersion
+import config
 import controlTypes
+import globalPluginHandler
+import gui
+import keyboardHandler
+import speech
 import wx
 import wx.adv
-import gui
-from gui.settingsDialogs import SettingsPanel as SettingsDialog, NVDASettingsDialog
+from gui.settingsDialogs import NVDASettingsDialog
+from gui.settingsDialogs import SettingsPanel as SettingsDialog
 from NVDAObjects.IAccessible import IAccessible
-import config
+from scriptHandler import script
 
 addonHandler.initTranslation()
 _: Callable[[str], str]
@@ -89,7 +88,7 @@ class DateDialog(wx.Dialog):
 
 	def __new__(cls, *args, **kwargs):
 		if DateDialog._instance is None:
-			return super(DateDialog, cls).__new__(cls, *args, **kwargs)
+			return super().__new__(cls, *args, **kwargs)
 		return DateDialog._instance
 
 	def __init__(self, parent):
@@ -97,7 +96,7 @@ class DateDialog(wx.Dialog):
 			return
 		DateDialog._instance = self
 		dlgTitle = _("Get the day of the week")
-		super(DateDialog, self).__init__(parent, title=dlgTitle)
+		super().__init__(parent, title=dlgTitle)
 		self.mainSizer = wx.BoxSizer(wx.VERTICAL)
 		self.dateLabel = _("Type or select a date")
 
@@ -203,7 +202,7 @@ class DayOfWeekSettingsDialog(SettingsDialog):
 		config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"] = (
 			self.reportDateFieldValuesCheckBox.GetValue()
 		)
-		super(DayOfWeekSettingsDialog, self).onOk(evt)
+		super().onOk(evt)
 
 	def onSave(self):
 		config.conf["dayOfWeek"]["enableAnnounces"] = self.enableAnnouncesCheckBox.GetValue()
@@ -222,7 +221,7 @@ class AnnounceFieldsLabels(IAccessible):
 
 	def event_gainFocus(self):
 		global curDateField
-		super(AnnounceFieldsLabels, self).event_gainFocus()
+		super().event_gainFocus()
 		if curDateField == 0:
 			curDateField += 1
 		self.calculateCurField()
@@ -230,7 +229,7 @@ class AnnounceFieldsLabels(IAccessible):
 	def event_valueChange(self):
 		if self.increment:
 			return
-		super(AnnounceFieldsLabels, self).event_valueChange()
+		super().event_valueChange()
 
 	def isUS(self):
 		return "US" in locale.getdefaultlocale()[0]
@@ -245,7 +244,7 @@ class AnnounceFieldsLabels(IAccessible):
 					labelAnnounce = fieldLabels[columnID - 1][0]
 				else:
 					labelAnnounce = fieldLabels[columnID - 1][1]
-		field = "{0}, {1}".format(curValue, labelAnnounce) if columnID else curValue
+		field = f"{curValue}, {labelAnnounce}" if columnID else curValue
 		ui.message(field)
 
 	def getDelimiter(self, value):
@@ -253,7 +252,7 @@ class AnnounceFieldsLabels(IAccessible):
 		rg = re.compile(ptrn)
 		return rg.match(value).group(1)
 
-	def whatChanged(self, val1, val2):  # noqa: C901
+	def whatChanged(self, val1, val2):
 		global curDateField
 		isYear = False
 		isMonth = False
@@ -406,7 +405,7 @@ class AnnounceFieldsLabels(IAccessible):
 			if config.conf["dayOfWeek"]["reportFieldsValuesWhenMovingVertically"]:
 				self.sayField(curValue)
 			else:
-				super(AnnounceFieldsLabels, self).event_valueChange()
+				super().event_valueChange()
 
 	def leftOrRight(self, value, flag=None):
 		if flag:
@@ -470,7 +469,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = ADDON_SUMMARY
 
 	def __init__(self, *args, **kwargs):
-		super(GlobalPlugin, self).__init__(*args, **kwargs)
+		super().__init__(*args, **kwargs)
 		NVDASettingsDialog.categoryClasses.append(DayOfWeekSettingsDialog)
 		self.createMenu()
 
