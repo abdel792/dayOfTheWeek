@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-07-31 11:39+0000\n"
-"PO-Revision-Date: 2026-10-27 00:20\n"
+"PO-Revision-Date: 2026-11-01 10:42\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -112,5 +112,5 @@ msgstr "Mit dieser Erweiterung ermitteln Sie den jeweiligen Wochentag aus dem an
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:28
 msgid "* Updated translations from Crowdin"
-msgstr ""
+msgstr "* Aktualisierte Übersetzungen von Crowdin"
 
